@@ -1,0 +1,9 @@
+{
+ "schema":"independent-cad-equipment-specs/1","assets":{"C33":{
+ "asset":"chem_buchner_filtration_cadquery","design":"new conical side-arm vacuum bottle, independently bored rubber seat and integral perforated ceramic cup-neck; separate original paper disc",
+ "groups":{"bottle":"侧管抽滤瓶","seat":"橡胶接座","funnel":"瓷布氏漏斗","paper":"圆滤纸"},
+ "dimensions":{"bottleBaseRadius":43,"wall":2,"holeRadius":1.8,"holes":[[-18,-12],[-6,-12],[6,-12],[18,-12],[-18,0],[-6,0],[6,0],[18,0],[-18,12],[-6,12],[6,12],[18,12]]},
+ "checks":{"bottle":{"bounds_mm":[[-43,-43,0],[48,43,145]],"solid":[[0,0,1.5],[42,0,4],[13,0,135]],"void":[[0,0,20],[0,0,105],[0,0,143],[35,0,118],[46,0,118]]},"seat":{"bounds_mm":[[-15,-15,0],[15,15,22]],"void":[[0,0,10]],"solid":[[10,0,10]]},"funnel":{"bounds_mm":[[-33,-33,-40],[33,33,42]],"void":[[0,0,-35],[0,0,-20],[0,0,1],[-18,-12,1],[6,12,1],[0,0,30]],"solid":[[10,5,1.5],[32,0,20],[5.8,0,-20]]},"paper":{"bounds_mm":[[-29.5,-29.5,0],[29.5,29.5,0.25]],"solid":[[0,0,0.12]]}},
+ "channels":{"bottleVacuum":[[0,0,100],[0,0,118],[12,0,118],[20,0,118],[28,0,118],[36,0,118],[46,0,118]],"funnelStem":[[0,0,-38],[0,0,-30],[0,0,-20],[0,0,-10],[0,0,1]]},
+ "ready":false}}
+}

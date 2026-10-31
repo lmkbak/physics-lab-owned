@@ -1,0 +1,8 @@
+{
+ "schema":"independent-cad-design/1","units":"mm","replacementReady":false,
+ "C08":{"outerRadius":32,"wall":1.6,"bottom":3,"shoulderZ":95,"neckZ":112,"height":125,"neckInnerRadius":12,"tubeOuterRadius":2.5,"tubeInnerRadius":1.5,"tubeBottomZ":8,"tubeTopZ":140,"bendRadius":14,"nozzleLength":28,"nozzleDrop":20},
+ "C09":{"spoonLength":140,"shaftWidth":6,"shaftThickness":2,"bowlLength":24,"bowlWidth":15,"bowlDepth":4,"boatWidth":68,"boatDepth":60,"boatHeight":12,"boatWall":1.2},
+ "C10":{"height":80,"outerBellyRadius":34,"innerBellyRadius":32.2,"bottom":3,"shoulderZ":48,"neckZ":70,"neckInnerRadius":12,"holderBoreRadius":3,"wickRadius":2.5,"capInnerRadius":18,"capWall":1},
+ "C11":{"tripodHeight":166,"ringOuterRadius":48,"ringInnerRadius":39,"ringThickness":6,"legRadius":4,"footRadius":76,"meshSize":124,"wireRadius":0.45,"gridPitch":8,"ceramicRadius":29,"ceramicThickness":3,"socketY_m":0.1702},
+ "designBasis":"New engineering dimensions independently selected under public functional constraints"
+}

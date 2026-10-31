@@ -1,0 +1,23 @@
+{
+  "schema": "owned-electric-cad-contract/1",
+  "task": "task-9",
+  "scope": ["tools/owned-cad-electric/**", "docs/ownership/cad-electric.md"],
+  "inputAllowlist": ["docs/ownership/cad-coverage.json:electrical,supplementalElectrical", "docs/ownership/baseline.json:electric.types"],
+  "forbidden": ["old geometry", "gzip", "GLB inputs", "images", "_ref", "original modeling implementation", "other worker modeling source"],
+  "output": "out/<asset>/{scene.json,manifest.json,<asset>.glb,group.step,parts/*.step}",
+  "sceneSchema": "owned-cad-scene/1",
+  "units": "mm",
+  "up": "Z",
+  "precision": {"generalLinearDeflection_mm": 0.03, "criticalLinearDeflection_mm": 0.02, "angularDeflection_rad": 0.08, "exception": "Lead 2026-10-31 runtime budget authorization: analytic helix mesh uses 12 segments/turn and 8 wire cross-section sides. This is not the original all-surface precision PASS; exact BRep remains retained.", "helixErrorBoundFormula_mm": "(coilRadius + wireRadius)*(1-cos(pi/12)) + wireRadius*(1-cos(pi/8))", "helixPreserved": ["exact turn count", "axis", "pitch", "center radius", "wire radius at sampled vertices", "closed connected mesh", "separate conductive group"], "exceptionForbiddenFor": ["terminal bore", "terminal slot", "shell wall", "capacitor plate", "pivot", "wire anchor"]},
+  "runtimeBudget": {"trianglesPerType": 60000, "totalSceneTransferBytes22Types": 20000000, "glb": "optional preview only; not runtime", "measure": ["triangles", "decoded positions/indices bytes", "GPU positions/normals/indices estimate", "scene transport bytes"]},
+  "encoding": {"version": "owned-cad-scene/1+typed-arrays/1", "posB64": "base64 IEEE754 Float32 little-endian xyz", "idxB64": "base64 Uint32 little-endian triangle indices", "expectedCounts": ["positionCount vertices", "triangleCount triangles", "posByteLength", "idxByteLength"], "validation": ["byteLength/count equality", "finite positions", "indices within vertex count", "sha256 decoded raw bytes equals generator plain-array hash"]},
+  "adapterContract": {"mmToM": 0.001, "cadZtoRuntimeY": "[x,y,z] -> [x,z,-y]", "terminalPositionTolerance_mm": 0.05, "terminalDirectionTolerance_deg": 0.1, "fixtures": ["identity", "translation(137,-83,12)mm", "rotationZ37+translation", "rotationZ90+translation", "dynamic minimum/midpoint/maximum"], "plateBTerminalUpdate": "evaluate current group transform every animation frame"},
+  "coverageAssertions": "22 runtime types including supplemental elcap, exact required functional/dynamic group IDs, each marking range/polarity; unknown baseline geometry explicitly not a no-downgrade claim; local hole/wall/slot measurements required", 
+  "newDesign": "Fresh parameterized mechanical dimensions; retain public functional ranges, groups and explicit pivots. Unknown terminal coordinates replaced by registered independent anchors, runtime adapter required.",
+  "dynamicGeometry": "All dynamic group vertices are expressed relative to pivot origin; assemblyOffset_mm restores placement; group STEP matches local coordinates.",
+  "terminalDesign": "Separate insulating collar, drilled conductive post, cross bore and slotted pressure cap. Mouth center equals p, axis equals d. plateB terminal is inside moving group.",
+  "markings": "Original extruded line/segment glyph geometry and calibrated tick geometry; no fonts or textures.",
+  "validation": ["read STEP back", "per-part valid closed BRep", "fresh mesh winding/watertight and volume", "analytic primitive volume oracle", "cross-hole point void and wall samples", "local dimensions", "world rotation/translation terminals", "dynamic endpoints/midpoint and pivot"],
+  "replacementReady": false,
+  "productionIntegration": "Lead-owned later phase; no production/public/build/service/git edits"
+}

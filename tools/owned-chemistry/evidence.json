@@ -1,0 +1,1418 @@
+{
+  "schema": "owned-chemistry-evidence/v1",
+  "status": "pass",
+  "checks": [
+    {
+      "name": "43 exact reagent IDs and baseline species metadata",
+      "status": "pass"
+    },
+    {
+      "name": "every independently declared reaction balances atoms and charge exactly",
+      "status": "pass"
+    },
+    {
+      "name": "neutralization limiting reactant, charge, solvent and enthalpy oracle",
+      "status": "pass"
+    },
+    {
+      "name": "acid/base independent analytic oracle",
+      "status": "pass"
+    },
+    {
+      "name": "carbonate 0/0.5/1/1.5/2 acid equivalents conserve carbon and match open-headspace pH",
+      "status": "pass"
+    },
+    {
+      "name": "100 take/merge cycles conserve suspended precipitate, gas, volume and energy",
+      "status": "pass"
+    },
+    {
+      "name": "dry solid/zero volume/zero dt/reset state boundaries",
+      "status": "pass"
+    },
+    {
+      "name": "precipitation classes and acid dissolution",
+      "status": "pass"
+    },
+    {
+      "name": "metal displacement, Fe reduction, permanganate and nitric dilute controls",
+      "status": "pass"
+    },
+    {
+      "name": "indicator and starch optics require their actual input",
+      "status": "pass"
+    },
+    {
+      "name": "precipitate wash/transfer and crystal redissolution preserve the inventory",
+      "status": "pass"
+    },
+    {
+      "name": "external heat, cooling and latent heat close the independent energy ledger",
+      "status": "pass"
+    },
+    {
+      "name": "missing catalysts and missing heat do not invent fun-reaction products",
+      "status": "pass"
+    },
+    {
+      "name": "iodine clock induction and depletion are time observables",
+      "status": "pass"
+    },
+    {
+      "name": "22 baseline experiments with independent product/gas/thermal ledger evidence",
+      "status": "pass"
+    },
+    {
+      "name": "dt 0.2 / 0.02 convergence <=1% species/gas/energy and identical completion state",
+      "status": "pass"
+    },
+    {
+      "name": "kinetic extents match independent analytic first-order and solid-front solutions",
+      "status": "pass"
+    },
+    {
+      "name": "all 22 existing DEMOS executed with actual doses, acceleration and until predicates",
+      "status": "pass"
+    }
+  ],
+  "reactionRows": 60,
+  "reagentCount": 43,
+  "speciesCount": 78,
+  "actualDemos": [
+    {
+      "id": "thermite",
+      "realSeconds": 7.899999999999988,
+      "observations": {
+        "until": [
+          {
+            "passed": true,
+            "max": 12
+          }
+        ]
+      },
+      "products": [
+        {
+          "vol": 0,
+          "T": 2759.605368932521,
+          "s": {
+            "thermite": 0.11776567212724232,
+            "Fe": 15.764468655745514,
+            "Al2O3": 7.882234327872757
+          },
+          "gas": {
+            "H2": 0,
+            "O2": 0,
+            "CO2": 0,
+            "NO2": 0,
+            "NO": 0
+          },
+          "fx": {
+            "H2": 0,
+            "O2": 0,
+            "CO2": 0,
+            "NO2": 0,
+            "NO": 0,
+            "boil": 0,
+            "sodium": 0,
+            "potassium": 0,
+            "heat": 0.8476607786080042,
+            "steam": 0,
+            "lum": 0,
+            "foam": 0,
+            "bread": 0,
+            "snake": 0,
+            "thermite": 0.4984125739076027,
+            "volcano": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "toothpaste",
+      "realSeconds": 6.999999999999991,
+      "observations": {},
+      "products": [
+        {
+          "vol": 20.41093259038926,
+          "T": 100.01107894740053,
+          "s": {
+            "H2O2": 36.249753699416146,
+            "soap": 3,
+            "K+": 4,
+            "I-": 4
+          },
+          "gas": {
+            "H2": 0,
+            "O2": 55.37512315029184,
+            "CO2": 0,
+            "NO2": 0,
+            "NO": 0
+          },
+          "fx": {
+            "H2": 0,
+            "O2": 4,
+            "CO2": 0,
+            "NO2": 0,
+            "NO": 0,
+            "boil": 0.6081975148064651,
+            "sodium": 0,
+            "potassium": 0,
+            "heat": 3.0153915964596614,
+            "steam": 0.6081975148064651,
+            "lum": 0,
+            "foam": 2.707389824433797,
+            "bread": 0,
+            "snake": 0,
+            "thermite": 0,
+            "volcano": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "luminol",
+      "realSeconds": 7.19999999999999,
+      "observations": {},
+      "products": [
+        {
+          "vol": 29,
+          "T": 25,
+          "s": {
+            "luminol": 0.015342631007330618,
+            "Na+": 1.5,
+            "OH-": 1.2306852620146618,
+            "K+": 0.6,
+            "FeCN": 0.2,
+            "H2O2": 14.730685262014676,
+            "aminophthalate": 0.13465736899266958
+          },
+          "gas": {
+            "H2": 0,
+            "O2": 0,
+            "CO2": 0,
+            "NO2": 0,
+            "NO": 0
+          },
+          "fx": {
+            "H2": 0,
+            "O2": 0,
+            "CO2": 0,
+            "NO2": 0,
+            "NO": 0,
+            "boil": 0,
+            "sodium": 0,
+            "potassium": 0,
+            "heat": 0,
+            "steam": 0,
+            "lum": 0.7566146089087766,
+            "foam": 0,
+            "bread": 0,
+            "snake": 0,
+            "thermite": 0,
+            "volcano": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "snake",
+      "realSeconds": 10.699999999999978,
+      "observations": {
+        "until": [
+          {
+            "passed": true,
+            "max": 16
+          }
+        ]
+      },
+      "products": [
+        {
+          "vol": 0,
+          "T": 3632.3222020522235,
+          "s": {
+            "HgS": 2.9999999999999996,
+            "snakeAsh": 1.4999999999999998,
+            "CS2": 0.032793454378394246
+          },
+          "gas": {
+            "H2": 0,
+            "O2": 0,
+            "CO2": 1.4672065456216041,
+            "NO2": 0,
+            "NO": 0
+          },
+          "fx": {
+            "H2": 0,
+            "O2": 0,
+            "CO2": 0.11677205330556367,
+            "NO2": 0,
+            "NO": 0,
+            "boil": 0,
+            "sodium": 0,
+            "potassium": 0,
+            "heat": 0.25129345871357295,
+            "steam": 0,
+            "lum": 0,
+            "foam": 0,
+            "bread": 0,
+            "snake": 0.04137530194591967,
+            "thermite": 0,
+            "volcano": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "bread",
+      "realSeconds": 15.099999999999962,
+      "observations": {
+        "until": [
+          {
+            "passed": true,
+            "max": 14
+          }
+        ]
+      },
+      "products": [
+        {
+          "vol": 5,
+          "T": 25,
+          "s": {
+            "sucrose": 0.02112932590336696,
+            "H2SO4c": 90,
+            "C": 143.7464480891594
+          },
+          "gas": {
+            "H2": 0,
+            "O2": 0,
+            "CO2": 0,
+            "NO2": 0,
+            "NO": 0
+          },
+          "fx": {
+            "H2": 0,
+            "O2": 0,
+            "CO2": 0,
+            "NO2": 0,
+            "NO": 0,
+            "boil": 0,
+            "sodium": 0,
+            "potassium": 0,
+            "heat": 0,
+            "steam": 0.03750868840095521,
+            "lum": 0,
+            "foam": 0,
+            "bread": 0.03750868840095521,
+            "snake": 0,
+            "thermite": 0,
+            "volcano": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "clock",
+      "realSeconds": 7.29999999999999,
+      "observations": {
+        "until": [
+          {
+            "passed": true,
+            "max": 15
+          }
+        ]
+      },
+      "products": [
+        {
+          "vol": 20,
+          "T": 25,
+          "s": {
+            "K+": 0.2,
+            "IO3-": 0.12000121723883916,
+            "Na+": 0.2,
+            "starch": 0.5,
+            "I-": 0.000006086194195109836,
+            "SO4": 0.20000000000000012,
+            "H+": 0.12000730343303403,
+            "I2": 0.03999634828348292
+          },
+          "gas": {
+            "H2": 0,
+            "O2": 0,
+            "CO2": 0,
+            "NO2": 0,
+            "NO": 0
+          },
+          "fx": {
+            "H2": 0,
+            "O2": 0,
+            "CO2": 0,
+            "NO2": 0,
+            "NO": 0,
+            "boil": 0,
+            "sodium": 0,
+            "potassium": 0,
+            "heat": 0,
+            "steam": 0,
+            "lum": 0,
+            "foam": 0,
+            "bread": 0,
+            "snake": 0,
+            "thermite": 0,
+            "volcano": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "volcano",
+      "realSeconds": 14.799999999999963,
+      "observations": {
+        "until": [
+          {
+            "passed": true,
+            "max": 16
+          }
+        ]
+      },
+      "products": [
+        {
+          "vol": 0,
+          "T": 2205.9225765533356,
+          "s": {
+            "Cr2O3": 8
+          },
+          "gas": {
+            "H2": 0,
+            "O2": 0,
+            "CO2": 0,
+            "NO2": 0,
+            "NO": 0
+          },
+          "fx": {
+            "H2": 0,
+            "O2": 0,
+            "CO2": 0,
+            "NO2": 0,
+            "NO": 0,
+            "boil": 0,
+            "sodium": 0,
+            "potassium": 0,
+            "heat": 0.1258310472151064,
+            "steam": 0.14665623218543755,
+            "lum": 0,
+            "foam": 0,
+            "bread": 0,
+            "snake": 0,
+            "thermite": 0,
+            "volcano": 0.14665623218543755
+          }
+        }
+      ]
+    },
+    {
+      "id": "k",
+      "realSeconds": 9.99999999999998,
+      "observations": {},
+      "products": [
+        {
+          "vol": 30.150000000000027,
+          "T": 28.101118105953354,
+          "s": {
+            "phph": 0.007500000000000002,
+            "K": 0.000012288424706656408,
+            "K+": 1.999987711575294,
+            "OH-": 1.999987711575294
+          },
+          "gas": {
+            "H2": 0.999993855787647,
+            "O2": 0,
+            "CO2": 0,
+            "NO2": 0,
+            "NO": 0
+          },
+          "fx": {
+            "H2": 0.053341305526665383,
+            "O2": 0,
+            "CO2": 0,
+            "NO2": 0,
+            "NO": 0,
+            "boil": 0,
+            "sodium": 0,
+            "potassium": 0.053341305526665383,
+            "heat": 0.04181958353290569,
+            "steam": 0,
+            "lum": 0,
+            "foam": 0,
+            "bread": 0,
+            "snake": 0,
+            "thermite": 0,
+            "volcano": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "na",
+      "realSeconds": 12.499999999999972,
+      "observations": {},
+      "products": [
+        {
+          "vol": 30.150000000000027,
+          "T": 29.3602614630869,
+          "s": {
+            "Na": 0.00008260934804924144,
+            "Na+": 2.9999173906519494,
+            "OH-": 2.9999173906519494,
+            "phph": 0.007500000000000002
+          },
+          "gas": {
+            "H2": 1.4999586953259747,
+            "O2": 0,
+            "CO2": 0,
+            "NO2": 0,
+            "NO": 0
+          },
+          "fx": {
+            "H2": 0.021370627587821878,
+            "O2": 0,
+            "CO2": 0,
+            "NO2": 0,
+            "NO": 0,
+            "boil": 0,
+            "sodium": 0.021370627587821878,
+            "potassium": 0,
+            "heat": 0.015728781904636946,
+            "steam": 0,
+            "lum": 0,
+            "foam": 0,
+            "bread": 0,
+            "snake": 0,
+            "thermite": 0,
+            "volcano": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "feoh2",
+      "realSeconds": 16.19999999999996,
+      "observations": {
+        "until": [
+          {
+            "passed": true,
+            "max": 14
+          }
+        ]
+      },
+      "products": [
+        {
+          "vol": 6,
+          "T": 25,
+          "s": {
+            "SO4": 1.5,
+            "Na+": 3,
+            "FeOH2": 0.44506502144106785,
+            "FeOH3": 1.0549349785589315
+          },
+          "gas": {
+            "H2": 0,
+            "O2": 0,
+            "CO2": 0,
+            "NO2": 0,
+            "NO": 0
+          },
+          "fx": {
+            "H2": 0,
+            "O2": 0,
+            "CO2": 0,
+            "NO2": 0,
+            "NO": 0,
+            "boil": 0,
+            "sodium": 0,
+            "potassium": 0,
+            "heat": 0,
+            "steam": 0,
+            "lum": 0,
+            "foam": 0,
+            "bread": 0,
+            "snake": 0,
+            "thermite": 0,
+            "volcano": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "aloh3",
+      "realSeconds": 8.999999999999984,
+      "observations": {},
+      "products": [
+        {
+          "vol": 12,
+          "T": 26.108651425126574,
+          "s": {
+            "Cl-": 8,
+            "Na+": 5,
+            "Al3+": 1
+          },
+          "gas": {
+            "H2": 0,
+            "O2": 0,
+            "CO2": 0,
+            "NO2": 0,
+            "NO": 0
+          },
+          "fx": {
+            "H2": 0,
+            "O2": 0,
+            "CO2": 0,
+            "NO2": 0,
+            "NO": 0,
+            "boil": 0,
+            "sodium": 0,
+            "potassium": 0,
+            "heat": 0.008511752063362667,
+            "steam": 0,
+            "lum": 0,
+            "foam": 0,
+            "bread": 0,
+            "snake": 0,
+            "thermite": 0,
+            "volcano": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "flame",
+      "realSeconds": 12.79999999999997,
+      "observations": {
+        "flames": [
+          "Na+",
+          "K+",
+          "Cu2+",
+          "Ca2+"
+        ]
+      },
+      "products": []
+    },
+    {
+      "id": "o2",
+      "realSeconds": 7.099999999999991,
+      "observations": {
+        "gasTest": "relight"
+      },
+      "products": [
+        {
+          "vol": 20,
+          "T": 50.89441403654301,
+          "s": {
+            "H2O2": 7.25142050691109,
+            "MnO2": 1
+          },
+          "gas": {
+            "H2": 0,
+            "O2": 11.374289746544438,
+            "CO2": 0,
+            "NO2": 0,
+            "NO": 0
+          },
+          "fx": {
+            "H2": 0,
+            "O2": 1.5504419337715523,
+            "CO2": 0,
+            "NO2": 0,
+            "NO": 0,
+            "boil": 0,
+            "sodium": 0,
+            "potassium": 0,
+            "heat": 0.6077732380384487,
+            "steam": 0,
+            "lum": 0,
+            "foam": 0,
+            "bread": 0,
+            "snake": 0,
+            "thermite": 0,
+            "volcano": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "h2",
+      "realSeconds": 7.099999999999991,
+      "observations": {
+        "gasTest": "pop"
+      },
+      "products": [
+        {
+          "vol": 5,
+          "T": 42.07811680436287,
+          "s": {
+            "Zn": 1.5827683722577965,
+            "H+": 0.16553674451558187,
+            "Cl-": 5,
+            "Zn2+": 2.4172316277422095
+          },
+          "gas": {
+            "H2": 2.4172316277422095,
+            "O2": 0,
+            "CO2": 0,
+            "NO2": 0,
+            "NO": 0
+          },
+          "fx": {
+            "H2": 0.1643345259900746,
+            "O2": 0,
+            "CO2": 0,
+            "NO2": 0,
+            "NO": 0,
+            "boil": 0,
+            "sodium": 0,
+            "potassium": 0,
+            "heat": 0.05061503400494293,
+            "steam": 0,
+            "lum": 0,
+            "foam": 0,
+            "bread": 0,
+            "snake": 0,
+            "thermite": 0,
+            "volcano": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "co2",
+      "realSeconds": 7.099999999999991,
+      "observations": {
+        "gasTest": "douse"
+      },
+      "products": [
+        {
+          "vol": 15,
+          "T": 25,
+          "s": {
+            "CaCO3": 0.0243417550711488,
+            "H+": 5.04868351014227,
+            "Cl-": 15,
+            "Ca2+": 4.975658244928844
+          },
+          "gas": {
+            "H2": 0,
+            "O2": 0,
+            "CO2": 4.975658244928844,
+            "NO2": 0,
+            "NO": 0
+          },
+          "fx": {
+            "H2": 0,
+            "O2": 0,
+            "CO2": 0.18938364704241895,
+            "NO2": 0,
+            "NO": 0,
+            "boil": 0,
+            "sodium": 0,
+            "potassium": 0,
+            "heat": 0,
+            "steam": 0,
+            "lum": 0,
+            "foam": 0,
+            "bread": 0,
+            "snake": 0,
+            "thermite": 0,
+            "volcano": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "fe3",
+      "realSeconds": 4.5,
+      "observations": {
+        "until": [
+          {
+            "passed": true,
+            "max": 12
+          }
+        ]
+      },
+      "products": [
+        {
+          "vol": 3.1,
+          "T": 25,
+          "s": {
+            "Fe3+": 0.00275042119916037,
+            "Cl-": 4.5,
+            "K+": 0.05,
+            "SCN-": 0.044475574568019205,
+            "FeSCN": 0.005524425431980803,
+            "Fe": 3.2541374233155684,
+            "Fe2+": 2.237587730053292
+          },
+          "gas": {
+            "H2": 0,
+            "O2": 0,
+            "CO2": 0,
+            "NO2": 0,
+            "NO": 0
+          },
+          "fx": {
+            "H2": 0,
+            "O2": 0,
+            "CO2": 0,
+            "NO2": 0,
+            "NO": 0,
+            "boil": 0,
+            "sodium": 0,
+            "potassium": 0,
+            "heat": 0,
+            "steam": 0,
+            "lum": 0,
+            "foam": 0,
+            "bread": 0,
+            "snake": 0,
+            "thermite": 0,
+            "volcano": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "cuhno3",
+      "realSeconds": 4.999999999999998,
+      "observations": {},
+      "products": [
+        {
+          "vol": 2,
+          "T": 25,
+          "s": {
+            "Cu": 0.32833999449559553,
+            "H+": 13.313359977982362,
+            "NO3-": 20.656679988991225,
+            "Cu2+": 3.671660005504404
+          },
+          "gas": {
+            "H2": 0,
+            "O2": 0,
+            "CO2": 0,
+            "NO2": 7.343320011008808,
+            "NO": 0
+          },
+          "fx": {
+            "H2": 0,
+            "O2": 0,
+            "CO2": 0,
+            "NO2": 1.1587152275743895,
+            "NO": 0,
+            "boil": 0,
+            "sodium": 0,
+            "potassium": 0,
+            "heat": 0,
+            "steam": 0,
+            "lum": 0,
+            "foam": 0,
+            "bread": 0,
+            "snake": 0,
+            "thermite": 0,
+            "volcano": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "agtree",
+      "realSeconds": 6.999999999999991,
+      "observations": {},
+      "products": [
+        {
+          "vol": 5,
+          "T": 25,
+          "s": {
+            "Ag+": 0.00015955096124060095,
+            "NO3-": 0.5,
+            "Cu": 3.750079775480624,
+            "Cu2+": 0.24992022451937929,
+            "Ag": 0.49984044903875857
+          },
+          "gas": {
+            "H2": 0,
+            "O2": 0,
+            "CO2": 0,
+            "NO2": 0,
+            "NO": 0
+          },
+          "fx": {
+            "H2": 0,
+            "O2": 0,
+            "CO2": 0,
+            "NO2": 0,
+            "NO": 0,
+            "boil": 0,
+            "sodium": 0,
+            "potassium": 0,
+            "heat": 0,
+            "steam": 0,
+            "lum": 0,
+            "foam": 0,
+            "bread": 0,
+            "snake": 0,
+            "thermite": 0,
+            "volcano": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "mg",
+      "realSeconds": 5.999999999999995,
+      "observations": {
+        "mgO": 3.9929145056838493
+      },
+      "products": []
+    },
+    {
+      "id": "cuoh2",
+      "realSeconds": 5.299999999999997,
+      "observations": {
+        "until": [
+          {
+            "passed": true,
+            "max": 20
+          }
+        ]
+      },
+      "products": [
+        {
+          "vol": 17.875147140095766,
+          "T": 100.00401342313481,
+          "s": {
+            "SO4": 4,
+            "Na+": 10,
+            "OH-": 2,
+            "CuOH2": 0.00011884319309421916,
+            "CuO": 3.999881156806905
+          },
+          "gas": {
+            "H2": 0,
+            "O2": 0,
+            "CO2": 0,
+            "NO2": 0,
+            "NO": 0
+          },
+          "fx": {
+            "H2": 0,
+            "O2": 0,
+            "CO2": 0,
+            "NO2": 0,
+            "NO": 0,
+            "boil": 0.08996589753970725,
+            "sodium": 0,
+            "potassium": 0,
+            "heat": 0,
+            "steam": 0.08996589753970725,
+            "lum": 0,
+            "foam": 0,
+            "bread": 0,
+            "snake": 0,
+            "thermite": 0,
+            "volcano": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "evap",
+      "realSeconds": 8.599999999999985,
+      "observations": {
+        "until": [
+          {
+            "passed": true,
+            "max": 25
+          }
+        ]
+      },
+      "products": [
+        {
+          "vol": 2.0299490170391787e-14,
+          "T": 701.5642107680202,
+          "s": {
+            "CuSO4Crystal": 2.9999999999999707
+          },
+          "gas": {
+            "H2": 0,
+            "O2": 0,
+            "CO2": 0,
+            "NO2": 0,
+            "NO": 0
+          },
+          "fx": {
+            "H2": 0,
+            "O2": 0,
+            "CO2": 0,
+            "NO2": 0,
+            "NO": 0,
+            "boil": 9.950389964353292e-9,
+            "sodium": 0,
+            "potassium": 0,
+            "heat": 0,
+            "steam": 9.950389964353292e-9,
+            "lum": 0,
+            "foam": 0,
+            "bread": 0,
+            "snake": 0,
+            "thermite": 0,
+            "volcano": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "starch",
+      "realSeconds": 3.0000000000000013,
+      "observations": {},
+      "products": [
+        {
+          "vol": 15.3,
+          "T": 25,
+          "s": {
+            "starch": 0.75,
+            "I2": 0.006000000000000001
+          },
+          "gas": {
+            "H2": 0,
+            "O2": 0,
+            "CO2": 0,
+            "NO2": 0,
+            "NO": 0
+          },
+          "fx": {
+            "H2": 0,
+            "O2": 0,
+            "CO2": 0,
+            "NO2": 0,
+            "NO": 0,
+            "boil": 0,
+            "sodium": 0,
+            "potassium": 0,
+            "heat": 0,
+            "steam": 0,
+            "lum": 0,
+            "foam": 0,
+            "bread": 0,
+            "snake": 0,
+            "thermite": 0,
+            "volcano": 0
+          }
+        }
+      ]
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "thermite",
+      "products": {
+        "thermite": 0.0016389399159191464,
+        "Fe": 7.996722120168158,
+        "Al2O3": 3.998361060084079
+      },
+      "gas": {
+        "H2": 0,
+        "O2": 0,
+        "CO2": 0,
+        "NO2": 0,
+        "NO": 0
+      },
+      "extent": {
+        "thermite": 3.998361060084079
+      },
+      "temperatureC": 1886.6971258976773
+    },
+    {
+      "id": "toothpaste",
+      "products": {
+        "H2O2": 8.890359422362412,
+        "I-": 1,
+        "soap": 2
+      },
+      "gas": {
+        "H2": 0,
+        "O2": 44.55482028881882,
+        "CO2": 0,
+        "NO2": 0,
+        "NO": 0
+      },
+      "extent": {
+        "peroxide": 44.55482028881882
+      },
+      "temperatureC": 100.00400920978186
+    },
+    {
+      "id": "luminol",
+      "products": {
+        "luminol": 0.00223707718561656,
+        "H2O2": 2.8044741543712313,
+        "FeCN": 0.05,
+        "aminophthalate": 0.0977629228143833
+      },
+      "gas": {
+        "H2": 0,
+        "O2": 0,
+        "CO2": 0,
+        "NO2": 0,
+        "NO": 0
+      },
+      "extent": {
+        "luminol": 0.0977629228143833
+      },
+      "temperatureC": 25
+    },
+    {
+      "id": "snake",
+      "products": {
+        "HgS": 2.9999999999999996,
+        "snakeAsh": 1.4999999999999998,
+        "CS2": 0.01213663948446537
+      },
+      "gas": {
+        "H2": 0,
+        "O2": 0,
+        "CO2": 1.4878633605155325,
+        "NO2": 0,
+        "NO": 0
+      },
+      "extent": {
+        "snake": 1.4999999999999998,
+        "snakeOxidation": 1.4878633605155325
+      },
+      "temperatureC": 2352.5272278993525
+    },
+    {
+      "id": "bread",
+      "products": {
+        "sucrose": 0.01101782866217344,
+        "H2SO4c": 36,
+        "C": 71.86778605605383
+      },
+      "gas": {
+        "H2": 0,
+        "O2": 0,
+        "CO2": 0,
+        "NO2": 0,
+        "NO": 0
+      },
+      "extent": {
+        "bread": 5.988982171337835
+      },
+      "temperatureC": 25
+    },
+    {
+      "id": "clock",
+      "products": {
+        "IO3-": 0.12000000003351857,
+        "starch": 0.5,
+        "I-": 1.6759217818636727e-10,
+        "I2": 0.03999999989944468
+      },
+      "gas": {
+        "H2": 0,
+        "O2": 0,
+        "CO2": 0,
+        "NO2": 0,
+        "NO": 0
+      },
+      "extent": {
+        "clockReduction": 0.012213883333044373,
+        "clockIodine": 0.06778611663343725,
+        "iodineScavenge": 0.16335835000086704
+      },
+      "temperatureC": 25
+    },
+    {
+      "id": "volcano",
+      "products": {
+        "Cr2O3": 4
+      },
+      "gas": {
+        "H2": 0,
+        "O2": 0,
+        "CO2": 0,
+        "NO2": 0,
+        "NO": 0
+      },
+      "extent": {
+        "volcano": 4
+      },
+      "temperatureC": 1209.053163463533
+    },
+    {
+      "id": "k",
+      "products": {
+        "K": 0.000001114780738538918
+      },
+      "gas": {
+        "H2": 0.9999994426096308,
+        "O2": 0,
+        "CO2": 0,
+        "NO2": 0,
+        "NO": 0
+      },
+      "extent": {
+        "waterK": 0.9999994426096308
+      },
+      "temperatureC": 29.664098964266664
+    },
+    {
+      "id": "na",
+      "products": {
+        "Na": 0.00004102258819704285
+      },
+      "gas": {
+        "H2": 1.4999794887059008,
+        "O2": 0,
+        "CO2": 0,
+        "NO2": 0,
+        "NO": 0
+      },
+      "extent": {
+        "waterNa": 1.4999794887059008
+      },
+      "temperatureC": 31.555496733644386
+    },
+    {
+      "id": "feoh2",
+      "products": {
+        "FeOH2": 1.2130613194252646,
+        "FeOH3": 0.7869386805747334
+      },
+      "gas": {
+        "H2": 0,
+        "O2": 0,
+        "CO2": 0,
+        "NO2": 0,
+        "NO": 0
+      },
+      "extent": {
+        "pptFeOH2": 2,
+        "ironAir": 0.19673467014368334
+      },
+      "temperatureC": 25
+    },
+    {
+      "id": "aloh3",
+      "products": {
+        "AlO2-": 1
+      },
+      "gas": {
+        "H2": 0,
+        "O2": 0,
+        "CO2": 0,
+        "NO2": 0,
+        "NO": 0
+      },
+      "extent": {
+        "pptAlOH3": 1,
+        "aluminate": 1
+      },
+      "temperatureC": 25
+    },
+    {
+      "id": "flame",
+      "products": {},
+      "gas": {
+        "H2": 0,
+        "O2": 0,
+        "CO2": 0,
+        "NO2": 0,
+        "NO": 0
+      },
+      "extent": {},
+      "temperatureC": 25
+    },
+    {
+      "id": "o2",
+      "products": {
+        "H2O2": 1.3607692993411877,
+        "MnO2": 1
+      },
+      "gas": {
+        "H2": 0,
+        "O2": 6.819615350329396,
+        "CO2": 0,
+        "NO2": 0,
+        "NO": 0
+      },
+      "extent": {
+        "peroxide": 6.819615350329396
+      },
+      "temperatureC": 55.71267499955532
+    },
+    {
+      "id": "h2",
+      "products": {
+        "Zn": 0.0029863432335067185,
+        "Zn2+": 3.9970136567665073
+      },
+      "gas": {
+        "H2": 3.9970136567665073,
+        "O2": 0,
+        "CO2": 0,
+        "NO2": 0,
+        "NO": 0
+      },
+      "extent": {
+        "acidZn": 3.9970136567665073
+      },
+      "temperatureC": 39.11310304248112
+    },
+    {
+      "id": "co2",
+      "products": {
+        "CaCO3": 0.0006170490204333965,
+        "Ca2+": 4.999382950979563
+      },
+      "gas": {
+        "H2": 0,
+        "O2": 0,
+        "CO2": 4.999382950979563,
+        "NO2": 0,
+        "NO": 0
+      },
+      "extent": {
+        "acidCaCO3": 4.999382950979563
+      },
+      "temperatureC": 25
+    },
+    {
+      "id": "fe3",
+      "products": {
+        "Fe3+": 1.255746659716636e-7,
+        "SCN-": 1.9999956049158458,
+        "FeSCN": 0.000004395084147990447,
+        "Fe": 3.00000226032941,
+        "Fe2+": 2.9999932190117806
+      },
+      "gas": {
+        "H2": 0,
+        "O2": 0,
+        "CO2": 0,
+        "NO2": 0,
+        "NO": 0
+      },
+      "extent": {
+        "complex": 1.8716598575000447,
+        "reduceFeFe": 0.06417000846264448,
+        "reduceComplex": 0.9358277312079453
+      },
+      "temperatureC": 25
+    },
+    {
+      "id": "cuhno3",
+      "products": {
+        "Cu": 0.00018159971904993944,
+        "Cu2+": 3.999818400280943
+      },
+      "gas": {
+        "H2": 0,
+        "O2": 0,
+        "CO2": 0,
+        "NO2": 7.999636800561886,
+        "NO": 0
+      },
+      "extent": {
+        "nitricConcentrated": 3.999818400280943
+      },
+      "temperatureC": 25
+    },
+    {
+      "id": "agtree",
+      "products": {
+        "Ag+": 0.02010367148926712,
+        "Cu": 3.0100518357446284,
+        "Cu2+": 0.9899481642553665,
+        "Ag": 1.979896328510733
+      },
+      "gas": {
+        "H2": 0,
+        "O2": 0,
+        "CO2": 0,
+        "NO2": 0,
+        "NO": 0
+      },
+      "extent": {
+        "silverTree": 0.9899481642553665
+      },
+      "temperatureC": 25
+    },
+    {
+      "id": "mg",
+      "products": {
+        "Mg": 0.0006029323003819056,
+        "MgO": 3.9993970676996184
+      },
+      "gas": {
+        "H2": 0,
+        "O2": 0,
+        "CO2": 0,
+        "NO2": 0,
+        "NO": 0
+      },
+      "extent": {
+        "MgBurn": 1.9996985338498092
+      },
+      "temperatureC": 2044.093222357274
+    },
+    {
+      "id": "cuoh2",
+      "products": {
+        "CuOH2": 0.00013545747298170742,
+        "CuO": 1.9998645425270183
+      },
+      "gas": {
+        "H2": 0,
+        "O2": 0,
+        "CO2": 0,
+        "NO2": 0,
+        "NO": 0
+      },
+      "extent": {
+        "pptCuOH2": 2,
+        "copperHeat": 1.9998645425270183
+      },
+      "temperatureC": 78.39603167255493
+    },
+    {
+      "id": "evap",
+      "products": {
+        "salt": 0.1499999999999994
+      },
+      "gas": {
+        "H2": 0,
+        "O2": 0,
+        "CO2": 0,
+        "NO2": 0,
+        "NO": 0
+      },
+      "extent": {
+        "crystalNa": 0.1499999999999994
+      },
+      "temperatureC": 639.3002947749079
+    },
+    {
+      "id": "starch",
+      "products": {
+        "I2": 0.04,
+        "starch": 0.1
+      },
+      "gas": {
+        "H2": 0,
+        "O2": 0,
+        "CO2": 0,
+        "NO2": 0,
+        "NO": 0
+      },
+      "extent": {},
+      "temperatureC": 25
+    }
+  ]
+}

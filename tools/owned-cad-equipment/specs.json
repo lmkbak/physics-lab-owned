@@ -1,0 +1,37 @@
+{
+  "schema": "independent-cad-equipment-specs/1",
+  "units": "mm",
+  "up": "Z",
+  "origin": "New independent dimensions selected for functional requirements; not measurements from old geometry",
+  "ready": false,
+  "assets": {
+    "C26": {
+      "asset": "chem_combustion_spoon_cadquery",
+      "design": "hemispherical segment shell concave spoon with joined long metal stem and separately bored shield",
+      "groups": {"spoon":"金属燃烧匙","shield":"金属挡片"},
+      "bowl": {"outerRadius":11,"innerRadius":10.3,"sphereCentreZ":11,"rimZ":11},
+      "stem": {"x":10.4,"radius":1.4,"z0":6,"z1":226},
+      "shield": {"radius":18,"thickness":1,"holeRadius":1.65,"z0":159,"x":10.4},
+      "runtime": {"groups":["spoon"],"axis":null,"gripY_mm":190,"localAxis":"Z","loaderAxisPending":"existing runtime axis default; validate integration conversion before ready"},
+      "checks": {
+        "spoon": {"solid":[[0,0,0.3],[10.4,0,100]],"void":[[0,0,6],[0,0,20]],"bounds_mm":[[-11,-11,0],[11.8,11,226]]},
+        "shield": {"solid":[[20,0,159.5]],"void":[[10.4,0,159.5]],"bounds_mm":[[-7.6,-18,159],[28.4,18,160]]}
+      }
+    },
+    "C54": {
+      "asset":"chem_flame_test_wire_cadquery",
+      "design":"insulating handle and bored metal chuck; nickel alloy demonstration loop and separate straight spare; two-groove support",
+      "groups":{"handle":"绝缘手柄与夹头","loop":"金属丝环","spare":"直丝备件","stand":"双槽承托座"},
+      "handle":{"radius":6,"height":65,"chuckRadius":3.8,"chuckHeight":13,"boreRadius":0.5},
+      "wire":{"radius":0.3,"stemZ0":70,"stemZ1":145.3,"loopCentreZ":148,"loopMajorRadius":2.7,"spareLength":90},
+      "stand":{"width":50,"depth":30,"height":12,"grooveRadius":6.3,"grooveCentreZ":13.5,"grooveXs":[-12,12]},
+      "runtime":{"groups":["handle","loop"],"rotate":"x-down","gripY_mm":130,"axis":null,"materialIdentity":"nickel-alloy educational wire; no platinum claim"},
+      "checks": {
+        "handle":{"solid":[[2,0,30],[2,0,70]],"void":[[0,0,72]],"bounds_mm":[[-6,-6,0],[6,6,78]]},
+        "loop":{"solid":[[0,0,100],[0,0,150.7]],"void":[[0,0,148]],"bounds_mm":[[-3,-0.3,70],[3,0.3,151]]},
+        "spare":{"solid":[[0,0,10]],"void":[[1,0,10]],"bounds_mm":[[-0.3,-0.3,0],[0.3,0.3,90]]},
+        "stand":{"solid":[[0,0,5]],"void":[[-12,0,11.9],[12,0,11.9]],"bounds_mm":[[-25,-15,0],[25,15,12]]}
+      }
+    }
+  }
+}

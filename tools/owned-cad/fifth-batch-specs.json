@@ -1,0 +1,8 @@
+{
+ "schema":"independent-cad-design/1","units":"mm","replacementReady":false,
+ "C17":{"height":530,"nominalMl":25,"boreRadius":3.5,"wall":1.4,"zeroZ":475,"graduationMl":0.1,"valveZ":54,"outletZ":18,"valveAxis":"Y","scaleDirection":"top-down","standHeight":550},
+ "C18":{"nominalMl":10,"shaftInnerRadius":1.4,"shaftOuterRadius":2.5,"bulbInnerRadius":9,"bulbBottomZ":60,"bulbTopZ":130,"upperShaftZ":160,"height":250,"tipZ":0,"tipConeEndZ":28,"tipInnerRadius":0.35,"tipOuterRadius":0.75,"bulbWall":1.3},
+ "C20":{"jacketLength":220,"outerJacketRadius":14,"innerJacketRadius":12.4,"vapourBoreRadius":4.5,"innerPipeOuterRadius":6,"endNeckOuterRadius":8,"endNeckInnerRadius":6,"lowerEndZ":0,"jacketBottomZ":30,"jacketTopZ":250,"upperEndZ":285,"waterPortInnerRadius":3,"waterPortOuterRadius":4.5,"portZ":[49,231],"displaySlope_deg":10},
+ "C21":{"mainOuterRadius":10,"mainInnerRadius":8,"mainHeight":115,"sideZ":62,"sideLength":70,"receiverAngle_deg":60,"receiverLength":100,"adapterBoreRadius":4.2,"adapterOuterRadius":8,"mountRingInnerRadius":11},
+ "designBasis":"Independent dimensions satisfying nominal capacities, port separation, stopper and public group functions"
+}

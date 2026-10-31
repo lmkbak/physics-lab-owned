@@ -1,0 +1,431 @@
+{
+  "schema": "independent-cad-equipment-specs/1",
+  "assets": {
+    "C25": {
+      "asset": "chem_thermometer_cadquery",
+      "design": "Independent physical-function BRep design; own dimensions in mechanisms.py; not reconstructed media",
+      "groupKeys": [
+        "thermometer",
+        "sleeve",
+        "cap",
+        "column",
+        "scale"
+      ],
+      "groups": {
+        "thermometer": "\u6db2\u67f1\u6e29\u5ea6\u8ba1",
+        "sleeve": "\u4fdd\u62a4\u5957",
+        "cap": "\u62a4\u5957\u7aef\u5e3d",
+        "column": "\u62a4\u5957\u7aef\u5e3d",
+        "scale": "\u62a4\u5957\u7aef\u5e3d"
+      },
+      "checks": {},
+      "pending": [
+        "group functional cross-review",
+        "graduation numbers and full profiles",
+        "new dimension parameterization",
+        "critical sections",
+        "fresh and visual review"
+      ]
+    },
+    "C27": {
+      "asset": "chem_test_tube_tools_cadquery",
+      "design": "Independent physical-function BRep design; own dimensions in mechanisms.py; not reconstructed media",
+      "groupKeys": [
+        "clipA",
+        "brush",
+        "clipB",
+        "spring"
+      ],
+      "groups": {
+        "clipA": "\u6728\u8d28\u8bd5\u7ba1\u5939",
+        "brush": "\u8bd5\u7ba1\u5237",
+        "clipB": "\u8bd5\u7ba1\u5237",
+        "spring": "\u8bd5\u7ba1\u5237"
+      },
+      "checks": {},
+      "pending": [
+        "group functional cross-review",
+        "graduation numbers and full profiles",
+        "new dimension parameterization",
+        "critical sections",
+        "fresh and visual review"
+      ]
+    },
+    "C31": {
+      "asset": "chem_desiccator_cadquery",
+      "design": "Independent physical-function BRep design; own dimensions in mechanisms.py; not reconstructed media",
+      "groupKeys": [
+        "bowl",
+        "plate",
+        "lid"
+      ],
+      "groups": {
+        "bowl": "\u73bb\u7483\u4e0b\u76bf",
+        "plate": "\u5e26\u5b54\u74f7\u9694\u677f",
+        "lid": "\u5e26\u94ae\u73bb\u7483\u76d6"
+      },
+      "checks": {},
+      "pending": [
+        "group functional cross-review",
+        "graduation numbers and full profiles",
+        "new dimension parameterization",
+        "critical sections",
+        "fresh and visual review"
+      ]
+    },
+    "C34": {
+      "asset": "chem_gas_syringe_cadquery",
+      "design": "Independent physical-function BRep design; own dimensions in mechanisms.py; not reconstructed media",
+      "groupKeys": [
+        "barrel",
+        "seal",
+        "plunger",
+        "scale"
+      ],
+      "groups": {
+        "barrel": "\u900f\u660e\u7b52\u4f53",
+        "seal": "\u6d3b\u585e\u7ec4\u4ef6",
+        "plunger": "\u6d3b\u585e\u7ec4\u4ef6",
+        "scale": "\u6d3b\u585e\u7ec4\u4ef6"
+      },
+      "checks": {},
+      "pending": [
+        "group functional cross-review",
+        "graduation numbers and full profiles",
+        "new dimension parameterization",
+        "critical sections",
+        "fresh and visual review"
+      ]
+    },
+    "C36": {
+      "asset": "chem_screw_pinch_clamp_cadquery",
+      "design": "Independent physical-function BRep design; own dimensions in mechanisms.py; not reconstructed media",
+      "groupKeys": [
+        "frame",
+        "screw",
+        "press",
+        "hose"
+      ],
+      "groups": {
+        "frame": "\u91d1\u5c5e\u5939\u6846",
+        "screw": "\u87ba\u6746\u4e0e\u65cb\u94ae",
+        "press": "\u6d3b\u52a8\u538b\u5757",
+        "hose": "\u67d4\u6027\u8f6f\u7ba1"
+      },
+      "checks": {},
+      "pending": [
+        "group functional cross-review",
+        "graduation numbers and full profiles",
+        "new dimension parameterization",
+        "critical sections",
+        "fresh and visual review"
+      ]
+    },
+    "C42": {
+      "asset": "chem_lab_burner_cadquery",
+      "design": "Independent physical-function BRep design; own dimensions in mechanisms.py; not reconstructed media",
+      "groupKeys": [
+        "base",
+        "inlet",
+        "mix",
+        "air"
+      ],
+      "groups": {
+        "base": "\u5e95\u5ea7\u4e0e\u55b7\u5634",
+        "inlet": "\u4fa7\u8fdb\u6c14\u5634",
+        "mix": "\u6df7\u5408\u7ba1",
+        "air": "\u7a7a\u6c14\u8c03\u8282\u5957"
+      },
+      "checks": {},
+      "pending": [
+        "group functional cross-review",
+        "graduation numbers and full profiles",
+        "new dimension parameterization",
+        "critical sections",
+        "fresh and visual review"
+      ]
+    },
+    "C43": {
+      "asset": "chem_electronic_balance_cadquery",
+      "design": "Independent physical-function BRep design; own dimensions in mechanisms.py; not reconstructed media",
+      "groupKeys": [
+        "base",
+        "case",
+        "pan",
+        "loadcell",
+        "circuit"
+      ],
+      "groups": {
+        "base": "\u5e95\u5ea7\u4e0e\u652f\u811a",
+        "case": "\u673a\u58f3\u4e0e\u663e\u793a\u9762",
+        "pan": "\u79f0\u76d8\u4e0e\u4f20\u529b\u67f1",
+        "loadcell": "\u79f0\u91cd\u6a21\u5757\u793a\u610f",
+        "circuit": "\u7535\u8def\u677f\u793a\u610f"
+      },
+      "checks": {},
+      "pending": [
+        "group functional cross-review",
+        "graduation numbers and full profiles",
+        "new dimension parameterization",
+        "critical sections",
+        "fresh and visual review"
+      ]
+    },
+    "C44": {
+      "asset": "chem_magnetic_stirrer_cadquery",
+      "design": "Independent physical-function BRep design; own dimensions in mechanisms.py; not reconstructed media",
+      "groupKeys": [
+        "base",
+        "case",
+        "motor",
+        "magnet",
+        "stirbar"
+      ],
+      "groups": {
+        "base": "\u5e95\u5ea7",
+        "case": "\u673a\u58f3\u4e0e\u5de5\u4f5c\u53f0",
+        "motor": "\u7535\u673a\u4e0e\u8f6c\u8f74",
+        "magnet": "\u78c1\u4f53\u8f6c\u67b6",
+        "stirbar": "\u5305\u8986\u6405\u62cc\u5b50"
+      },
+      "checks": {},
+      "pending": [
+        "group functional cross-review",
+        "graduation numbers and full profiles",
+        "new dimension parameterization",
+        "critical sections",
+        "fresh and visual review"
+      ]
+    },
+    "C45": {
+      "asset": "chem_water_bath_cadquery",
+      "design": "Independent physical-function BRep design; own dimensions in mechanisms.py; not reconstructed media",
+      "groupKeys": [
+        "base",
+        "outer",
+        "liner",
+        "lid",
+        "rings"
+      ],
+      "groups": {
+        "base": "\u5e95\u5ea7\u4e0e\u52a0\u70ed\u7ec4\u4ef6",
+        "outer": "\u5916\u58f3",
+        "liner": "\u91d1\u5c5e\u5185\u80c6",
+        "lid": "\u76d6\u677f",
+        "rings": "\u540c\u5fc3\u5957\u73af"
+      },
+      "checks": {},
+      "pending": [
+        "group functional cross-review",
+        "graduation numbers and full profiles",
+        "new dimension parameterization",
+        "critical sections",
+        "fresh and visual review"
+      ]
+    },
+    "C46": {
+      "asset": "chem_alkaline_burette_cadquery",
+      "design": "Independent physical-function BRep design; own dimensions in mechanisms.py; not reconstructed media",
+      "groupKeys": [
+        "stand",
+        "tube",
+        "hose",
+        "bead",
+        "tip",
+        "scale",
+        "stopcock"
+      ],
+      "groups": {
+        "stand": "\u5c55\u793a\u652f\u67b6",
+        "tube": "\u523b\u5ea6\u73bb\u7483\u7ba1",
+        "hose": "\u6a61\u80f6\u8fde\u63a5\u7ba1",
+        "bead": "\u73bb\u7483\u73e0",
+        "tip": "\u73bb\u7483\u5c16\u5634",
+        "scale": "\u73bb\u7483\u5c16\u5634",
+        "stopcock": "\u73bb\u7483\u5c16\u5634"
+      },
+      "checks": {},
+      "pending": [
+        "group functional cross-review",
+        "graduation numbers and full profiles",
+        "new dimension parameterization",
+        "critical sections",
+        "fresh and visual review"
+      ]
+    },
+    "C47": {
+      "asset": "chem_allihn_condenser_cadquery",
+      "design": "Independent physical-function BRep design; own dimensions in mechanisms.py; not reconstructed media",
+      "groupKeys": [
+        "body",
+        "lower",
+        "upper",
+        "stand"
+      ],
+      "groups": {
+        "body": "\u4e00\u4f53\u73bb\u7483\u51b7\u51dd\u7ba1",
+        "lower": "\u4e0b\u65b9\u84dd\u8272\u6c34\u53e3\u5957",
+        "upper": "\u4e0a\u65b9\u7eff\u8272\u6c34\u53e3\u5957",
+        "stand": "\u5c55\u793a\u6258\u67b6"
+      },
+      "checks": {},
+      "pending": [
+        "group functional cross-review",
+        "graduation numbers and full profiles",
+        "new dimension parameterization",
+        "critical sections",
+        "fresh and visual review"
+      ]
+    },
+    "C55": {
+      "asset": "dc_supply_cadquery",
+      "design": "Independent physical-function BRep design; own dimensions in mechanisms.py; not reconstructed media",
+      "groupKeys": [
+        "base",
+        "case",
+        "panel",
+        "transformer",
+        "rectifier",
+        "board",
+        "posts",
+        "switch",
+        "cable"
+      ],
+      "groups": {
+        "base": "\u901a\u98ce\u5916\u58f3\u4e0e\u63d0\u624b",
+        "case": "\u524d\u9762\u677f\u4e0e\u63a7\u5236",
+        "panel": "\u5e95\u677f\u652f\u6491",
+        "transformer": "\u9694\u79bb\u53d8\u538b\u5668",
+        "rectifier": "\u6865\u5f0f\u6574\u6d41",
+        "board": "\u6ee4\u6ce2\u7535\u5bb9",
+        "posts": "\u7ebf\u6027\u7a33\u538b",
+        "switch": "\u63a7\u5236\u4e0e\u8f93\u51fa",
+        "cable": "\u529f\u80fd\u5bfc\u7ebf"
+      },
+      "checks": {},
+      "pending": [
+        "group functional cross-review",
+        "graduation numbers and full profiles",
+        "new dimension parameterization",
+        "critical sections",
+        "fresh and visual review"
+      ]
+    },
+    "C57": {
+      "asset": "multimeter_cadquery",
+      "design": "Independent physical-function BRep design; own dimensions in mechanisms.py; not reconstructed media",
+      "groupKeys": [
+        "base",
+        "case",
+        "circuit",
+        "switch",
+        "display",
+        "probeA",
+        "probeB"
+      ],
+      "groups": {
+        "base": "\u5916\u58f3\u4e0e\u8868\u76d8",
+        "case": "\u78c1\u7535\u5f0f\u8868\u5934",
+        "circuit": "\u91cf\u7a0b\u8f6c\u6362",
+        "switch": "\u7535\u538b\u4e0e\u7535\u6d41\u652f\u8def",
+        "display": "\u4ea4\u6d41\u652f\u8def",
+        "probeA": "\u7535\u963b\u6863\u652f\u8def",
+        "probeB": "\u914d\u5957\u9644\u4ef6"
+      },
+      "checks": {},
+      "pending": [
+        "group functional cross-review",
+        "graduation numbers and full profiles",
+        "new dimension parameterization",
+        "critical sections",
+        "fresh and visual review"
+      ]
+    },
+    "C58": {
+      "asset": "chem_ph_meter_cadquery",
+      "design": "Independent physical-function BRep design; own dimensions in mechanisms.py; not reconstructed media",
+      "groupKeys": [
+        "base",
+        "case",
+        "probe",
+        "board",
+        "cable"
+      ],
+      "groups": {
+        "base": "\u673a\u8eab\u4e0e\u7535\u8def\u793a\u610f",
+        "case": "\u663e\u793a\u9762\u677f",
+        "probe": "\u7535\u6781\u4e0e\u8fde\u63a5\u7ebf",
+        "board": "\u7535\u6781\u652f\u67b6",
+        "cable": "\u4fdd\u62a4\u5e3d"
+      },
+      "checks": {},
+      "pending": [
+        "group functional cross-review",
+        "graduation numbers and full profiles",
+        "new dimension parameterization",
+        "critical sections",
+        "fresh and visual review"
+      ]
+    },
+    "C64": {
+      "asset": "chem_gas_burette_leveling_cadquery",
+      "design": "Independent physical-function BRep design; own dimensions in mechanisms.py; not reconstructed media",
+      "groupKeys": [
+        "tube",
+        "stopcock",
+        "tip",
+        "stand",
+        "scale",
+        "bottle",
+        "hose"
+      ],
+      "groups": {
+        "tube": "\u6c14\u4f53\u91cf\u7ba1",
+        "stopcock": "\u91cf\u7ba1\u65cb\u585e",
+        "tip": "\u6c34\u51c6\u74f6",
+        "stand": "\u8fde\u901a\u8f6f\u7ba1",
+        "scale": "\u5c55\u793a\u652f\u67b6",
+        "bottle": "\u5c55\u793a\u652f\u67b6",
+        "hose": "\u5c55\u793a\u652f\u67b6"
+      },
+      "checks": {},
+      "pending": [
+        "group functional cross-review",
+        "graduation numbers and full profiles",
+        "new dimension parameterization",
+        "critical sections",
+        "fresh and visual review"
+      ]
+    },
+    "C69": {
+      "asset": "chem_micro_syringe_cadquery",
+      "design": "Independent physical-function BRep design; own dimensions in mechanisms.py; not reconstructed media",
+      "groupKeys": [
+        "stand",
+        "barrel",
+        "seal",
+        "plunger",
+        "cap",
+        "microcup",
+        "scale"
+      ],
+      "groups": {
+        "stand": "\u6536\u7eb3\u6258\u5ea7",
+        "barrel": "\u900f\u660e\u9488\u7b52",
+        "seal": "\u5bc6\u5c01\u6d3b\u585e",
+        "plunger": "\u5341\u5b57\u63a8\u6746",
+        "cap": "\u5c01\u53e3\u5e3d",
+        "microcup": "\u5fae\u578b\u5185\u676f",
+        "scale": "\u5fae\u578b\u5185\u676f"
+      },
+      "checks": {},
+      "pending": [
+        "group functional cross-review",
+        "graduation numbers and full profiles",
+        "new dimension parameterization",
+        "critical sections",
+        "fresh and visual review"
+      ]
+    }
+  }
+}

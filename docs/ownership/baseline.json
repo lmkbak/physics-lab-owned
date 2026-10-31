@@ -1,0 +1,5537 @@
+{
+  "schema": "owned-content-baseline/v1",
+  "status": "requirements-only-no-replacement-approved",
+  "rules": [
+    "Preserve every ID and its user-visible function",
+    "Preserve terminals, ranges, moving groups, hollow volumes and liquid conservation",
+    "No production replacement before reviewer pass",
+    "Hashes identify baseline versions, never prove originality"
+  ],
+  "electric": {
+    "types": [
+      {
+        "id": "dcsupply",
+        "name": "学生直流电源",
+        "terminals": {
+          "+": {
+            "label": "正极 +",
+            "pol": "+"
+          },
+          "-": {
+            "label": "负极 −",
+            "pol": "-"
+          }
+        },
+        "defaults": {
+          "V": 3,
+          "Ilim": 2,
+          "on": true
+        },
+        "initialState": {},
+        "procedural": false,
+        "thumbnail": "dc_supply_cadquery",
+        "controls": [
+          {
+            "key": "on",
+            "type": "toggle"
+          },
+          {
+            "key": "V",
+            "type": "range",
+            "min": 0,
+            "max": 12,
+            "step": 0.1,
+            "unit": "V"
+          },
+          {
+            "key": "Ilim",
+            "type": "select",
+            "options": [
+              [
+                0.5,
+                "0.5 A"
+              ],
+              [
+                1,
+                "1 A"
+              ],
+              [
+                2,
+                "2 A"
+              ]
+            ]
+          }
+        ],
+        "verified": false
+      },
+      {
+        "id": "battery",
+        "name": "电池组（2 节串联）",
+        "terminals": {
+          "+": {
+            "label": "正极 +",
+            "pol": "+"
+          },
+          "-": {
+            "label": "负极 −",
+            "pol": "-"
+          }
+        },
+        "defaults": {
+          "E": 3,
+          "r": 1
+        },
+        "initialState": {},
+        "procedural": false,
+        "thumbnail": "battery_holder_cadquery",
+        "controls": [
+          {
+            "key": "E",
+            "type": "range",
+            "min": 2.4,
+            "max": 3.2,
+            "step": 0.05,
+            "unit": "V"
+          },
+          {
+            "key": "r",
+            "type": "range",
+            "min": 0.1,
+            "max": 5,
+            "step": 0.1,
+            "unit": "Ω"
+          }
+        ],
+        "verified": false
+      },
+      {
+        "id": "switch",
+        "name": "单刀单掷开关",
+        "terminals": {
+          "A": {
+            "label": "接线柱 A"
+          },
+          "B": {
+            "label": "接线柱 B"
+          }
+        },
+        "defaults": {
+          "closed": false
+        },
+        "initialState": {},
+        "procedural": false,
+        "thumbnail": "knife_switch_cadquery",
+        "controls": [
+          {
+            "key": "closed",
+            "type": "toggle"
+          }
+        ],
+        "verified": false
+      },
+      {
+        "id": "dpdt",
+        "name": "双刀双掷开关",
+        "terminals": {
+          "A1": {
+            "label": "A1"
+          },
+          "C1": {
+            "label": "C1（公共）"
+          },
+          "B1": {
+            "label": "B1"
+          },
+          "A2": {
+            "label": "A2"
+          },
+          "C2": {
+            "label": "C2（公共）"
+          },
+          "B2": {
+            "label": "B2"
+          }
+        },
+        "defaults": {
+          "pos": "off"
+        },
+        "initialState": {},
+        "procedural": false,
+        "thumbnail": "dpdt_switch_cadquery",
+        "controls": [
+          {
+            "key": "pos",
+            "type": "select",
+            "options": [
+              [
+                "A",
+                "合向 A"
+              ],
+              [
+                "off",
+                "中间断开"
+              ],
+              [
+                "B",
+                "合向 B"
+              ]
+            ]
+          }
+        ],
+        "verified": false
+      },
+      {
+        "id": "lamp",
+        "name": "小灯泡与灯座",
+        "terminals": {
+          "A": {
+            "label": "接线柱（螺口）"
+          },
+          "B": {
+            "label": "接线柱（中心）"
+          }
+        },
+        "defaults": {
+          "rating": "2.5V 0.3A"
+        },
+        "initialState": {
+          "burnt": false,
+          "over": 0
+        },
+        "procedural": false,
+        "thumbnail": "lamp_holder_cadquery",
+        "controls": [
+          {
+            "key": "rating",
+            "type": "select",
+            "options": [
+              [
+                "2.5V 0.3A",
+                "2.5V 0.3A"
+              ],
+              [
+                "3.8V 0.3A",
+                "3.8V 0.3A"
+              ],
+              [
+                "6.3V 0.15A",
+                "6.3V 0.15A"
+              ]
+            ]
+          },
+          {
+            "key": "replace",
+            "type": "button"
+          }
+        ],
+        "verified": false
+      },
+      {
+        "id": "led",
+        "name": "发光二极管 LED",
+        "terminals": {
+          "+": {
+            "label": "阳极 +（长脚）",
+            "pol": "+"
+          },
+          "-": {
+            "label": "阴极 −（短脚）",
+            "pol": "-"
+          }
+        },
+        "defaults": {
+          "color": "red"
+        },
+        "initialState": {
+          "burnt": false,
+          "over": 0
+        },
+        "procedural": true,
+        "thumbnail": "led_cadquery",
+        "controls": [
+          {
+            "key": "color",
+            "type": "select",
+            "options": [
+              [
+                "red",
+                "红光（约 1.9 V）"
+              ],
+              [
+                "yellow",
+                "黄光（约 2 V）"
+              ],
+              [
+                "green",
+                "绿光（约 2.1 V）"
+              ],
+              [
+                "blue",
+                "蓝光（约 3 V）"
+              ],
+              [
+                "white",
+                "白光（约 3 V）"
+              ]
+            ]
+          },
+          {
+            "key": "replace",
+            "type": "button"
+          }
+        ],
+        "verified": false
+      },
+      {
+        "id": "diode",
+        "name": "整流二极管",
+        "terminals": {
+          "+": {
+            "label": "阳极 +",
+            "pol": "+"
+          },
+          "-": {
+            "label": "阴极 −（色环端）",
+            "pol": "-"
+          }
+        },
+        "defaults": {},
+        "initialState": {},
+        "procedural": true,
+        "thumbnail": "rectifier_diode_cadquery",
+        "controls": [],
+        "verified": false
+      },
+      {
+        "id": "resistor10",
+        "name": "定值电阻 10 Ω",
+        "terminals": {
+          "A": {
+            "label": "接线柱 A"
+          },
+          "B": {
+            "label": "接线柱 B"
+          }
+        },
+        "defaults": {},
+        "initialState": {},
+        "procedural": false,
+        "thumbnail": "fixed_resistors_cadquery",
+        "controls": [],
+        "verified": false
+      },
+      {
+        "id": "resistor20",
+        "name": "定值电阻 20 Ω",
+        "terminals": {
+          "A": {
+            "label": "接线柱 A"
+          },
+          "B": {
+            "label": "接线柱 B"
+          }
+        },
+        "defaults": {},
+        "initialState": {},
+        "procedural": false,
+        "thumbnail": "fixed_resistors_cadquery",
+        "controls": [],
+        "verified": false
+      },
+      {
+        "id": "resistor50",
+        "name": "定值电阻 50 Ω",
+        "terminals": {
+          "A": {
+            "label": "接线柱 A"
+          },
+          "B": {
+            "label": "接线柱 B"
+          }
+        },
+        "defaults": {},
+        "initialState": {},
+        "procedural": false,
+        "thumbnail": "fixed_resistors_cadquery",
+        "controls": [],
+        "verified": false
+      },
+      {
+        "id": "rheostat",
+        "name": "滑动变阻器",
+        "terminals": {
+          "A": {
+            "label": "A（线圈左端）"
+          },
+          "B": {
+            "label": "B（线圈右端）"
+          },
+          "C": {
+            "label": "C（金属杆）"
+          },
+          "D": {
+            "label": "D（金属杆）"
+          }
+        },
+        "defaults": {
+          "Rmax": 50,
+          "s": 1
+        },
+        "initialState": {},
+        "procedural": false,
+        "thumbnail": "rheostat_cadquery",
+        "controls": [
+          {
+            "key": "s",
+            "type": "range",
+            "min": 0,
+            "max": 1,
+            "step": 0.01
+          },
+          {
+            "key": "Rmax",
+            "type": "select",
+            "options": [
+              [
+                20,
+                "20 Ω 2 A"
+              ],
+              [
+                50,
+                "50 Ω 1.5 A"
+              ],
+              [
+                200,
+                "200 Ω 1 A"
+              ]
+            ]
+          }
+        ],
+        "verified": false
+      },
+      {
+        "id": "resbox",
+        "name": "四档十进电阻箱",
+        "terminals": {
+          "A": {
+            "label": "接线柱 A"
+          },
+          "B": {
+            "label": "接线柱 B"
+          }
+        },
+        "defaults": {
+          "d": [
+            0,
+            0,
+            1,
+            0
+          ]
+        },
+        "initialState": {},
+        "procedural": false,
+        "thumbnail": "resistance_box_cadquery",
+        "controls": [
+          {
+            "key": "d",
+            "type": "digits"
+          }
+        ],
+        "verified": false
+      },
+      {
+        "id": "ntc",
+        "name": "热敏电阻 NTC",
+        "terminals": {
+          "A": {
+            "label": "接线柱 A"
+          },
+          "B": {
+            "label": "接线柱 B"
+          }
+        },
+        "defaults": {
+          "T": 25
+        },
+        "initialState": {},
+        "procedural": false,
+        "thumbnail": "sensor_resistors_cadquery",
+        "controls": [
+          {
+            "key": "T",
+            "type": "range",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "°C"
+          }
+        ],
+        "verified": false
+      },
+      {
+        "id": "ldr",
+        "name": "光敏电阻 LDR",
+        "terminals": {
+          "A": {
+            "label": "接线柱 A"
+          },
+          "B": {
+            "label": "接线柱 B"
+          }
+        },
+        "defaults": {
+          "E": 100
+        },
+        "initialState": {},
+        "procedural": false,
+        "thumbnail": "sensor_resistors_cadquery",
+        "controls": [
+          {
+            "key": "E",
+            "type": "range",
+            "min": 0,
+            "max": 1000,
+            "step": 5,
+            "unit": "lx"
+          }
+        ],
+        "verified": false
+      },
+      {
+        "id": "ammeter",
+        "name": "电流表",
+        "terminals": {
+          "3": {
+            "label": "3 A 量程",
+            "pol": "+"
+          },
+          "-": {
+            "label": "− 公共端",
+            "pol": "-"
+          },
+          "0.6": {
+            "label": "0.6 A 量程",
+            "pol": "+"
+          }
+        },
+        "defaults": {},
+        "initialState": {},
+        "procedural": false,
+        "thumbnail": "ammeter_cadquery",
+        "controls": [],
+        "verified": false
+      },
+      {
+        "id": "voltmeter",
+        "name": "电压表",
+        "terminals": {
+          "3": {
+            "label": "3 V 量程",
+            "pol": "+"
+          },
+          "15": {
+            "label": "15 V 量程",
+            "pol": "+"
+          },
+          "-": {
+            "label": "− 公共端",
+            "pol": "-"
+          }
+        },
+        "defaults": {},
+        "initialState": {},
+        "procedural": false,
+        "thumbnail": "voltmeter_cadquery",
+        "controls": [],
+        "verified": false
+      },
+      {
+        "id": "galvanometer",
+        "name": "灵敏检流计",
+        "terminals": {
+          "A": {
+            "label": "接线柱 A"
+          },
+          "B": {
+            "label": "接线柱 B"
+          }
+        },
+        "defaults": {},
+        "initialState": {},
+        "procedural": false,
+        "thumbnail": "galvanometer_cadquery",
+        "controls": [],
+        "verified": false
+      },
+      {
+        "id": "fuse",
+        "name": "保险丝与保险座",
+        "terminals": {
+          "A": {
+            "label": "接线柱 A"
+          },
+          "B": {
+            "label": "接线柱 B"
+          }
+        },
+        "defaults": {
+          "rating": 1
+        },
+        "initialState": {
+          "heat": 0,
+          "blown": false
+        },
+        "procedural": false,
+        "thumbnail": "fuse_holder_cadquery",
+        "controls": [
+          {
+            "key": "rating",
+            "type": "select",
+            "options": [
+              [
+                0.5,
+                "0.5 A"
+              ],
+              [
+                1,
+                "1 A"
+              ],
+              [
+                2,
+                "2 A"
+              ]
+            ]
+          },
+          {
+            "key": "replace",
+            "type": "button"
+          }
+        ],
+        "verified": false
+      },
+      {
+        "id": "capacitor",
+        "name": "平行板电容器",
+        "terminals": {
+          "A": {
+            "label": "极板 A"
+          },
+          "B": {
+            "label": "极板 B（可移动）"
+          }
+        },
+        "defaults": {
+          "d": 32,
+          "dielectric": false
+        },
+        "initialState": {
+          "v": 0
+        },
+        "procedural": false,
+        "thumbnail": "capacitor_cadquery",
+        "controls": [
+          {
+            "key": "d",
+            "type": "range",
+            "min": 32,
+            "max": 96,
+            "step": 1,
+            "unit": "mm"
+          },
+          {
+            "key": "dielectric",
+            "type": "toggle"
+          }
+        ],
+        "verified": false
+      },
+      {
+        "id": "elcap",
+        "name": "电解电容器",
+        "terminals": {
+          "+": {
+            "label": "正极 +",
+            "pol": "+"
+          },
+          "-": {
+            "label": "负极 −",
+            "pol": "-"
+          }
+        },
+        "defaults": {
+          "C": 1000
+        },
+        "initialState": {
+          "v": 0
+        },
+        "procedural": true,
+        "thumbnail": null,
+        "controls": [
+          {
+            "key": "C",
+            "type": "select",
+            "options": [
+              [
+                470,
+                "470 μF"
+              ],
+              [
+                1000,
+                "1000 μF"
+              ],
+              [
+                2200,
+                "2200 μF"
+              ],
+              [
+                4700,
+                "4700 μF"
+              ]
+            ]
+          },
+          {
+            "key": "discharge",
+            "type": "button"
+          }
+        ],
+        "verified": false
+      },
+      {
+        "id": "motor",
+        "name": "教学直流电动机",
+        "terminals": {
+          "A": {
+            "label": "接线柱 A（电刷）"
+          },
+          "B": {
+            "label": "接线柱 B（电刷）"
+          }
+        },
+        "defaults": {
+          "stalled": false
+        },
+        "initialState": {
+          "w": 0,
+          "stalled": false,
+          "angle": 0
+        },
+        "procedural": false,
+        "thumbnail": "dc_motor_cadquery",
+        "controls": [
+          {
+            "key": "stalled",
+            "type": "toggle"
+          }
+        ],
+        "verified": false
+      },
+      {
+        "id": "solenoid",
+        "name": "螺线管与铁芯",
+        "terminals": {
+          "A": {
+            "label": "接线柱 A"
+          },
+          "B": {
+            "label": "接线柱 B"
+          }
+        },
+        "defaults": {
+          "core": true
+        },
+        "initialState": {},
+        "procedural": false,
+        "thumbnail": "solenoid_cadquery",
+        "controls": [
+          {
+            "key": "core",
+            "type": "toggle"
+          }
+        ],
+        "verified": false
+      }
+    ],
+    "presets": [
+      {
+        "id": "blank",
+        "title": "空白实验台",
+        "tag": "自由搭建",
+        "description": "从器材柜拖出器材，点击接线柱开始连线。",
+        "parts": [],
+        "wires": [],
+        "teachingRequirements": [
+          "点击器材柜中的器材，再在台面上点击放置。",
+          "点击一个接线柱，再点击另一个接线柱即可连线；拖拽也可以。",
+          "按 R 旋转所选器材，Delete 删除，Ctrl+Z 撤销。"
+        ],
+        "verified": false
+      },
+      {
+        "id": "ohm",
+        "title": "伏安法测电阻",
+        "tag": "外接法 · 限流",
+        "description": "电流表串联、电压表并联，改变滑片位置记录多组 U、I，求 R = U / I。",
+        "parts": [
+          {
+            "id": "E",
+            "type": "battery",
+            "x": -470,
+            "y": 170
+          },
+          {
+            "id": "S",
+            "type": "switch",
+            "x": -250,
+            "y": 230
+          },
+          {
+            "id": "Rp",
+            "type": "rheostat",
+            "x": 60,
+            "y": 250,
+            "params": {
+              "s": 0
+            }
+          },
+          {
+            "id": "R",
+            "type": "resistor10",
+            "x": 380,
+            "y": 30
+          },
+          {
+            "id": "A",
+            "type": "ammeter",
+            "x": -150,
+            "y": -200
+          },
+          {
+            "id": "V",
+            "type": "voltmeter",
+            "x": 360,
+            "y": -240
+          }
+        ],
+        "wires": [
+          {
+            "a": "E:+",
+            "b": "S:A",
+            "color": "red"
+          },
+          {
+            "a": "S:B",
+            "b": "Rp:C",
+            "color": "red"
+          },
+          {
+            "a": "Rp:B",
+            "b": "A:0.6",
+            "color": "red"
+          },
+          {
+            "a": "A:-",
+            "b": "R:A",
+            "color": "yellow"
+          },
+          {
+            "a": "R:B",
+            "b": "E:-",
+            "color": "black"
+          },
+          {
+            "a": "R:A",
+            "b": "V:3",
+            "color": "red"
+          },
+          {
+            "a": "R:B",
+            "b": "V:-",
+            "color": "black"
+          }
+        ],
+        "teachingRequirements": [
+          "闭合开关前，滑片应在使接入电阻最大的一端（本例为 A 端）。",
+          "移动滑片，至少记录 3 组 U、I，点击“记录数据”。",
+          "外接法：电压表分流，测得 R 偏小；待测电阻越小误差越小。"
+        ],
+        "verified": false
+      },
+      {
+        "id": "lamp-iu",
+        "title": "描绘小灯泡的伏安特性曲线",
+        "tag": "分压接法",
+        "description": "用分压接法让电压从 0 开始变化，观察灯丝电阻随温度升高而增大。",
+        "parts": [
+          {
+            "id": "P",
+            "type": "dcsupply",
+            "x": -470,
+            "y": 180,
+            "params": {
+              "V": 4
+            }
+          },
+          {
+            "id": "S",
+            "type": "switch",
+            "x": -210,
+            "y": 240
+          },
+          {
+            "id": "Rp",
+            "type": "rheostat",
+            "x": 120,
+            "y": 260,
+            "params": {
+              "s": 0,
+              "Rmax": 20
+            }
+          },
+          {
+            "id": "L",
+            "type": "lamp",
+            "x": 420,
+            "y": 40
+          },
+          {
+            "id": "A",
+            "type": "ammeter",
+            "x": -110,
+            "y": -200
+          },
+          {
+            "id": "V",
+            "type": "voltmeter",
+            "x": 380,
+            "y": -230
+          }
+        ],
+        "wires": [
+          {
+            "a": "P:+",
+            "b": "S:A",
+            "color": "red"
+          },
+          {
+            "a": "S:B",
+            "b": "Rp:B",
+            "color": "red"
+          },
+          {
+            "a": "Rp:A",
+            "b": "P:-",
+            "color": "black"
+          },
+          {
+            "a": "Rp:C",
+            "b": "A:0.6",
+            "color": "red"
+          },
+          {
+            "a": "A:-",
+            "b": "L:A",
+            "color": "yellow"
+          },
+          {
+            "a": "L:B",
+            "b": "Rp:A",
+            "color": "black"
+          },
+          {
+            "a": "L:A",
+            "b": "V:3",
+            "color": "red"
+          },
+          {
+            "a": "L:B",
+            "b": "V:-",
+            "color": "black"
+          }
+        ],
+        "teachingRequirements": [
+          "分压接法：滑片从 A 端开始，灯两端电压从 0 增大。",
+          "每隔约 0.2 V 记录一次，打开“数据”窗口看 I–U 图像。",
+          "图像向电压轴弯曲：电压越高，灯丝温度越高，电阻越大。"
+        ],
+        "verified": false
+      },
+      {
+        "id": "emf",
+        "title": "测电源的电动势和内阻",
+        "tag": "U = E − Ir",
+        "description": "改变外电阻，记录路端电压 U 与电流 I，U–I 图像的纵截距为 E，斜率绝对值为 r。",
+        "parts": [
+          {
+            "id": "E",
+            "type": "battery",
+            "x": -440,
+            "y": 160,
+            "params": {
+              "E": 2.95,
+              "r": 1.6
+            }
+          },
+          {
+            "id": "S",
+            "type": "switch",
+            "x": -200,
+            "y": 240
+          },
+          {
+            "id": "Rp",
+            "type": "rheostat",
+            "x": 140,
+            "y": 250,
+            "params": {
+              "Rmax": 20,
+              "s": 1
+            }
+          },
+          {
+            "id": "A",
+            "type": "ammeter",
+            "x": 140,
+            "y": -170
+          },
+          {
+            "id": "V",
+            "type": "voltmeter",
+            "x": -330,
+            "y": -220
+          }
+        ],
+        "wires": [
+          {
+            "a": "E:+",
+            "b": "S:A",
+            "color": "red"
+          },
+          {
+            "a": "S:B",
+            "b": "Rp:C",
+            "color": "red"
+          },
+          {
+            "a": "Rp:A",
+            "b": "A:0.6",
+            "color": "yellow"
+          },
+          {
+            "a": "A:-",
+            "b": "E:-",
+            "color": "black"
+          },
+          {
+            "a": "S:B",
+            "b": "V:3",
+            "color": "red"
+          },
+          {
+            "a": "E:-",
+            "b": "V:-",
+            "color": "black"
+          }
+        ],
+        "teachingRequirements": [
+          "电池用旧电池（内阻较大），路端电压变化更明显。",
+          "记录 5 组以上数据，画 U–I 图线，延长交 U 轴得 E。",
+          "电流不宜过大、通电时间不宜过长，以免电池极化。"
+        ],
+        "verified": false
+      },
+      {
+        "id": "parallel",
+        "title": "串联与并联",
+        "tag": "电源内阻的影响",
+        "description": "两灯并联后再与开关串联。闭合支路开关，观察总电流与各灯亮度变化。",
+        "parts": [
+          {
+            "id": "E",
+            "type": "battery",
+            "x": -470,
+            "y": 120,
+            "params": {
+              "r": 1
+            }
+          },
+          {
+            "id": "S1",
+            "type": "switch",
+            "x": -230,
+            "y": 250
+          },
+          {
+            "id": "L1",
+            "type": "lamp",
+            "x": 120,
+            "y": 260
+          },
+          {
+            "id": "S2",
+            "type": "switch",
+            "x": -40,
+            "y": 20
+          },
+          {
+            "id": "L2",
+            "type": "lamp",
+            "x": 230,
+            "y": 20
+          },
+          {
+            "id": "A",
+            "type": "ammeter",
+            "x": -150,
+            "y": -230
+          }
+        ],
+        "wires": [
+          {
+            "a": "E:+",
+            "b": "S1:A",
+            "color": "red"
+          },
+          {
+            "a": "S1:B",
+            "b": "L1:A",
+            "color": "red"
+          },
+          {
+            "a": "S1:B",
+            "b": "S2:A",
+            "color": "red"
+          },
+          {
+            "a": "S2:B",
+            "b": "L2:A",
+            "color": "yellow"
+          },
+          {
+            "a": "L1:B",
+            "b": "A:3",
+            "color": "blue"
+          },
+          {
+            "a": "L2:B",
+            "b": "A:3",
+            "color": "blue"
+          },
+          {
+            "a": "A:-",
+            "b": "E:-",
+            "color": "black"
+          }
+        ],
+        "teachingRequirements": [
+          "先闭合 S1，再闭合 S2：总电流增大。",
+          "电源有内阻时，并联支路增加使路端电压下降，L1 略变暗。",
+          "把电池内阻调为 0.1 Ω 再试，比较差别。"
+        ],
+        "verified": false
+      },
+      {
+        "id": "led",
+        "title": "二极管的单向导电性",
+        "tag": "换向开关",
+        "description": "双刀双掷开关接成换向开关，切换方向，观察 LED 何时发光。",
+        "parts": [
+          {
+            "id": "P",
+            "type": "dcsupply",
+            "x": -470,
+            "y": 160,
+            "params": {
+              "V": 3
+            }
+          },
+          {
+            "id": "K",
+            "type": "dpdt",
+            "x": -170,
+            "y": 120,
+            "params": {
+              "pos": "A"
+            }
+          },
+          {
+            "id": "R",
+            "type": "resistor50",
+            "x": 160,
+            "y": 230
+          },
+          {
+            "id": "D",
+            "type": "led",
+            "x": 300,
+            "y": 40
+          },
+          {
+            "id": "A",
+            "type": "ammeter",
+            "x": 80,
+            "y": -210
+          }
+        ],
+        "wires": [
+          {
+            "a": "P:+",
+            "b": "K:C1",
+            "color": "red"
+          },
+          {
+            "a": "P:-",
+            "b": "K:C2",
+            "color": "black"
+          },
+          {
+            "a": "K:A1",
+            "b": "K:B2",
+            "color": "yellow"
+          },
+          {
+            "a": "K:A2",
+            "b": "K:B1",
+            "color": "blue"
+          },
+          {
+            "a": "K:A1",
+            "b": "R:A",
+            "color": "red"
+          },
+          {
+            "a": "R:B",
+            "b": "D:+",
+            "color": "red"
+          },
+          {
+            "a": "D:-",
+            "b": "A:0.6",
+            "color": "green"
+          },
+          {
+            "a": "A:-",
+            "b": "K:A2",
+            "color": "black"
+          }
+        ],
+        "teachingRequirements": [
+          "刀片合向 A：LED 正向导通发光。合向 B：电压反向，LED 不亮，电流为零（电流表指针几乎不动）。",
+          "去掉 50 Ω 限流电阻直接接电源，LED 会因电流过大烧坏。",
+          "换成不同颜色的 LED，比较导通电压。"
+        ],
+        "verified": false
+      },
+      {
+        "id": "motor",
+        "title": "电动机的反电动势",
+        "tag": "转动 vs 卡住",
+        "description": "电动机刚通电时电流大，转起来后反电动势使电流减小；卡住转子电流又变大。",
+        "parts": [
+          {
+            "id": "P",
+            "type": "dcsupply",
+            "x": -470,
+            "y": 170,
+            "params": {
+              "V": 3
+            }
+          },
+          {
+            "id": "S",
+            "type": "switch",
+            "x": -220,
+            "y": 250
+          },
+          {
+            "id": "M",
+            "type": "motor",
+            "x": 230,
+            "y": 160
+          },
+          {
+            "id": "A",
+            "type": "ammeter",
+            "x": -100,
+            "y": -200
+          },
+          {
+            "id": "V",
+            "type": "voltmeter",
+            "x": 300,
+            "y": -220
+          }
+        ],
+        "wires": [
+          {
+            "a": "P:+",
+            "b": "S:A",
+            "color": "red"
+          },
+          {
+            "a": "S:B",
+            "b": "A:3",
+            "color": "red"
+          },
+          {
+            "a": "A:-",
+            "b": "M:A",
+            "color": "yellow"
+          },
+          {
+            "a": "M:B",
+            "b": "P:-",
+            "color": "black"
+          },
+          {
+            "a": "M:A",
+            "b": "V:3",
+            "color": "red"
+          },
+          {
+            "a": "M:B",
+            "b": "V:-",
+            "color": "black"
+          }
+        ],
+        "teachingRequirements": [
+          "闭合开关，注意电流表指针先大后小。",
+          "在属性中勾选“卡住转子”，电流增大到 U/R，线圈发热。",
+          "电动机正常工作时 UI > I²R，多出的部分转化为机械能。"
+        ],
+        "verified": false
+      },
+      {
+        "id": "rc",
+        "title": "电容器的充电与放电",
+        "tag": "建议慢放",
+        "description": "双刀开关一侧经电阻箱充电，另一侧通过 LED 与电阻放电。",
+        "parts": [
+          {
+            "id": "P",
+            "type": "dcsupply",
+            "x": -490,
+            "y": 180,
+            "params": {
+              "V": 6
+            }
+          },
+          {
+            "id": "Rb",
+            "type": "resbox",
+            "x": -170,
+            "y": 280,
+            "params": {
+              "d": [
+                0,
+                5,
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "id": "K",
+            "type": "dpdt",
+            "x": -140,
+            "y": 30,
+            "params": {
+              "pos": "off"
+            }
+          },
+          {
+            "id": "C",
+            "type": "elcap",
+            "x": 160,
+            "y": 40,
+            "params": {
+              "C": 4700
+            }
+          },
+          {
+            "id": "R",
+            "type": "resistor50",
+            "x": 170,
+            "y": 240
+          },
+          {
+            "id": "D",
+            "type": "led",
+            "x": 420,
+            "y": 200,
+            "params": {
+              "color": "green"
+            }
+          },
+          {
+            "id": "V",
+            "type": "voltmeter",
+            "x": 260,
+            "y": -220
+          }
+        ],
+        "wires": [
+          {
+            "a": "P:+",
+            "b": "Rb:A",
+            "color": "red"
+          },
+          {
+            "a": "Rb:B",
+            "b": "K:A1",
+            "color": "red"
+          },
+          {
+            "a": "K:C1",
+            "b": "C:+",
+            "color": "yellow"
+          },
+          {
+            "a": "C:-",
+            "b": "P:-",
+            "color": "black"
+          },
+          {
+            "a": "K:B1",
+            "b": "R:A",
+            "color": "blue"
+          },
+          {
+            "a": "R:B",
+            "b": "D:+",
+            "color": "blue"
+          },
+          {
+            "a": "D:-",
+            "b": "C:-",
+            "color": "black"
+          },
+          {
+            "a": "C:+",
+            "b": "V:15",
+            "color": "red"
+          },
+          {
+            "a": "C:-",
+            "b": "V:-",
+            "color": "black"
+          }
+        ],
+        "teachingRequirements": [
+          "把刀片合向 A：电容经 500 Ω 充电，电压表读数先快后慢地上升（τ = RC ≈ 2.4 s）。",
+          "再合向 B：电容通过 LED 放电，LED 闪亮后逐渐熄灭。",
+          "左上角可切换 ×0.25 慢放，观察过程。"
+        ],
+        "verified": false
+      },
+      {
+        "id": "sensor",
+        "title": "热敏电阻与光敏电阻",
+        "tag": "传感器",
+        "description": "两条支路分别用 NTC 控制小灯泡、用光敏电阻控制 LED。",
+        "parts": [
+          {
+            "id": "P",
+            "type": "dcsupply",
+            "x": -480,
+            "y": 150,
+            "params": {
+              "V": 3
+            }
+          },
+          {
+            "id": "Rt",
+            "type": "ntc",
+            "x": -110,
+            "y": 260
+          },
+          {
+            "id": "L",
+            "type": "lamp",
+            "x": 150,
+            "y": 260
+          },
+          {
+            "id": "Rg",
+            "type": "ldr",
+            "x": -110,
+            "y": 20,
+            "params": {
+              "E": 300
+            }
+          },
+          {
+            "id": "D",
+            "type": "led",
+            "x": 150,
+            "y": 20
+          },
+          {
+            "id": "A",
+            "type": "ammeter",
+            "x": -150,
+            "y": -220
+          }
+        ],
+        "wires": [
+          {
+            "a": "P:+",
+            "b": "Rt:A",
+            "color": "red"
+          },
+          {
+            "a": "Rt:B",
+            "b": "L:A",
+            "color": "red"
+          },
+          {
+            "a": "L:B",
+            "b": "A:0.6",
+            "color": "yellow"
+          },
+          {
+            "a": "P:+",
+            "b": "Rg:A",
+            "color": "red"
+          },
+          {
+            "a": "Rg:B",
+            "b": "D:+",
+            "color": "red"
+          },
+          {
+            "a": "D:-",
+            "b": "P:-",
+            "color": "black"
+          },
+          {
+            "a": "A:-",
+            "b": "P:-",
+            "color": "black"
+          }
+        ],
+        "teachingRequirements": [
+          "选中热敏电阻，升高温度：电阻减小，灯变亮、电流表示数变大。",
+          "选中光敏电阻，减弱光照：电阻增大，LED 变暗直至熄灭。",
+          "这就是温控、光控电路的工作原理。"
+        ],
+        "verified": false
+      },
+      {
+        "id": "fuse",
+        "title": "保险丝的作用",
+        "tag": "短路保护",
+        "description": "S2 闭合会把灯泡短路，观察保险丝熔断。",
+        "parts": [
+          {
+            "id": "P",
+            "type": "dcsupply",
+            "x": -470,
+            "y": 170,
+            "params": {
+              "V": 3,
+              "Ilim": 2
+            }
+          },
+          {
+            "id": "S1",
+            "type": "switch",
+            "x": -220,
+            "y": 250
+          },
+          {
+            "id": "F",
+            "type": "fuse",
+            "x": 50,
+            "y": 260,
+            "params": {
+              "rating": 1
+            }
+          },
+          {
+            "id": "L",
+            "type": "lamp",
+            "x": 330,
+            "y": 150
+          },
+          {
+            "id": "S2",
+            "type": "switch",
+            "x": 300,
+            "y": -60
+          },
+          {
+            "id": "A",
+            "type": "ammeter",
+            "x": -110,
+            "y": -210
+          }
+        ],
+        "wires": [
+          {
+            "a": "P:+",
+            "b": "S1:A",
+            "color": "red"
+          },
+          {
+            "a": "S1:B",
+            "b": "F:A",
+            "color": "red"
+          },
+          {
+            "a": "F:B",
+            "b": "L:A",
+            "color": "red"
+          },
+          {
+            "a": "L:B",
+            "b": "A:3",
+            "color": "yellow"
+          },
+          {
+            "a": "A:-",
+            "b": "P:-",
+            "color": "black"
+          },
+          {
+            "a": "F:B",
+            "b": "S2:A",
+            "color": "blue"
+          },
+          {
+            "a": "S2:B",
+            "b": "L:B",
+            "color": "blue"
+          }
+        ],
+        "teachingRequirements": [
+          "闭合 S1，灯正常发光。",
+          "再闭合 S2：灯被短路，电流猛增，保险丝发红熔断。",
+          "在属性中可“更换保险丝”，改用 2 A 规格再试。"
+        ],
+        "verified": false
+      },
+      {
+        "id": "solenoid",
+        "title": "通电螺线管的磁场",
+        "tag": "右手螺旋定则",
+        "description": "换向开关改变电流方向，观察磁感线方向与 N、S 极的变化。",
+        "parts": [
+          {
+            "id": "P",
+            "type": "dcsupply",
+            "x": -470,
+            "y": 160,
+            "params": {
+              "V": 3
+            }
+          },
+          {
+            "id": "K",
+            "type": "dpdt",
+            "x": -170,
+            "y": 110,
+            "params": {
+              "pos": "A"
+            }
+          },
+          {
+            "id": "Rp",
+            "type": "rheostat",
+            "x": 180,
+            "y": 270,
+            "params": {
+              "s": 0.4,
+              "Rmax": 20
+            }
+          },
+          {
+            "id": "Lx",
+            "type": "solenoid",
+            "x": 230,
+            "y": 20
+          },
+          {
+            "id": "A",
+            "type": "ammeter",
+            "x": -60,
+            "y": -220
+          }
+        ],
+        "wires": [
+          {
+            "a": "P:+",
+            "b": "K:C1",
+            "color": "red"
+          },
+          {
+            "a": "P:-",
+            "b": "K:C2",
+            "color": "black"
+          },
+          {
+            "a": "K:A1",
+            "b": "K:B2",
+            "color": "yellow"
+          },
+          {
+            "a": "K:A2",
+            "b": "K:B1",
+            "color": "blue"
+          },
+          {
+            "a": "K:A1",
+            "b": "Rp:A",
+            "color": "red"
+          },
+          {
+            "a": "Rp:C",
+            "b": "Lx:A",
+            "color": "red"
+          },
+          {
+            "a": "Lx:B",
+            "b": "A:3",
+            "color": "green"
+          },
+          {
+            "a": "A:-",
+            "b": "K:A2",
+            "color": "black"
+          }
+        ],
+        "teachingRequirements": [
+          "合向 A：电流从 A 端流入螺线管，右手握住，四指沿电流方向，拇指所指的 B 端为 N 极。",
+          "合向 B：电流反向，磁感线流动方向和 N、S 极对调。",
+          "拔出铁芯或减小电流（移动滑片），磁感线变暗。"
+        ],
+        "verified": false
+      },
+      {
+        "id": "plate",
+        "title": "平行板电容器",
+        "tag": "C = εS / d",
+        "description": "充电后断开开关，拉开极板：Q 不变，C 减小，U 增大；保持连接则 U 不变、Q 减小。",
+        "parts": [
+          {
+            "id": "P",
+            "type": "dcsupply",
+            "x": -470,
+            "y": 170,
+            "params": {
+              "V": 10
+            }
+          },
+          {
+            "id": "S",
+            "type": "switch",
+            "x": -220,
+            "y": 250
+          },
+          {
+            "id": "C",
+            "type": "capacitor",
+            "x": 230,
+            "y": 120
+          }
+        ],
+        "wires": [
+          {
+            "a": "P:+",
+            "b": "S:A",
+            "color": "red"
+          },
+          {
+            "a": "S:B",
+            "b": "C:A",
+            "color": "red"
+          },
+          {
+            "a": "C:B",
+            "b": "P:-",
+            "color": "black"
+          }
+        ],
+        "teachingRequirements": [
+          "闭合开关给电容器充电，板间出现电场线、极板上出现正负电荷。",
+          "断开开关后拖动右侧极板拉开距离：Q 不变，U 升高（看属性面板）。",
+          "插入介质板（点击介质板或在属性中勾选），C 增大。"
+        ],
+        "verified": false
+      }
+    ]
+  },
+  "chemistry": {
+    "equipment": [
+      {
+        "id": "beaker250",
+        "name": "250 mL 烧杯",
+        "kind": "vessel",
+        "geometry": {
+          "asset": "chem_beakers",
+          "groups": [
+            "beaker250"
+          ],
+          "axis": "beaker250",
+          "roles": {},
+          "rotate": null,
+          "zFrom": null
+        },
+        "profileGroups": null,
+        "sockets": [],
+        "flow": 28,
+        "heat": true,
+        "fill": null,
+        "tool": null,
+        "isTube": false,
+        "gripY": null,
+        "procedural": false,
+        "verified": false
+      },
+      {
+        "id": "beaker100",
+        "name": "100 mL 烧杯",
+        "kind": "vessel",
+        "geometry": {
+          "asset": "chem_beakers",
+          "groups": [
+            "beaker100"
+          ],
+          "axis": "beaker100",
+          "roles": {},
+          "rotate": null,
+          "zFrom": null
+        },
+        "profileGroups": null,
+        "sockets": [],
+        "flow": 20,
+        "heat": true,
+        "fill": null,
+        "tool": null,
+        "isTube": false,
+        "gripY": null,
+        "procedural": false,
+        "verified": false
+      },
+      {
+        "id": "tube",
+        "name": "试管",
+        "kind": "vessel",
+        "geometry": {
+          "asset": "chem_test_tubes",
+          "groups": [
+            "tube150"
+          ],
+          "axis": "tube150",
+          "roles": {},
+          "rotate": null,
+          "zFrom": null
+        },
+        "profileGroups": null,
+        "sockets": [],
+        "flow": 6,
+        "heat": true,
+        "fill": null,
+        "tool": null,
+        "isTube": true,
+        "gripY": null,
+        "procedural": false,
+        "verified": false
+      },
+      {
+        "id": "conical",
+        "name": "250 mL 锥形瓶",
+        "kind": "vessel",
+        "geometry": {
+          "asset": "chem_conical_flask",
+          "groups": [
+            "flask"
+          ],
+          "axis": "flask",
+          "roles": {},
+          "rotate": null,
+          "zFrom": null
+        },
+        "profileGroups": null,
+        "sockets": [],
+        "flow": 14,
+        "heat": true,
+        "fill": null,
+        "tool": null,
+        "isTube": false,
+        "gripY": null,
+        "procedural": false,
+        "verified": false
+      },
+      {
+        "id": "cylinder",
+        "name": "100 mL 量筒",
+        "kind": "vessel",
+        "geometry": {
+          "asset": "chem_graduated_cylinders",
+          "groups": [
+            "cylinder100",
+            "foot100"
+          ],
+          "axis": "cylinder100",
+          "roles": {},
+          "rotate": null,
+          "zFrom": null
+        },
+        "profileGroups": [
+          "cylinder100"
+        ],
+        "sockets": [],
+        "flow": 14,
+        "heat": false,
+        "fill": null,
+        "tool": null,
+        "isTube": false,
+        "gripY": null,
+        "procedural": false,
+        "verified": false
+      },
+      {
+        "id": "roundFlask",
+        "name": "250 mL 圆底烧瓶",
+        "kind": "vessel",
+        "geometry": {
+          "asset": "chem_round_flasks",
+          "groups": [
+            "flask250",
+            "cradle250"
+          ],
+          "axis": "flask250",
+          "roles": {},
+          "rotate": null,
+          "zFrom": null
+        },
+        "profileGroups": [
+          "flask250"
+        ],
+        "sockets": [],
+        "flow": 12,
+        "heat": true,
+        "fill": null,
+        "tool": null,
+        "isTube": false,
+        "gripY": null,
+        "procedural": false,
+        "verified": false
+      },
+      {
+        "id": "crucible",
+        "name": "瓷坩埚",
+        "kind": "vessel",
+        "geometry": {
+          "asset": "chem_porcelain_heating",
+          "groups": [
+            "crucible"
+          ],
+          "axis": "crucible",
+          "roles": {},
+          "rotate": null,
+          "zFrom": null
+        },
+        "profileGroups": [
+          "crucible"
+        ],
+        "sockets": [],
+        "flow": 6,
+        "heat": true,
+        "fill": 0.85,
+        "tool": null,
+        "isTube": false,
+        "gripY": null,
+        "procedural": false,
+        "verified": false
+      },
+      {
+        "id": "dish",
+        "name": "蒸发皿",
+        "kind": "vessel",
+        "geometry": {
+          "asset": "chem_porcelain_heating",
+          "groups": [
+            "dish"
+          ],
+          "axis": "dish",
+          "roles": {},
+          "rotate": null,
+          "zFrom": null
+        },
+        "profileGroups": [
+          "dish"
+        ],
+        "sockets": [],
+        "flow": 10,
+        "heat": true,
+        "fill": 0.8,
+        "tool": null,
+        "isTube": false,
+        "gripY": null,
+        "procedural": false,
+        "verified": false
+      },
+      {
+        "id": "bottleN",
+        "name": "细口瓶",
+        "kind": "vessel",
+        "geometry": {
+          "asset": "chem_reagent_bottles",
+          "groups": [
+            "bottle_1",
+            "stopper_1"
+          ],
+          "axis": "bottle_1",
+          "roles": {
+            "stopper_1": "stopper"
+          },
+          "rotate": null,
+          "zFrom": null
+        },
+        "profileGroups": [
+          "bottle_1"
+        ],
+        "sockets": [],
+        "flow": 14,
+        "heat": false,
+        "fill": null,
+        "tool": null,
+        "isTube": false,
+        "gripY": null,
+        "procedural": false,
+        "verified": false
+      },
+      {
+        "id": "bottleNA",
+        "name": "棕色细口瓶",
+        "kind": "vessel",
+        "geometry": {
+          "asset": "chem_reagent_bottles",
+          "groups": [
+            "bottle_3",
+            "stopper_3"
+          ],
+          "axis": "bottle_3",
+          "roles": {
+            "stopper_3": "stopper"
+          },
+          "rotate": null,
+          "zFrom": null
+        },
+        "profileGroups": [
+          "bottle_3"
+        ],
+        "sockets": [],
+        "flow": 14,
+        "heat": false,
+        "fill": null,
+        "tool": null,
+        "isTube": false,
+        "gripY": null,
+        "procedural": false,
+        "verified": false
+      },
+      {
+        "id": "bottleW",
+        "name": "广口瓶",
+        "kind": "vessel",
+        "geometry": {
+          "asset": "chem_reagent_bottles",
+          "groups": [
+            "bottle_0",
+            "stopper_0"
+          ],
+          "axis": "bottle_0",
+          "roles": {
+            "stopper_0": "stopper"
+          },
+          "rotate": null,
+          "zFrom": null
+        },
+        "profileGroups": [
+          "bottle_0"
+        ],
+        "sockets": [],
+        "flow": 14,
+        "heat": false,
+        "fill": null,
+        "tool": null,
+        "isTube": false,
+        "gripY": null,
+        "procedural": false,
+        "verified": false
+      },
+      {
+        "id": "bottleWA",
+        "name": "棕色广口瓶",
+        "kind": "vessel",
+        "geometry": {
+          "asset": "chem_reagent_bottles",
+          "groups": [
+            "bottle_2",
+            "stopper_2"
+          ],
+          "axis": "bottle_2",
+          "roles": {
+            "stopper_2": "stopper"
+          },
+          "rotate": null,
+          "zFrom": null
+        },
+        "profileGroups": [
+          "bottle_2"
+        ],
+        "sockets": [],
+        "flow": 14,
+        "heat": false,
+        "fill": null,
+        "tool": null,
+        "isTube": false,
+        "gripY": null,
+        "procedural": false,
+        "verified": false
+      },
+      {
+        "id": "dropBottle",
+        "name": "滴瓶",
+        "kind": "vessel",
+        "geometry": {
+          "asset": "chem_droppers",
+          "groups": [
+            "clear_bottle",
+            "clear_tube",
+            "clear_cap",
+            "clear_bulb"
+          ],
+          "axis": "clear_bottle",
+          "roles": {
+            "clear_tube": "stopper",
+            "clear_cap": "stopper",
+            "clear_bulb": "stopper"
+          },
+          "rotate": null,
+          "zFrom": null
+        },
+        "profileGroups": [
+          "clear_bottle"
+        ],
+        "sockets": [],
+        "flow": 8,
+        "heat": false,
+        "fill": null,
+        "tool": null,
+        "isTube": false,
+        "gripY": null,
+        "procedural": false,
+        "verified": false
+      },
+      {
+        "id": "dropBottleA",
+        "name": "棕色滴瓶",
+        "kind": "vessel",
+        "geometry": {
+          "asset": "chem_droppers",
+          "groups": [
+            "amber_bottle",
+            "amber_tube",
+            "amber_cap",
+            "amber_bulb"
+          ],
+          "axis": "amber_bottle",
+          "roles": {
+            "amber_tube": "stopper",
+            "amber_cap": "stopper",
+            "amber_bulb": "stopper"
+          },
+          "rotate": null,
+          "zFrom": null
+        },
+        "profileGroups": [
+          "amber_bottle"
+        ],
+        "sockets": [],
+        "flow": 8,
+        "heat": false,
+        "fill": null,
+        "tool": null,
+        "isTube": false,
+        "gripY": null,
+        "procedural": false,
+        "verified": false
+      },
+      {
+        "id": "lamp",
+        "name": "酒精灯",
+        "kind": "lamp",
+        "geometry": {
+          "asset": "chem_spirit_lamp",
+          "groups": [
+            "reservoir",
+            "holder",
+            "wick"
+          ],
+          "axis": "reservoir",
+          "roles": {},
+          "rotate": null,
+          "zFrom": null
+        },
+        "profileGroups": null,
+        "sockets": [],
+        "flow": null,
+        "heat": false,
+        "fill": null,
+        "tool": null,
+        "isTube": false,
+        "gripY": null,
+        "procedural": false,
+        "verified": false
+      },
+      {
+        "id": "tripod",
+        "name": "三脚架与陶土网",
+        "kind": "fixture",
+        "geometry": {
+          "asset": "chem_tripod_gauze",
+          "groups": [
+            "tripod",
+            "gauze",
+            "ceramic"
+          ],
+          "axis": "gauze",
+          "roles": {},
+          "rotate": null,
+          "zFrom": null
+        },
+        "profileGroups": null,
+        "sockets": [
+          {
+            "p": [
+              0,
+              0.1702,
+              0
+            ],
+            "accepts": "heatVessel"
+          }
+        ],
+        "flow": null,
+        "heat": false,
+        "fill": null,
+        "tool": null,
+        "isTube": false,
+        "gripY": null,
+        "procedural": false,
+        "verified": false
+      },
+      {
+        "id": "rack",
+        "name": "试管架",
+        "kind": "fixture",
+        "geometry": {
+          "asset": "chem_test_tubes",
+          "groups": [
+            "rack_base",
+            "rack_posts",
+            "rack_guides"
+          ],
+          "axis": "rack_base",
+          "roles": {},
+          "rotate": null,
+          "zFrom": null
+        },
+        "profileGroups": null,
+        "sockets": [
+          {
+            "p": [
+              -0.048,
+              0.012,
+              0
+            ],
+            "accepts": "tube"
+          },
+          {
+            "p": [
+              -0.016,
+              0.012,
+              0
+            ],
+            "accepts": "tube"
+          },
+          {
+            "p": [
+              0.016,
+              0.012,
+              0
+            ],
+            "accepts": "tube"
+          },
+          {
+            "p": [
+              0.048,
+              0.012,
+              0
+            ],
+            "accepts": "tube"
+          }
+        ],
+        "flow": null,
+        "heat": false,
+        "fill": null,
+        "tool": null,
+        "isTube": false,
+        "gripY": null,
+        "procedural": false,
+        "verified": false
+      },
+      {
+        "id": "dropper",
+        "name": "胶头滴管",
+        "kind": "tool",
+        "geometry": {
+          "asset": "chem_droppers",
+          "groups": [
+            "clear_tube",
+            "clear_bulb"
+          ],
+          "axis": "clear_tube",
+          "roles": {},
+          "rotate": null,
+          "zFrom": null
+        },
+        "profileGroups": null,
+        "sockets": [],
+        "flow": null,
+        "heat": false,
+        "fill": null,
+        "tool": "dropper",
+        "isTube": false,
+        "gripY": 0.098,
+        "procedural": false,
+        "verified": false
+      },
+      {
+        "id": "rod",
+        "name": "玻璃棒",
+        "kind": "tool",
+        "geometry": {
+          "asset": "chem_beakers",
+          "groups": [
+            "stirrer"
+          ],
+          "axis": "stirrer",
+          "roles": {},
+          "rotate": "x-up",
+          "zFrom": null
+        },
+        "profileGroups": null,
+        "sockets": [],
+        "flow": null,
+        "heat": false,
+        "fill": null,
+        "tool": "rod",
+        "isTube": false,
+        "gripY": 0.15,
+        "procedural": false,
+        "verified": false
+      },
+      {
+        "id": "loop",
+        "name": "焰色试验铂丝",
+        "kind": "tool",
+        "geometry": {
+          "asset": "chem_flame_test_loop",
+          "groups": [
+            "handle",
+            "loop"
+          ],
+          "axis": "handle",
+          "roles": {},
+          "rotate": "x-down",
+          "zFrom": null
+        },
+        "profileGroups": null,
+        "sockets": [],
+        "flow": null,
+        "heat": false,
+        "fill": null,
+        "tool": "loop",
+        "isTube": false,
+        "gripY": 0.13,
+        "procedural": false,
+        "verified": false
+      },
+      {
+        "id": "spoon",
+        "name": "药匙",
+        "kind": "tool",
+        "geometry": {
+          "asset": "chem_spatulas",
+          "groups": [
+            "spoon"
+          ],
+          "axis": "spoon",
+          "roles": {},
+          "rotate": "x-down",
+          "zFrom": null
+        },
+        "profileGroups": null,
+        "sockets": [],
+        "flow": null,
+        "heat": false,
+        "fill": null,
+        "tool": "spoon",
+        "isTube": false,
+        "gripY": 0.11,
+        "procedural": false,
+        "verified": false
+      },
+      {
+        "id": "cspoon",
+        "name": "燃烧匙",
+        "kind": "tool",
+        "geometry": {
+          "asset": "chem_combustion_spoon",
+          "groups": [
+            "spoon"
+          ],
+          "axis": "spoon",
+          "roles": {},
+          "rotate": null,
+          "zFrom": null
+        },
+        "profileGroups": null,
+        "sockets": [],
+        "flow": null,
+        "heat": false,
+        "fill": null,
+        "tool": "spoon",
+        "isTube": false,
+        "gripY": 0.19,
+        "procedural": false,
+        "verified": false
+      },
+      {
+        "id": "splint",
+        "name": "木条",
+        "kind": "tool",
+        "geometry": null,
+        "profileGroups": null,
+        "sockets": [],
+        "flow": null,
+        "heat": false,
+        "fill": null,
+        "tool": "splint",
+        "isTube": false,
+        "gripY": 0.14,
+        "procedural": true,
+        "verified": false
+      },
+      {
+        "id": "toolrack",
+        "name": "工具座",
+        "kind": "fixture",
+        "geometry": null,
+        "profileGroups": null,
+        "sockets": [
+          {
+            "p": [
+              -0.15,
+              0.004,
+              0
+            ],
+            "accepts": "tool"
+          },
+          {
+            "p": [
+              -0.1,
+              0.004,
+              0
+            ],
+            "accepts": "tool"
+          },
+          {
+            "p": [
+              -0.05,
+              0.004,
+              0
+            ],
+            "accepts": "tool"
+          },
+          {
+            "p": [
+              0,
+              0.004,
+              0
+            ],
+            "accepts": "tool"
+          },
+          {
+            "p": [
+              0.05,
+              0.004,
+              0
+            ],
+            "accepts": "tool"
+          },
+          {
+            "p": [
+              0.1,
+              0.004,
+              0
+            ],
+            "accepts": "tool"
+          },
+          {
+            "p": [
+              0.15,
+              0.004,
+              0
+            ],
+            "accepts": "tool"
+          }
+        ],
+        "flow": null,
+        "heat": false,
+        "fill": null,
+        "tool": null,
+        "isTube": false,
+        "gripY": null,
+        "procedural": true,
+        "verified": false
+      },
+      {
+        "id": "wash",
+        "name": "洗瓶（蒸馏水）",
+        "kind": "wash",
+        "geometry": {
+          "asset": "chem_wash_bottle",
+          "groups": [
+            "body",
+            "cap",
+            "seal",
+            "tube"
+          ],
+          "axis": "body",
+          "roles": {},
+          "rotate": null,
+          "zFrom": null
+        },
+        "profileGroups": null,
+        "sockets": [],
+        "flow": null,
+        "heat": false,
+        "fill": null,
+        "tool": null,
+        "isTube": false,
+        "gripY": null,
+        "procedural": false,
+        "verified": false
+      }
+    ],
+    "reagents": [
+      {
+        "id": "HCl",
+        "name": "稀盐酸",
+        "formula": "HCl",
+        "note": "1 mol/L",
+        "bottle": "narrow",
+        "amber": false,
+        "solid": null,
+        "concentration": {
+          "H+": 1,
+          "Cl-": 1
+        },
+        "portion": null,
+        "tint": null,
+        "fun": false,
+        "verified": false
+      },
+      {
+        "id": "H2SO4",
+        "name": "稀硫酸",
+        "formula": "H₂SO₄",
+        "note": "0.5 mol/L",
+        "bottle": "narrow",
+        "amber": false,
+        "solid": null,
+        "concentration": {
+          "H+": 1,
+          "SO4": 0.5
+        },
+        "portion": null,
+        "tint": null,
+        "fun": false,
+        "verified": false
+      },
+      {
+        "id": "HNO3c",
+        "name": "浓硝酸",
+        "formula": "HNO₃",
+        "note": "14 mol/L",
+        "bottle": "narrow",
+        "amber": true,
+        "solid": null,
+        "concentration": {
+          "H+": 14,
+          "NO3-": 14
+        },
+        "portion": null,
+        "tint": [
+          1,
+          0.96,
+          0.82
+        ],
+        "fun": false,
+        "verified": false
+      },
+      {
+        "id": "HNO3d",
+        "name": "稀硝酸",
+        "formula": "HNO₃",
+        "note": "2 mol/L",
+        "bottle": "narrow",
+        "amber": false,
+        "solid": null,
+        "concentration": {
+          "H+": 2,
+          "NO3-": 2
+        },
+        "portion": null,
+        "tint": null,
+        "fun": false,
+        "verified": false
+      },
+      {
+        "id": "NaOH",
+        "name": "氢氧化钠",
+        "formula": "NaOH",
+        "note": "1 mol/L",
+        "bottle": "narrow",
+        "amber": false,
+        "solid": null,
+        "concentration": {
+          "Na+": 1,
+          "OH-": 1
+        },
+        "portion": null,
+        "tint": null,
+        "fun": false,
+        "verified": false
+      },
+      {
+        "id": "CuSO4",
+        "name": "硫酸铜",
+        "formula": "CuSO₄",
+        "note": "0.5 mol/L",
+        "bottle": "narrow",
+        "amber": false,
+        "solid": null,
+        "concentration": {
+          "Cu2+": 0.5,
+          "SO4": 0.5
+        },
+        "portion": null,
+        "tint": null,
+        "fun": false,
+        "verified": false
+      },
+      {
+        "id": "FeCl3",
+        "name": "氯化铁",
+        "formula": "FeCl₃",
+        "note": "0.5 mol/L",
+        "bottle": "narrow",
+        "amber": false,
+        "solid": null,
+        "concentration": {
+          "Fe3+": 0.5,
+          "Cl-": 1.5
+        },
+        "portion": null,
+        "tint": null,
+        "fun": false,
+        "verified": false
+      },
+      {
+        "id": "FeSO4",
+        "name": "硫酸亚铁",
+        "formula": "FeSO₄",
+        "note": "新制 0.5 mol/L",
+        "bottle": "narrow",
+        "amber": false,
+        "solid": null,
+        "concentration": {
+          "Fe2+": 0.5,
+          "SO4": 0.5
+        },
+        "portion": null,
+        "tint": null,
+        "fun": false,
+        "verified": false
+      },
+      {
+        "id": "AlCl3",
+        "name": "氯化铝",
+        "formula": "AlCl₃",
+        "note": "0.5 mol/L",
+        "bottle": "narrow",
+        "amber": false,
+        "solid": null,
+        "concentration": {
+          "Al3+": 0.5,
+          "Cl-": 1.5
+        },
+        "portion": null,
+        "tint": null,
+        "fun": false,
+        "verified": false
+      },
+      {
+        "id": "AgNO3",
+        "name": "硝酸银",
+        "formula": "AgNO₃",
+        "note": "0.1 mol/L",
+        "bottle": "narrow",
+        "amber": true,
+        "solid": null,
+        "concentration": {
+          "Ag+": 0.1,
+          "NO3-": 0.1
+        },
+        "portion": null,
+        "tint": null,
+        "fun": false,
+        "verified": false
+      },
+      {
+        "id": "BaCl2",
+        "name": "氯化钡",
+        "formula": "BaCl₂",
+        "note": "0.5 mol/L",
+        "bottle": "narrow",
+        "amber": false,
+        "solid": null,
+        "concentration": {
+          "Ba2+": 0.5,
+          "Cl-": 1
+        },
+        "portion": null,
+        "tint": null,
+        "fun": false,
+        "verified": false
+      },
+      {
+        "id": "Na2CO3",
+        "name": "碳酸钠",
+        "formula": "Na₂CO₃",
+        "note": "0.5 mol/L",
+        "bottle": "narrow",
+        "amber": false,
+        "solid": null,
+        "concentration": {
+          "Na+": 1,
+          "CO3": 0.5
+        },
+        "portion": null,
+        "tint": null,
+        "fun": false,
+        "verified": false
+      },
+      {
+        "id": "Na2SO4",
+        "name": "硫酸钠",
+        "formula": "Na₂SO₄",
+        "note": "0.5 mol/L",
+        "bottle": "narrow",
+        "amber": false,
+        "solid": null,
+        "concentration": {
+          "Na+": 1,
+          "SO4": 0.5
+        },
+        "portion": null,
+        "tint": null,
+        "fun": false,
+        "verified": false
+      },
+      {
+        "id": "KSCN",
+        "name": "硫氰化钾",
+        "formula": "KSCN",
+        "note": "0.5 mol/L",
+        "bottle": "narrow",
+        "amber": false,
+        "solid": null,
+        "concentration": {
+          "K+": 0.5,
+          "SCN-": 0.5
+        },
+        "portion": null,
+        "tint": null,
+        "fun": false,
+        "verified": false
+      },
+      {
+        "id": "NaCl",
+        "name": "氯化钠",
+        "formula": "NaCl",
+        "note": "1 mol/L",
+        "bottle": "narrow",
+        "amber": false,
+        "solid": null,
+        "concentration": {
+          "Na+": 1,
+          "Cl-": 1
+        },
+        "portion": null,
+        "tint": null,
+        "fun": false,
+        "verified": false
+      },
+      {
+        "id": "KCl",
+        "name": "氯化钾",
+        "formula": "KCl",
+        "note": "1 mol/L",
+        "bottle": "narrow",
+        "amber": false,
+        "solid": null,
+        "concentration": {
+          "K+": 1,
+          "Cl-": 1
+        },
+        "portion": null,
+        "tint": null,
+        "fun": false,
+        "verified": false
+      },
+      {
+        "id": "CaCl2",
+        "name": "氯化钙",
+        "formula": "CaCl₂",
+        "note": "0.5 mol/L",
+        "bottle": "narrow",
+        "amber": false,
+        "solid": null,
+        "concentration": {
+          "Ca2+": 0.5,
+          "Cl-": 1
+        },
+        "portion": null,
+        "tint": null,
+        "fun": false,
+        "verified": false
+      },
+      {
+        "id": "H2O2",
+        "name": "过氧化氢",
+        "formula": "H₂O₂",
+        "note": "5%",
+        "bottle": "narrow",
+        "amber": true,
+        "solid": null,
+        "concentration": {
+          "H2O2": 1.5
+        },
+        "portion": null,
+        "tint": null,
+        "fun": false,
+        "verified": false
+      },
+      {
+        "id": "KMnO4",
+        "name": "高锰酸钾",
+        "formula": "KMnO₄",
+        "note": "0.02 mol/L",
+        "bottle": "narrow",
+        "amber": true,
+        "solid": null,
+        "concentration": {
+          "K+": 0.02,
+          "MnO4-": 0.02
+        },
+        "portion": null,
+        "tint": null,
+        "fun": false,
+        "verified": false
+      },
+      {
+        "id": "I2",
+        "name": "碘水",
+        "formula": "I₂",
+        "note": "0.02 mol/L",
+        "bottle": "narrow",
+        "amber": true,
+        "solid": null,
+        "concentration": {
+          "I2": 0.02
+        },
+        "portion": null,
+        "tint": null,
+        "fun": false,
+        "verified": false
+      },
+      {
+        "id": "starch",
+        "name": "淀粉溶液",
+        "formula": "(C₆H₁₀O₅)ₙ",
+        "note": "1%",
+        "bottle": "narrow",
+        "amber": false,
+        "solid": null,
+        "concentration": {
+          "starch": 0.05
+        },
+        "portion": null,
+        "tint": [
+          0.97,
+          0.97,
+          0.95
+        ],
+        "fun": false,
+        "verified": false
+      },
+      {
+        "id": "phph",
+        "name": "酚酞",
+        "formula": "酚酞",
+        "note": "指示剂",
+        "bottle": "drop",
+        "amber": false,
+        "solid": null,
+        "concentration": {
+          "phph": 0.05
+        },
+        "portion": null,
+        "tint": null,
+        "fun": false,
+        "verified": false
+      },
+      {
+        "id": "litmus",
+        "name": "紫色石蕊",
+        "formula": "石蕊",
+        "note": "指示剂",
+        "bottle": "drop",
+        "amber": true,
+        "solid": null,
+        "concentration": {
+          "litmus": 0.05
+        },
+        "portion": null,
+        "tint": null,
+        "fun": false,
+        "verified": false
+      },
+      {
+        "id": "Zn",
+        "name": "锌粒",
+        "formula": "Zn",
+        "note": "颗粒",
+        "bottle": "wide",
+        "amber": false,
+        "solid": {
+          "Zn": 4
+        },
+        "concentration": null,
+        "portion": null,
+        "tint": null,
+        "fun": false,
+        "verified": false
+      },
+      {
+        "id": "Mg",
+        "name": "镁条",
+        "formula": "Mg",
+        "note": "已打磨",
+        "bottle": "wide",
+        "amber": false,
+        "solid": {
+          "Mg": 4
+        },
+        "concentration": null,
+        "portion": null,
+        "tint": null,
+        "fun": false,
+        "verified": false
+      },
+      {
+        "id": "Fe",
+        "name": "铁钉",
+        "formula": "Fe",
+        "note": "已除锈",
+        "bottle": "wide",
+        "amber": false,
+        "solid": {
+          "Fe": 4
+        },
+        "concentration": null,
+        "portion": null,
+        "tint": null,
+        "fun": false,
+        "verified": false
+      },
+      {
+        "id": "Cu",
+        "name": "铜丝",
+        "formula": "Cu",
+        "note": "螺旋状",
+        "bottle": "wide",
+        "amber": false,
+        "solid": {
+          "Cu": 4
+        },
+        "concentration": null,
+        "portion": null,
+        "tint": null,
+        "fun": false,
+        "verified": false
+      },
+      {
+        "id": "CaCO3",
+        "name": "大理石",
+        "formula": "CaCO₃",
+        "note": "块状",
+        "bottle": "wide",
+        "amber": false,
+        "solid": {
+          "CaCO3": 5
+        },
+        "concentration": null,
+        "portion": null,
+        "tint": null,
+        "fun": false,
+        "verified": false
+      },
+      {
+        "id": "MnO2",
+        "name": "二氧化锰",
+        "formula": "MnO₂",
+        "note": "粉末",
+        "bottle": "wide",
+        "amber": true,
+        "solid": {
+          "MnO2": 1
+        },
+        "concentration": null,
+        "portion": null,
+        "tint": null,
+        "fun": false,
+        "verified": false
+      },
+      {
+        "id": "Na",
+        "name": "金属钠",
+        "formula": "Na",
+        "note": "煤油中保存",
+        "bottle": "wide",
+        "amber": true,
+        "solid": {
+          "Na": 3
+        },
+        "concentration": null,
+        "portion": null,
+        "tint": null,
+        "fun": false,
+        "verified": false
+      },
+      {
+        "id": "K",
+        "name": "金属钾",
+        "formula": "K",
+        "note": "煤油中保存",
+        "bottle": "wide",
+        "amber": true,
+        "solid": {
+          "K": 2
+        },
+        "concentration": null,
+        "portion": null,
+        "tint": null,
+        "fun": true,
+        "verified": false
+      },
+      {
+        "id": "thermite",
+        "name": "铝热剂",
+        "formula": "Al+Fe₂O₃",
+        "note": "铝粉与氧化铁",
+        "bottle": "wide",
+        "amber": false,
+        "solid": {
+          "thermite": 4
+        },
+        "concentration": null,
+        "portion": null,
+        "tint": null,
+        "fun": true,
+        "verified": false
+      },
+      {
+        "id": "luminol",
+        "name": "鲁米诺溶液",
+        "formula": "鲁米诺",
+        "note": "碱性",
+        "bottle": "narrow",
+        "amber": false,
+        "solid": null,
+        "concentration": {
+          "luminol": 0.01,
+          "Na+": 0.1,
+          "OH-": 0.1
+        },
+        "portion": null,
+        "tint": null,
+        "fun": true,
+        "verified": false
+      },
+      {
+        "id": "K3FeCN6",
+        "name": "铁氰化钾",
+        "formula": "K₃[Fe(CN)₆]",
+        "note": "催化剂",
+        "bottle": "narrow",
+        "amber": false,
+        "solid": null,
+        "concentration": {
+          "K+": 0.15,
+          "FeCN": 0.05
+        },
+        "portion": null,
+        "tint": null,
+        "fun": true,
+        "verified": false
+      },
+      {
+        "id": "H2O2c",
+        "name": "浓过氧化氢",
+        "formula": "30% H₂O₂",
+        "note": "强氧化性",
+        "bottle": "narrow",
+        "amber": true,
+        "solid": null,
+        "concentration": {
+          "H2O2": 9.8
+        },
+        "portion": null,
+        "tint": null,
+        "fun": true,
+        "verified": false
+      },
+      {
+        "id": "KI",
+        "name": "碘化钾",
+        "formula": "KI",
+        "note": "1 mol/L",
+        "bottle": "narrow",
+        "amber": false,
+        "solid": null,
+        "concentration": {
+          "K+": 1,
+          "I-": 1
+        },
+        "portion": null,
+        "tint": null,
+        "fun": true,
+        "verified": false
+      },
+      {
+        "id": "soap",
+        "name": "洗洁精",
+        "formula": "洗洁精",
+        "note": "起泡剂",
+        "bottle": "narrow",
+        "amber": false,
+        "solid": null,
+        "concentration": {
+          "soap": 1
+        },
+        "portion": null,
+        "tint": null,
+        "fun": true,
+        "verified": false
+      },
+      {
+        "id": "HgSCN2",
+        "name": "硫氰酸汞",
+        "formula": "Hg(SCN)₂",
+        "note": "剧毒·仅虚拟演示",
+        "bottle": "wide",
+        "amber": true,
+        "solid": {
+          "HgSCN2": 3
+        },
+        "concentration": null,
+        "portion": null,
+        "tint": null,
+        "fun": true,
+        "verified": false
+      },
+      {
+        "id": "sucrose",
+        "name": "蔗糖",
+        "formula": "C₁₂H₂₂O₁₁",
+        "note": "白色晶体",
+        "bottle": "wide",
+        "amber": false,
+        "solid": {
+          "sucrose": 6
+        },
+        "concentration": null,
+        "portion": null,
+        "tint": null,
+        "fun": true,
+        "verified": false
+      },
+      {
+        "id": "H2SO4c",
+        "name": "浓硫酸",
+        "formula": "98% H₂SO₄",
+        "note": "强脱水性",
+        "bottle": "narrow",
+        "amber": false,
+        "solid": null,
+        "concentration": {
+          "H2SO4c": 18
+        },
+        "portion": null,
+        "tint": null,
+        "fun": true,
+        "verified": false
+      },
+      {
+        "id": "KIO3",
+        "name": "碘钟 A 液",
+        "formula": "KIO₃",
+        "note": "0.02 mol/L",
+        "bottle": "narrow",
+        "amber": false,
+        "solid": null,
+        "concentration": {
+          "K+": 0.02,
+          "IO3-": 0.02
+        },
+        "portion": null,
+        "tint": null,
+        "fun": true,
+        "verified": false
+      },
+      {
+        "id": "HSO3",
+        "name": "碘钟 B 液",
+        "formula": "NaHSO₃+淀粉",
+        "note": "0.02 mol/L",
+        "bottle": "narrow",
+        "amber": false,
+        "solid": null,
+        "concentration": {
+          "Na+": 0.02,
+          "HSO3-": 0.02,
+          "starch": 0.05
+        },
+        "portion": null,
+        "tint": null,
+        "fun": true,
+        "verified": false
+      },
+      {
+        "id": "dichromate",
+        "name": "重铬酸铵",
+        "formula": "(NH₄)₂Cr₂O₇",
+        "note": "橙色晶体·有毒",
+        "bottle": "wide",
+        "amber": false,
+        "solid": {
+          "dichromate": 4
+        },
+        "concentration": null,
+        "portion": null,
+        "tint": null,
+        "fun": true,
+        "verified": false
+      }
+    ],
+    "demos": [
+      {
+        "id": "thermite",
+        "title": "铝热反应",
+        "description": "坩埚中装铝热剂 → 放到三脚架上用酒精灯引燃：火星四射、强光、生成熔融的铁",
+        "position": [
+          -0.2,
+          0.58
+        ],
+        "fun": true,
+        "observedLiteralDependencies": [
+          "crucible",
+          "thermite"
+        ],
+        "expectedProducts": null,
+        "completionAssertion": null,
+        "abortRestorationVerified": false,
+        "verified": false
+      },
+      {
+        "id": "toothpaste",
+        "title": "大象牙膏",
+        "description": "量筒中倒入 30% H₂O₂ 和洗洁精 → 加入 KI 溶液：泡沫柱喷涌而出",
+        "position": [
+          -0.5,
+          0.56
+        ],
+        "fun": true,
+        "observedLiteralDependencies": [
+          "cylinder",
+          "H2O2c",
+          "soap",
+          "KI"
+        ],
+        "expectedProducts": null,
+        "completionAssertion": null,
+        "abortRestorationVerified": false,
+        "verified": false
+      },
+      {
+        "id": "luminol",
+        "title": "鲁米诺发光",
+        "description": "关灯 → 烧杯中倒入鲁米诺溶液、铁氰化钾 → 加入过氧化氢：幽蓝冷光",
+        "position": [
+          -0.35,
+          0.6
+        ],
+        "fun": true,
+        "observedLiteralDependencies": [
+          "beaker250",
+          "luminol",
+          "K3FeCN6",
+          "H2O2"
+        ],
+        "expectedProducts": null,
+        "completionAssertion": null,
+        "abortRestorationVerified": false,
+        "verified": false
+      },
+      {
+        "id": "snake",
+        "title": "法老之蛇",
+        "description": "蒸发皿中放硫氰酸汞 → 放到三脚架上加热：灰黄色“长蛇”蜿蜒钻出（剧毒，仅虚拟演示）",
+        "position": [
+          -0.2,
+          0.58
+        ],
+        "fun": true,
+        "observedLiteralDependencies": [
+          "dish",
+          "HgSCN2"
+        ],
+        "expectedProducts": null,
+        "completionAssertion": null,
+        "abortRestorationVerified": false,
+        "verified": false
+      },
+      {
+        "id": "bread",
+        "title": "黑面包（浓硫酸脱水）",
+        "description": "烧杯中放蔗糖 → 倒入浓硫酸：变黑、膨胀成多孔“黑面包”，冒白雾",
+        "position": [
+          -0.3,
+          0.6
+        ],
+        "fun": true,
+        "observedLiteralDependencies": [
+          "beaker100",
+          "sucrose",
+          "H2SO4c"
+        ],
+        "expectedProducts": null,
+        "completionAssertion": null,
+        "abortRestorationVerified": false,
+        "verified": false
+      },
+      {
+        "id": "clock",
+        "title": "碘钟反应",
+        "description": "A 液（KIO₃）与 B 液（NaHSO₃ + 淀粉）混合 → 数秒后突然由无色变深蓝",
+        "position": [
+          -0.35,
+          0.6
+        ],
+        "fun": true,
+        "observedLiteralDependencies": [
+          "beaker250",
+          "KIO3",
+          "HSO3"
+        ],
+        "expectedProducts": null,
+        "completionAssertion": null,
+        "abortRestorationVerified": false,
+        "verified": false
+      },
+      {
+        "id": "volcano",
+        "title": "“火山爆发”",
+        "description": "蒸发皿中放重铬酸铵 → 加热引燃：火星喷发，堆起绿色火山灰",
+        "position": [
+          -0.2,
+          0.58
+        ],
+        "fun": true,
+        "observedLiteralDependencies": [
+          "dish",
+          "dichromate"
+        ],
+        "expectedProducts": null,
+        "completionAssertion": null,
+        "abortRestorationVerified": false,
+        "verified": false
+      },
+      {
+        "id": "k",
+        "title": "钾与水",
+        "description": "烧杯中加水 → 放入一小块钾：熔成火球、紫色火焰、轻微爆炸",
+        "position": [
+          -0.3,
+          0.62
+        ],
+        "fun": true,
+        "observedLiteralDependencies": [
+          "beaker250",
+          "wash",
+          "dropper",
+          "phph",
+          "spoon"
+        ],
+        "expectedProducts": null,
+        "completionAssertion": null,
+        "abortRestorationVerified": false,
+        "verified": false
+      },
+      {
+        "id": "na",
+        "title": "钠与水",
+        "description": "烧杯中用洗瓶加水 → 药匙从棕色广口瓶取钠 → 加入水中 → 滴管滴入酚酞",
+        "position": [
+          -0.3,
+          0.62
+        ],
+        "fun": false,
+        "observedLiteralDependencies": [
+          "beaker250",
+          "wash",
+          "spoon",
+          "Na",
+          "dropper",
+          "phph"
+        ],
+        "expectedProducts": null,
+        "completionAssertion": null,
+        "abortRestorationVerified": false,
+        "verified": false
+      },
+      {
+        "id": "feoh2",
+        "title": "Fe(OH)₂ 的制备",
+        "description": "试管倒入 FeSO₄ → 加入 NaOH，观察白色 → 灰绿 → 红褐",
+        "position": [
+          0.3,
+          0.62
+        ],
+        "fun": false,
+        "observedLiteralDependencies": [
+          "FeSO4",
+          "NaOH"
+        ],
+        "expectedProducts": null,
+        "completionAssertion": null,
+        "abortRestorationVerified": false,
+        "verified": false
+      },
+      {
+        "id": "aloh3",
+        "title": "Al(OH)₃ 的两性",
+        "description": "AlCl₃ 中加 NaOH：先沉淀，过量后溶解；再加盐酸又沉淀、再溶解",
+        "position": [
+          0.3,
+          0.62
+        ],
+        "fun": false,
+        "observedLiteralDependencies": [
+          "AlCl3",
+          "NaOH",
+          "HCl"
+        ],
+        "expectedProducts": null,
+        "completionAssertion": null,
+        "abortRestorationVerified": false,
+        "verified": false
+      },
+      {
+        "id": "flame",
+        "title": "焰色试验",
+        "description": "铂丝蘸 NaCl / KCl / CuSO₄ / CaCl₂ 溶液 → 伸到酒精灯外焰灼烧；每次用后清洗",
+        "position": [
+          0.15,
+          0.62
+        ],
+        "fun": false,
+        "observedLiteralDependencies": [
+          "loop",
+          "NaCl",
+          "KCl",
+          "CuSO4",
+          "CaCl2"
+        ],
+        "expectedProducts": null,
+        "completionAssertion": null,
+        "abortRestorationVerified": false,
+        "verified": false
+      },
+      {
+        "id": "o2",
+        "title": "制取并检验 O₂",
+        "description": "锥形瓶 H₂O₂ + 药匙 MnO₂ → 木条点燃后甩灭留火星 → 伸到瓶口复燃",
+        "position": [
+          -0.35,
+          0.6
+        ],
+        "fun": false,
+        "observedLiteralDependencies": [
+          "conical",
+          "H2O2",
+          "spoon",
+          "MnO2",
+          "beaker100"
+        ],
+        "expectedProducts": null,
+        "completionAssertion": null,
+        "abortRestorationVerified": false,
+        "verified": false
+      },
+      {
+        "id": "h2",
+        "title": "H₂ 爆鸣",
+        "description": "试管放锌粒 + 稀盐酸 → 燃着的木条伸到管口",
+        "position": [
+          0.3,
+          0.62
+        ],
+        "fun": false,
+        "observedLiteralDependencies": [
+          "spoon",
+          "Zn",
+          "HCl"
+        ],
+        "expectedProducts": null,
+        "completionAssertion": null,
+        "abortRestorationVerified": false,
+        "verified": false
+      },
+      {
+        "id": "co2",
+        "title": "CO₂ 使木条熄灭",
+        "description": "烧杯中放大理石 + 稀盐酸 → 燃着的木条伸到杯口熄灭",
+        "position": [
+          -0.25,
+          0.6
+        ],
+        "fun": false,
+        "observedLiteralDependencies": [
+          "beaker100",
+          "spoon",
+          "CaCO3",
+          "HCl"
+        ],
+        "expectedProducts": null,
+        "completionAssertion": null,
+        "abortRestorationVerified": false,
+        "verified": false
+      },
+      {
+        "id": "fe3",
+        "title": "Fe³⁺ 的检验与还原",
+        "description": "FeCl₃ 中滴 KSCN → 血红色；再放入铁钉 → 红色褪去、溶液变浅绿",
+        "position": [
+          0.3,
+          0.62
+        ],
+        "fun": false,
+        "observedLiteralDependencies": [
+          "FeCl3",
+          "dropper",
+          "KSCN",
+          "spoon",
+          "Fe"
+        ],
+        "expectedProducts": null,
+        "completionAssertion": null,
+        "abortRestorationVerified": false,
+        "verified": false
+      },
+      {
+        "id": "cuhno3",
+        "title": "铜与浓硝酸",
+        "description": "试管放铜丝 → 倒入少量浓硝酸：剧烈反应，红棕色 NO₂，溶液变绿",
+        "position": [
+          0.3,
+          0.62
+        ],
+        "fun": false,
+        "observedLiteralDependencies": [
+          "spoon",
+          "Cu",
+          "HNO3c"
+        ],
+        "expectedProducts": null,
+        "completionAssertion": null,
+        "abortRestorationVerified": false,
+        "verified": false
+      },
+      {
+        "id": "agtree",
+        "title": "银树（铜置换银）",
+        "description": "试管倒入 AgNO₃ → 放入铜丝，静置：铜丝上长出银白色晶体，溶液渐蓝",
+        "position": [
+          0.3,
+          0.62
+        ],
+        "fun": false,
+        "observedLiteralDependencies": [
+          "AgNO3",
+          "spoon",
+          "Cu"
+        ],
+        "expectedProducts": null,
+        "completionAssertion": null,
+        "abortRestorationVerified": false,
+        "verified": false
+      },
+      {
+        "id": "mg",
+        "title": "镁条燃烧",
+        "description": "燃烧匙取镁条 → 伸入酒精灯火焰：耀眼白光，生成白色 MgO",
+        "position": [
+          0.12,
+          0.62
+        ],
+        "fun": false,
+        "observedLiteralDependencies": [
+          "cspoon",
+          "Mg"
+        ],
+        "expectedProducts": null,
+        "completionAssertion": null,
+        "abortRestorationVerified": false,
+        "verified": false
+      },
+      {
+        "id": "cuoh2",
+        "title": "Cu(OH)₂ 受热分解",
+        "description": "烧杯中制 Cu(OH)₂ → 放到三脚架上，点燃下方酒精灯加热：蓝色沉淀变黑",
+        "position": [
+          -0.2,
+          0.6
+        ],
+        "fun": false,
+        "observedLiteralDependencies": [
+          "beaker100",
+          "CuSO4",
+          "NaOH"
+        ],
+        "expectedProducts": null,
+        "completionAssertion": null,
+        "abortRestorationVerified": false,
+        "verified": false
+      },
+      {
+        "id": "evap",
+        "title": "蒸发结晶",
+        "description": "蒸发皿倒入 CuSO₄ 溶液 → 放三脚架加热至蒸干，析出蓝色晶体",
+        "position": [
+          -0.2,
+          0.6
+        ],
+        "fun": false,
+        "observedLiteralDependencies": [
+          "dish",
+          "CuSO4"
+        ],
+        "expectedProducts": null,
+        "completionAssertion": null,
+        "abortRestorationVerified": false,
+        "verified": false
+      },
+      {
+        "id": "starch",
+        "title": "淀粉遇碘变蓝",
+        "description": "烧杯倒入淀粉溶液 → 滴管滴入碘水：溶液变为深蓝色",
+        "position": [
+          -0.3,
+          0.62
+        ],
+        "fun": false,
+        "observedLiteralDependencies": [
+          "beaker250",
+          "starch",
+          "dropper",
+          "I2"
+        ],
+        "expectedProducts": null,
+        "completionAssertion": null,
+        "abortRestorationVerified": false,
+        "verified": false
+      }
+    ],
+    "speciesIds": [
+      "H+",
+      "OH-",
+      "Na+",
+      "K+",
+      "Cl-",
+      "SO4",
+      "NO3-",
+      "CO3",
+      "Cu2+",
+      "Fe3+",
+      "Fe2+",
+      "Al3+",
+      "AlO2-",
+      "Ag+",
+      "Ba2+",
+      "Ca2+",
+      "Mg2+",
+      "Zn2+",
+      "Mn2+",
+      "SCN-",
+      "FeSCN",
+      "MnO4-",
+      "H2O2",
+      "I2",
+      "starch",
+      "phph",
+      "litmus",
+      "NO2aq",
+      "AgCl",
+      "BaSO4",
+      "BaCO3",
+      "CaCO3p",
+      "CuOH2",
+      "FeOH3",
+      "FeOH2",
+      "AlOH3",
+      "CuO",
+      "MnO2",
+      "Ag",
+      "salt",
+      "Zn",
+      "Mg",
+      "Fe",
+      "Cu",
+      "CaCO3",
+      "Na",
+      "MgO",
+      "K",
+      "I-",
+      "IO3-",
+      "HSO3-",
+      "luminol",
+      "FeCN",
+      "soap",
+      "H2SO4c",
+      "thermite",
+      "Al2O3",
+      "HgSCN2",
+      "snakeAsh",
+      "sucrose",
+      "C",
+      "dichromate",
+      "Cr2O3"
+    ],
+    "catalogType": "array",
+    "catalogTopKeys": null
+  },
+  "existingIndependentPartCandidates": [
+    {
+      "name": "alcohol_lamp",
+      "glb": "public\\parts\\alcohol_lamp.glb",
+      "faces": 6926,
+      "size_mm": [
+        67.98,
+        67.99,
+        106
+      ],
+      "volume_mm3": 267762.2,
+      "volume_error_pct": 0.0609,
+      "kb": 122.8,
+      "asset": "public/parts/alcohol_lamp.glb",
+      "generatorCandidate": "tools/cad/build_parts.py",
+      "generationChainVerified": false,
+      "semanticGroupsVerified": false,
+      "cavityOracleVerified": false,
+      "independentlyVerifiedForReplacement": false
+    },
+    {
+      "name": "aperture_plate",
+      "glb": "public\\parts\\aperture_plate.glb",
+      "faces": 2244,
+      "size_mm": [
+        220,
+        5,
+        220
+      ],
+      "volume_mm3": 239012.9,
+      "volume_error_pct": 0.0003,
+      "kb": 40.4,
+      "asset": "public/parts/aperture_plate.glb",
+      "generatorCandidate": "tools/cad/build_parts.py",
+      "generationChainVerified": false,
+      "semanticGroupsVerified": false,
+      "cavityOracleVerified": false,
+      "independentlyVerifiedForReplacement": false
+    },
+    {
+      "name": "asbestos_mesh",
+      "glb": "public\\parts\\asbestos_mesh.glb",
+      "faces": 5260,
+      "size_mm": [
+        104,
+        104,
+        4.6
+      ],
+      "volume_mm3": 8445.9,
+      "volume_error_pct": 0.0529,
+      "kb": 93,
+      "asset": "public/parts/asbestos_mesh.glb",
+      "generatorCandidate": "tools/cad/build_parts.py",
+      "generationChainVerified": false,
+      "semanticGroupsVerified": false,
+      "cavityOracleVerified": false,
+      "independentlyVerifiedForReplacement": false
+    },
+    {
+      "name": "balance_base",
+      "glb": "public\\parts\\balance_base.glb",
+      "faces": 7924,
+      "size_mm": [
+        260,
+        150,
+        236
+      ],
+      "volume_mm3": 1198521.5,
+      "volume_error_pct": 0.0002,
+      "kb": 140.3,
+      "asset": "public/parts/balance_base.glb",
+      "generatorCandidate": "tools/cad/build_parts.py",
+      "generationChainVerified": false,
+      "semanticGroupsVerified": false,
+      "cavityOracleVerified": false,
+      "independentlyVerifiedForReplacement": false
+    },
+    {
+      "name": "balance_beam",
+      "glb": "public\\parts\\balance_beam.glb",
+      "faces": 2952,
+      "size_mm": [
+        240,
+        36,
+        28
+      ],
+      "volume_mm3": 35623.2,
+      "volume_error_pct": 0.0083,
+      "kb": 52.9,
+      "asset": "public/parts/balance_beam.glb",
+      "generatorCandidate": "tools/cad/build_parts.py",
+      "generationChainVerified": false,
+      "semanticGroupsVerified": false,
+      "cavityOracleVerified": false,
+      "independentlyVerifiedForReplacement": false
+    },
+    {
+      "name": "balance_pan",
+      "glb": "public\\parts\\balance_pan.glb",
+      "faces": 1422,
+      "size_mm": [
+        112,
+        111.98,
+        4
+      ],
+      "volume_mm3": 36547.2,
+      "volume_error_pct": 0.0528,
+      "kb": 26,
+      "asset": "public/parts/balance_pan.glb",
+      "generatorCandidate": "tools/cad/build_parts.py",
+      "generationChainVerified": false,
+      "semanticGroupsVerified": false,
+      "cavityOracleVerified": false,
+      "independentlyVerifiedForReplacement": false
+    },
+    {
+      "name": "battery_holder",
+      "glb": "public\\parts\\battery_holder.glb",
+      "faces": 1308,
+      "size_mm": [
+        120,
+        34,
+        30
+      ],
+      "volume_mm3": 46674.3,
+      "volume_error_pct": 0,
+      "kb": 24,
+      "asset": "public/parts/battery_holder.glb",
+      "generatorCandidate": "tools/cad/build_parts.py",
+      "generationChainVerified": false,
+      "semanticGroupsVerified": false,
+      "cavityOracleVerified": false,
+      "independentlyVerifiedForReplacement": false
+    },
+    {
+      "name": "beaker_body",
+      "glb": "public\\parts\\beaker_body.glb",
+      "faces": 1706,
+      "size_mm": [
+        95,
+        89.99,
+        110
+      ],
+      "volume_mm3": 103181.2,
+      "volume_error_pct": 0.0252,
+      "kb": 31,
+      "asset": "public/parts/beaker_body.glb",
+      "generatorCandidate": "tools/cad/build_parts.py",
+      "generationChainVerified": false,
+      "semanticGroupsVerified": false,
+      "cavityOracleVerified": false,
+      "independentlyVerifiedForReplacement": false
+    },
+    {
+      "name": "block_cube",
+      "glb": "public\\parts\\block_cube.glb",
+      "faces": 1380,
+      "size_mm": [
+        60,
+        60,
+        60
+      ],
+      "volume_mm3": 214645.5,
+      "volume_error_pct": 0.008,
+      "kb": 25.2,
+      "asset": "public/parts/block_cube.glb",
+      "generatorCandidate": "tools/cad/build_parts.py",
+      "generationChainVerified": false,
+      "semanticGroupsVerified": false,
+      "cavityOracleVerified": false,
+      "independentlyVerifiedForReplacement": false
+    },
+    {
+      "name": "candle",
+      "glb": "public\\parts\\candle.glb",
+      "faces": 7896,
+      "size_mm": [
+        44,
+        43.99,
+        94
+      ],
+      "volume_mm3": 46682.3,
+      "volume_error_pct": 0.0882,
+      "kb": 139.8,
+      "asset": "public/parts/candle.glb",
+      "generatorCandidate": "tools/cad/build_parts.py",
+      "generationChainVerified": false,
+      "semanticGroupsVerified": false,
+      "cavityOracleVerified": false,
+      "independentlyVerifiedForReplacement": false
+    },
+    {
+      "name": "carrier",
+      "glb": "public\\parts\\carrier.glb",
+      "faces": 1920,
+      "size_mm": [
+        44,
+        44,
+        37.9
+      ],
+      "volume_mm3": 43013.8,
+      "volume_error_pct": 0.0003,
+      "kb": 34.7,
+      "asset": "public/parts/carrier.glb",
+      "generatorCandidate": "tools/cad/build_parts.py",
+      "generationChainVerified": false,
+      "semanticGroupsVerified": false,
+      "cavityOracleVerified": false,
+      "independentlyVerifiedForReplacement": false
+    },
+    {
+      "name": "cart",
+      "glb": "public\\parts\\cart.glb",
+      "faces": 8726,
+      "size_mm": [
+        116,
+        112,
+        34.18
+      ],
+      "volume_mm3": 76940.4,
+      "volume_error_pct": 0.0442,
+      "kb": 154.4,
+      "asset": "public/parts/cart.glb",
+      "generatorCandidate": "tools/cad/build_parts.py",
+      "generationChainVerified": false,
+      "semanticGroupsVerified": false,
+      "cavityOracleVerified": false,
+      "independentlyVerifiedForReplacement": false
+    },
+    {
+      "name": "circuit_board",
+      "glb": "public\\parts\\circuit_board.glb",
+      "faces": 9820,
+      "size_mm": [
+        320,
+        220,
+        22
+      ],
+      "volume_mm3": 559193.1,
+      "volume_error_pct": 0.0022,
+      "kb": 172.8,
+      "asset": "public/parts/circuit_board.glb",
+      "generatorCandidate": "tools/cad/build_parts.py",
+      "generationChainVerified": false,
+      "semanticGroupsVerified": false,
+      "cavityOracleVerified": false,
+      "independentlyVerifiedForReplacement": false
+    },
+    {
+      "name": "cliff",
+      "glb": "public\\parts\\cliff.glb",
+      "faces": 18476,
+      "size_mm": [
+        581.06,
+        606.17,
+        945.18
+      ],
+      "volume_mm3": 110549178.7,
+      "volume_error_pct": 0,
+      "kb": 325.7,
+      "asset": "public/parts/cliff.glb",
+      "generatorCandidate": "tools/cad/build_parts.py",
+      "generationChainVerified": false,
+      "semanticGroupsVerified": false,
+      "cavityOracleVerified": false,
+      "independentlyVerifiedForReplacement": false
+    },
+    {
+      "name": "concave_lens",
+      "glb": "public\\parts\\concave_lens.glb",
+      "faces": 18425,
+      "size_mm": [
+        60,
+        60,
+        9.9
+      ],
+      "volume_mm3": 23972.7,
+      "volume_error_pct": 0.0236,
+      "kb": 324.9,
+      "asset": "public/parts/concave_lens.glb",
+      "generatorCandidate": "tools/cad/build_parts.py",
+      "generationChainVerified": false,
+      "semanticGroupsVerified": false,
+      "cavityOracleVerified": false,
+      "independentlyVerifiedForReplacement": false
+    },
+    {
+      "name": "drum",
+      "glb": "public\\parts\\drum.glb",
+      "faces": 5934,
+      "size_mm": [
+        191.01,
+        189.01,
+        100
+      ],
+      "volume_mm3": 604956.3,
+      "volume_error_pct": 0.1414,
+      "kb": 105.3,
+      "asset": "public/parts/drum.glb",
+      "generatorCandidate": "tools/cad/build_parts.py",
+      "generationChainVerified": false,
+      "semanticGroupsVerified": false,
+      "cavityOracleVerified": false,
+      "independentlyVerifiedForReplacement": false
+    },
+    {
+      "name": "engine_block",
+      "glb": "public\\parts\\engine_block.glb",
+      "faces": 6032,
+      "size_mm": [
+        103.94,
+        103.97,
+        161
+      ],
+      "volume_mm3": 683777.4,
+      "volume_error_pct": 0.1258,
+      "kb": 107.2,
+      "asset": "public/parts/engine_block.glb",
+      "generatorCandidate": "tools/cad/build_parts.py",
+      "generationChainVerified": false,
+      "semanticGroupsVerified": false,
+      "cavityOracleVerified": false,
+      "independentlyVerifiedForReplacement": false
+    },
+    {
+      "name": "engine_crank",
+      "glb": "public\\parts\\engine_crank.glb",
+      "faces": 1626,
+      "size_mm": [
+        140,
+        40,
+        76
+      ],
+      "volume_mm3": 111676.6,
+      "volume_error_pct": 0.0132,
+      "kb": 29.6,
+      "asset": "public/parts/engine_crank.glb",
+      "generatorCandidate": "tools/cad/build_parts.py",
+      "generationChainVerified": false,
+      "semanticGroupsVerified": false,
+      "cavityOracleVerified": false,
+      "independentlyVerifiedForReplacement": false
+    },
+    {
+      "name": "engine_piston",
+      "glb": "public\\parts\\engine_piston.glb",
+      "faces": 4136,
+      "size_mm": [
+        67.2,
+        67.2,
+        46
+      ],
+      "volume_mm3": 147987.7,
+      "volume_error_pct": 0.0232,
+      "kb": 73.7,
+      "asset": "public/parts/engine_piston.glb",
+      "generatorCandidate": "tools/cad/build_parts.py",
+      "generationChainVerified": false,
+      "semanticGroupsVerified": false,
+      "cavityOracleVerified": false,
+      "independentlyVerifiedForReplacement": false
+    },
+    {
+      "name": "engine_rod",
+      "glb": "public\\parts\\engine_rod.glb",
+      "faces": 4448,
+      "size_mm": [
+        40,
+        36,
+        97.99
+      ],
+      "volume_mm3": 44878.9,
+      "volume_error_pct": 0.0127,
+      "kb": 79.1,
+      "asset": "public/parts/engine_rod.glb",
+      "generatorCandidate": "tools/cad/build_parts.py",
+      "generationChainVerified": false,
+      "semanticGroupsVerified": false,
+      "cavityOracleVerified": false,
+      "independentlyVerifiedForReplacement": false
+    },
+    {
+      "name": "glass_block",
+      "glb": "public\\parts\\glass_block.glb",
+      "faces": 44,
+      "size_mm": [
+        240,
+        140,
+        90
+      ],
+      "volume_mm3": 3020282.7,
+      "volume_error_pct": 0,
+      "kb": 1.7,
+      "asset": "public/parts/glass_block.glb",
+      "generatorCandidate": "tools/cad/build_parts.py",
+      "generationChainVerified": false,
+      "semanticGroupsVerified": false,
+      "cavityOracleVerified": false,
+      "independentlyVerifiedForReplacement": false
+    },
+    {
+      "name": "graduated_cylinder",
+      "glb": "public\\parts\\graduated_cylinder.glb",
+      "faces": 11714,
+      "size_mm": [
+        84,
+        83.97,
+        268
+      ],
+      "volume_mm3": 854543.7,
+      "volume_error_pct": 0.1524,
+      "kb": 206.9,
+      "asset": "public/parts/graduated_cylinder.glb",
+      "generatorCandidate": "tools/cad/build_parts.py",
+      "generationChainVerified": false,
+      "semanticGroupsVerified": false,
+      "cavityOracleVerified": false,
+      "independentlyVerifiedForReplacement": false
+    },
+    {
+      "name": "graduated_cylinder_ticks",
+      "glb": "public\\parts\\graduated_cylinder_ticks.glb",
+      "faces": 20510,
+      "size_mm": [
+        84.05,
+        84.03,
+        268.14
+      ],
+      "volume_mm3": 852631.2,
+      "volume_error_pct": 0,
+      "kb": 361.3,
+      "asset": "public/parts/graduated_cylinder_ticks.glb",
+      "generatorCandidate": "tools/cad/build_parts.py",
+      "generationChainVerified": false,
+      "semanticGroupsVerified": false,
+      "cavityOracleVerified": false,
+      "independentlyVerifiedForReplacement": false
+    },
+    {
+      "name": "hook_weight_100",
+      "glb": "public\\parts\\hook_weight_100.glb",
+      "faces": 13056,
+      "size_mm": [
+        29.2,
+        29.19,
+        25.2
+      ],
+      "volume_mm3": 14936.1,
+      "volume_error_pct": 0.165,
+      "kb": 230.6,
+      "asset": "public/parts/hook_weight_100.glb",
+      "generatorCandidate": "tools/cad/build_parts.py",
+      "generationChainVerified": false,
+      "semanticGroupsVerified": false,
+      "cavityOracleVerified": false,
+      "independentlyVerifiedForReplacement": false
+    },
+    {
+      "name": "hook_weight_50",
+      "glb": "public\\parts\\hook_weight_50.glb",
+      "faces": 8996,
+      "size_mm": [
+        24.8,
+        24.79,
+        21.1
+      ],
+      "volume_mm3": 8846.4,
+      "volume_error_pct": 0.1569,
+      "kb": 159.2,
+      "asset": "public/parts/hook_weight_50.glb",
+      "generatorCandidate": "tools/cad/build_parts.py",
+      "generationChainVerified": false,
+      "semanticGroupsVerified": false,
+      "cavityOracleVerified": false,
+      "independentlyVerifiedForReplacement": false
+    },
+    {
+      "name": "incline_plate",
+      "glb": "public\\parts\\incline_plate.glb",
+      "faces": 28,
+      "size_mm": [
+        300,
+        120,
+        16
+      ],
+      "volume_mm3": 240000,
+      "volume_error_pct": 0,
+      "kb": 1.5,
+      "asset": "public/parts/incline_plate.glb",
+      "generatorCandidate": "tools/cad/build_parts.py",
+      "generationChainVerified": false,
+      "semanticGroupsVerified": false,
+      "cavityOracleVerified": false,
+      "independentlyVerifiedForReplacement": false
+    },
+    {
+      "name": "incline_stopper",
+      "glb": "public\\parts\\incline_stopper.glb",
+      "faces": 982,
+      "size_mm": [
+        64,
+        54,
+        34
+      ],
+      "volume_mm3": 42809.5,
+      "volume_error_pct": 0.0002,
+      "kb": 18.2,
+      "asset": "public/parts/incline_stopper.glb",
+      "generatorCandidate": "tools/cad/build_parts.py",
+      "generationChainVerified": false,
+      "semanticGroupsVerified": false,
+      "cavityOracleVerified": false,
+      "independentlyVerifiedForReplacement": false
+    },
+    {
+      "name": "knife_switch",
+      "glb": "public\\parts\\knife_switch.glb",
+      "faces": 2558,
+      "size_mm": [
+        96,
+        46,
+        49.5
+      ],
+      "volume_mm3": 49312.7,
+      "volume_error_pct": 0.0037,
+      "kb": 45.8,
+      "asset": "public/parts/knife_switch.glb",
+      "generatorCandidate": "tools/cad/build_parts.py",
+      "generationChainVerified": false,
+      "semanticGroupsVerified": false,
+      "cavityOracleVerified": false,
+      "independentlyVerifiedForReplacement": false
+    },
+    {
+      "name": "lamp_base",
+      "glb": "public\\parts\\lamp_base.glb",
+      "faces": 5684,
+      "size_mm": [
+        15.2,
+        15.2,
+        21.8
+      ],
+      "volume_mm3": 2693.8,
+      "volume_error_pct": 0.0264,
+      "kb": 100.9,
+      "asset": "public/parts/lamp_base.glb",
+      "generatorCandidate": "tools/cad/build_parts.py",
+      "generationChainVerified": false,
+      "semanticGroupsVerified": false,
+      "cavityOracleVerified": false,
+      "independentlyVerifiedForReplacement": false
+    },
+    {
+      "name": "lamp_bulb",
+      "glb": "public\\parts\\lamp_bulb.glb",
+      "faces": 15079,
+      "size_mm": [
+        52,
+        52,
+        65
+      ],
+      "volume_mm3": 82818.1,
+      "volume_error_pct": 0,
+      "kb": 265.9,
+      "asset": "public/parts/lamp_bulb.glb",
+      "generatorCandidate": "tools/cad/build_parts.py",
+      "generationChainVerified": false,
+      "semanticGroupsVerified": false,
+      "cavityOracleVerified": false,
+      "independentlyVerifiedForReplacement": false
+    },
+    {
+      "name": "lamp_filament",
+      "glb": "public\\parts\\lamp_filament.glb",
+      "faces": 14040,
+      "size_mm": [
+        6.8,
+        6.8,
+        25.9
+      ],
+      "volume_mm3": 277.4,
+      "volume_error_pct": 0.0269,
+      "kb": 247.8,
+      "asset": "public/parts/lamp_filament.glb",
+      "generatorCandidate": "tools/cad/build_parts.py",
+      "generationChainVerified": false,
+      "semanticGroupsVerified": false,
+      "cavityOracleVerified": false,
+      "independentlyVerifiedForReplacement": false
+    },
+    {
+      "name": "lamp_glass",
+      "glb": "public\\parts\\lamp_glass.glb",
+      "faces": 8376,
+      "size_mm": [
+        30,
+        29.99,
+        31.5
+      ],
+      "volume_mm3": 11979.3,
+      "volume_error_pct": 0.0658,
+      "kb": 148.2,
+      "asset": "public/parts/lamp_glass.glb",
+      "generatorCandidate": "tools/cad/build_parts.py",
+      "generationChainVerified": false,
+      "semanticGroupsVerified": false,
+      "cavityOracleVerified": false,
+      "independentlyVerifiedForReplacement": false
+    },
+    {
+      "name": "lamp_socket_e10",
+      "glb": "public\\parts\\lamp_socket_e10.glb",
+      "faces": 22264,
+      "size_mm": [
+        42,
+        41.94,
+        29.6
+      ],
+      "volume_mm3": 13393.4,
+      "volume_error_pct": 0.192,
+      "kb": 392.4,
+      "asset": "public/parts/lamp_socket_e10.glb",
+      "generatorCandidate": "tools/cad/build_parts.py",
+      "generationChainVerified": false,
+      "semanticGroupsVerified": false,
+      "cavityOracleVerified": false,
+      "independentlyVerifiedForReplacement": false
+    },
+    {
+      "name": "laser_head",
+      "glb": "public\\parts\\laser_head.glb",
+      "faces": 19956,
+      "size_mm": [
+        22,
+        22,
+        82.01
+      ],
+      "volume_mm3": 28427.4,
+      "volume_error_pct": 0,
+      "kb": 351.6,
+      "asset": "public/parts/laser_head.glb",
+      "generatorCandidate": "tools/cad/build_parts.py",
+      "generationChainVerified": false,
+      "semanticGroupsVerified": false,
+      "cavityOracleVerified": false,
+      "independentlyVerifiedForReplacement": false
+    },
+    {
+      "name": "lens",
+      "glb": "public\\parts\\lens.glb",
+      "faces": 17636,
+      "size_mm": [
+        60.02,
+        60.02,
+        14
+      ],
+      "volume_mm3": 20151.2,
+      "volume_error_pct": 0,
+      "kb": 310.8,
+      "asset": "public/parts/lens.glb",
+      "generatorCandidate": "tools/cad/build_parts.py",
+      "generationChainVerified": false,
+      "semanticGroupsVerified": false,
+      "cavityOracleVerified": false,
+      "independentlyVerifiedForReplacement": false
+    },
+    {
+      "name": "lens_holder",
+      "glb": "public\\parts\\lens_holder.glb",
+      "faces": 1456,
+      "size_mm": [
+        68,
+        62.89,
+        67.99
+      ],
+      "volume_mm3": 26518.9,
+      "volume_error_pct": 0.0211,
+      "kb": 26.6,
+      "asset": "public/parts/lens_holder.glb",
+      "generatorCandidate": "tools/cad/build_parts.py",
+      "generationChainVerified": false,
+      "semanticGroupsVerified": false,
+      "cavityOracleVerified": false,
+      "independentlyVerifiedForReplacement": false
+    },
+    {
+      "name": "meter_case",
+      "glb": "public\\parts\\meter_case.glb",
+      "faces": 4496,
+      "size_mm": [
+        128,
+        40.6,
+        163
+      ],
+      "volume_mm3": 576321.5,
+      "volume_error_pct": 0.0006,
+      "kb": 80,
+      "asset": "public/parts/meter_case.glb",
+      "generatorCandidate": "tools/cad/build_parts.py",
+      "generationChainVerified": false,
+      "semanticGroupsVerified": false,
+      "cavityOracleVerified": false,
+      "independentlyVerifiedForReplacement": false
+    },
+    {
+      "name": "mirror_plate",
+      "glb": "public\\parts\\mirror_plate.glb",
+      "faces": 668,
+      "size_mm": [
+        160,
+        6,
+        200
+      ],
+      "volume_mm3": 189203.4,
+      "volume_error_pct": 0.0001,
+      "kb": 12.7,
+      "asset": "public/parts/mirror_plate.glb",
+      "generatorCandidate": "tools/cad/build_parts.py",
+      "generationChainVerified": false,
+      "semanticGroupsVerified": false,
+      "cavityOracleVerified": false,
+      "independentlyVerifiedForReplacement": false
+    },
+    {
+      "name": "oscilloscope_screen",
+      "glb": "public\\parts\\oscilloscope_screen.glb",
+      "faces": 5088,
+      "size_mm": [
+        260,
+        206,
+        154
+      ],
+      "volume_mm3": 6720596,
+      "volume_error_pct": 0.0014,
+      "kb": 90.6,
+      "asset": "public/parts/oscilloscope_screen.glb",
+      "generatorCandidate": "tools/cad/build_parts.py",
+      "generationChainVerified": false,
+      "semanticGroupsVerified": false,
+      "cavityOracleVerified": false,
+      "independentlyVerifiedForReplacement": false
+    },
+    {
+      "name": "person_figure",
+      "glb": "public\\parts\\person_figure.glb",
+      "faces": 19420,
+      "size_mm": [
+        735.52,
+        317.73,
+        1858.04
+      ],
+      "volume_mm3": 74182176.4,
+      "volume_error_pct": 0,
+      "kb": 342.2,
+      "asset": "public/parts/person_figure.glb",
+      "generatorCandidate": "tools/cad/build_parts.py",
+      "generationChainVerified": false,
+      "semanticGroupsVerified": false,
+      "cavityOracleVerified": false,
+      "independentlyVerifiedForReplacement": false
+    },
+    {
+      "name": "post",
+      "glb": "public\\parts\\post.glb",
+      "faces": 2066,
+      "size_mm": [
+        18,
+        17.99,
+        261
+      ],
+      "volume_mm3": 22828.6,
+      "volume_error_pct": 0.0814,
+      "kb": 37.3,
+      "asset": "public/parts/post.glb",
+      "generatorCandidate": "tools/cad/build_parts.py",
+      "generationChainVerified": false,
+      "semanticGroupsVerified": false,
+      "cavityOracleVerified": false,
+      "independentlyVerifiedForReplacement": false
+    },
+    {
+      "name": "prism",
+      "glb": "public\\parts\\prism.glb",
+      "faces": 3164,
+      "size_mm": [
+        60,
+        43.54,
+        37.97
+      ],
+      "volume_mm3": 52405.1,
+      "volume_error_pct": 0.0001,
+      "kb": 56.6,
+      "asset": "public/parts/prism.glb",
+      "generatorCandidate": "tools/cad/build_parts.py",
+      "generationChainVerified": false,
+      "semanticGroupsVerified": false,
+      "cavityOracleVerified": false,
+      "independentlyVerifiedForReplacement": false
+    },
+    {
+      "name": "pulley_wheel",
+      "glb": "public\\parts\\pulley_wheel.glb",
+      "faces": 1470,
+      "size_mm": [
+        59.99,
+        36,
+        59.99
+      ],
+      "volume_mm3": 96245.8,
+      "volume_error_pct": 0.0597,
+      "kb": 26.8,
+      "asset": "public/parts/pulley_wheel.glb",
+      "generatorCandidate": "tools/cad/build_parts.py",
+      "generationChainVerified": false,
+      "semanticGroupsVerified": false,
+      "cavityOracleVerified": false,
+      "independentlyVerifiedForReplacement": false
+    },
+    {
+      "name": "push_switch",
+      "glb": "public\\parts\\push_switch.glb",
+      "faces": 1860,
+      "size_mm": [
+        64,
+        42,
+        35
+      ],
+      "volume_mm3": 39196.3,
+      "volume_error_pct": 0.0114,
+      "kb": 33.6,
+      "asset": "public/parts/push_switch.glb",
+      "generatorCandidate": "tools/cad/build_parts.py",
+      "generationChainVerified": false,
+      "semanticGroupsVerified": false,
+      "cavityOracleVerified": false,
+      "independentlyVerifiedForReplacement": false
+    },
+    {
+      "name": "rail",
+      "glb": "public\\parts\\rail.glb",
+      "faces": 60,
+      "size_mm": [
+        700,
+        60,
+        8
+      ],
+      "volume_mm3": 282296,
+      "volume_error_pct": 0,
+      "kb": 2,
+      "asset": "public/parts/rail.glb",
+      "generatorCandidate": "tools/cad/build_parts.py",
+      "generationChainVerified": false,
+      "semanticGroupsVerified": false,
+      "cavityOracleVerified": false,
+      "independentlyVerifiedForReplacement": false
+    },
+    {
+      "name": "resistor_body",
+      "glb": "public\\parts\\resistor_body.glb",
+      "faces": 21680,
+      "size_mm": [
+        76,
+        8,
+        8
+      ],
+      "volume_mm3": 1296,
+      "volume_error_pct": 0.1542,
+      "kb": 382.1,
+      "asset": "public/parts/resistor_body.glb",
+      "generatorCandidate": "tools/cad/build_parts.py",
+      "generationChainVerified": false,
+      "semanticGroupsVerified": false,
+      "cavityOracleVerified": false,
+      "independentlyVerifiedForReplacement": false
+    },
+    {
+      "name": "rheostat_body",
+      "glb": "public\\parts\\rheostat_body.glb",
+      "faces": 2232,
+      "size_mm": [
+        192,
+        400,
+        60
+      ],
+      "volume_mm3": 225585.8,
+      "volume_error_pct": 0.0174,
+      "kb": 40.3,
+      "asset": "public/parts/rheostat_body.glb",
+      "generatorCandidate": "tools/cad/build_parts.py",
+      "generationChainVerified": false,
+      "semanticGroupsVerified": false,
+      "cavityOracleVerified": false,
+      "independentlyVerifiedForReplacement": false
+    },
+    {
+      "name": "ruler",
+      "glb": "public\\parts\\ruler.glb",
+      "faces": 5468,
+      "size_mm": [
+        300,
+        30,
+        4
+      ],
+      "volume_mm3": 34984.6,
+      "volume_error_pct": 0,
+      "kb": 97.1,
+      "asset": "public/parts/ruler.glb",
+      "generatorCandidate": "tools/cad/build_parts.py",
+      "generationChainVerified": false,
+      "semanticGroupsVerified": false,
+      "cavityOracleVerified": false,
+      "independentlyVerifiedForReplacement": false
+    },
+    {
+      "name": "screen_holder",
+      "glb": "public\\parts\\screen_holder.glb",
+      "faces": 3328,
+      "size_mm": [
+        92,
+        56,
+        122
+      ],
+      "volume_mm3": 101251.6,
+      "volume_error_pct": 0.0023,
+      "kb": 59.5,
+      "asset": "public/parts/screen_holder.glb",
+      "generatorCandidate": "tools/cad/build_parts.py",
+      "generationChainVerified": false,
+      "semanticGroupsVerified": false,
+      "cavityOracleVerified": false,
+      "independentlyVerifiedForReplacement": false
+    },
+    {
+      "name": "screen_panel",
+      "glb": "public\\parts\\screen_panel.glb",
+      "faces": 64,
+      "size_mm": [
+        220,
+        6,
+        200
+      ],
+      "volume_mm3": 61464,
+      "volume_error_pct": 0,
+      "kb": 2.1,
+      "asset": "public/parts/screen_panel.glb",
+      "generatorCandidate": "tools/cad/build_parts.py",
+      "generationChainVerified": false,
+      "semanticGroupsVerified": false,
+      "cavityOracleVerified": false,
+      "independentlyVerifiedForReplacement": false
+    },
+    {
+      "name": "source_panel",
+      "glb": "public\\parts\\source_panel.glb",
+      "faces": 196,
+      "size_mm": [
+        150,
+        7,
+        150
+      ],
+      "volume_mm3": 141682.3,
+      "volume_error_pct": 0,
+      "kb": 4.4,
+      "asset": "public/parts/source_panel.glb",
+      "generatorCandidate": "tools/cad/build_parts.py",
+      "generationChainVerified": false,
+      "semanticGroupsVerified": false,
+      "cavityOracleVerified": false,
+      "independentlyVerifiedForReplacement": false
+    },
+    {
+      "name": "spring",
+      "glb": "public\\parts\\spring.glb",
+      "faces": 6878,
+      "size_mm": [
+        21.14,
+        21.15,
+        55.2
+      ],
+      "volume_mm3": 2814.1,
+      "volume_error_pct": 0.1096,
+      "kb": 121.9,
+      "asset": "public/parts/spring.glb",
+      "generatorCandidate": "tools/cad/build_parts.py",
+      "generationChainVerified": false,
+      "semanticGroupsVerified": false,
+      "cavityOracleVerified": false,
+      "independentlyVerifiedForReplacement": false
+    },
+    {
+      "name": "spring_scale_body",
+      "glb": "public\\parts\\spring_scale_body.glb",
+      "faces": 3152,
+      "size_mm": [
+        34,
+        33.99,
+        194
+      ],
+      "volume_mm3": 57685.9,
+      "volume_error_pct": 0.0264,
+      "kb": 56.4,
+      "asset": "public/parts/spring_scale_body.glb",
+      "generatorCandidate": "tools/cad/build_parts.py",
+      "generationChainVerified": false,
+      "semanticGroupsVerified": false,
+      "cavityOracleVerified": false,
+      "independentlyVerifiedForReplacement": false
+    },
+    {
+      "name": "stand_base",
+      "glb": "public\\parts\\stand_base.glb",
+      "faces": 2912,
+      "size_mm": [
+        200,
+        132,
+        44
+      ],
+      "volume_mm3": 382900.2,
+      "volume_error_pct": 0.0073,
+      "kb": 52.2,
+      "asset": "public/parts/stand_base.glb",
+      "generatorCandidate": "tools/cad/build_parts.py",
+      "generationChainVerified": false,
+      "semanticGroupsVerified": false,
+      "cavityOracleVerified": false,
+      "independentlyVerifiedForReplacement": false
+    },
+    {
+      "name": "stand_clamp",
+      "glb": "public\\parts\\stand_clamp.glb",
+      "faces": 2954,
+      "size_mm": [
+        46,
+        50,
+        48
+      ],
+      "volume_mm3": 46943.5,
+      "volume_error_pct": 0.0012,
+      "kb": 52.8,
+      "asset": "public/parts/stand_clamp.glb",
+      "generatorCandidate": "tools/cad/build_parts.py",
+      "generationChainVerified": false,
+      "semanticGroupsVerified": false,
+      "cavityOracleVerified": false,
+      "independentlyVerifiedForReplacement": false
+    },
+    {
+      "name": "stand_ring",
+      "glb": "public\\parts\\stand_ring.glb",
+      "faces": 2292,
+      "size_mm": [
+        174,
+        89.91,
+        33
+      ],
+      "volume_mm3": 23027.6,
+      "volume_error_pct": 0.1327,
+      "kb": 41.3,
+      "asset": "public/parts/stand_ring.glb",
+      "generatorCandidate": "tools/cad/build_parts.py",
+      "generationChainVerified": false,
+      "semanticGroupsVerified": false,
+      "cavityOracleVerified": false,
+      "independentlyVerifiedForReplacement": false
+    },
+    {
+      "name": "stand_rod",
+      "glb": "public\\parts\\stand_rod.glb",
+      "faces": 16352,
+      "size_mm": [
+        12,
+        12,
+        500.28
+      ],
+      "volume_mm3": 56392.5,
+      "volume_error_pct": 0,
+      "kb": 288.2,
+      "asset": "public/parts/stand_rod.glb",
+      "generatorCandidate": "tools/cad/build_parts.py",
+      "generationChainVerified": false,
+      "semanticGroupsVerified": false,
+      "cavityOracleVerified": false,
+      "independentlyVerifiedForReplacement": false
+    },
+    {
+      "name": "test_tube",
+      "glb": "public\\parts\\test_tube.glb",
+      "faces": 7416,
+      "size_mm": [
+        19.2,
+        19.18,
+        150.9
+      ],
+      "volume_mm3": 13344.7,
+      "volume_error_pct": 0.1352,
+      "kb": 131.4,
+      "asset": "public/parts/test_tube.glb",
+      "generatorCandidate": "tools/cad/build_parts.py",
+      "generationChainVerified": false,
+      "semanticGroupsVerified": false,
+      "cavityOracleVerified": false,
+      "independentlyVerifiedForReplacement": false
+    },
+    {
+      "name": "thermometer",
+      "glb": "public\\parts\\thermometer.glb",
+      "faces": 14287,
+      "size_mm": [
+        8.8,
+        8.79,
+        204.5
+      ],
+      "volume_mm3": 5487.9,
+      "volume_error_pct": 0.1457,
+      "kb": 252.2,
+      "asset": "public/parts/thermometer.glb",
+      "generatorCandidate": "tools/cad/build_parts.py",
+      "generationChainVerified": false,
+      "semanticGroupsVerified": false,
+      "cavityOracleVerified": false,
+      "independentlyVerifiedForReplacement": false
+    },
+    {
+      "name": "tree_bush",
+      "glb": "public\\parts\\tree_bush.glb",
+      "faces": 15238,
+      "size_mm": [
+        435.09,
+        426.12,
+        608.52
+      ],
+      "volume_mm3": 11733246.6,
+      "volume_error_pct": 0,
+      "kb": 268.6,
+      "asset": "public/parts/tree_bush.glb",
+      "generatorCandidate": "tools/cad/build_parts.py",
+      "generationChainVerified": false,
+      "semanticGroupsVerified": false,
+      "cavityOracleVerified": false,
+      "independentlyVerifiedForReplacement": false
+    },
+    {
+      "name": "tripod",
+      "glb": "public\\parts\\tripod.glb",
+      "faces": 4338,
+      "size_mm": [
+        120,
+        129.24,
+        103.27
+      ],
+      "volume_mm3": 23749.3,
+      "volume_error_pct": 0.1487,
+      "kb": 77.2,
+      "asset": "public/parts/tripod.glb",
+      "generatorCandidate": "tools/cad/build_parts.py",
+      "generationChainVerified": false,
+      "semanticGroupsVerified": false,
+      "cavityOracleVerified": false,
+      "independentlyVerifiedForReplacement": false
+    },
+    {
+      "name": "tuning_fork",
+      "glb": "public\\parts\\tuning_fork.glb",
+      "faces": 9044,
+      "size_mm": [
+        46,
+        14.8,
+        170
+      ],
+      "volume_mm3": 15931.9,
+      "volume_error_pct": 0.014,
+      "kb": 160,
+      "asset": "public/parts/tuning_fork.glb",
+      "generatorCandidate": "tools/cad/build_parts.py",
+      "generationChainVerified": false,
+      "semanticGroupsVerified": false,
+      "cavityOracleVerified": false,
+      "independentlyVerifiedForReplacement": false
+    },
+    {
+      "name": "tuning_fork_box",
+      "glb": "public\\parts\\tuning_fork_box.glb",
+      "faces": 1956,
+      "size_mm": [
+        190,
+        95,
+        105
+      ],
+      "volume_mm3": 728736.8,
+      "volume_error_pct": 0.0006,
+      "kb": 35.3,
+      "asset": "public/parts/tuning_fork_box.glb",
+      "generatorCandidate": "tools/cad/build_parts.py",
+      "generationChainVerified": false,
+      "semanticGroupsVerified": false,
+      "cavityOracleVerified": false,
+      "independentlyVerifiedForReplacement": false
+    },
+    {
+      "name": "tuning_fork_striker",
+      "glb": "public\\parts\\tuning_fork_striker.glb",
+      "faces": 7302,
+      "size_mm": [
+        26,
+        25.97,
+        129
+      ],
+      "volume_mm3": 26704.5,
+      "volume_error_pct": 0.1523,
+      "kb": 129.4,
+      "asset": "public/parts/tuning_fork_striker.glb",
+      "generatorCandidate": "tools/cad/build_parts.py",
+      "generationChainVerified": false,
+      "semanticGroupsVerified": false,
+      "cavityOracleVerified": false,
+      "independentlyVerifiedForReplacement": false
+    },
+    {
+      "name": "water_tank",
+      "glb": "public\\parts\\water_tank.glb",
+      "faces": 100,
+      "size_mm": [
+        300,
+        220,
+        170
+      ],
+      "volume_mm3": 2110076.7,
+      "volume_error_pct": 0,
+      "kb": 2.7,
+      "asset": "public/parts/water_tank.glb",
+      "generatorCandidate": "tools/cad/build_parts.py",
+      "generationChainVerified": false,
+      "semanticGroupsVerified": false,
+      "cavityOracleVerified": false,
+      "independentlyVerifiedForReplacement": false
+    },
+    {
+      "name": "weight_block",
+      "glb": "public\\parts\\weight_block.glb",
+      "faces": 3156,
+      "size_mm": [
+        32,
+        31.99,
+        38
+      ],
+      "volume_mm3": 24621.5,
+      "volume_error_pct": 0.0316,
+      "kb": 56.5,
+      "asset": "public/parts/weight_block.glb",
+      "generatorCandidate": "tools/cad/build_parts.py",
+      "generationChainVerified": false,
+      "semanticGroupsVerified": false,
+      "cavityOracleVerified": false,
+      "independentlyVerifiedForReplacement": false
+    },
+    {
+      "name": "white_screen",
+      "glb": "public\\parts\\white_screen.glb",
+      "faces": 680,
+      "size_mm": [
+        220,
+        10,
+        200
+      ],
+      "volume_mm3": 313192.8,
+      "volume_error_pct": 0,
+      "kb": 12.9,
+      "asset": "public/parts/white_screen.glb",
+      "generatorCandidate": "tools/cad/build_parts.py",
+      "generationChainVerified": false,
+      "semanticGroupsVerified": false,
+      "cavityOracleVerified": false,
+      "independentlyVerifiedForReplacement": false
+    },
+    {
+      "name": "wire_clip",
+      "glb": "public\\parts\\wire_clip.glb",
+      "faces": 8968,
+      "size_mm": [
+        56,
+        9.2,
+        12
+      ],
+      "volume_mm3": 2984.1,
+      "volume_error_pct": 0.0416,
+      "kb": 158.6,
+      "asset": "public/parts/wire_clip.glb",
+      "generatorCandidate": "tools/cad/build_parts.py",
+      "generationChainVerified": false,
+      "semanticGroupsVerified": false,
+      "cavityOracleVerified": false,
+      "independentlyVerifiedForReplacement": false
+    }
+  ],
+  "modules": [
+    {
+      "file": "src/lab/clbench/CircuitBench.jsx",
+      "bytes": 15559,
+      "sha256": "fc75fbc24eb79857da925a69137c87690e98c3b24c38157a89f04b388148fe3e",
+      "exportedNames": [],
+      "ownership": "unresolved-until-reviewed",
+      "replacement": null,
+      "verified": false
+    },
+    {
+      "file": "src/lab/clbench/bench-ext.css",
+      "bytes": 16503,
+      "sha256": "021754495c0e2246c423e84d048ac5fdd946eee4e113c22acacae04ebf8cd626",
+      "exportedNames": [],
+      "ownership": "unresolved-until-reviewed",
+      "replacement": null,
+      "verified": false
+    },
+    {
+      "file": "src/lab/clbench/bench.css",
+      "bytes": 35263,
+      "sha256": "4ced6075db719f653bae7508dddac7e607b4a00e0b8e5a34b2d3148115a9521c",
+      "exportedNames": [],
+      "ownership": "unresolved-until-reviewed",
+      "replacement": null,
+      "verified": false
+    },
+    {
+      "file": "src/lab/clbench/bench.js",
+      "bytes": 81340,
+      "sha256": "2c0845c8346e853a0cc914b6d2e0f8c2df5c49c838c63fe8e7fc7a40585c5163",
+      "exportedNames": [
+        "createBench"
+      ],
+      "ownership": "unresolved-until-reviewed",
+      "replacement": null,
+      "verified": false
+    },
+    {
+      "file": "src/lab/clbench/circuit.js",
+      "bytes": 4386,
+      "sha256": "3ece0f2ba18f5007dd8ee0dc2b968a44767c71b7fe4d35f1ee9ac99316e417b4",
+      "exportedNames": [
+        "WIRE_R",
+        "Simulation"
+      ],
+      "ownership": "unresolved-until-reviewed",
+      "replacement": null,
+      "verified": false
+    },
+    {
+      "file": "src/lab/clbench/cover.js",
+      "bytes": 7063,
+      "sha256": "fe378df6a75ec106496a888746541c7b75dde70c239116939b54ef4c7308b7e8",
+      "exportedNames": [
+        "createCover"
+      ],
+      "ownership": "unresolved-until-reviewed",
+      "replacement": null,
+      "verified": false
+    },
+    {
+      "file": "src/lab/clbench/drape.js",
+      "bytes": 14314,
+      "sha256": "a5e1c7888b73337da32a43abc2c6a9ced9ac40431a08d995168cb0297e287eb4",
+      "exportedNames": [
+        "buildHeightMap",
+        "depthIn",
+        "dekink",
+        "solveRope",
+        "PointGrid"
+      ],
+      "ownership": "unresolved-until-reviewed",
+      "replacement": null,
+      "verified": false
+    },
+    {
+      "file": "src/lab/clbench/music.js",
+      "bytes": 6960,
+      "sha256": "aa0bdc425da56455e645a0265a736d2639d92ecc568782d98d8cfe0c5f64c03a",
+      "exportedNames": [
+        "BeatMusic"
+      ],
+      "ownership": "unresolved-until-reviewed",
+      "replacement": null,
+      "verified": false
+    },
+    {
+      "file": "src/lab/clbench/nameplates.js",
+      "bytes": 1497,
+      "sha256": "cbb7c0f7f836d52341c56f0dfcd722aab7d1f881cd5042927bf6432627933539",
+      "exportedNames": [
+        "NAMEPLATES",
+        "nameplateIndices"
+      ],
+      "ownership": "unresolved-until-reviewed",
+      "replacement": null,
+      "verified": false
+    },
+    {
+      "file": "src/lab/clbench/parts.js",
+      "bytes": 25463,
+      "sha256": "328a15c641e6d11658e5397f6f50acd8dc66c76af809e1e845d18612b4461ca4",
+      "exportedNames": [
+        "EPS0",
+        "METER",
+        "ntcR",
+        "ldrR",
+        "plateC",
+        "TYPES",
+        "shortValue"
+      ],
+      "ownership": "unresolved-until-reviewed",
+      "replacement": null,
+      "verified": false
+    },
+    {
+      "file": "src/lab/clbench/presets.js",
+      "bytes": 11535,
+      "sha256": "f32c3246739058d3063bb0b6892b29e1b010d73c3b2580e038fcc9d6997ae022",
+      "exportedNames": [
+        "PRESETS"
+      ],
+      "ownership": "unresolved-until-reviewed",
+      "replacement": null,
+      "verified": false
+    },
+    {
+      "file": "src/lab/clbench/schematic.js",
+      "bytes": 9885,
+      "sha256": "d75a2c4558fbd291e51d675b9663ca5148fe283c65bf8c1cd6137c87822972de",
+      "exportedNames": [
+        "esc",
+        "body",
+        "renderSchematic"
+      ],
+      "ownership": "unresolved-until-reviewed",
+      "replacement": null,
+      "verified": false
+    },
+    {
+      "file": "src/lab/clbench/skeleton.html",
+      "bytes": 9704,
+      "sha256": "ef3e695e6a3d3477011485fd4c12698208f5359988c1ea48676b96929271ccfb",
+      "exportedNames": [],
+      "ownership": "unresolved-until-reviewed",
+      "replacement": null,
+      "verified": false
+    },
+    {
+      "file": "src/lab/clbench/solver.js",
+      "bytes": 9618,
+      "sha256": "2e8f4ee1bb4c8d2402d4e641fed1e862603bc74a0104d94f632090bca22813a6",
+      "exportedNames": [
+        "GMIN",
+        "solveLinear",
+        "Resistor",
+        "Source",
+        "Supply",
+        "Diode",
+        "Lamp",
+        "Capacitor",
+        "Motor",
+        "solveStep"
+      ],
+      "ownership": "unresolved-until-reviewed",
+      "replacement": null,
+      "verified": false
+    },
+    {
+      "file": "src/lab/clbench/standard.js",
+      "bytes": 13255,
+      "sha256": "9a195ed504d6864596c00d53af865d19a9d21c8274e4615d9ec90e336f28bb62",
+      "exportedNames": [
+        "topology",
+        "reduce",
+        "renderStandard"
+      ],
+      "ownership": "unresolved-until-reviewed",
+      "replacement": null,
+      "verified": false
+    },
+    {
+      "file": "src/lab/clbench/touchControls.js",
+      "bytes": 21293,
+      "sha256": "8fcc5d37febcb87ee29f94fec1e3de9c6ac34a30b4e7f93371c48f7ffbe68c00",
+      "exportedNames": [
+        "attachTouchControls"
+      ],
+      "ownership": "unresolved-until-reviewed",
+      "replacement": null,
+      "verified": false
+    },
+    {
+      "file": "src/lab/clbench/visuals.js",
+      "bytes": 37881,
+      "sha256": "fe206a5e5be633d5f339668babf506724f6d32592dd5cc88475a79db132e263a",
+      "exportedNames": [
+        "setAnisotropy",
+        "loadAsset",
+        "makeHalo",
+        "FX",
+        "VIS",
+        "textSprite",
+        "buildPart3D"
+      ],
+      "ownership": "unresolved-until-reviewed",
+      "replacement": null,
+      "verified": false
+    },
+    {
+      "file": "src/lab/glowbench/GlowBench.jsx",
+      "bytes": 2967,
+      "sha256": "d852ae44d49d8f7bdda0b35831f35627c583e4f1e36558fd97ef53bee4656831",
+      "exportedNames": [],
+      "ownership": "unresolved-until-reviewed",
+      "replacement": null,
+      "verified": false
+    },
+    {
+      "file": "src/lab/glowbench/bench.css",
+      "bytes": 16133,
+      "sha256": "248144ef33b22a1a633763cc51777b068d2b802b8537079b766c0dedf304d014",
+      "exportedNames": [],
+      "ownership": "unresolved-until-reviewed",
+      "replacement": null,
+      "verified": false
+    },
+    {
+      "file": "src/lab/glowbench/bench.js",
+      "bytes": 100576,
+      "sha256": "546be4266e9c55bad6c08116e86937c2029c5d1bb2672ed67afdee2b59fde4e0",
+      "exportedNames": [
+        "createGlowBench"
+      ],
+      "ownership": "unresolved-until-reviewed",
+      "replacement": null,
+      "verified": false
+    },
+    {
+      "file": "src/lab/glowbench/bottleLabel.js",
+      "bytes": 2161,
+      "sha256": "47bb448bbab89772391e9b561c0fb33f2035cd9e3e40fd89d5c5bc5c2cd0329d",
+      "exportedNames": [
+        "conformBottleLabel"
+      ],
+      "ownership": "unresolved-until-reviewed",
+      "replacement": null,
+      "verified": false
+    },
+    {
+      "file": "src/lab/glowbench/chem.js",
+      "bytes": 40744,
+      "sha256": "ee1cecfb176ed551aa2ae7502d538f5f55fa1fea2c6d4640059ef8b77fb1accd",
+      "exportedNames": [
+        "SPECIES",
+        "REAGENTS",
+        "REAGENT_BY_ID",
+        "FLAME_COLORS",
+        "REACTIONS",
+        "createMixture",
+        "fromReagent",
+        "water",
+        "isSolid",
+        "equilibrate",
+        "step",
+        "pH",
+        "appearance",
+        "composition",
+        "take",
+        "merge",
+        "clear",
+        "flameIon"
+      ],
+      "ownership": "unresolved-until-reviewed",
+      "replacement": null,
+      "verified": false
+    },
+    {
+      "file": "src/lab/glowbench/demo.js",
+      "bytes": 22795,
+      "sha256": "47ca3a57925bf83d1099db12bde869d2cb67250817d55761f26b5c5c1a8165f0",
+      "exportedNames": [
+        "DEMOS"
+      ],
+      "ownership": "unresolved-until-reviewed",
+      "replacement": null,
+      "verified": false
+    },
+    {
+      "file": "src/lab/glowbench/drawer-thumbs.css",
+      "bytes": 1607,
+      "sha256": "12dd80f3046e29b7e183de2337ef36a81cf0be5498f9fc93a46a8fbb76d99fb2",
+      "exportedNames": [],
+      "ownership": "unresolved-until-reviewed",
+      "replacement": null,
+      "verified": false
+    },
+    {
+      "file": "src/lab/glowbench/fx.js",
+      "bytes": 16339,
+      "sha256": "485226736ea14ed5242db659130c59cc78cac2b70df109c87d11b9bcadbecb98",
+      "exportedNames": [
+        "PARTICLE_MATS",
+        "Particles",
+        "Flame",
+        "makeLiquidMaterial",
+        "Stream",
+        "Sound"
+      ],
+      "ownership": "unresolved-until-reviewed",
+      "replacement": null,
+      "verified": false
+    },
+    {
+      "file": "src/lab/glowbench/hands.js",
+      "bytes": 8803,
+      "sha256": "479facc617a1451740027a103aa3b9507ee3298ef7fff325aedffa8c3fb62678",
+      "exportedNames": [
+        "Hand"
+      ],
+      "ownership": "unresolved-until-reviewed",
+      "replacement": null,
+      "verified": false
+    },
+    {
+      "file": "src/lab/glowbench/integration.css",
+      "bytes": 959,
+      "sha256": "469b9b0638d05990c5afa3b1f527251d69b009313a30c0c688816a7e43d3e37a",
+      "exportedNames": [],
+      "ownership": "unresolved-until-reviewed",
+      "replacement": null,
+      "verified": false
+    },
+    {
+      "file": "src/lab/glowbench/items.js",
+      "bytes": 28104,
+      "sha256": "735628491f98b5ee631ba4f61c94d9e77dd9ab428d47d8aead9aa1a1e0f80741",
+      "exportedNames": [
+        "DEFS",
+        "bottleKey",
+        "createItem",
+        "refill",
+        "updateVesselVisual",
+        "mouthWorld"
+      ],
+      "ownership": "unresolved-until-reviewed",
+      "replacement": null,
+      "verified": false
+    },
+    {
+      "file": "src/lab/glowbench/music.js",
+      "bytes": 8101,
+      "sha256": "3bf789f6899f7ffb0f425537737acff2b744ce1b2b3e3898089f61cf979789f0",
+      "exportedNames": [
+        "PALETTE",
+        "Music"
+      ],
+      "ownership": "unresolved-until-reviewed",
+      "replacement": null,
+      "verified": false
+    },
+    {
+      "file": "src/lab/glowbench/parts.js",
+      "bytes": 12822,
+      "sha256": "7fa4cf1badffd484681d3d55df52532e546ec53cb4c90698cf151d5d0dff3fad",
+      "exportedNames": [
+        "loadScene",
+        "buildPart",
+        "computeProfile",
+        "liquidGeometry",
+        "makeMaterial",
+        "addRim"
+      ],
+      "ownership": "unresolved-until-reviewed",
+      "replacement": null,
+      "verified": false
+    },
+    {
+      "file": "src/lab/glowbench/reagentThumbs.js",
+      "bytes": 6729,
+      "sha256": "5d79996b02bc9d49ec18622e72ba63fbafc30353f6157454cb07827ca46d5c18",
+      "exportedNames": [
+        "createReagentThumbRenderer"
+      ],
+      "ownership": "unresolved-until-reviewed",
+      "replacement": null,
+      "verified": false
+    },
+    {
+      "file": "src/lab/glowbench/skeleton.html",
+      "bytes": 3618,
+      "sha256": "5f4938c9c9608f0b3a79c69dfcc1b8f45c70e921d2b6ccc6badc61d92e4234eb",
+      "exportedNames": [],
+      "ownership": "unresolved-until-reviewed",
+      "replacement": null,
+      "verified": false
+    },
+    {
+      "file": "src/lab/glowbench/spectacle.js",
+      "bytes": 13112,
+      "sha256": "dd9f8385a34265128747d2d591f263d5099910f657ede0c394fe2607de1b4a94",
+      "exportedNames": [
+        "Spectacle"
+      ],
+      "ownership": "unresolved-until-reviewed",
+      "replacement": null,
+      "verified": false
+    },
+    {
+      "file": "src/lab/glowbench/studio/StudioBench.jsx",
+      "bytes": 185,
+      "sha256": "15cb4e3a8ac9239e23465552e5d1bc95bc97018cc5f04d9c8df67a883ff0a847",
+      "exportedNames": [],
+      "ownership": "unresolved-until-reviewed",
+      "replacement": null,
+      "verified": false
+    },
+    {
+      "file": "src/lab/glowbench/studio/studio.css",
+      "bytes": 8747,
+      "sha256": "4417a35e61bfa876272c16a8a67f91783ff81c8eb601d18dc0de4fd9da3c33ba",
+      "exportedNames": [],
+      "ownership": "unresolved-until-reviewed",
+      "replacement": null,
+      "verified": false
+    },
+    {
+      "file": "src/lab/glowbench/studio/world.js",
+      "bytes": 12635,
+      "sha256": "f81ea9dbbb68b02f33bc4d618270128fcb1ae9867d5cb079ebd2514ff6d09468",
+      "exportedNames": [
+        "buildStudioWorld"
+      ],
+      "ownership": "unresolved-until-reviewed",
+      "replacement": null,
+      "verified": false
+    },
+    {
+      "file": "src/lab/glowbench/touch-controls.css",
+      "bytes": 10680,
+      "sha256": "5ca91dfe20853f13e3219940cdcf6d6db719dba4c6bc1972b375c510782e6753",
+      "exportedNames": [],
+      "ownership": "unresolved-until-reviewed",
+      "replacement": null,
+      "verified": false
+    },
+    {
+      "file": "src/lab/glowbench/touchControls.js",
+      "bytes": 20279,
+      "sha256": "70aa9707fabc3fae762d4d2cc6d34d0907a8ef666b43410d2993a0b58d280559",
+      "exportedNames": [
+        "createTouchControls"
+      ],
+      "ownership": "unresolved-until-reviewed",
+      "replacement": null,
+      "verified": false
+    },
+    {
+      "file": "src/lab/glowbench/world.js",
+      "bytes": 10487,
+      "sha256": "6f71af469c10078ea134f2cd46edb6859d0de3f5e7ebdd9bf815f1c769dfa982",
+      "exportedNames": [
+        "BENCH_Y",
+        "SHELF",
+        "buildWorld"
+      ],
+      "ownership": "unresolved-until-reviewed",
+      "replacement": null,
+      "verified": false
+    }
+  ],
+  "interactionGates": [
+    "mouse orbit/zoom/pan",
+    "390x844 and 844x390 true touch rotate/pinch/pan",
+    "terminal wire start/end/cancel must execute, no skip",
+    "rheostat drag and switch interaction",
+    "stopper and pouring",
+    "all demos completion",
+    "music pulse drives lighting with music toggle/volume/duck",
+    "10 route cycles+reset+dispose, no monotonic GPU/audio/RAF/listener growth"
+  ],
+  "counts": {
+    "electricTypes": 22,
+    "electricPresets": 12,
+    "chemistryEquipmentDefs": 25,
+    "reagents": 43,
+    "demos": 22,
+    "ownPartCandidates": 68,
+    "sourceModules": 39
+  }
+}

@@ -1,0 +1,19 @@
+// Standalone offline audition UI; intentionally separate from the application's runtime API.
+export function response(kind,a,b=1) {
+  const s=Math.max(0,Math.min(1,Number(a)||0));
+  if(kind==='click-switch')return {gain:.18+s*.45,rate:.92+s*.18};
+  if(kind==='explosion')return {gain:.25+s*.55,rate:.95+s*.1};
+  if(kind.startsWith('impact-'))return {gain:Math.min(.62,.1+Math.sqrt(Math.max(0,Number(a)||0))*.3),rate:Math.max(.7,Math.min(1.25,1.05/(1+(Math.max(.2,Number(b)||1)-1)*.06)))};
+  if(kind==='motor')return {gain:.16,rate:Math.max(.55,Math.min(1.8,Number(a)/600))};
+  throw Error('Unknown response');
+}
+export function auditionHtml(names) {
+  return `<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>自有音效候选试听</title>
+<style>body{font:16px system-ui;background:#101820;color:#e7eff5;max-width:900px;margin:32px auto;padding:0 20px}article{padding:18px;background:#1b2934;margin:14px 0;border-radius:12px}label{display:inline-block;margin:8px}button{padding:8px 16px}audio{display:block;width:100%;margin:12px 0}output{display:block;color:#9edacb}</style>
+<h1>自有音效候选试听</h1><p>待人工试听。客观测试不代表听感等同录音。独立程序化物理声学设计；此页不修改应用 API，不接入生产。</p><p>直接打开本地文件即可。先用每项播放器听原始文件，再用参数示范试听物理响应。马达循环至少听五圈，停止后方可播放下一项。请从低音量开始。</p><button id="stop">停止全部</button>
+${names.map(name=>`<article data-name="${name}"><h2>${name}</h2><audio controls preload="none" ${name==='motor'?'loop':''} src="${name}.wav"></audio><label>${name==='motor'?'rpm':name.startsWith('impact-')?'能量 J':'强度'} <input class="a" type="number" min="0" max="${name==='motor'?2400:name.startsWith('impact-')?20:1}" step="${name==='motor'?60:.1}" value="${name==='motor'?600:1}"></label>${name.startsWith('impact-')?'<label>质量 kg <input class="b" type="number" min="0.2" max="20" step=".2" value="1"></label>':''}<button class="demo">播放参数示范</button><output></output><p>${name==='motor'?'基准600rpm；gain=0.16在1.2秒下降到0.0001，loop=true；上方原始播放器用于长期接点试听。':'参数改变增益与播放速率，主播放器保留原始资产。'}</p></article>`).join('')}
+<script>const response=${response.toString()};const media=new Set();let context;let generation=0;
+const release=entry=>{clearTimeout(entry.timer);entry.audio.onended=null;entry.audio.onerror=null;entry.audio.pause();entry.source.disconnect();entry.amp.disconnect();entry.audio.removeAttribute('src');entry.audio.load();media.delete(entry);};
+const stop=()=>{generation++;for(const entry of [...media])release(entry);for(const a of document.querySelectorAll('audio'))a.pause();};document.querySelector('#stop').onclick=stop;window.addEventListener('pagehide',()=>{stop();const previous=context;context=null;previous?.close().catch(()=>{});});
+for(const card of document.querySelectorAll('article'))card.querySelector('.demo').onclick=async()=>{stop();const token=generation;const name=card.dataset.name;const p=response(name,card.querySelector('.a').value,card.querySelector('.b')?.value??1);card.querySelector('output').textContent=JSON.stringify(p)+'；仅试听示范';try{if(!context||context.state==='closed')context=new AudioContext();await context.resume();}catch(error){card.querySelector('output').textContent='音频启动失败：'+error.message;return;}if(token!==generation)return;const audio=new Audio(name+'.wav');audio.loop=name==='motor';audio.playbackRate=p.rate;audio.preservesPitch=false;const source=context.createMediaElementSource(audio),amp=context.createGain();const entry={audio,source,amp,timer:null};media.add(entry);audio.onended=()=>release(entry);audio.onerror=()=>release(entry);source.connect(amp).connect(context.destination);amp.gain.value=p.gain;if(name==='motor'){amp.gain.setValueAtTime(.16,context.currentTime);amp.gain.linearRampToValueAtTime(.0001,context.currentTime+1.2);entry.timer=setTimeout(()=>release(entry),1250);}try{await audio.play();}catch(error){release(entry);card.querySelector('output').textContent='播放失败：'+error.message;}};</script></html>`;
+}

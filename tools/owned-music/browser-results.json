@@ -1,0 +1,227 @@
+{
+  "scope": "isolated-owned-modules",
+  "productionAcceptance": false,
+  "environment": {
+    "date": "2026-10-31",
+    "browser": "TANKBrowser/1.0 Chrome/150.0.0.0 Windows NT 10.0 Win64 x64",
+    "page": "http://127.0.0.1:5173/tools/owned-music/evidence.html",
+    "serviceStartedByWorker": false
+  },
+  "offline": {
+    "kind": "OfflineAudioContext",
+    "sampleRate": 48000,
+    "channels": 2,
+    "duration": 30.666666666666668,
+    "bars": 12,
+    "pass": true,
+    "full": {
+      "finite": true,
+      "peak": 0.20429101586341858,
+      "rms": 0.017386644698037072
+    },
+    "tailLast100ms": {
+      "finite": true,
+      "peak": 0,
+      "rms": 0
+    },
+    "sectionsRms": [
+      0.01871103773093665,
+      0.01899477983779772,
+      0.018530559111359594
+    ],
+    "counts": {
+      "kick": 39,
+      "snare": 27,
+      "hat": 112,
+      "bass": 60,
+      "pad": 48,
+      "pluck": 52
+    },
+    "after": {
+      "nodes": 0,
+      "sources": 0,
+      "voices": 0,
+      "events": 0,
+      "timers": 0
+    },
+    "stems": [
+      {
+        "part": "kick",
+        "peak": 0.17618583142757416,
+        "rms": 0.009746571725598606,
+        "finite": true,
+        "pass": true
+      },
+      {
+        "part": "snare",
+        "peak": 0.10632912814617157,
+        "rms": 0.002846212907252173,
+        "finite": true,
+        "pass": true
+      },
+      {
+        "part": "hat",
+        "peak": 0.04160727933049202,
+        "rms": 0.000673989565506295,
+        "finite": true,
+        "pass": true
+      },
+      {
+        "part": "bass",
+        "peak": 0.04892036318778992,
+        "rms": 0.0037056025793133877,
+        "finite": true,
+        "pass": true
+      },
+      {
+        "part": "pad",
+        "peak": 0.02797311544418335,
+        "rms": 0.0029278139327392058,
+        "finite": true,
+        "pass": true
+      },
+      {
+        "part": "pluck",
+        "peak": 0.05422205105423927,
+        "rms": 0.0037588630947714015,
+        "finite": true,
+        "pass": true
+      }
+    ]
+  },
+  "realtime": [
+    {
+      "adapter": "beat",
+      "durationMs": 6000,
+      "samples": 300,
+      "pass": true,
+      "maximumOnsetErrorMs": 25.510110729641156,
+      "onsetErrorsMs": [
+        12.519999999999996,
+        3.786778159247328,
+        6.790110825008799,
+        11.040777682410408,
+        9.444444444444589,
+        6.930999904632529,
+        9.048555555555282,
+        25.510110729641156,
+        10.33333333333264
+      ],
+      "stoppedPulse": {
+        "beat": 0,
+        "chord": -1
+      },
+      "after": {
+        "nodes": 0,
+        "sources": 0,
+        "voices": 0,
+        "events": 0,
+        "timers": 0
+      }
+    },
+    {
+      "adapter": "glow",
+      "durationMs": 6000,
+      "samples": 300,
+      "pass": true,
+      "maximumOnsetErrorMs": 13.352999999999989,
+      "onsetErrorsMs": [
+        13.352999999999989,
+        10.82577768241011,
+        9.22811082500874,
+        11.200777682410568,
+        9.444444444444589,
+        12.154999809265377,
+        8.689555555556616,
+        9.732111492580131,
+        10.316666952768117
+      ],
+      "stoppedPulse": null,
+      "after": {
+        "nodes": 0,
+        "sources": 0,
+        "voices": 0,
+        "events": 0,
+        "timers": 0
+      }
+    }
+  ],
+  "limits": [
+    "Onset error measures a 20ms polling observation against the scheduled audio clock; it is not microphone or speaker loopback measurement.",
+    "No production imports, integrated page light behavior, subjective listening fidelity or physical output latency acceptance is claimed.",
+    "Offline silence tail follows the explicit planned output fade; runtime immediate graph teardown is independently checked by lifecycle tests."
+  ],
+  "historicalRealtimeV1": [
+    {
+      "adapter": "beat",
+      "durationMs": 6000,
+      "samples": 300,
+      "pass": true,
+      "maximumOnsetErrorMs": 19.016555746289576,
+      "onsetErrorsMs": [
+        3.3569998092651336,
+        11.809777873144967,
+        14.510110920376462,
+        0.8657778731446797,
+        7.563444349076853,
+        13.563000095367261,
+        19.016555746289576,
+        4.142111206477672,
+        11.331666666666074
+      ],
+      "stoppedPulse": {
+        "beat": 0,
+        "chord": -1
+      },
+      "after": {
+        "nodes": 0,
+        "sources": 0,
+        "voices": 0,
+        "events": 0,
+        "timers": 0
+      }
+    },
+    {
+      "adapter": "glow",
+      "durationMs": 6000,
+      "samples": 300,
+      "pass": true,
+      "maximumOnsetErrorMs": 19.873999713897707,
+      "onsetErrorsMs": [
+        19.873999713897707,
+        7.656777491675815,
+        11.386111206478589,
+        17.768778159247045,
+        4.567444444444124,
+        10.666666666666824,
+        15.5165555555552,
+        3.1111111111110645,
+        6.920666571298639
+      ],
+      "stoppedPulse": null,
+      "after": {
+        "nodes": 0,
+        "sources": 0,
+        "voices": 0,
+        "events": 0,
+        "timers": 0
+      }
+    }
+  ],
+  "historicalRealtimeV1Status": "superseded: observer reused candidate audibleTime and did not require nonzero pulse; not independent pulse proof",
+  "realtimeVersion": "v2: observer directly maps getOutputTimestamp; observed pulse>0.2 required; all five stopped resource counts checked",
+  "negativeControl": {
+    "injectedPulse": "null",
+    "durationMs": 1000,
+    "samples": 50,
+    "onsetErrorsMs": [],
+    "pass": false,
+    "correctlyRejected": true
+  },
+  "cancelControl": {
+    "rounds": 5,
+    "cancelCallsPerRound": 2,
+    "promisesSettled": true,
+    "allResourceCountsZero": true
+  }
+}

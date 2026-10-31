@@ -1,0 +1,31 @@
+{
+  "schema": "independent-cad-design/1",
+  "status": "development-authorized-production-unverified",
+  "designBasis": "New independently chosen engineering dimensions constrained by public function specifications; no reference geometry or textures read",
+  "units": "mm",
+  "replacementReady": false,
+  "cadTolerance_mm": 0.02,
+  "angularTolerance_rad": 0.05,
+  "C01": {
+    "beaker100": {"innerRadius":25,"height":75,"wall":1.5,"bottom":3,"nominal_ml":100,"nominalHeightAboveInnerBottom":50.92958178940651,"spoutStartsBelowRim":9,"spoutReach":7,"spoutHalfAngle_deg":24,"baseChamfer":0.35},
+    "beaker250": {"innerRadius":34,"height":95,"wall":1.8,"bottom":3,"nominal_ml":250,"nominalHeightAboveInnerBottom":68.83864320581014,"spoutStartsBelowRim":10,"spoutReach":8,"spoutHalfAngle_deg":24,"baseChamfer":0.4},
+    "stirrer":{"diameter":6,"length":180,"tipRadius":3},
+    "markings":"Estimated volume only; original vector/generated geometry, no calibration grade"
+  },
+  "C02": {
+    "tube100":{"outerRadius":8,"wall":1.2,"height":100,"bottomType":"hemisphere"},
+    "tube120":{"outerRadius":8,"wall":1.2,"height":120,"bottomType":"hemisphere"},
+    "tube150":{"outerRadius":8,"wall":1.2,"height":150,"bottomType":"hemisphere"},
+    "rack":{"baseWidth":154,"baseDepth":54,"baseThickness":9,"holeDiameter":17.2,"holeX":[-48,-16,16,48],"guideBottoms":[50,88],"guideThickness":5,"guideWidth":146,"guideDepth":32,"postCentersX":[-68,68],"postWidth":10,"postHeight":89,"socketPositions_m":[[-0.048,0.012,0],[-0.016,0.012,0],[0.016,0.012,0],[0.048,0.012,0]]}
+  },
+  "C04": {
+    "cylinder50":{"innerRadius":9,"wall":1.4,"bottom":3,"nominal_ml":50,"height":215,"footApothem":22,"footThickness":7,"footRadialClearance":0.2,"graduation_ml":1,"numberEvery_ml":5},
+    "cylinder100":{"innerRadius":12,"wall":1.5,"bottom":3,"nominal_ml":100,"height":240,"footApothem":28,"footThickness":8,"footRadialClearance":0.2,"graduation_ml":1,"numberEvery_ml":10},
+    "markings":"IN / 20 C / mL; numerical capacities from independent cylindrical bore oracle; no accuracy class"
+  },
+  "C22": {
+    "body":{"outerRadius":27,"height":103,"wall":1.6,"bottom":3,"shoulderStarts":74,"shoulderEnds":91,"neckInnerRadiusWide":16,"neckInnerRadiusNarrow":9,"stopperEngagement":9,"stopperRadialClearance":0.15,"neckTaper_deg":3},
+    "variants":[{"id":0,"neck":"wide","glass":"clear"},{"id":1,"neck":"narrow","glass":"clear"},{"id":2,"neck":"wide","glass":"amber"},{"id":3,"neck":"narrow","glass":"amber"}],
+    "markings":"No invented bottle capacity or fixed chemical compatibility claim"
+  }
+}

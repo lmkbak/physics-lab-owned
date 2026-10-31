@@ -1,0 +1,3555 @@
+{
+  "source": "docs/ownership/cad-coverage.json; functional facts only",
+  "geometryInput": false,
+  "requirements": [
+    {
+      "number": "C25",
+      "asset": "chem_thermometer_cadquery",
+      "id": "chem_thermometer",
+      "name": "温度计与护套",
+      "category": "测温与辅助操作",
+      "dimensionFact": "0–100 °C示意刻度 · 长224 mm",
+      "requirements": "224长0–100温标、毛细管与30°C示意液柱；独立中空护套和端帽；当前204.5长无标尺不得当完成",
+      "groups": [
+        {
+          "label": "液柱温度计",
+          "ordinal": 1
+        },
+        {
+          "label": "保护套",
+          "ordinal": 2
+        },
+        {
+          "label": "护套端帽",
+          "ordinal": 3
+        }
+      ],
+      "runtime": [],
+      "cavity": {
+        "status": "unverified",
+        "candidateGroups": [
+          "保护套"
+        ],
+        "detail": "按独立解析内轮廓/通道拓扑验证这些器形；内外表面、底厚、开口与隔离通路不能由包围盒或透明实心替代",
+        "gateIds": [
+          "CAVITY-ORACLE",
+          "CHANNELS"
+        ]
+      },
+      "sockets": {
+        "status": "unverified",
+        "catalogConnectorGroups": [],
+        "runtimeSockets": [],
+        "detail": "无公开装配接口数值；只保留确有的支承/接触特征，不虚构连接功能"
+      },
+      "material": {
+        "status": "unverified",
+        "requiredClasses": [
+          "glass"
+        ],
+        "transparencyRequired": true,
+        "detail": "材质按独立功能件分开；透明/棕玻璃、陶瓷/绝缘、导电金属与软材不可统一灰模；所有标注自绘"
+      },
+      "scales": {
+        "status": "unverified",
+        "hasPublicMarkingFacts": true,
+        "dimensionFact": "0–100 °C示意刻度 · 长224 mm",
+        "tags": [],
+        "detail": "按公开容量/分度/方向独立生成刻线、数字、单位；单标器不得变多标；估读与标称不冒充实物校准"
+      },
+      "movable": {
+        "status": "unverified",
+        "independentGroupsRequired": true,
+        "runtimeRoles": [],
+        "runtimeRotations": [],
+        "detail": "区分可独立拆取与已有运行时运动；保持roles/axis与一体玻璃边界，静态器具不捏造已支持动力学"
+      }
+    },
+    {
+      "number": "C26",
+      "asset": "chem_combustion_spoon_cadquery",
+      "id": "chem_combustion_spoon",
+      "name": "燃烧匙与挡片",
+      "category": "测温与辅助操作",
+      "dimensionFact": "长柄约220 mm · 匙口Ø22 mm",
+      "requirements": "约220长柄连接Ø22凹匙；穿柄挡片独立且有通孔",
+      "groups": [
+        {
+          "label": "金属燃烧匙",
+          "ordinal": 1
+        },
+        {
+          "label": "金属挡片",
+          "ordinal": 2
+        }
+      ],
+      "runtime": [
+        {
+          "itemKey": "cspoon",
+          "name": "燃烧匙",
+          "kind": "tool",
+          "groups": [
+            "spoon"
+          ],
+          "axis": null,
+          "axisRule": "No explicit axis: preserve loader default origin rule",
+          "rotate": null,
+          "roles": {},
+          "profileGroups": null,
+          "profileRule": "Not a liquid vessel item",
+          "sockets": [],
+          "gripY_m": 0.19,
+          "flow": null,
+          "heat": false,
+          "fill": null
+        }
+      ],
+      "cavity": {
+        "status": "unverified",
+        "candidateGroups": [],
+        "detail": "依各功能组真实孔/凹槽定义；未声明盛液功能不得捏造容积",
+        "gateIds": [
+          "CAVITY-ORACLE",
+          "CHANNELS"
+        ]
+      },
+      "sockets": {
+        "status": "unverified",
+        "catalogConnectorGroups": [],
+        "runtimeSockets": [],
+        "detail": "无公开装配接口数值；只保留确有的支承/接触特征，不虚构连接功能"
+      },
+      "material": {
+        "status": "unverified",
+        "requiredClasses": [
+          "metal"
+        ],
+        "transparencyRequired": false,
+        "detail": "材质按独立功能件分开；透明/棕玻璃、陶瓷/绝缘、导电金属与软材不可统一灰模；所有标注自绘"
+      },
+      "scales": {
+        "status": "unverified",
+        "hasPublicMarkingFacts": false,
+        "dimensionFact": "长柄约220 mm · 匙口Ø22 mm",
+        "tags": [],
+        "detail": "未声明计量刻度；不得添加虚假读数或准确度等级"
+      },
+      "movable": {
+        "status": "unverified",
+        "independentGroupsRequired": false,
+        "runtimeRoles": [],
+        "runtimeRotations": [],
+        "detail": "区分可独立拆取与已有运行时运动；保持roles/axis与一体玻璃边界，静态器具不捏造已支持动力学"
+      }
+    },
+    {
+      "number": "C27",
+      "asset": "chem_test_tube_tools_cadquery",
+      "id": "chem_test_tube_tools",
+      "name": "试管夹与试管刷",
+      "category": "测温与辅助操作",
+      "dimensionFact": "木夹长170 mm · 刷头长55 mm",
+      "requirements": "170木夹双臂弹簧与弧口；55刷头径向刷毛、芯杆、挂圈固定整体",
+      "groups": [
+        {
+          "label": "木质试管夹",
+          "ordinal": 1
+        },
+        {
+          "label": "试管刷",
+          "ordinal": 2
+        }
+      ],
+      "runtime": [],
+      "cavity": {
+        "status": "unverified",
+        "candidateGroups": [],
+        "detail": "依各功能组真实孔/凹槽定义；未声明盛液功能不得捏造容积",
+        "gateIds": [
+          "CAVITY-ORACLE",
+          "CHANNELS"
+        ]
+      },
+      "sockets": {
+        "status": "unverified",
+        "catalogConnectorGroups": [],
+        "runtimeSockets": [],
+        "detail": "无公开装配接口数值；只保留确有的支承/接触特征，不虚构连接功能"
+      },
+      "material": {
+        "status": "unverified",
+        "requiredClasses": [
+          "metal",
+          "wood"
+        ],
+        "transparencyRequired": false,
+        "detail": "材质按独立功能件分开；透明/棕玻璃、陶瓷/绝缘、导电金属与软材不可统一灰模；所有标注自绘"
+      },
+      "scales": {
+        "status": "unverified",
+        "hasPublicMarkingFacts": false,
+        "dimensionFact": "木夹长170 mm · 刷头长55 mm",
+        "tags": [],
+        "detail": "未声明计量刻度；不得添加虚假读数或准确度等级"
+      },
+      "movable": {
+        "status": "unverified",
+        "independentGroupsRequired": false,
+        "runtimeRoles": [],
+        "runtimeRotations": [],
+        "detail": "区分可独立拆取与已有运行时运动；保持roles/axis与一体玻璃边界，静态器具不捏造已支持动力学"
+      }
+    },
+    {
+      "number": "C28",
+      "asset": "chem_stoppers_connectors_cadquery",
+      "id": "chem_stoppers_connectors",
+      "name": "橡胶塞与导管接头",
+      "category": "连接与承托",
+      "dimensionFact": "塞高24 mm · 导管外径6 / 内径4 mm",
+      "requirements": "24高实心/单孔/双孔锥塞；外6内4直管和90度弯管；独立贯通柔性套管",
+      "groups": [
+        {
+          "label": "实心塞",
+          "ordinal": 1
+        },
+        {
+          "label": "单孔塞",
+          "ordinal": 2
+        },
+        {
+          "label": "双孔塞",
+          "ordinal": 3
+        },
+        {
+          "label": "玻璃直管",
+          "ordinal": 4
+        },
+        {
+          "label": "玻璃弯管",
+          "ordinal": 5
+        },
+        {
+          "label": "柔性连接套管",
+          "ordinal": 6
+        }
+      ],
+      "runtime": [],
+      "cavity": {
+        "status": "unverified",
+        "candidateGroups": [
+          "实心塞",
+          "单孔塞",
+          "双孔塞",
+          "玻璃直管",
+          "玻璃弯管"
+        ],
+        "detail": "按独立解析内轮廓/通道拓扑验证这些器形；内外表面、底厚、开口与隔离通路不能由包围盒或透明实心替代",
+        "gateIds": [
+          "CAVITY-ORACLE",
+          "CHANNELS"
+        ]
+      },
+      "sockets": {
+        "status": "unverified",
+        "catalogConnectorGroups": [
+          "实心塞",
+          "单孔塞",
+          "双孔塞"
+        ],
+        "runtimeSockets": [],
+        "detail": "新建真实孔/锥面/接管或电接触接口，尺寸与装配净空须逐接口记录，不能以贴图洞替代"
+      },
+      "material": {
+        "status": "unverified",
+        "requiredClasses": [
+          "glass",
+          "elastomer"
+        ],
+        "transparencyRequired": true,
+        "detail": "材质按独立功能件分开；透明/棕玻璃、陶瓷/绝缘、导电金属与软材不可统一灰模；所有标注自绘"
+      },
+      "scales": {
+        "status": "unverified",
+        "hasPublicMarkingFacts": false,
+        "dimensionFact": "塞高24 mm · 导管外径6 / 内径4 mm",
+        "tags": [],
+        "detail": "未声明计量刻度；不得添加虚假读数或准确度等级"
+      },
+      "movable": {
+        "status": "unverified",
+        "independentGroupsRequired": false,
+        "runtimeRoles": [],
+        "runtimeRotations": [],
+        "detail": "区分可独立拆取与已有运行时运动；保持roles/axis与一体玻璃边界，静态器具不捏造已支持动力学"
+      }
+    },
+    {
+      "number": "C29",
+      "asset": "chem_thistle_funnels_cadquery",
+      "id": "chem_thistle_funnels",
+      "name": "长颈漏斗套件",
+      "category": "连接与承托",
+      "dimensionFact": "总高180 / 240 mm · 管腔Ø4 mm",
+      "requirements": "180/240高两套球部与长颈一体玻璃；管内4连续贯通，无阀",
+      "groups": [
+        {
+          "label": "180 mm长颈漏斗",
+          "ordinal": 1
+        },
+        {
+          "label": "240 mm长颈漏斗",
+          "ordinal": 2
+        }
+      ],
+      "runtime": [],
+      "cavity": {
+        "status": "unverified",
+        "candidateGroups": [],
+        "detail": "依各功能组真实孔/凹槽定义；未声明盛液功能不得捏造容积",
+        "gateIds": [
+          "CAVITY-ORACLE",
+          "CHANNELS"
+        ]
+      },
+      "sockets": {
+        "status": "unverified",
+        "catalogConnectorGroups": [],
+        "runtimeSockets": [],
+        "detail": "无公开装配接口数值；只保留确有的支承/接触特征，不虚构连接功能"
+      },
+      "material": {
+        "status": "unverified",
+        "requiredClasses": [
+          "glass"
+        ],
+        "transparencyRequired": true,
+        "detail": "材质按独立功能件分开；透明/棕玻璃、陶瓷/绝缘、导电金属与软材不可统一灰模；所有标注自绘"
+      },
+      "scales": {
+        "status": "unverified",
+        "hasPublicMarkingFacts": false,
+        "dimensionFact": "总高180 / 240 mm · 管腔Ø4 mm",
+        "tags": [],
+        "detail": "未声明计量刻度；不得添加虚假读数或准确度等级"
+      },
+      "movable": {
+        "status": "unverified",
+        "independentGroupsRequired": false,
+        "runtimeRoles": [],
+        "runtimeRotations": [],
+        "detail": "区分可独立拆取与已有运行时运动；保持roles/axis与一体玻璃边界，静态器具不捏造已支持动力学"
+      }
+    },
+    {
+      "number": "C30",
+      "asset": "chem_triangle_rings_cadquery",
+      "id": "chem_triangle_rings",
+      "name": "泥三角与烧瓶托环",
+      "category": "连接与承托",
+      "dimensionFact": "三角边长90 mm · 托环外径70 / 90 mm",
+      "requirements": "90边泥三角陶瓷套与铁丝整体；70/90中央敞开斜内缘软木环；现有金属铁圈不能当软木环",
+      "groups": [
+        {
+          "label": "泥三角",
+          "ordinal": 1
+        },
+        {
+          "label": "70 mm软木托环",
+          "ordinal": 2
+        },
+        {
+          "label": "90 mm软木托环",
+          "ordinal": 3
+        }
+      ],
+      "runtime": [],
+      "cavity": {
+        "status": "unverified",
+        "candidateGroups": [],
+        "detail": "依各功能组真实孔/凹槽定义；未声明盛液功能不得捏造容积",
+        "gateIds": [
+          "CAVITY-ORACLE",
+          "CHANNELS"
+        ]
+      },
+      "sockets": {
+        "status": "unverified",
+        "catalogConnectorGroups": [],
+        "runtimeSockets": [],
+        "detail": "无公开装配接口数值；只保留确有的支承/接触特征，不虚构连接功能"
+      },
+      "material": {
+        "status": "unverified",
+        "requiredClasses": [
+          "ceramic",
+          "metal",
+          "cork"
+        ],
+        "transparencyRequired": false,
+        "detail": "材质按独立功能件分开；透明/棕玻璃、陶瓷/绝缘、导电金属与软材不可统一灰模；所有标注自绘"
+      },
+      "scales": {
+        "status": "unverified",
+        "hasPublicMarkingFacts": false,
+        "dimensionFact": "三角边长90 mm · 托环外径70 / 90 mm",
+        "tags": [],
+        "detail": "未声明计量刻度；不得添加虚假读数或准确度等级"
+      },
+      "movable": {
+        "status": "unverified",
+        "independentGroupsRequired": false,
+        "runtimeRoles": [],
+        "runtimeRotations": [],
+        "detail": "区分可独立拆取与已有运行时运动；保持roles/axis与一体玻璃边界，静态器具不捏造已支持动力学"
+      }
+    },
+    {
+      "number": "C31",
+      "asset": "chem_desiccator_cadquery",
+      "id": "chem_desiccator",
+      "name": "干燥器与带孔隔板",
+      "category": "干燥、称量与抽滤",
+      "dimensionFact": "外径180 mm · 带盖高184 mm",
+      "requirements": "Ø180带盖184下皿真实空腔及内肩；独立穿孔瓷隔板；带钮一体盖与平接面",
+      "groups": [
+        {
+          "label": "玻璃下皿",
+          "ordinal": 1
+        },
+        {
+          "label": "带孔瓷隔板",
+          "ordinal": 2
+        },
+        {
+          "label": "带钮玻璃盖",
+          "ordinal": 3
+        }
+      ],
+      "runtime": [],
+      "cavity": {
+        "status": "unverified",
+        "candidateGroups": [
+          "玻璃下皿"
+        ],
+        "detail": "按独立解析内轮廓/通道拓扑验证这些器形；内外表面、底厚、开口与隔离通路不能由包围盒或透明实心替代",
+        "gateIds": [
+          "CAVITY-ORACLE",
+          "CHANNELS"
+        ]
+      },
+      "sockets": {
+        "status": "unverified",
+        "catalogConnectorGroups": [],
+        "runtimeSockets": [],
+        "detail": "无公开装配接口数值；只保留确有的支承/接触特征，不虚构连接功能"
+      },
+      "material": {
+        "status": "unverified",
+        "requiredClasses": [
+          "glass",
+          "ceramic"
+        ],
+        "transparencyRequired": true,
+        "detail": "材质按独立功能件分开；透明/棕玻璃、陶瓷/绝缘、导电金属与软材不可统一灰模；所有标注自绘"
+      },
+      "scales": {
+        "status": "unverified",
+        "hasPublicMarkingFacts": false,
+        "dimensionFact": "外径180 mm · 带盖高184 mm",
+        "tags": [],
+        "detail": "未声明计量刻度；不得添加虚假读数或准确度等级"
+      },
+      "movable": {
+        "status": "unverified",
+        "independentGroupsRequired": false,
+        "runtimeRoles": [],
+        "runtimeRotations": [],
+        "detail": "区分可独立拆取与已有运行时运动；保持roles/axis与一体玻璃边界，静态器具不捏造已支持动力学"
+      }
+    },
+    {
+      "number": "C32",
+      "asset": "chem_weighing_bottles_cadquery",
+      "id": "chem_weighing_bottles",
+      "name": "称量瓶与镊子",
+      "category": "干燥、称量与抽滤",
+      "dimensionFact": "称量瓶Ø44×32 / Ø34×58 mm · 镊长120 mm",
+      "requirements": "Ø44×32/Ø34×58两种有底空瓶和短定位盖；120镊子尾连双臂有间隙",
+      "groups": [
+        {
+          "label": "矮型称量瓶",
+          "ordinal": 1
+        },
+        {
+          "label": "矮型瓶盖",
+          "ordinal": 2
+        },
+        {
+          "label": "高型称量瓶",
+          "ordinal": 3
+        },
+        {
+          "label": "高型瓶盖",
+          "ordinal": 4
+        },
+        {
+          "label": "平口镊子",
+          "ordinal": 5
+        }
+      ],
+      "runtime": [],
+      "cavity": {
+        "status": "unverified",
+        "candidateGroups": [
+          "矮型称量瓶",
+          "高型称量瓶"
+        ],
+        "detail": "按独立解析内轮廓/通道拓扑验证这些器形；内外表面、底厚、开口与隔离通路不能由包围盒或透明实心替代",
+        "gateIds": [
+          "CAVITY-ORACLE",
+          "CHANNELS"
+        ]
+      },
+      "sockets": {
+        "status": "unverified",
+        "catalogConnectorGroups": [
+          "矮型瓶盖",
+          "高型瓶盖"
+        ],
+        "runtimeSockets": [],
+        "detail": "新建真实孔/锥面/接管或电接触接口，尺寸与装配净空须逐接口记录，不能以贴图洞替代"
+      },
+      "material": {
+        "status": "unverified",
+        "requiredClasses": [
+          "glass"
+        ],
+        "transparencyRequired": true,
+        "detail": "材质按独立功能件分开；透明/棕玻璃、陶瓷/绝缘、导电金属与软材不可统一灰模；所有标注自绘"
+      },
+      "scales": {
+        "status": "unverified",
+        "hasPublicMarkingFacts": false,
+        "dimensionFact": "称量瓶Ø44×32 / Ø34×58 mm · 镊长120 mm",
+        "tags": [],
+        "detail": "未声明计量刻度；不得添加虚假读数或准确度等级"
+      },
+      "movable": {
+        "status": "unverified",
+        "independentGroupsRequired": false,
+        "runtimeRoles": [],
+        "runtimeRotations": [],
+        "detail": "区分可独立拆取与已有运行时运动；保持roles/axis与一体玻璃边界，静态器具不捏造已支持动力学"
+      }
+    },
+    {
+      "number": "C33",
+      "asset": "chem_buchner_filtration_cadquery",
+      "id": "chem_buchner_filtration",
+      "name": "抽滤瓶与布氏漏斗",
+      "category": "干燥、称量与抽滤",
+      "dimensionFact": "抽滤瓶高145 mm · 漏斗口径66 mm",
+      "requirements": "145高瓶侧管通内腔；橡胶锥接座；66口一体瓷滤板/杯/颈真实贯孔；旁置圆纸",
+      "groups": [
+        {
+          "label": "侧管抽滤瓶",
+          "ordinal": 1
+        },
+        {
+          "label": "橡胶接座",
+          "ordinal": 2
+        },
+        {
+          "label": "瓷布氏漏斗",
+          "ordinal": 3
+        },
+        {
+          "label": "圆滤纸",
+          "ordinal": 4
+        }
+      ],
+      "runtime": [],
+      "cavity": {
+        "status": "unverified",
+        "candidateGroups": [],
+        "detail": "依各功能组真实孔/凹槽定义；未声明盛液功能不得捏造容积",
+        "gateIds": [
+          "CAVITY-ORACLE",
+          "CHANNELS"
+        ]
+      },
+      "sockets": {
+        "status": "unverified",
+        "catalogConnectorGroups": [
+          "侧管抽滤瓶",
+          "橡胶接座"
+        ],
+        "runtimeSockets": [],
+        "detail": "新建真实孔/锥面/接管或电接触接口，尺寸与装配净空须逐接口记录，不能以贴图洞替代"
+      },
+      "material": {
+        "status": "unverified",
+        "requiredClasses": [
+          "glass",
+          "elastomer",
+          "ceramic",
+          "paper"
+        ],
+        "transparencyRequired": true,
+        "detail": "材质按独立功能件分开；透明/棕玻璃、陶瓷/绝缘、导电金属与软材不可统一灰模；所有标注自绘"
+      },
+      "scales": {
+        "status": "unverified",
+        "hasPublicMarkingFacts": false,
+        "dimensionFact": "抽滤瓶高145 mm · 漏斗口径66 mm",
+        "tags": [],
+        "detail": "未声明计量刻度；不得添加虚假读数或准确度等级"
+      },
+      "movable": {
+        "status": "unverified",
+        "independentGroupsRequired": false,
+        "runtimeRoles": [],
+        "runtimeRotations": [],
+        "detail": "区分可独立拆取与已有运行时运动；保持roles/axis与一体玻璃边界，静态器具不捏造已支持动力学"
+      }
+    },
+    {
+      "number": "C34",
+      "asset": "chem_gas_syringe_cadquery",
+      "id": "chem_gas_syringe",
+      "name": "气体注射器",
+      "category": "气体量取与通路控制",
+      "dimensionFact": "50 mL · 1 mL分度 · 筒内径20 mm",
+      "requirements": "50 mL内径20透明筒、接嘴连通；1 mL刻度和独立活塞组件，30 mL位置不含嘴死体积",
+      "groups": [
+        {
+          "label": "透明筒体",
+          "ordinal": 1
+        },
+        {
+          "label": "活塞组件",
+          "ordinal": 2
+        }
+      ],
+      "runtime": [],
+      "cavity": {
+        "status": "unverified",
+        "candidateGroups": [
+          "透明筒体"
+        ],
+        "detail": "按独立解析内轮廓/通道拓扑验证这些器形；内外表面、底厚、开口与隔离通路不能由包围盒或透明实心替代",
+        "gateIds": [
+          "CAVITY-ORACLE",
+          "CHANNELS"
+        ]
+      },
+      "sockets": {
+        "status": "unverified",
+        "catalogConnectorGroups": [],
+        "runtimeSockets": [],
+        "detail": "无公开装配接口数值；只保留确有的支承/接触特征，不虚构连接功能"
+      },
+      "material": {
+        "status": "unverified",
+        "requiredClasses": [],
+        "transparencyRequired": true,
+        "detail": "材质按独立功能件分开；透明/棕玻璃、陶瓷/绝缘、导电金属与软材不可统一灰模；所有标注自绘"
+      },
+      "scales": {
+        "status": "unverified",
+        "hasPublicMarkingFacts": true,
+        "dimensionFact": "50 mL · 1 mL分度 · 筒内径20 mm",
+        "tags": [
+          "连续刻度"
+        ],
+        "detail": "按公开容量/分度/方向独立生成刻线、数字、单位；单标器不得变多标；估读与标称不冒充实物校准"
+      },
+      "movable": {
+        "status": "unverified",
+        "independentGroupsRequired": true,
+        "runtimeRoles": [],
+        "runtimeRotations": [],
+        "detail": "区分可独立拆取与已有运行时运动；保持roles/axis与一体玻璃边界，静态器具不捏造已支持动力学"
+      }
+    },
+    {
+      "number": "C35",
+      "asset": "chem_bulb_drying_tube_cadquery",
+      "id": "chem_bulb_drying_tube",
+      "name": "球形干燥管",
+      "category": "气体量取与通路控制",
+      "dimensionFact": "球部外径44 mm · 细管内径4 mm",
+      "requirements": "Ø44球腔与细管内4连通；宽口、独立单孔塞与贯通接管",
+      "groups": [
+        {
+          "label": "球形玻璃管",
+          "ordinal": 1
+        },
+        {
+          "label": "单孔橡胶塞",
+          "ordinal": 2
+        },
+        {
+          "label": "玻璃接管",
+          "ordinal": 3
+        }
+      ],
+      "runtime": [],
+      "cavity": {
+        "status": "unverified",
+        "candidateGroups": [
+          "玻璃接管"
+        ],
+        "detail": "按独立解析内轮廓/通道拓扑验证这些器形；内外表面、底厚、开口与隔离通路不能由包围盒或透明实心替代",
+        "gateIds": [
+          "CAVITY-ORACLE",
+          "CHANNELS"
+        ]
+      },
+      "sockets": {
+        "status": "unverified",
+        "catalogConnectorGroups": [
+          "单孔橡胶塞",
+          "玻璃接管"
+        ],
+        "runtimeSockets": [],
+        "detail": "新建真实孔/锥面/接管或电接触接口，尺寸与装配净空须逐接口记录，不能以贴图洞替代"
+      },
+      "material": {
+        "status": "unverified",
+        "requiredClasses": [
+          "glass",
+          "elastomer"
+        ],
+        "transparencyRequired": true,
+        "detail": "材质按独立功能件分开；透明/棕玻璃、陶瓷/绝缘、导电金属与软材不可统一灰模；所有标注自绘"
+      },
+      "scales": {
+        "status": "unverified",
+        "hasPublicMarkingFacts": false,
+        "dimensionFact": "球部外径44 mm · 细管内径4 mm",
+        "tags": [],
+        "detail": "未声明计量刻度；不得添加虚假读数或准确度等级"
+      },
+      "movable": {
+        "status": "unverified",
+        "independentGroupsRequired": true,
+        "runtimeRoles": [],
+        "runtimeRotations": [],
+        "detail": "区分可独立拆取与已有运行时运动；保持roles/axis与一体玻璃边界，静态器具不捏造已支持动力学"
+      }
+    },
+    {
+      "number": "C36",
+      "asset": "chem_screw_pinch_clamp_cadquery",
+      "id": "chem_screw_pinch_clamp",
+      "name": "螺旋止水夹与软管",
+      "category": "气体量取与通路控制",
+      "dimensionFact": "夹框46×24×50 mm · 软管外径8 / 内径5 mm",
+      "requirements": "46×24×50框、真外螺旋螺纹杆与旋钮、独立压块；外8内5软管开放未压扁",
+      "groups": [
+        {
+          "label": "金属夹框",
+          "ordinal": 1
+        },
+        {
+          "label": "螺杆与旋钮",
+          "ordinal": 2
+        },
+        {
+          "label": "活动压块",
+          "ordinal": 3
+        },
+        {
+          "label": "柔性软管",
+          "ordinal": 4
+        }
+      ],
+      "runtime": [],
+      "cavity": {
+        "status": "unverified",
+        "candidateGroups": [
+          "柔性软管"
+        ],
+        "detail": "按独立解析内轮廓/通道拓扑验证这些器形；内外表面、底厚、开口与隔离通路不能由包围盒或透明实心替代",
+        "gateIds": [
+          "CAVITY-ORACLE",
+          "CHANNELS"
+        ]
+      },
+      "sockets": {
+        "status": "unverified",
+        "catalogConnectorGroups": [],
+        "runtimeSockets": [],
+        "detail": "无公开装配接口数值；只保留确有的支承/接触特征，不虚构连接功能"
+      },
+      "material": {
+        "status": "unverified",
+        "requiredClasses": [
+          "elastomer",
+          "metal"
+        ],
+        "transparencyRequired": false,
+        "detail": "材质按独立功能件分开；透明/棕玻璃、陶瓷/绝缘、导电金属与软材不可统一灰模；所有标注自绘"
+      },
+      "scales": {
+        "status": "unverified",
+        "hasPublicMarkingFacts": false,
+        "dimensionFact": "夹框46×24×50 mm · 软管外径8 / 内径5 mm",
+        "tags": [],
+        "detail": "未声明计量刻度；不得添加虚假读数或准确度等级"
+      },
+      "movable": {
+        "status": "unverified",
+        "independentGroupsRequired": false,
+        "runtimeRoles": [],
+        "runtimeRotations": [],
+        "detail": "区分可独立拆取与已有运行时运动；保持roles/axis与一体玻璃边界，静态器具不捏造已支持动力学"
+      }
+    },
+    {
+      "number": "C37",
+      "asset": "chem_electrode_set_cadquery",
+      "id": "chem_electrode_set",
+      "name": "铜锌与石墨电极套件",
+      "category": "电化学器材",
+      "dimensionFact": "片状电极18×2×90 mm · 石墨棒Ø8×90 mm",
+      "requirements": "18×2×90铜/锌片与Ø8×90石墨棒；各自一体接线端与绝缘展示环；不固定极性",
+      "groups": [
+        {
+          "label": "绝缘展示架",
+          "ordinal": 1
+        },
+        {
+          "label": "铜片与接线端",
+          "ordinal": 2
+        },
+        {
+          "label": "锌片与接线端",
+          "ordinal": 3
+        },
+        {
+          "label": "石墨棒与接线端",
+          "ordinal": 4
+        }
+      ],
+      "runtime": [],
+      "cavity": {
+        "status": "unverified",
+        "candidateGroups": [],
+        "detail": "依各功能组真实孔/凹槽定义；未声明盛液功能不得捏造容积",
+        "gateIds": [
+          "CAVITY-ORACLE",
+          "CHANNELS"
+        ]
+      },
+      "sockets": {
+        "status": "unverified",
+        "catalogConnectorGroups": [
+          "铜片与接线端",
+          "锌片与接线端",
+          "石墨棒与接线端"
+        ],
+        "runtimeSockets": [],
+        "detail": "新建真实孔/锥面/接管或电接触接口，尺寸与装配净空须逐接口记录，不能以贴图洞替代"
+      },
+      "material": {
+        "status": "unverified",
+        "requiredClasses": [
+          "metal",
+          "graphite"
+        ],
+        "transparencyRequired": false,
+        "detail": "材质按独立功能件分开；透明/棕玻璃、陶瓷/绝缘、导电金属与软材不可统一灰模；所有标注自绘"
+      },
+      "scales": {
+        "status": "unverified",
+        "hasPublicMarkingFacts": false,
+        "dimensionFact": "片状电极18×2×90 mm · 石墨棒Ø8×90 mm",
+        "tags": [],
+        "detail": "未声明计量刻度；不得添加虚假读数或准确度等级"
+      },
+      "movable": {
+        "status": "unverified",
+        "independentGroupsRequired": false,
+        "runtimeRoles": [],
+        "runtimeRotations": [],
+        "detail": "区分可独立拆取与已有运行时运动；保持roles/axis与一体玻璃边界，静态器具不捏造已支持动力学"
+      }
+    },
+    {
+      "number": "C38",
+      "asset": "chem_salt_bridge_cadquery",
+      "id": "chem_salt_bridge",
+      "name": "U形盐桥管与支架",
+      "category": "电化学器材",
+      "dimensionFact": "玻璃外径12 / 内径9 mm · 两腿间距80 mm",
+      "requirements": "外12内9、腿距80倒U玻璃连续内腔；定位半环与展示架独立",
+      "groups": [
+        {
+          "label": "盐桥玻璃管",
+          "ordinal": 1
+        },
+        {
+          "label": "展示架",
+          "ordinal": 2
+        }
+      ],
+      "runtime": [],
+      "cavity": {
+        "status": "unverified",
+        "candidateGroups": [
+          "盐桥玻璃管"
+        ],
+        "detail": "按独立解析内轮廓/通道拓扑验证这些器形；内外表面、底厚、开口与隔离通路不能由包围盒或透明实心替代",
+        "gateIds": [
+          "CAVITY-ORACLE",
+          "CHANNELS"
+        ]
+      },
+      "sockets": {
+        "status": "unverified",
+        "catalogConnectorGroups": [],
+        "runtimeSockets": [],
+        "detail": "无公开装配接口数值；只保留确有的支承/接触特征，不虚构连接功能"
+      },
+      "material": {
+        "status": "unverified",
+        "requiredClasses": [
+          "glass"
+        ],
+        "transparencyRequired": true,
+        "detail": "材质按独立功能件分开；透明/棕玻璃、陶瓷/绝缘、导电金属与软材不可统一灰模；所有标注自绘"
+      },
+      "scales": {
+        "status": "unverified",
+        "hasPublicMarkingFacts": false,
+        "dimensionFact": "玻璃外径12 / 内径9 mm · 两腿间距80 mm",
+        "tags": [],
+        "detail": "未声明计量刻度；不得添加虚假读数或准确度等级"
+      },
+      "movable": {
+        "status": "unverified",
+        "independentGroupsRequired": true,
+        "runtimeRoles": [],
+        "runtimeRotations": [],
+        "detail": "区分可独立拆取与已有运行时运动；保持roles/axis与一体玻璃边界，静态器具不捏造已支持动力学"
+      }
+    },
+    {
+      "number": "C39",
+      "asset": "chem_electrolysis_cell_cadquery",
+      "id": "chem_electrolysis_cell",
+      "name": "双电极电解槽",
+      "category": "电化学器材",
+      "dimensionFact": "槽体120×78×90 mm · 电极间距50 mm",
+      "requirements": "120×78×90敞口真实槽腔、独立双孔绝缘梁；间距50的石墨/套/接线端两组；当前槽尺寸不符",
+      "groups": [
+        {
+          "label": "透明敞口槽",
+          "ordinal": 1
+        },
+        {
+          "label": "绝缘横梁",
+          "ordinal": 2
+        },
+        {
+          "label": "电极A",
+          "ordinal": 3
+        },
+        {
+          "label": "电极B",
+          "ordinal": 4
+        }
+      ],
+      "runtime": [],
+      "cavity": {
+        "status": "unverified",
+        "candidateGroups": [
+          "透明敞口槽"
+        ],
+        "detail": "按独立解析内轮廓/通道拓扑验证这些器形；内外表面、底厚、开口与隔离通路不能由包围盒或透明实心替代",
+        "gateIds": [
+          "CAVITY-ORACLE",
+          "CHANNELS"
+        ]
+      },
+      "sockets": {
+        "status": "unverified",
+        "catalogConnectorGroups": [
+          "电极A",
+          "电极B"
+        ],
+        "runtimeSockets": [],
+        "detail": "新建真实孔/锥面/接管或电接触接口，尺寸与装配净空须逐接口记录，不能以贴图洞替代"
+      },
+      "material": {
+        "status": "unverified",
+        "requiredClasses": [
+          "graphite"
+        ],
+        "transparencyRequired": true,
+        "detail": "材质按独立功能件分开；透明/棕玻璃、陶瓷/绝缘、导电金属与软材不可统一灰模；所有标注自绘"
+      },
+      "scales": {
+        "status": "unverified",
+        "hasPublicMarkingFacts": false,
+        "dimensionFact": "槽体120×78×90 mm · 电极间距50 mm",
+        "tags": [],
+        "detail": "未声明计量刻度；不得添加虚假读数或准确度等级"
+      },
+      "movable": {
+        "status": "unverified",
+        "independentGroupsRequired": false,
+        "runtimeRoles": [],
+        "runtimeRotations": [],
+        "detail": "区分可独立拆取与已有运行时运动；保持roles/axis与一体玻璃边界，静态器具不捏造已支持动力学"
+      }
+    },
+    {
+      "number": "C40",
+      "asset": "chem_colorimeter_tubes_cadquery",
+      "id": "chem_colorimeter_tubes",
+      "name": "比色管与管架",
+      "category": "比色、反应与加热",
+      "dimensionFact": "50 mL示意标线 · 内径19 mm",
+      "requirements": "内19平底比色双管单条50 mL线；双孔架、各自可取塞；按内腔定位标线",
+      "groups": [
+        {
+          "label": "双孔管架",
+          "ordinal": 1
+        },
+        {
+          "label": "比色管1",
+          "ordinal": 2
+        },
+        {
+          "label": "配套塞1",
+          "ordinal": 3
+        },
+        {
+          "label": "比色管2",
+          "ordinal": 4
+        },
+        {
+          "label": "配套塞2",
+          "ordinal": 5
+        }
+      ],
+      "runtime": [],
+      "cavity": {
+        "status": "unverified",
+        "candidateGroups": [
+          "比色管1",
+          "比色管2"
+        ],
+        "detail": "按独立解析内轮廓/通道拓扑验证这些器形；内外表面、底厚、开口与隔离通路不能由包围盒或透明实心替代",
+        "gateIds": [
+          "CAVITY-ORACLE",
+          "CHANNELS"
+        ]
+      },
+      "sockets": {
+        "status": "unverified",
+        "catalogConnectorGroups": [],
+        "runtimeSockets": [],
+        "detail": "无公开装配接口数值；只保留确有的支承/接触特征，不虚构连接功能"
+      },
+      "material": {
+        "status": "unverified",
+        "requiredClasses": [
+          "glass"
+        ],
+        "transparencyRequired": true,
+        "detail": "材质按独立功能件分开；透明/棕玻璃、陶瓷/绝缘、导电金属与软材不可统一灰模；所有标注自绘"
+      },
+      "scales": {
+        "status": "unverified",
+        "hasPublicMarkingFacts": true,
+        "dimensionFact": "50 mL示意标线 · 内径19 mm",
+        "tags": [
+          "单标线"
+        ],
+        "detail": "按公开容量/分度/方向独立生成刻线、数字、单位；单标器不得变多标；估读与标称不冒充实物校准"
+      },
+      "movable": {
+        "status": "unverified",
+        "independentGroupsRequired": true,
+        "runtimeRoles": [],
+        "runtimeRotations": [],
+        "detail": "区分可独立拆取与已有运行时运动；保持roles/axis与一体玻璃边界，静态器具不捏造已支持动力学"
+      }
+    },
+    {
+      "number": "C41",
+      "asset": "chem_three_neck_flask_cadquery",
+      "id": "chem_three_neck_flask",
+      "name": "三口烧瓶与配套塞",
+      "category": "比色、反应与加热",
+      "dimensionFact": "球部Ø90 mm · 侧口倾角30°",
+      "requirements": "Ø90球腔与三个颈口连通，侧口30度；三个可取塞与冷态软木托环",
+      "groups": [
+        {
+          "label": "三口烧瓶",
+          "ordinal": 1
+        },
+        {
+          "label": "软木托环",
+          "ordinal": 2
+        },
+        {
+          "label": "中央瓶塞",
+          "ordinal": 3
+        },
+        {
+          "label": "左侧瓶塞",
+          "ordinal": 4
+        },
+        {
+          "label": "右侧瓶塞",
+          "ordinal": 5
+        }
+      ],
+      "runtime": [],
+      "cavity": {
+        "status": "unverified",
+        "candidateGroups": [
+          "三口烧瓶",
+          "软木托环"
+        ],
+        "detail": "按独立解析内轮廓/通道拓扑验证这些器形；内外表面、底厚、开口与隔离通路不能由包围盒或透明实心替代",
+        "gateIds": [
+          "CAVITY-ORACLE",
+          "CHANNELS"
+        ]
+      },
+      "sockets": {
+        "status": "unverified",
+        "catalogConnectorGroups": [
+          "三口烧瓶",
+          "中央瓶塞",
+          "左侧瓶塞",
+          "右侧瓶塞"
+        ],
+        "runtimeSockets": [],
+        "detail": "新建真实孔/锥面/接管或电接触接口，尺寸与装配净空须逐接口记录，不能以贴图洞替代"
+      },
+      "material": {
+        "status": "unverified",
+        "requiredClasses": [
+          "cork"
+        ],
+        "transparencyRequired": false,
+        "detail": "材质按独立功能件分开；透明/棕玻璃、陶瓷/绝缘、导电金属与软材不可统一灰模；所有标注自绘"
+      },
+      "scales": {
+        "status": "unverified",
+        "hasPublicMarkingFacts": false,
+        "dimensionFact": "球部Ø90 mm · 侧口倾角30°",
+        "tags": [],
+        "detail": "未声明计量刻度；不得添加虚假读数或准确度等级"
+      },
+      "movable": {
+        "status": "unverified",
+        "independentGroupsRequired": false,
+        "runtimeRoles": [],
+        "runtimeRotations": [],
+        "detail": "区分可独立拆取与已有运行时运动；保持roles/axis与一体玻璃边界，静态器具不捏造已支持动力学"
+      }
+    },
+    {
+      "number": "C42",
+      "asset": "chem_lab_burner_cadquery",
+      "id": "chem_lab_burner",
+      "name": "实验燃气灯",
+      "category": "比色、反应与加热",
+      "dimensionFact": "灯管高135 mm · 底座Ø70 mm",
+      "requirements": "135混合管与Ø70底座；中央细喷孔和侧进气道相通；套筒空气孔对齐",
+      "groups": [
+        {
+          "label": "底座与喷嘴",
+          "ordinal": 1
+        },
+        {
+          "label": "侧进气嘴",
+          "ordinal": 2
+        },
+        {
+          "label": "混合管",
+          "ordinal": 3
+        },
+        {
+          "label": "空气调节套",
+          "ordinal": 4
+        }
+      ],
+      "runtime": [],
+      "cavity": {
+        "status": "unverified",
+        "candidateGroups": [
+          "侧进气嘴",
+          "混合管"
+        ],
+        "detail": "按独立解析内轮廓/通道拓扑验证这些器形；内外表面、底厚、开口与隔离通路不能由包围盒或透明实心替代",
+        "gateIds": [
+          "CAVITY-ORACLE",
+          "CHANNELS"
+        ]
+      },
+      "sockets": {
+        "status": "unverified",
+        "catalogConnectorGroups": [
+          "底座与喷嘴",
+          "侧进气嘴"
+        ],
+        "runtimeSockets": [],
+        "detail": "新建真实孔/锥面/接管或电接触接口，尺寸与装配净空须逐接口记录，不能以贴图洞替代"
+      },
+      "material": {
+        "status": "unverified",
+        "requiredClasses": [],
+        "transparencyRequired": false,
+        "detail": "材质按独立功能件分开；透明/棕玻璃、陶瓷/绝缘、导电金属与软材不可统一灰模；所有标注自绘"
+      },
+      "scales": {
+        "status": "unverified",
+        "hasPublicMarkingFacts": false,
+        "dimensionFact": "灯管高135 mm · 底座Ø70 mm",
+        "tags": [],
+        "detail": "未声明计量刻度；不得添加虚假读数或准确度等级"
+      },
+      "movable": {
+        "status": "unverified",
+        "independentGroupsRequired": false,
+        "runtimeRoles": [],
+        "runtimeRotations": [],
+        "detail": "区分可独立拆取与已有运行时运动；保持roles/axis与一体玻璃边界，静态器具不捏造已支持动力学"
+      }
+    },
+    {
+      "number": "C43",
+      "asset": "chem_electronic_balance_cadquery",
+      "id": "chem_electronic_balance",
+      "name": "电子天平结构模型",
+      "category": "称量、搅拌与恒温",
+      "dimensionFact": "机身160×140 mm · 称盘Ø90 mm",
+      "requirements": "160×140机身与Ø90称盘；底座、上壳/未测显示、盘柱、传感器示意、电路板五组",
+      "groups": [
+        {
+          "label": "底座与支脚",
+          "ordinal": 1
+        },
+        {
+          "label": "机壳与显示面",
+          "ordinal": 2
+        },
+        {
+          "label": "称盘与传力柱",
+          "ordinal": 3
+        },
+        {
+          "label": "称重模块示意",
+          "ordinal": 4
+        },
+        {
+          "label": "电路板示意",
+          "ordinal": 5
+        }
+      ],
+      "runtime": [],
+      "cavity": {
+        "status": "unverified",
+        "candidateGroups": [],
+        "detail": "依各功能组真实孔/凹槽定义；未声明盛液功能不得捏造容积",
+        "gateIds": [
+          "CAVITY-ORACLE",
+          "CHANNELS"
+        ]
+      },
+      "sockets": {
+        "status": "unverified",
+        "catalogConnectorGroups": [],
+        "runtimeSockets": [],
+        "detail": "无公开装配接口数值；只保留确有的支承/接触特征，不虚构连接功能"
+      },
+      "material": {
+        "status": "unverified",
+        "requiredClasses": [],
+        "transparencyRequired": false,
+        "detail": "材质按独立功能件分开；透明/棕玻璃、陶瓷/绝缘、导电金属与软材不可统一灰模；所有标注自绘"
+      },
+      "scales": {
+        "status": "unverified",
+        "hasPublicMarkingFacts": false,
+        "dimensionFact": "机身160×140 mm · 称盘Ø90 mm",
+        "tags": [],
+        "detail": "未声明计量刻度；不得添加虚假读数或准确度等级"
+      },
+      "movable": {
+        "status": "unverified",
+        "independentGroupsRequired": true,
+        "runtimeRoles": [],
+        "runtimeRotations": [],
+        "detail": "区分可独立拆取与已有运行时运动；保持roles/axis与一体玻璃边界，静态器具不捏造已支持动力学"
+      }
+    },
+    {
+      "number": "C44",
+      "asset": "chem_magnetic_stirrer_cadquery",
+      "id": "chem_magnetic_stirrer",
+      "name": "磁力搅拌器与搅拌子",
+      "category": "称量、搅拌与恒温",
+      "dimensionFact": "机身140×130 mm · 搅拌子长34 mm",
+      "requirements": "140×130非加热机身、底座、外壳、独立电机/轴与双磁体架；34长包覆搅拌子",
+      "groups": [
+        {
+          "label": "底座",
+          "ordinal": 1
+        },
+        {
+          "label": "机壳与工作台",
+          "ordinal": 2
+        },
+        {
+          "label": "电机与转轴",
+          "ordinal": 3
+        },
+        {
+          "label": "磁体转架",
+          "ordinal": 4
+        },
+        {
+          "label": "包覆搅拌子",
+          "ordinal": 5
+        }
+      ],
+      "runtime": [],
+      "cavity": {
+        "status": "unverified",
+        "candidateGroups": [],
+        "detail": "依各功能组真实孔/凹槽定义；未声明盛液功能不得捏造容积",
+        "gateIds": [
+          "CAVITY-ORACLE",
+          "CHANNELS"
+        ]
+      },
+      "sockets": {
+        "status": "unverified",
+        "catalogConnectorGroups": [],
+        "runtimeSockets": [],
+        "detail": "无公开装配接口数值；只保留确有的支承/接触特征，不虚构连接功能"
+      },
+      "material": {
+        "status": "unverified",
+        "requiredClasses": [],
+        "transparencyRequired": false,
+        "detail": "材质按独立功能件分开；透明/棕玻璃、陶瓷/绝缘、导电金属与软材不可统一灰模；所有标注自绘"
+      },
+      "scales": {
+        "status": "unverified",
+        "hasPublicMarkingFacts": false,
+        "dimensionFact": "机身140×130 mm · 搅拌子长34 mm",
+        "tags": [],
+        "detail": "未声明计量刻度；不得添加虚假读数或准确度等级"
+      },
+      "movable": {
+        "status": "unverified",
+        "independentGroupsRequired": false,
+        "runtimeRoles": [],
+        "runtimeRotations": [],
+        "detail": "区分可独立拆取与已有运行时运动；保持roles/axis与一体玻璃边界，静态器具不捏造已支持动力学"
+      }
+    },
+    {
+      "number": "C45",
+      "asset": "chem_water_bath_cadquery",
+      "id": "chem_water_bath",
+      "name": "实验水浴锅",
+      "category": "称量、搅拌与恒温",
+      "dimensionFact": "外壳180×140×105 mm · 单孔可取出套环",
+      "requirements": "180×140×105薄壳、真实有底金属内胆；独立底座加热示意、带孔盖与同心开口套环",
+      "groups": [
+        {
+          "label": "底座与加热组件",
+          "ordinal": 1
+        },
+        {
+          "label": "外壳",
+          "ordinal": 2
+        },
+        {
+          "label": "金属内胆",
+          "ordinal": 3
+        },
+        {
+          "label": "盖板",
+          "ordinal": 4
+        },
+        {
+          "label": "同心套环",
+          "ordinal": 5
+        }
+      ],
+      "runtime": [],
+      "cavity": {
+        "status": "unverified",
+        "candidateGroups": [
+          "外壳",
+          "金属内胆"
+        ],
+        "detail": "按独立解析内轮廓/通道拓扑验证这些器形；内外表面、底厚、开口与隔离通路不能由包围盒或透明实心替代",
+        "gateIds": [
+          "CAVITY-ORACLE",
+          "CHANNELS"
+        ]
+      },
+      "sockets": {
+        "status": "unverified",
+        "catalogConnectorGroups": [],
+        "runtimeSockets": [],
+        "detail": "无公开装配接口数值；只保留确有的支承/接触特征，不虚构连接功能"
+      },
+      "material": {
+        "status": "unverified",
+        "requiredClasses": [
+          "metal"
+        ],
+        "transparencyRequired": false,
+        "detail": "材质按独立功能件分开；透明/棕玻璃、陶瓷/绝缘、导电金属与软材不可统一灰模；所有标注自绘"
+      },
+      "scales": {
+        "status": "unverified",
+        "hasPublicMarkingFacts": false,
+        "dimensionFact": "外壳180×140×105 mm · 单孔可取出套环",
+        "tags": [],
+        "detail": "未声明计量刻度；不得添加虚假读数或准确度等级"
+      },
+      "movable": {
+        "status": "unverified",
+        "independentGroupsRequired": true,
+        "runtimeRoles": [],
+        "runtimeRotations": [],
+        "detail": "区分可独立拆取与已有运行时运动；保持roles/axis与一体玻璃边界，静态器具不捏造已支持动力学"
+      }
+    },
+    {
+      "number": "C46",
+      "asset": "chem_alkaline_burette_cadquery",
+      "id": "chem_alkaline_burette",
+      "name": "碱式滴定管与玻璃珠阀",
+      "category": "分液与定量转移",
+      "dimensionFact": "25 mL · 0.1 mL分度",
+      "requirements": "25 mL0.1分度上零下增管；橡胶通管内玻璃珠静态关闭；尖嘴、展示架独立",
+      "groups": [
+        {
+          "label": "展示支架",
+          "ordinal": 1
+        },
+        {
+          "label": "刻度玻璃管",
+          "ordinal": 2
+        },
+        {
+          "label": "橡胶连接管",
+          "ordinal": 3
+        },
+        {
+          "label": "玻璃珠",
+          "ordinal": 4
+        },
+        {
+          "label": "玻璃尖嘴",
+          "ordinal": 5
+        }
+      ],
+      "runtime": [],
+      "cavity": {
+        "status": "unverified",
+        "candidateGroups": [
+          "刻度玻璃管",
+          "橡胶连接管"
+        ],
+        "detail": "按独立解析内轮廓/通道拓扑验证这些器形；内外表面、底厚、开口与隔离通路不能由包围盒或透明实心替代",
+        "gateIds": [
+          "CAVITY-ORACLE",
+          "CHANNELS"
+        ]
+      },
+      "sockets": {
+        "status": "unverified",
+        "catalogConnectorGroups": [
+          "橡胶连接管"
+        ],
+        "runtimeSockets": [],
+        "detail": "新建真实孔/锥面/接管或电接触接口，尺寸与装配净空须逐接口记录，不能以贴图洞替代"
+      },
+      "material": {
+        "status": "unverified",
+        "requiredClasses": [
+          "glass",
+          "elastomer"
+        ],
+        "transparencyRequired": true,
+        "detail": "材质按独立功能件分开；透明/棕玻璃、陶瓷/绝缘、导电金属与软材不可统一灰模；所有标注自绘"
+      },
+      "scales": {
+        "status": "unverified",
+        "hasPublicMarkingFacts": true,
+        "dimensionFact": "25 mL · 0.1 mL分度",
+        "tags": [
+          "0.1 mL分度"
+        ],
+        "detail": "按公开容量/分度/方向独立生成刻线、数字、单位；单标器不得变多标；估读与标称不冒充实物校准"
+      },
+      "movable": {
+        "status": "unverified",
+        "independentGroupsRequired": true,
+        "runtimeRoles": [],
+        "runtimeRotations": [],
+        "detail": "区分可独立拆取与已有运行时运动；保持roles/axis与一体玻璃边界，静态器具不捏造已支持动力学"
+      }
+    },
+    {
+      "number": "C47",
+      "asset": "chem_allihn_condenser_cadquery",
+      "id": "chem_allihn_condenser",
+      "name": "球形冷凝管",
+      "category": "蒸馏与冷凝",
+      "dimensionFact": "四球结构 · 夹套长190 mm",
+      "requirements": "190长夹套四球内管与外套封接一体玻璃；两通路隔离；低蓝高绿水口套与架",
+      "groups": [
+        {
+          "label": "一体玻璃冷凝管",
+          "ordinal": 1
+        },
+        {
+          "label": "下方蓝色水口套",
+          "ordinal": 2
+        },
+        {
+          "label": "上方绿色水口套",
+          "ordinal": 3
+        },
+        {
+          "label": "展示托架",
+          "ordinal": 4
+        }
+      ],
+      "runtime": [],
+      "cavity": {
+        "status": "unverified",
+        "candidateGroups": [],
+        "detail": "依各功能组真实孔/凹槽定义；未声明盛液功能不得捏造容积",
+        "gateIds": [
+          "CAVITY-ORACLE",
+          "CHANNELS"
+        ]
+      },
+      "sockets": {
+        "status": "unverified",
+        "catalogConnectorGroups": [],
+        "runtimeSockets": [],
+        "detail": "无公开装配接口数值；只保留确有的支承/接触特征，不虚构连接功能"
+      },
+      "material": {
+        "status": "unverified",
+        "requiredClasses": [
+          "glass"
+        ],
+        "transparencyRequired": true,
+        "detail": "材质按独立功能件分开；透明/棕玻璃、陶瓷/绝缘、导电金属与软材不可统一灰模；所有标注自绘"
+      },
+      "scales": {
+        "status": "unverified",
+        "hasPublicMarkingFacts": false,
+        "dimensionFact": "四球结构 · 夹套长190 mm",
+        "tags": [],
+        "detail": "未声明计量刻度；不得添加虚假读数或准确度等级"
+      },
+      "movable": {
+        "status": "unverified",
+        "independentGroupsRequired": false,
+        "runtimeRoles": [],
+        "runtimeRotations": [],
+        "detail": "区分可独立拆取与已有运行时运动；保持roles/axis与一体玻璃边界，静态器具不捏造已支持动力学"
+      }
+    },
+    {
+      "number": "C48",
+      "asset": "chem_distilling_flask_cadquery",
+      "id": "chem_distilling_flask",
+      "name": "带侧管蒸馏烧瓶",
+      "category": "蒸馏与冷凝",
+      "dimensionFact": "球部Ø90 mm · 侧支管内径6 mm",
+      "requirements": "Ø90圆底长颈侧管一体腔，侧管内6贯通；单孔塞与软木托座",
+      "groups": [
+        {
+          "label": "侧管蒸馏烧瓶",
+          "ordinal": 1
+        },
+        {
+          "label": "单孔塞",
+          "ordinal": 2
+        },
+        {
+          "label": "软木托座",
+          "ordinal": 3
+        }
+      ],
+      "runtime": [],
+      "cavity": {
+        "status": "unverified",
+        "candidateGroups": [
+          "侧管蒸馏烧瓶"
+        ],
+        "detail": "按独立解析内轮廓/通道拓扑验证这些器形；内外表面、底厚、开口与隔离通路不能由包围盒或透明实心替代",
+        "gateIds": [
+          "CAVITY-ORACLE",
+          "CHANNELS"
+        ]
+      },
+      "sockets": {
+        "status": "unverified",
+        "catalogConnectorGroups": [],
+        "runtimeSockets": [],
+        "detail": "无公开装配接口数值；只保留确有的支承/接触特征，不虚构连接功能"
+      },
+      "material": {
+        "status": "unverified",
+        "requiredClasses": [
+          "glass",
+          "cork"
+        ],
+        "transparencyRequired": true,
+        "detail": "材质按独立功能件分开；透明/棕玻璃、陶瓷/绝缘、导电金属与软材不可统一灰模；所有标注自绘"
+      },
+      "scales": {
+        "status": "unverified",
+        "hasPublicMarkingFacts": false,
+        "dimensionFact": "球部Ø90 mm · 侧支管内径6 mm",
+        "tags": [],
+        "detail": "未声明计量刻度；不得添加虚假读数或准确度等级"
+      },
+      "movable": {
+        "status": "unverified",
+        "independentGroupsRequired": false,
+        "runtimeRoles": [],
+        "runtimeRotations": [],
+        "detail": "区分可独立拆取与已有运行时运动；保持roles/axis与一体玻璃边界，静态器具不捏造已支持动力学"
+      }
+    },
+    {
+      "number": "C49",
+      "asset": "retort_stand_cadquery",
+      "id": "chem_retort_stand",
+      "name": "铁架台与夹具",
+      "category": "连接与承托",
+      "dimensionFact": "底座280×200mm · 总高373mm",
+      "requirements": "280×200底总高373；Ø12杆、上下错孔十字夹、分层双爪万能夹/铰轴/双限位杆；当前200×132底和500杆不符",
+      "groups": [
+        {
+          "label": "厚重圆角底座",
+          "ordinal": 1
+        },
+        {
+          "label": "竖直支杆",
+          "ordinal": 2
+        },
+        {
+          "label": "上十字夹",
+          "ordinal": 3
+        },
+        {
+          "label": "下十字夹",
+          "ordinal": 4
+        },
+        {
+          "label": "万能夹与横杆",
+          "ordinal": 5
+        },
+        {
+          "label": "铁圈与连接杆",
+          "ordinal": 6
+        }
+      ],
+      "runtime": [],
+      "cavity": {
+        "status": "unverified",
+        "candidateGroups": [],
+        "detail": "依各功能组真实孔/凹槽定义；未声明盛液功能不得捏造容积",
+        "gateIds": [
+          "CAVITY-ORACLE",
+          "CHANNELS"
+        ]
+      },
+      "sockets": {
+        "status": "unverified",
+        "catalogConnectorGroups": [],
+        "runtimeSockets": [],
+        "detail": "无公开装配接口数值；只保留确有的支承/接触特征，不虚构连接功能"
+      },
+      "material": {
+        "status": "unverified",
+        "requiredClasses": [
+          "metal"
+        ],
+        "transparencyRequired": false,
+        "detail": "材质按独立功能件分开；透明/棕玻璃、陶瓷/绝缘、导电金属与软材不可统一灰模；所有标注自绘"
+      },
+      "scales": {
+        "status": "unverified",
+        "hasPublicMarkingFacts": false,
+        "dimensionFact": "底座280×200mm · 总高373mm",
+        "tags": [],
+        "detail": "未声明计量刻度；不得添加虚假读数或准确度等级"
+      },
+      "movable": {
+        "status": "unverified",
+        "independentGroupsRequired": true,
+        "runtimeRoles": [],
+        "runtimeRotations": [],
+        "detail": "区分可独立拆取与已有运行时运动；保持roles/axis与一体玻璃边界，静态器具不捏造已支持动力学"
+      }
+    },
+    {
+      "number": "C50",
+      "asset": "chem_lab_jack_cadquery",
+      "id": "chem_lab_jack",
+      "name": "实验升降台",
+      "category": "连接与承托",
+      "dimensionFact": "台面140×100 mm · 当前高110 mm",
+      "requirements": "140×100台面高110；上下导轨、四支臂真实轴孔、横轴/滑轴和端槽、独立螺杆滑块",
+      "groups": [
+        {
+          "label": "下底板与导轨",
+          "ordinal": 1
+        },
+        {
+          "label": "上台板与导轨",
+          "ordinal": 2
+        },
+        {
+          "label": "交叉支臂",
+          "ordinal": 3
+        },
+        {
+          "label": "铰轴与滑轴",
+          "ordinal": 4
+        },
+        {
+          "label": "调节螺杆与滑块",
+          "ordinal": 5
+        }
+      ],
+      "runtime": [],
+      "cavity": {
+        "status": "unverified",
+        "candidateGroups": [],
+        "detail": "依各功能组真实孔/凹槽定义；未声明盛液功能不得捏造容积",
+        "gateIds": [
+          "CAVITY-ORACLE",
+          "CHANNELS"
+        ]
+      },
+      "sockets": {
+        "status": "unverified",
+        "catalogConnectorGroups": [],
+        "runtimeSockets": [],
+        "detail": "无公开装配接口数值；只保留确有的支承/接触特征，不虚构连接功能"
+      },
+      "material": {
+        "status": "unverified",
+        "requiredClasses": [],
+        "transparencyRequired": false,
+        "detail": "材质按独立功能件分开；透明/棕玻璃、陶瓷/绝缘、导电金属与软材不可统一灰模；所有标注自绘"
+      },
+      "scales": {
+        "status": "unverified",
+        "hasPublicMarkingFacts": false,
+        "dimensionFact": "台面140×100 mm · 当前高110 mm",
+        "tags": [],
+        "detail": "未声明计量刻度；不得添加虚假读数或准确度等级"
+      },
+      "movable": {
+        "status": "unverified",
+        "independentGroupsRequired": false,
+        "runtimeRoles": [],
+        "runtimeRotations": [],
+        "detail": "区分可独立拆取与已有运行时运动；保持roles/axis与一体玻璃边界，静态器具不捏造已支持动力学"
+      }
+    },
+    {
+      "number": "C51",
+      "asset": "chem_shallow_dishes_cadquery",
+      "id": "chem_shallow_dishes",
+      "name": "结晶皿与带盖培养皿",
+      "category": "存放与微量操作",
+      "dimensionFact": "结晶皿Ø100×48 mm · 培养皿Ø90×16 mm",
+      "requirements": "Ø100×48结晶皿、Ø90×16培养底与外套盖；各自完整薄壁与匹配套合",
+      "groups": [
+        {
+          "label": "结晶皿",
+          "ordinal": 1
+        },
+        {
+          "label": "培养皿底",
+          "ordinal": 2
+        },
+        {
+          "label": "培养皿盖",
+          "ordinal": 3
+        }
+      ],
+      "runtime": [],
+      "cavity": {
+        "status": "unverified",
+        "candidateGroups": [],
+        "detail": "依各功能组真实孔/凹槽定义；未声明盛液功能不得捏造容积",
+        "gateIds": [
+          "CAVITY-ORACLE",
+          "CHANNELS"
+        ]
+      },
+      "sockets": {
+        "status": "unverified",
+        "catalogConnectorGroups": [],
+        "runtimeSockets": [],
+        "detail": "无公开装配接口数值；只保留确有的支承/接触特征，不虚构连接功能"
+      },
+      "material": {
+        "status": "unverified",
+        "requiredClasses": [
+          "glass"
+        ],
+        "transparencyRequired": true,
+        "detail": "材质按独立功能件分开；透明/棕玻璃、陶瓷/绝缘、导电金属与软材不可统一灰模；所有标注自绘"
+      },
+      "scales": {
+        "status": "unverified",
+        "hasPublicMarkingFacts": false,
+        "dimensionFact": "结晶皿Ø100×48 mm · 培养皿Ø90×16 mm",
+        "tags": [],
+        "detail": "未声明计量刻度；不得添加虚假读数或准确度等级"
+      },
+      "movable": {
+        "status": "unverified",
+        "independentGroupsRequired": true,
+        "runtimeRoles": [],
+        "runtimeRotations": [],
+        "detail": "区分可独立拆取与已有运行时运动；保持roles/axis与一体玻璃边界，静态器具不捏造已支持动力学"
+      }
+    },
+    {
+      "number": "C52",
+      "asset": "pan_balance_cadquery",
+      "id": "chem_pan_balance",
+      "name": "托盘天平",
+      "category": "称量、搅拌与恒温",
+      "dimensionFact": "盘径约96mm · 左右力臂100mm · 0–5g教学游码",
+      "requirements": "盘约96、等臂100、0–5g游码；双平行导向/承座、轴套止动、细针/扇标、尺/游码独立；当前盘112不符",
+      "groups": [
+        {
+          "label": "铸造底座与水平支承",
+          "ordinal": 1
+        },
+        {
+          "label": "等臂横梁与平衡螺母",
+          "ordinal": 2
+        },
+        {
+          "label": "平行导向与托盘承座",
+          "ordinal": 3
+        },
+        {
+          "label": "浅弧托盘",
+          "ordinal": 4
+        },
+        {
+          "label": "支点轴套与止动件",
+          "ordinal": 5
+        },
+        {
+          "label": "细指针与扇形标牌",
+          "ordinal": 6
+        },
+        {
+          "label": "游码与刻度尺",
+          "ordinal": 7
+        }
+      ],
+      "runtime": [],
+      "cavity": {
+        "status": "unverified",
+        "candidateGroups": [
+          "平行导向与托盘承座",
+          "浅弧托盘"
+        ],
+        "detail": "按独立解析内轮廓/通道拓扑验证这些器形；内外表面、底厚、开口与隔离通路不能由包围盒或透明实心替代",
+        "gateIds": [
+          "CAVITY-ORACLE",
+          "CHANNELS"
+        ]
+      },
+      "sockets": {
+        "status": "unverified",
+        "catalogConnectorGroups": [],
+        "runtimeSockets": [],
+        "detail": "无公开装配接口数值；只保留确有的支承/接触特征，不虚构连接功能"
+      },
+      "material": {
+        "status": "unverified",
+        "requiredClasses": [
+          "metal"
+        ],
+        "transparencyRequired": false,
+        "detail": "材质按独立功能件分开；透明/棕玻璃、陶瓷/绝缘、导电金属与软材不可统一灰模；所有标注自绘"
+      },
+      "scales": {
+        "status": "unverified",
+        "hasPublicMarkingFacts": true,
+        "dimensionFact": "盘径约96mm · 左右力臂100mm · 0–5g教学游码",
+        "tags": [
+          "细指针与扇形标牌",
+          "游码与刻度尺"
+        ],
+        "detail": "按公开容量/分度/方向独立生成刻线、数字、单位；单标器不得变多标；估读与标称不冒充实物校准"
+      },
+      "movable": {
+        "status": "unverified",
+        "independentGroupsRequired": true,
+        "runtimeRoles": [],
+        "runtimeRotations": [],
+        "detail": "区分可独立拆取与已有运行时运动；保持roles/axis与一体玻璃边界，静态器具不捏造已支持动力学"
+      }
+    },
+    {
+      "number": "C53",
+      "asset": "chem_mass_set_cadquery",
+      "id": "chem_mass_set",
+      "name": "砝码与收纳盒",
+      "category": "称量、搅拌与恒温",
+      "dimensionFact": "五件砝码 · 标识总和38 g",
+      "requirements": "五独立1/2/5/10/20g教学砝码按7.8g/cm3体积设计；木盒五凹槽与独立盖；当前单柱砝码非五件",
+      "groups": [
+        {
+          "label": "收纳盒",
+          "ordinal": 1
+        },
+        {
+          "label": "独立盒盖",
+          "ordinal": 2
+        },
+        {
+          "label": "1 g砝码示意",
+          "ordinal": 3
+        },
+        {
+          "label": "2 g砝码示意",
+          "ordinal": 4
+        },
+        {
+          "label": "5 g砝码示意",
+          "ordinal": 5
+        },
+        {
+          "label": "10 g砝码示意",
+          "ordinal": 6
+        },
+        {
+          "label": "20 g砝码示意",
+          "ordinal": 7
+        }
+      ],
+      "runtime": [],
+      "cavity": {
+        "status": "unverified",
+        "candidateGroups": [],
+        "detail": "依各功能组真实孔/凹槽定义；未声明盛液功能不得捏造容积",
+        "gateIds": [
+          "CAVITY-ORACLE",
+          "CHANNELS"
+        ]
+      },
+      "sockets": {
+        "status": "unverified",
+        "catalogConnectorGroups": [],
+        "runtimeSockets": [],
+        "detail": "无公开装配接口数值；只保留确有的支承/接触特征，不虚构连接功能"
+      },
+      "material": {
+        "status": "unverified",
+        "requiredClasses": [
+          "wood"
+        ],
+        "transparencyRequired": false,
+        "detail": "材质按独立功能件分开；透明/棕玻璃、陶瓷/绝缘、导电金属与软材不可统一灰模；所有标注自绘"
+      },
+      "scales": {
+        "status": "unverified",
+        "hasPublicMarkingFacts": true,
+        "dimensionFact": "五件砝码 · 标识总和38 g",
+        "tags": [],
+        "detail": "按公开容量/分度/方向独立生成刻线、数字、单位；单标器不得变多标；估读与标称不冒充实物校准"
+      },
+      "movable": {
+        "status": "unverified",
+        "independentGroupsRequired": true,
+        "runtimeRoles": [],
+        "runtimeRotations": [],
+        "detail": "区分可独立拆取与已有运行时运动；保持roles/axis与一体玻璃边界，静态器具不捏造已支持动力学"
+      }
+    },
+    {
+      "number": "C54",
+      "asset": "chem_flame_test_loop_cadquery",
+      "id": "chem_flame_test_loop",
+      "name": "焰色反应金属丝与手柄",
+      "category": "测温与辅助操作",
+      "dimensionFact": "丝环外径6 mm · 丝径0.6 mm",
+      "requirements": "外6丝环丝径0.6与直丝备件；绝缘手柄/金属夹头与端孔、双槽座；运行时loop组兼容不预设铂",
+      "groups": [
+        {
+          "label": "绝缘手柄与夹头",
+          "ordinal": 1
+        },
+        {
+          "label": "金属丝环",
+          "ordinal": 2
+        },
+        {
+          "label": "直丝备件",
+          "ordinal": 3
+        },
+        {
+          "label": "双槽承托座",
+          "ordinal": 4
+        }
+      ],
+      "runtime": [
+        {
+          "itemKey": "loop",
+          "name": "焰色试验铂丝",
+          "kind": "tool",
+          "groups": [
+            "handle",
+            "loop"
+          ],
+          "axis": null,
+          "axisRule": "No explicit axis: preserve loader default origin rule",
+          "rotate": "x-down",
+          "roles": {},
+          "profileGroups": null,
+          "profileRule": "Not a liquid vessel item",
+          "sockets": [],
+          "gripY_m": 0.13,
+          "flow": null,
+          "heat": false,
+          "fill": null
+        }
+      ],
+      "cavity": {
+        "status": "unverified",
+        "candidateGroups": [],
+        "detail": "依各功能组真实孔/凹槽定义；未声明盛液功能不得捏造容积",
+        "gateIds": [
+          "CAVITY-ORACLE",
+          "CHANNELS"
+        ]
+      },
+      "sockets": {
+        "status": "unverified",
+        "catalogConnectorGroups": [],
+        "runtimeSockets": [],
+        "detail": "无公开装配接口数值；只保留确有的支承/接触特征，不虚构连接功能"
+      },
+      "material": {
+        "status": "unverified",
+        "requiredClasses": [
+          "ceramic",
+          "metal"
+        ],
+        "transparencyRequired": false,
+        "detail": "材质按独立功能件分开；透明/棕玻璃、陶瓷/绝缘、导电金属与软材不可统一灰模；所有标注自绘"
+      },
+      "scales": {
+        "status": "unverified",
+        "hasPublicMarkingFacts": false,
+        "dimensionFact": "丝环外径6 mm · 丝径0.6 mm",
+        "tags": [],
+        "detail": "未声明计量刻度；不得添加虚假读数或准确度等级"
+      },
+      "movable": {
+        "status": "unverified",
+        "independentGroupsRequired": true,
+        "runtimeRoles": [],
+        "runtimeRotations": [
+          {
+            "itemKey": "loop",
+            "rotate": "x-down"
+          }
+        ],
+        "detail": "区分可独立拆取与已有运行时运动；保持roles/axis与一体玻璃边界，静态器具不捏造已支持动力学"
+      }
+    },
+    {
+      "number": "C55",
+      "asset": "dc_supply_cadquery",
+      "id": "chem_dc_supply",
+      "name": "学生直流电源",
+      "category": "电化学器材",
+      "dimensionFact": "机壳 180 × 110 × 125 mm",
+      "requirements": "180×110×125壳和九功能组；通风/控制/底板、初次级隔离绕组、整流、滤波、稳压、输出及功能线独立",
+      "groups": [
+        {
+          "label": "通风外壳与提手",
+          "ordinal": 1
+        },
+        {
+          "label": "前面板与控制",
+          "ordinal": 2
+        },
+        {
+          "label": "底板支撑",
+          "ordinal": 3
+        },
+        {
+          "label": "隔离变压器",
+          "ordinal": 4
+        },
+        {
+          "label": "桥式整流",
+          "ordinal": 5
+        },
+        {
+          "label": "滤波电容",
+          "ordinal": 6
+        },
+        {
+          "label": "线性稳压",
+          "ordinal": 7
+        },
+        {
+          "label": "控制与输出",
+          "ordinal": 8
+        },
+        {
+          "label": "功能导线",
+          "ordinal": 9
+        }
+      ],
+      "runtime": [],
+      "cavity": {
+        "status": "unverified",
+        "candidateGroups": [],
+        "detail": "依各功能组真实孔/凹槽定义；未声明盛液功能不得捏造容积",
+        "gateIds": [
+          "CAVITY-ORACLE",
+          "CHANNELS"
+        ]
+      },
+      "sockets": {
+        "status": "unverified",
+        "catalogConnectorGroups": [
+          "通风外壳与提手",
+          "前面板与控制"
+        ],
+        "runtimeSockets": [],
+        "detail": "新建真实孔/锥面/接管或电接触接口，尺寸与装配净空须逐接口记录，不能以贴图洞替代"
+      },
+      "material": {
+        "status": "unverified",
+        "requiredClasses": [
+          "metal"
+        ],
+        "transparencyRequired": false,
+        "detail": "材质按独立功能件分开；透明/棕玻璃、陶瓷/绝缘、导电金属与软材不可统一灰模；所有标注自绘"
+      },
+      "scales": {
+        "status": "unverified",
+        "hasPublicMarkingFacts": false,
+        "dimensionFact": "机壳 180 × 110 × 125 mm",
+        "tags": [],
+        "detail": "未声明计量刻度；不得添加虚假读数或准确度等级"
+      },
+      "movable": {
+        "status": "unverified",
+        "independentGroupsRequired": true,
+        "runtimeRoles": [],
+        "runtimeRotations": [],
+        "detail": "区分可独立拆取与已有运行时运动；保持roles/axis与一体玻璃边界，静态器具不捏造已支持动力学"
+      }
+    },
+    {
+      "number": "C56",
+      "asset": "test_leads_cadquery",
+      "id": "chem_test_leads",
+      "name": "导线与连接头套件",
+      "category": "电化学器材",
+      "dimensionFact": "插针 Ø4 mm · 导线外径 Ø3.7 mm",
+      "requirements": "外3.7绝缘与独立铜芯、Ø4开槽香蕉针/握柄、鳄鱼上下齿颚/销簧/套；接线柱中心/横孔与压帽；当前夹一体不能拆颚",
+      "groups": [
+        {
+          "label": "导线绝缘层",
+          "ordinal": 1
+        },
+        {
+          "label": "铜芯与压接",
+          "ordinal": 2
+        },
+        {
+          "label": "香蕉插头绝缘",
+          "ordinal": 3
+        },
+        {
+          "label": "香蕉插针",
+          "ordinal": 4
+        },
+        {
+          "label": "鳄鱼夹下夹口",
+          "ordinal": 5
+        },
+        {
+          "label": "鳄鱼夹上夹口",
+          "ordinal": 6
+        },
+        {
+          "label": "销轴与扭簧",
+          "ordinal": 7
+        },
+        {
+          "label": "鳄鱼夹绝缘套",
+          "ordinal": 8
+        },
+        {
+          "label": "接线柱绝缘",
+          "ordinal": 9
+        },
+        {
+          "label": "接线柱导体",
+          "ordinal": 10
+        }
+      ],
+      "runtime": [],
+      "cavity": {
+        "status": "unverified",
+        "candidateGroups": [],
+        "detail": "依各功能组真实孔/凹槽定义；未声明盛液功能不得捏造容积",
+        "gateIds": [
+          "CAVITY-ORACLE",
+          "CHANNELS"
+        ]
+      },
+      "sockets": {
+        "status": "unverified",
+        "catalogConnectorGroups": [
+          "鳄鱼夹下夹口",
+          "鳄鱼夹上夹口",
+          "接线柱绝缘",
+          "接线柱导体"
+        ],
+        "runtimeSockets": [],
+        "detail": "新建真实孔/锥面/接管或电接触接口，尺寸与装配净空须逐接口记录，不能以贴图洞替代"
+      },
+      "material": {
+        "status": "unverified",
+        "requiredClasses": [
+          "metal"
+        ],
+        "transparencyRequired": false,
+        "detail": "材质按独立功能件分开；透明/棕玻璃、陶瓷/绝缘、导电金属与软材不可统一灰模；所有标注自绘"
+      },
+      "scales": {
+        "status": "unverified",
+        "hasPublicMarkingFacts": false,
+        "dimensionFact": "插针 Ø4 mm · 导线外径 Ø3.7 mm",
+        "tags": [],
+        "detail": "未声明计量刻度；不得添加虚假读数或准确度等级"
+      },
+      "movable": {
+        "status": "unverified",
+        "independentGroupsRequired": true,
+        "runtimeRoles": [],
+        "runtimeRotations": [],
+        "detail": "区分可独立拆取与已有运行时运动；保持roles/axis与一体玻璃边界，静态器具不捏造已支持动力学"
+      }
+    },
+    {
+      "number": "C57",
+      "asset": "multimeter_cadquery",
+      "id": "chem_multimeter",
+      "name": "指针式多用电表",
+      "category": "电化学器材",
+      "dimensionFact": "外壳 138 × 210 × 44 mm",
+      "requirements": "138×210×44分壳、独立针、磁电表头/轴承游丝、量程触点桥、V/A/AC/Ω支路与表笔插孔；双柱单壳不足",
+      "groups": [
+        {
+          "label": "外壳与表盘",
+          "ordinal": 1
+        },
+        {
+          "label": "磁电式表头",
+          "ordinal": 2
+        },
+        {
+          "label": "量程转换",
+          "ordinal": 3
+        },
+        {
+          "label": "电压与电流支路",
+          "ordinal": 4
+        },
+        {
+          "label": "交流支路",
+          "ordinal": 5
+        },
+        {
+          "label": "电阻档支路",
+          "ordinal": 6
+        },
+        {
+          "label": "配套附件",
+          "ordinal": 7
+        }
+      ],
+      "runtime": [],
+      "cavity": {
+        "status": "unverified",
+        "candidateGroups": [],
+        "detail": "依各功能组真实孔/凹槽定义；未声明盛液功能不得捏造容积",
+        "gateIds": [
+          "CAVITY-ORACLE",
+          "CHANNELS"
+        ]
+      },
+      "sockets": {
+        "status": "unverified",
+        "catalogConnectorGroups": [
+          "配套附件"
+        ],
+        "runtimeSockets": [],
+        "detail": "新建真实孔/锥面/接管或电接触接口，尺寸与装配净空须逐接口记录，不能以贴图洞替代"
+      },
+      "material": {
+        "status": "unverified",
+        "requiredClasses": [
+          "metal"
+        ],
+        "transparencyRequired": false,
+        "detail": "材质按独立功能件分开；透明/棕玻璃、陶瓷/绝缘、导电金属与软材不可统一灰模；所有标注自绘"
+      },
+      "scales": {
+        "status": "unverified",
+        "hasPublicMarkingFacts": false,
+        "dimensionFact": "外壳 138 × 210 × 44 mm",
+        "tags": [],
+        "detail": "未声明计量刻度；不得添加虚假读数或准确度等级"
+      },
+      "movable": {
+        "status": "unverified",
+        "independentGroupsRequired": true,
+        "runtimeRoles": [],
+        "runtimeRotations": [],
+        "detail": "区分可独立拆取与已有运行时运动；保持roles/axis与一体玻璃边界，静态器具不捏造已支持动力学"
+      }
+    },
+    {
+      "number": "C58",
+      "asset": "chem_ph_meter_cadquery",
+      "id": "chem_ph_meter",
+      "name": "pH计与电极",
+      "category": "电化学器材",
+      "dimensionFact": "仪表140×105 mm · 电极杆Ø12 mm",
+      "requirements": "140×105空腔表身与可移面板；Ø12杆球泡/柄/线一体电极、开口支架、空保护帽；无虚假pH实测",
+      "groups": [
+        {
+          "label": "机身与电路示意",
+          "ordinal": 1
+        },
+        {
+          "label": "显示面板",
+          "ordinal": 2
+        },
+        {
+          "label": "电极与连接线",
+          "ordinal": 3
+        },
+        {
+          "label": "电极支架",
+          "ordinal": 4
+        },
+        {
+          "label": "保护帽",
+          "ordinal": 5
+        }
+      ],
+      "runtime": [],
+      "cavity": {
+        "status": "unverified",
+        "candidateGroups": [
+          "机身与电路示意",
+          "保护帽"
+        ],
+        "detail": "按独立解析内轮廓/通道拓扑验证这些器形；内外表面、底厚、开口与隔离通路不能由包围盒或透明实心替代",
+        "gateIds": [
+          "CAVITY-ORACLE",
+          "CHANNELS"
+        ]
+      },
+      "sockets": {
+        "status": "unverified",
+        "catalogConnectorGroups": [
+          "电极与连接线"
+        ],
+        "runtimeSockets": [],
+        "detail": "新建真实孔/锥面/接管或电接触接口，尺寸与装配净空须逐接口记录，不能以贴图洞替代"
+      },
+      "material": {
+        "status": "unverified",
+        "requiredClasses": [
+          "glass"
+        ],
+        "transparencyRequired": true,
+        "detail": "材质按独立功能件分开；透明/棕玻璃、陶瓷/绝缘、导电金属与软材不可统一灰模；所有标注自绘"
+      },
+      "scales": {
+        "status": "unverified",
+        "hasPublicMarkingFacts": false,
+        "dimensionFact": "仪表140×105 mm · 电极杆Ø12 mm",
+        "tags": [],
+        "detail": "未声明计量刻度；不得添加虚假读数或准确度等级"
+      },
+      "movable": {
+        "status": "unverified",
+        "independentGroupsRequired": true,
+        "runtimeRoles": [],
+        "runtimeRotations": [],
+        "detail": "区分可独立拆取与已有运行时运动；保持roles/axis与一体玻璃边界，静态器具不捏造已支持动力学"
+      }
+    },
+    {
+      "number": "C59",
+      "asset": "chem_pressure_funnel_cadquery",
+      "id": "chem_pressure_funnel",
+      "name": "恒压滴液漏斗",
+      "category": "分液与定量转移",
+      "dimensionFact": "储液部外径44 mm · 压力管内径3 mm",
+      "requirements": "Ø44储液一体玻璃、独立内3压力平衡通道与滴液通道；下环隙、可取旋塞/上塞与架",
+      "groups": [
+        {
+          "label": "一体玻璃器身",
+          "ordinal": 1
+        },
+        {
+          "label": "玻璃旋塞",
+          "ordinal": 2
+        },
+        {
+          "label": "上口塞",
+          "ordinal": 3
+        },
+        {
+          "label": "展示架",
+          "ordinal": 4
+        }
+      ],
+      "runtime": [],
+      "cavity": {
+        "status": "unverified",
+        "candidateGroups": [],
+        "detail": "依各功能组真实孔/凹槽定义；未声明盛液功能不得捏造容积",
+        "gateIds": [
+          "CAVITY-ORACLE",
+          "CHANNELS"
+        ]
+      },
+      "sockets": {
+        "status": "unverified",
+        "catalogConnectorGroups": [],
+        "runtimeSockets": [],
+        "detail": "无公开装配接口数值；只保留确有的支承/接触特征，不虚构连接功能"
+      },
+      "material": {
+        "status": "unverified",
+        "requiredClasses": [
+          "glass"
+        ],
+        "transparencyRequired": true,
+        "detail": "材质按独立功能件分开；透明/棕玻璃、陶瓷/绝缘、导电金属与软材不可统一灰模；所有标注自绘"
+      },
+      "scales": {
+        "status": "unverified",
+        "hasPublicMarkingFacts": false,
+        "dimensionFact": "储液部外径44 mm · 压力管内径3 mm",
+        "tags": [],
+        "detail": "未声明计量刻度；不得添加虚假读数或准确度等级"
+      },
+      "movable": {
+        "status": "unverified",
+        "independentGroupsRequired": true,
+        "runtimeRoles": [],
+        "runtimeRotations": [],
+        "detail": "区分可独立拆取与已有运行时运动；保持roles/axis与一体玻璃边界，静态器具不捏造已支持动力学"
+      }
+    },
+    {
+      "number": "C60",
+      "asset": "chem_backflow_trap_cadquery",
+      "id": "chem_backflow_trap",
+      "name": "防倒吸空瓶与短导管",
+      "category": "气体收集与处理",
+      "dimensionFact": "瓶高150 mm · 两管端均位于瓶内上部",
+      "requirements": "150高真实空瓶、双孔塞与两根短管；各端止于瓶内上部，不作为单向阀",
+      "groups": [
+        {
+          "label": "空瓶",
+          "ordinal": 1
+        },
+        {
+          "label": "双孔塞",
+          "ordinal": 2
+        },
+        {
+          "label": "短导管A",
+          "ordinal": 3
+        },
+        {
+          "label": "短导管B",
+          "ordinal": 4
+        }
+      ],
+      "runtime": [],
+      "cavity": {
+        "status": "unverified",
+        "candidateGroups": [
+          "空瓶"
+        ],
+        "detail": "按独立解析内轮廓/通道拓扑验证这些器形；内外表面、底厚、开口与隔离通路不能由包围盒或透明实心替代",
+        "gateIds": [
+          "CAVITY-ORACLE",
+          "CHANNELS"
+        ]
+      },
+      "sockets": {
+        "status": "unverified",
+        "catalogConnectorGroups": [
+          "空瓶",
+          "双孔塞",
+          "短导管A",
+          "短导管B"
+        ],
+        "runtimeSockets": [],
+        "detail": "新建真实孔/锥面/接管或电接触接口，尺寸与装配净空须逐接口记录，不能以贴图洞替代"
+      },
+      "material": {
+        "status": "unverified",
+        "requiredClasses": [],
+        "transparencyRequired": false,
+        "detail": "材质按独立功能件分开；透明/棕玻璃、陶瓷/绝缘、导电金属与软材不可统一灰模；所有标注自绘"
+      },
+      "scales": {
+        "status": "unverified",
+        "hasPublicMarkingFacts": false,
+        "dimensionFact": "瓶高150 mm · 两管端均位于瓶内上部",
+        "tags": [],
+        "detail": "未声明计量刻度；不得添加虚假读数或准确度等级"
+      },
+      "movable": {
+        "status": "unverified",
+        "independentGroupsRequired": true,
+        "runtimeRoles": [],
+        "runtimeRotations": [],
+        "detail": "区分可独立拆取与已有运行时运动；保持roles/axis与一体玻璃边界，静态器具不捏造已支持动力学"
+      }
+    },
+    {
+      "number": "C61",
+      "asset": "chem_branch_connectors_cadquery",
+      "id": "chem_branch_connectors",
+      "name": "T形与Y形玻璃接头",
+      "category": "连接与承托",
+      "dimensionFact": "玻璃外径8 / 内径5 mm · 套管内径8.3 mm",
+      "requirements": "外8内5 T/Y三通每三口同腔，无阀向；内8.3柔性套管两件",
+      "groups": [
+        {
+          "label": "T形接头",
+          "ordinal": 1
+        },
+        {
+          "label": "Y形接头",
+          "ordinal": 2
+        },
+        {
+          "label": "柔性连接套管",
+          "ordinal": 3
+        }
+      ],
+      "runtime": [],
+      "cavity": {
+        "status": "unverified",
+        "candidateGroups": [
+          "T形接头",
+          "Y形接头",
+          "柔性连接套管"
+        ],
+        "detail": "按独立解析内轮廓/通道拓扑验证这些器形；内外表面、底厚、开口与隔离通路不能由包围盒或透明实心替代",
+        "gateIds": [
+          "CAVITY-ORACLE",
+          "CHANNELS"
+        ]
+      },
+      "sockets": {
+        "status": "unverified",
+        "catalogConnectorGroups": [
+          "T形接头",
+          "Y形接头"
+        ],
+        "runtimeSockets": [],
+        "detail": "新建真实孔/锥面/接管或电接触接口，尺寸与装配净空须逐接口记录，不能以贴图洞替代"
+      },
+      "material": {
+        "status": "unverified",
+        "requiredClasses": [
+          "elastomer"
+        ],
+        "transparencyRequired": false,
+        "detail": "材质按独立功能件分开；透明/棕玻璃、陶瓷/绝缘、导电金属与软材不可统一灰模；所有标注自绘"
+      },
+      "scales": {
+        "status": "unverified",
+        "hasPublicMarkingFacts": false,
+        "dimensionFact": "玻璃外径8 / 内径5 mm · 套管内径8.3 mm",
+        "tags": [],
+        "detail": "未声明计量刻度；不得添加虚假读数或准确度等级"
+      },
+      "movable": {
+        "status": "unverified",
+        "independentGroupsRequired": true,
+        "runtimeRoles": [],
+        "runtimeRotations": [],
+        "detail": "区分可独立拆取与已有运行时运动；保持roles/axis与一体玻璃边界，静态器具不捏造已支持动力学"
+      }
+    },
+    {
+      "number": "C62",
+      "asset": "chem_ground_joint_adapter_cadquery",
+      "id": "chem_ground_joint_adapter",
+      "name": "磨口转接头与固定夹",
+      "category": "连接与承托",
+      "dimensionFact": "下外锥Ø14→18 mm · 上内锥Ø18.2→22.2 mm",
+      "requirements": "下外锥14→18、上内锥18.2→22.2连续孔；独立上管/凸缘与跨缘开口夹留玻璃间隙",
+      "groups": [
+        {
+          "label": "大小口转接头",
+          "ordinal": 1
+        },
+        {
+          "label": "配套上接管",
+          "ordinal": 2
+        },
+        {
+          "label": "开口固定夹",
+          "ordinal": 3
+        }
+      ],
+      "runtime": [],
+      "cavity": {
+        "status": "unverified",
+        "candidateGroups": [
+          "大小口转接头"
+        ],
+        "detail": "按独立解析内轮廓/通道拓扑验证这些器形；内外表面、底厚、开口与隔离通路不能由包围盒或透明实心替代",
+        "gateIds": [
+          "CAVITY-ORACLE",
+          "CHANNELS"
+        ]
+      },
+      "sockets": {
+        "status": "unverified",
+        "catalogConnectorGroups": [
+          "大小口转接头",
+          "配套上接管"
+        ],
+        "runtimeSockets": [],
+        "detail": "新建真实孔/锥面/接管或电接触接口，尺寸与装配净空须逐接口记录，不能以贴图洞替代"
+      },
+      "material": {
+        "status": "unverified",
+        "requiredClasses": [
+          "glass"
+        ],
+        "transparencyRequired": true,
+        "detail": "材质按独立功能件分开；透明/棕玻璃、陶瓷/绝缘、导电金属与软材不可统一灰模；所有标注自绘"
+      },
+      "scales": {
+        "status": "unverified",
+        "hasPublicMarkingFacts": false,
+        "dimensionFact": "下外锥Ø14→18 mm · 上内锥Ø18.2→22.2 mm",
+        "tags": [],
+        "detail": "未声明计量刻度；不得添加虚假读数或准确度等级"
+      },
+      "movable": {
+        "status": "unverified",
+        "independentGroupsRequired": false,
+        "runtimeRoles": [],
+        "runtimeRotations": [],
+        "detail": "区分可独立拆取与已有运行时运动；保持roles/axis与一体玻璃边界，静态器具不捏造已支持动力学"
+      }
+    },
+    {
+      "number": "C63",
+      "asset": "chem_kipp_generator_cadquery",
+      "id": "chem_kipp_generator",
+      "name": "启普发生器结构模型",
+      "category": "气体收集与处理",
+      "dimensionFact": "三室器形 · 长导管通至下室",
+      "requirements": "中下室缩颈相通、上球长管贯至下室；连接套/带孔承板/通孔出气旋塞/排液塞独立",
+      "groups": [
+        {
+          "label": "中下室与侧管",
+          "ordinal": 1
+        },
+        {
+          "label": "上球与长导管",
+          "ordinal": 2
+        },
+        {
+          "label": "上口连接套",
+          "ordinal": 3
+        },
+        {
+          "label": "带孔承托板",
+          "ordinal": 4
+        },
+        {
+          "label": "出气旋塞",
+          "ordinal": 5
+        },
+        {
+          "label": "下部排液塞",
+          "ordinal": 6
+        }
+      ],
+      "runtime": [],
+      "cavity": {
+        "status": "unverified",
+        "candidateGroups": [
+          "带孔承托板"
+        ],
+        "detail": "按独立解析内轮廓/通道拓扑验证这些器形；内外表面、底厚、开口与隔离通路不能由包围盒或透明实心替代",
+        "gateIds": [
+          "CAVITY-ORACLE",
+          "CHANNELS"
+        ]
+      },
+      "sockets": {
+        "status": "unverified",
+        "catalogConnectorGroups": [
+          "上球与长导管",
+          "带孔承托板"
+        ],
+        "runtimeSockets": [],
+        "detail": "新建真实孔/锥面/接管或电接触接口，尺寸与装配净空须逐接口记录，不能以贴图洞替代"
+      },
+      "material": {
+        "status": "unverified",
+        "requiredClasses": [
+          "glass"
+        ],
+        "transparencyRequired": true,
+        "detail": "材质按独立功能件分开；透明/棕玻璃、陶瓷/绝缘、导电金属与软材不可统一灰模；所有标注自绘"
+      },
+      "scales": {
+        "status": "unverified",
+        "hasPublicMarkingFacts": false,
+        "dimensionFact": "三室器形 · 长导管通至下室",
+        "tags": [],
+        "detail": "未声明计量刻度；不得添加虚假读数或准确度等级"
+      },
+      "movable": {
+        "status": "unverified",
+        "independentGroupsRequired": true,
+        "runtimeRoles": [],
+        "runtimeRotations": [],
+        "detail": "区分可独立拆取与已有运行时运动；保持roles/axis与一体玻璃边界，静态器具不捏造已支持动力学"
+      }
+    },
+    {
+      "number": "C64",
+      "asset": "chem_gas_burette_leveling_cadquery",
+      "id": "chem_gas_burette_leveling",
+      "name": "气体量管与水准瓶",
+      "category": "气体量取与通路控制",
+      "dimensionFact": "5–50 mL标线 · 1 mL分度",
+      "requirements": "5–50mL/1mL标线基于阀口以下内腔；旋塞、敞口水准瓶、连续中空软管、支架独立",
+      "groups": [
+        {
+          "label": "气体量管",
+          "ordinal": 1
+        },
+        {
+          "label": "量管旋塞",
+          "ordinal": 2
+        },
+        {
+          "label": "水准瓶",
+          "ordinal": 3
+        },
+        {
+          "label": "连通软管",
+          "ordinal": 4
+        },
+        {
+          "label": "展示支架",
+          "ordinal": 5
+        }
+      ],
+      "runtime": [],
+      "cavity": {
+        "status": "unverified",
+        "candidateGroups": [
+          "水准瓶",
+          "连通软管"
+        ],
+        "detail": "按独立解析内轮廓/通道拓扑验证这些器形；内外表面、底厚、开口与隔离通路不能由包围盒或透明实心替代",
+        "gateIds": [
+          "CAVITY-ORACLE",
+          "CHANNELS"
+        ]
+      },
+      "sockets": {
+        "status": "unverified",
+        "catalogConnectorGroups": [
+          "气体量管"
+        ],
+        "runtimeSockets": [],
+        "detail": "新建真实孔/锥面/接管或电接触接口，尺寸与装配净空须逐接口记录，不能以贴图洞替代"
+      },
+      "material": {
+        "status": "unverified",
+        "requiredClasses": [],
+        "transparencyRequired": false,
+        "detail": "材质按独立功能件分开；透明/棕玻璃、陶瓷/绝缘、导电金属与软材不可统一灰模；所有标注自绘"
+      },
+      "scales": {
+        "status": "unverified",
+        "hasPublicMarkingFacts": true,
+        "dimensionFact": "5–50 mL标线 · 1 mL分度",
+        "tags": [],
+        "detail": "按公开容量/分度/方向独立生成刻线、数字、单位；单标器不得变多标；估读与标称不冒充实物校准"
+      },
+      "movable": {
+        "status": "unverified",
+        "independentGroupsRequired": true,
+        "runtimeRoles": [],
+        "runtimeRotations": [],
+        "detail": "区分可独立拆取与已有运行时运动；保持roles/axis与一体玻璃边界，静态器具不捏造已支持动力学"
+      }
+    },
+    {
+      "number": "C65",
+      "asset": "chem_double_burette_clamp_cadquery",
+      "id": "chem_double_burette_clamp",
+      "name": "双滴定管夹",
+      "category": "连接与承托",
+      "dimensionFact": "双夹中心距130 mm · 立杆孔Ø12.4 mm",
+      "requirements": "双夹中心距130、立杆孔12.4；错孔夹座、双开口环横杆、独立软垫与两锁钉；现有十字夹仅方法参考",
+      "groups": [
+        {
+          "label": "错孔夹座",
+          "ordinal": 1
+        },
+        {
+          "label": "横杆与双夹环",
+          "ordinal": 2
+        },
+        {
+          "label": "柔性衬垫",
+          "ordinal": 3
+        },
+        {
+          "label": "锁紧螺钉",
+          "ordinal": 4
+        }
+      ],
+      "runtime": [],
+      "cavity": {
+        "status": "unverified",
+        "candidateGroups": [],
+        "detail": "依各功能组真实孔/凹槽定义；未声明盛液功能不得捏造容积",
+        "gateIds": [
+          "CAVITY-ORACLE",
+          "CHANNELS"
+        ]
+      },
+      "sockets": {
+        "status": "unverified",
+        "catalogConnectorGroups": [
+          "柔性衬垫"
+        ],
+        "runtimeSockets": [],
+        "detail": "新建真实孔/锥面/接管或电接触接口，尺寸与装配净空须逐接口记录，不能以贴图洞替代"
+      },
+      "material": {
+        "status": "unverified",
+        "requiredClasses": [
+          "elastomer"
+        ],
+        "transparencyRequired": false,
+        "detail": "材质按独立功能件分开；透明/棕玻璃、陶瓷/绝缘、导电金属与软材不可统一灰模；所有标注自绘"
+      },
+      "scales": {
+        "status": "unverified",
+        "hasPublicMarkingFacts": false,
+        "dimensionFact": "双夹中心距130 mm · 立杆孔Ø12.4 mm",
+        "tags": [],
+        "detail": "未声明计量刻度；不得添加虚假读数或准确度等级"
+      },
+      "movable": {
+        "status": "unverified",
+        "independentGroupsRequired": true,
+        "runtimeRoles": [],
+        "runtimeRotations": [],
+        "detail": "区分可独立拆取与已有运行时运动；保持roles/axis与一体玻璃边界，静态器具不捏造已支持动力学"
+      }
+    },
+    {
+      "number": "C66",
+      "asset": "chem_vigreux_column_cadquery",
+      "id": "chem_vigreux_column",
+      "name": "刺形分馏柱",
+      "category": "蒸馏与冷凝",
+      "dimensionFact": "16处内向凸起 · 柱体外径30 mm",
+      "requirements": "外30柱壁一体的16内凸/外凹真实几何；上下贯通、独立肩托架",
+      "groups": [
+        {
+          "label": "一体玻璃分馏柱",
+          "ordinal": 1
+        },
+        {
+          "label": "展示支架",
+          "ordinal": 2
+        }
+      ],
+      "runtime": [],
+      "cavity": {
+        "status": "unverified",
+        "candidateGroups": [],
+        "detail": "依各功能组真实孔/凹槽定义；未声明盛液功能不得捏造容积",
+        "gateIds": [
+          "CAVITY-ORACLE",
+          "CHANNELS"
+        ]
+      },
+      "sockets": {
+        "status": "unverified",
+        "catalogConnectorGroups": [],
+        "runtimeSockets": [],
+        "detail": "无公开装配接口数值；只保留确有的支承/接触特征，不虚构连接功能"
+      },
+      "material": {
+        "status": "unverified",
+        "requiredClasses": [
+          "glass"
+        ],
+        "transparencyRequired": true,
+        "detail": "材质按独立功能件分开；透明/棕玻璃、陶瓷/绝缘、导电金属与软材不可统一灰模；所有标注自绘"
+      },
+      "scales": {
+        "status": "unverified",
+        "hasPublicMarkingFacts": false,
+        "dimensionFact": "16处内向凸起 · 柱体外径30 mm",
+        "tags": [],
+        "detail": "未声明计量刻度；不得添加虚假读数或准确度等级"
+      },
+      "movable": {
+        "status": "unverified",
+        "independentGroupsRequired": true,
+        "runtimeRoles": [],
+        "runtimeRotations": [],
+        "detail": "区分可独立拆取与已有运行时运动；保持roles/axis与一体玻璃边界，静态器具不捏造已支持动力学"
+      }
+    },
+    {
+      "number": "C67",
+      "asset": "chem_gas_absorption_funnel_cadquery",
+      "id": "chem_gas_absorption_funnel",
+      "name": "尾气吸收漏斗套件",
+      "category": "气体收集与处理",
+      "dimensionFact": "漏斗口外径56 mm · 接收杯外径80 mm",
+      "requirements": "Ø56倒置宽口漏斗、Ø80有底接收杯、独立肩托；当前烧杯尺寸不符，需新参数化杯",
+      "groups": [
+        {
+          "label": "固定支架",
+          "ordinal": 1
+        },
+        {
+          "label": "倒置吸收漏斗",
+          "ordinal": 2
+        },
+        {
+          "label": "空接收杯",
+          "ordinal": 3
+        }
+      ],
+      "runtime": [],
+      "cavity": {
+        "status": "unverified",
+        "candidateGroups": [
+          "倒置吸收漏斗"
+        ],
+        "detail": "按独立解析内轮廓/通道拓扑验证这些器形；内外表面、底厚、开口与隔离通路不能由包围盒或透明实心替代",
+        "gateIds": [
+          "CAVITY-ORACLE",
+          "CHANNELS"
+        ]
+      },
+      "sockets": {
+        "status": "unverified",
+        "catalogConnectorGroups": [],
+        "runtimeSockets": [],
+        "detail": "无公开装配接口数值；只保留确有的支承/接触特征，不虚构连接功能"
+      },
+      "material": {
+        "status": "unverified",
+        "requiredClasses": [],
+        "transparencyRequired": true,
+        "detail": "材质按独立功能件分开；透明/棕玻璃、陶瓷/绝缘、导电金属与软材不可统一灰模；所有标注自绘"
+      },
+      "scales": {
+        "status": "unverified",
+        "hasPublicMarkingFacts": false,
+        "dimensionFact": "漏斗口外径56 mm · 接收杯外径80 mm",
+        "tags": [],
+        "detail": "未声明计量刻度；不得添加虚假读数或准确度等级"
+      },
+      "movable": {
+        "status": "unverified",
+        "independentGroupsRequired": false,
+        "runtimeRoles": [],
+        "runtimeRotations": [],
+        "detail": "区分可独立拆取与已有运行时运动；保持roles/axis与一体玻璃边界，静态器具不捏造已支持动力学"
+      }
+    },
+    {
+      "number": "C68",
+      "asset": "chem_combustion_tube_boat_cadquery",
+      "id": "chem_combustion_tube_boat",
+      "name": "燃烧管与瓷舟",
+      "category": "反应与连接",
+      "dimensionFact": "主管长240 mm · 内径25 mm · 瓷舟长70 mm",
+      "requirements": "240长内25两端开放主管；70长弧底瓷舟可取、左右通孔塞和接管及双凹托架",
+      "groups": [
+        {
+          "label": "展示托架",
+          "ordinal": 1
+        },
+        {
+          "label": "玻璃主管",
+          "ordinal": 2
+        },
+        {
+          "label": "弧底瓷舟",
+          "ordinal": 3
+        },
+        {
+          "label": "左端单孔塞",
+          "ordinal": 4
+        },
+        {
+          "label": "左侧接管",
+          "ordinal": 5
+        },
+        {
+          "label": "右端单孔塞",
+          "ordinal": 6
+        },
+        {
+          "label": "右侧接管",
+          "ordinal": 7
+        }
+      ],
+      "runtime": [],
+      "cavity": {
+        "status": "unverified",
+        "candidateGroups": [
+          "展示托架",
+          "玻璃主管",
+          "左端单孔塞",
+          "左侧接管",
+          "右端单孔塞",
+          "右侧接管"
+        ],
+        "detail": "按独立解析内轮廓/通道拓扑验证这些器形；内外表面、底厚、开口与隔离通路不能由包围盒或透明实心替代",
+        "gateIds": [
+          "CAVITY-ORACLE",
+          "CHANNELS"
+        ]
+      },
+      "sockets": {
+        "status": "unverified",
+        "catalogConnectorGroups": [
+          "左端单孔塞",
+          "左侧接管",
+          "右端单孔塞",
+          "右侧接管"
+        ],
+        "runtimeSockets": [],
+        "detail": "新建真实孔/锥面/接管或电接触接口，尺寸与装配净空须逐接口记录，不能以贴图洞替代"
+      },
+      "material": {
+        "status": "unverified",
+        "requiredClasses": [
+          "glass",
+          "ceramic"
+        ],
+        "transparencyRequired": true,
+        "detail": "材质按独立功能件分开；透明/棕玻璃、陶瓷/绝缘、导电金属与软材不可统一灰模；所有标注自绘"
+      },
+      "scales": {
+        "status": "unverified",
+        "hasPublicMarkingFacts": false,
+        "dimensionFact": "主管长240 mm · 内径25 mm · 瓷舟长70 mm",
+        "tags": [],
+        "detail": "未声明计量刻度；不得添加虚假读数或准确度等级"
+      },
+      "movable": {
+        "status": "unverified",
+        "independentGroupsRequired": false,
+        "runtimeRoles": [],
+        "runtimeRotations": [],
+        "detail": "区分可独立拆取与已有运行时运动；保持roles/axis与一体玻璃边界，静态器具不捏造已支持动力学"
+      }
+    },
+    {
+      "number": "C69",
+      "asset": "chem_micro_syringe_cadquery",
+      "id": "chem_micro_syringe",
+      "name": "注射器微型反应套件",
+      "category": "存放与微量操作",
+      "dimensionFact": "筒内径16 mm · 标示容积10 mL",
+      "requirements": "内16标10mL筒底锥腔连出口；独立密封头、十字加强推杆/指盘、封帽、微杯及收纳座",
+      "groups": [
+        {
+          "label": "收纳托座",
+          "ordinal": 1
+        },
+        {
+          "label": "透明针筒",
+          "ordinal": 2
+        },
+        {
+          "label": "密封活塞",
+          "ordinal": 3
+        },
+        {
+          "label": "十字推杆",
+          "ordinal": 4
+        },
+        {
+          "label": "封口帽",
+          "ordinal": 5
+        },
+        {
+          "label": "微型内杯",
+          "ordinal": 6
+        }
+      ],
+      "runtime": [],
+      "cavity": {
+        "status": "unverified",
+        "candidateGroups": [
+          "透明针筒"
+        ],
+        "detail": "按独立解析内轮廓/通道拓扑验证这些器形；内外表面、底厚、开口与隔离通路不能由包围盒或透明实心替代",
+        "gateIds": [
+          "CAVITY-ORACLE",
+          "CHANNELS"
+        ]
+      },
+      "sockets": {
+        "status": "unverified",
+        "catalogConnectorGroups": [
+          "透明针筒"
+        ],
+        "runtimeSockets": [],
+        "detail": "新建真实孔/锥面/接管或电接触接口，尺寸与装配净空须逐接口记录，不能以贴图洞替代"
+      },
+      "material": {
+        "status": "unverified",
+        "requiredClasses": [],
+        "transparencyRequired": true,
+        "detail": "材质按独立功能件分开；透明/棕玻璃、陶瓷/绝缘、导电金属与软材不可统一灰模；所有标注自绘"
+      },
+      "scales": {
+        "status": "unverified",
+        "hasPublicMarkingFacts": true,
+        "dimensionFact": "筒内径16 mm · 标示容积10 mL",
+        "tags": [],
+        "detail": "按公开容量/分度/方向独立生成刻线、数字、单位；单标器不得变多标；估读与标称不冒充实物校准"
+      },
+      "movable": {
+        "status": "unverified",
+        "independentGroupsRequired": true,
+        "runtimeRoles": [],
+        "runtimeRotations": [],
+        "detail": "区分可独立拆取与已有运行时运动；保持roles/axis与一体玻璃边界，静态器具不捏造已支持动力学"
+      }
+    },
+    {
+      "number": "C70",
+      "asset": "chem_dialysis_bag_cadquery",
+      "id": "chem_dialysis_bag",
+      "name": "渗析袋与悬挂支架",
+      "category": "过滤与固体取用",
+      "dimensionFact": "外杯直径100 mm · 袋长76 mm",
+      "requirements": "Ø100外杯、76长封闭薄膜袋，独立上下封夹及双柱梁；膜不加虚假可见孔；当前杯尺寸不符",
+      "groups": [
+        {
+          "label": "悬挂支架",
+          "ordinal": 1
+        },
+        {
+          "label": "透明外杯",
+          "ordinal": 2
+        },
+        {
+          "label": "半透膜袋",
+          "ordinal": 3
+        },
+        {
+          "label": "上封夹",
+          "ordinal": 4
+        },
+        {
+          "label": "下封夹",
+          "ordinal": 5
+        }
+      ],
+      "runtime": [],
+      "cavity": {
+        "status": "unverified",
+        "candidateGroups": [
+          "半透膜袋"
+        ],
+        "detail": "按独立解析内轮廓/通道拓扑验证这些器形；内外表面、底厚、开口与隔离通路不能由包围盒或透明实心替代",
+        "gateIds": [
+          "CAVITY-ORACLE",
+          "CHANNELS"
+        ]
+      },
+      "sockets": {
+        "status": "unverified",
+        "catalogConnectorGroups": [],
+        "runtimeSockets": [],
+        "detail": "无公开装配接口数值；只保留确有的支承/接触特征，不虚构连接功能"
+      },
+      "material": {
+        "status": "unverified",
+        "requiredClasses": [],
+        "transparencyRequired": true,
+        "detail": "材质按独立功能件分开；透明/棕玻璃、陶瓷/绝缘、导电金属与软材不可统一灰模；所有标注自绘"
+      },
+      "scales": {
+        "status": "unverified",
+        "hasPublicMarkingFacts": false,
+        "dimensionFact": "外杯直径100 mm · 袋长76 mm",
+        "tags": [],
+        "detail": "未声明计量刻度；不得添加虚假读数或准确度等级"
+      },
+      "movable": {
+        "status": "unverified",
+        "independentGroupsRequired": false,
+        "runtimeRoles": [],
+        "runtimeRotations": [],
+        "detail": "区分可独立拆取与已有运行时运动；保持roles/axis与一体玻璃边界，静态器具不捏造已支持动力学"
+      }
+    },
+    {
+      "number": "C71",
+      "asset": "chem_calorimeter_cadquery",
+      "id": "chem_calorimeter",
+      "name": "简易量热器",
+      "category": "称量、搅拌与恒温",
+      "dimensionFact": "内杯直径76 mm · 双孔可拆保温盖",
+      "requirements": "Ø76独立反应内杯与带底隔热层/外壳；双贯孔盖、无读数探杆和一体环形搅拌杆；候选尺寸不符",
+      "groups": [
+        {
+          "label": "保护外壳",
+          "ordinal": 1
+        },
+        {
+          "label": "隔热衬层",
+          "ordinal": 2
+        },
+        {
+          "label": "反应内杯",
+          "ordinal": 3
+        },
+        {
+          "label": "双孔保温盖",
+          "ordinal": 4
+        },
+        {
+          "label": "测温探杆",
+          "ordinal": 5
+        },
+        {
+          "label": "环形搅拌杆",
+          "ordinal": 6
+        }
+      ],
+      "runtime": [],
+      "cavity": {
+        "status": "unverified",
+        "candidateGroups": [
+          "双孔保温盖"
+        ],
+        "detail": "按独立解析内轮廓/通道拓扑验证这些器形；内外表面、底厚、开口与隔离通路不能由包围盒或透明实心替代",
+        "gateIds": [
+          "CAVITY-ORACLE",
+          "CHANNELS"
+        ]
+      },
+      "sockets": {
+        "status": "unverified",
+        "catalogConnectorGroups": [],
+        "runtimeSockets": [],
+        "detail": "无公开装配接口数值；只保留确有的支承/接触特征，不虚构连接功能"
+      },
+      "material": {
+        "status": "unverified",
+        "requiredClasses": [],
+        "transparencyRequired": false,
+        "detail": "材质按独立功能件分开；透明/棕玻璃、陶瓷/绝缘、导电金属与软材不可统一灰模；所有标注自绘"
+      },
+      "scales": {
+        "status": "unverified",
+        "hasPublicMarkingFacts": false,
+        "dimensionFact": "内杯直径76 mm · 双孔可拆保温盖",
+        "tags": [],
+        "detail": "未声明计量刻度；不得添加虚假读数或准确度等级"
+      },
+      "movable": {
+        "status": "unverified",
+        "independentGroupsRequired": true,
+        "runtimeRoles": [],
+        "runtimeRotations": [],
+        "detail": "区分可独立拆取与已有运行时运动；保持roles/axis与一体玻璃边界，静态器具不捏造已支持动力学"
+      }
+    },
+    {
+      "number": "C72",
+      "asset": "chem_conductivity_cadquery",
+      "id": "chem_conductivity",
+      "name": "电导率测量装置",
+      "category": "电化学器材",
+      "dimensionFact": "双电极间距12 mm · 100 mL烧杯",
+      "requirements": "复用自建C01的100mL杯；12间距双电极绝缘头、线、支架、下壳、面板/窗、板独立；不虚构μS/cm",
+      "groups": [
+        {
+          "label": "支架底座",
+          "ordinal": 1
+        },
+        {
+          "label": "共用烧杯",
+          "ordinal": 2
+        },
+        {
+          "label": "双电极探头",
+          "ordinal": 3
+        },
+        {
+          "label": "连接线",
+          "ordinal": 4
+        },
+        {
+          "label": "仪表下壳",
+          "ordinal": 5
+        },
+        {
+          "label": "仪表面板",
+          "ordinal": 6
+        },
+        {
+          "label": "电路板",
+          "ordinal": 7
+        }
+      ],
+      "runtime": [],
+      "cavity": {
+        "status": "unverified",
+        "candidateGroups": [],
+        "detail": "依各功能组真实孔/凹槽定义；未声明盛液功能不得捏造容积",
+        "gateIds": [
+          "CAVITY-ORACLE",
+          "CHANNELS"
+        ]
+      },
+      "sockets": {
+        "status": "unverified",
+        "catalogConnectorGroups": [
+          "连接线"
+        ],
+        "runtimeSockets": [],
+        "detail": "新建真实孔/锥面/接管或电接触接口，尺寸与装配净空须逐接口记录，不能以贴图洞替代"
+      },
+      "material": {
+        "status": "unverified",
+        "requiredClasses": [
+          "metal"
+        ],
+        "transparencyRequired": false,
+        "detail": "材质按独立功能件分开；透明/棕玻璃、陶瓷/绝缘、导电金属与软材不可统一灰模；所有标注自绘"
+      },
+      "scales": {
+        "status": "unverified",
+        "hasPublicMarkingFacts": true,
+        "dimensionFact": "双电极间距12 mm · 100 mL烧杯",
+        "tags": [],
+        "detail": "按公开容量/分度/方向独立生成刻线、数字、单位；单标器不得变多标；估读与标称不冒充实物校准"
+      },
+      "movable": {
+        "status": "unverified",
+        "independentGroupsRequired": true,
+        "runtimeRoles": [],
+        "runtimeRotations": [],
+        "detail": "区分可独立拆取与已有运行时运动；保持roles/axis与一体玻璃边界，静态器具不捏造已支持动力学"
+      }
+    },
+    {
+      "number": "C73",
+      "asset": "chem_paper_chromatography_cadquery",
+      "id": "chem_paper_chromatography",
+      "name": "纸层析展开装置",
+      "category": "过滤与固体取用",
+      "dimensionFact": "展开缸110×65×145 mm · 纸条宽32 mm",
+      "requirements": "110×65×145有底透明缸、盖/悬杆、纸夹与32宽纸条；展开前沿及两教学Rf状态须保留",
+      "groups": [
+        {
+          "label": "玻璃展开缸",
+          "ordinal": 1
+        },
+        {
+          "label": "盖与悬挂杆",
+          "ordinal": 2
+        },
+        {
+          "label": "纸夹",
+          "ordinal": 3
+        },
+        {
+          "label": "滤纸条",
+          "ordinal": 4
+        }
+      ],
+      "runtime": [],
+      "cavity": {
+        "status": "unverified",
+        "candidateGroups": [],
+        "detail": "依各功能组真实孔/凹槽定义；未声明盛液功能不得捏造容积",
+        "gateIds": [
+          "CAVITY-ORACLE",
+          "CHANNELS"
+        ]
+      },
+      "sockets": {
+        "status": "unverified",
+        "catalogConnectorGroups": [],
+        "runtimeSockets": [],
+        "detail": "无公开装配接口数值；只保留确有的支承/接触特征，不虚构连接功能"
+      },
+      "material": {
+        "status": "unverified",
+        "requiredClasses": [
+          "glass",
+          "elastomer",
+          "paper"
+        ],
+        "transparencyRequired": true,
+        "detail": "材质按独立功能件分开；透明/棕玻璃、陶瓷/绝缘、导电金属与软材不可统一灰模；所有标注自绘"
+      },
+      "scales": {
+        "status": "unverified",
+        "hasPublicMarkingFacts": false,
+        "dimensionFact": "展开缸110×65×145 mm · 纸条宽32 mm",
+        "tags": [],
+        "detail": "未声明计量刻度；不得添加虚假读数或准确度等级"
+      },
+      "movable": {
+        "status": "unverified",
+        "independentGroupsRequired": false,
+        "runtimeRoles": [],
+        "runtimeRotations": [],
+        "detail": "区分可独立拆取与已有运行时运动；保持roles/axis与一体玻璃边界，静态器具不捏造已支持动力学"
+      }
+    },
+    {
+      "number": "C74",
+      "asset": "chem_tyndall_box_cadquery",
+      "id": "chem_tyndall_box",
+      "name": "丁达尔效应观察盒",
+      "category": "比色、反应与加热",
+      "dimensionFact": "光路沿X方向 · 从前方侧向观察",
+      "requirements": "前观察口与可拆盖、X向窄光孔、独立有底方样品池和后吸光挡板；现有水槽/激光头只候选不直接匹配",
+      "groups": [
+        {
+          "label": "遮光盒主体",
+          "ordinal": 1
+        },
+        {
+          "label": "可拆顶盖",
+          "ordinal": 2
+        },
+        {
+          "label": "窄束光源",
+          "ordinal": 3
+        },
+        {
+          "label": "方形样品池",
+          "ordinal": 4
+        },
+        {
+          "label": "吸光挡板",
+          "ordinal": 5
+        }
+      ],
+      "runtime": [],
+      "cavity": {
+        "status": "unverified",
+        "candidateGroups": [],
+        "detail": "依各功能组真实孔/凹槽定义；未声明盛液功能不得捏造容积",
+        "gateIds": [
+          "CAVITY-ORACLE",
+          "CHANNELS"
+        ]
+      },
+      "sockets": {
+        "status": "unverified",
+        "catalogConnectorGroups": [],
+        "runtimeSockets": [],
+        "detail": "无公开装配接口数值；只保留确有的支承/接触特征，不虚构连接功能"
+      },
+      "material": {
+        "status": "unverified",
+        "requiredClasses": [],
+        "transparencyRequired": false,
+        "detail": "材质按独立功能件分开；透明/棕玻璃、陶瓷/绝缘、导电金属与软材不可统一灰模；所有标注自绘"
+      },
+      "scales": {
+        "status": "unverified",
+        "hasPublicMarkingFacts": false,
+        "dimensionFact": "光路沿X方向 · 从前方侧向观察",
+        "tags": [],
+        "detail": "未声明计量刻度；不得添加虚假读数或准确度等级"
+      },
+      "movable": {
+        "status": "unverified",
+        "independentGroupsRequired": true,
+        "runtimeRoles": [],
+        "runtimeRotations": [],
+        "detail": "区分可独立拆取与已有运行时运动；保持roles/axis与一体玻璃边界，静态器具不捏造已支持动力学"
+      }
+    }
+  ]
+}

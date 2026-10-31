@@ -1,0 +1,7 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Owned music isolated evidence</title>
+<style>body{background:#100b18;color:#e9dafc;font:16px system-ui;margin:32px;max-width:1000px}button,a{margin:8px;padding:12px;background:#36154f;color:#f5eaff;border:1px solid #a44fe1;border-radius:8px}pre{white-space:pre-wrap;overflow-wrap:anywhere;max-height:60vh;overflow:auto;font:12px monospace}.lamp{width:64px;height:32px;display:inline-block;border-radius:50%;opacity:0;box-shadow:0 0 32px currentColor}audio{display:block;margin:20px 0}</style>
+<h1>独立音乐证据台</h1><p>只导入 owned 音乐模块。离线渲染 12 小节并检查六声部；实时按钮需用户手势，运行 6 秒后自动停止并释放资源。此页不代表生产集成验收。</p>
+<button id="offline">Offline render + stems</button><button id="beat">Beat real-time pulse</button><button id="glow">Glow real-time pulse</button><a id="wav" download="owned-original-score.wav" hidden>下载原创 WAV</a>
+<p><span class="lamp"></span><span class="lamp"></span><span class="lamp"></span></p><audio controls></audio><pre id="report">等待测试</pre>
+<script type="module" src="./evidence.mjs"></script></html>

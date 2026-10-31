@@ -1,0 +1,1074 @@
+{
+  "schema": "independent-cad-equipment-specs/1",
+  "ready": false,
+  "assets": {
+    "C29": {
+      "asset": "chem_thistle_funnels_cadquery",
+      "design": "Independent hollow BRep design from functional facts; detailed new dimensions in own glassware.py; no old geometry",
+      "groups": {
+        "short": "180 mm\u957f\u9888\u6f0f\u6597",
+        "long": "240 mm\u957f\u9888\u6f0f\u6597"
+      },
+      "dimensions": {
+        "source": "independent constants in glassware.py (to be fully parameterized)"
+      },
+      "checks": {
+        "short": {
+          "bounds_mm": [
+            [
+              -20,
+              -20,
+              0
+            ],
+            [
+              20,
+              20,
+              180
+            ]
+          ],
+          "void": [
+            [
+              0,
+              0,
+              5
+            ],
+            [
+              0,
+              0,
+              154
+            ],
+            [
+              0,
+              0,
+              178
+            ]
+          ],
+          "solid": [
+            [
+              2.6,
+              0,
+              30
+            ]
+          ]
+        },
+        "long": {
+          "bounds_mm": [
+            [
+              -20,
+              -20,
+              0
+            ],
+            [
+              20,
+              20,
+              240
+            ]
+          ],
+          "void": [
+            [
+              0,
+              0,
+              20
+            ],
+            [
+              0,
+              0,
+              214
+            ]
+          ],
+          "solid": [
+            [
+              2.6,
+              0,
+              30
+            ]
+          ]
+        }
+      },
+      "pending": [
+        "full local critical-section checks",
+        "all original graduations",
+        "profile/capacity oracle",
+        "full group mapping review"
+      ]
+    },
+    "C35": {
+      "asset": "chem_bulb_drying_tube_cadquery",
+      "design": "Independent hollow BRep design from functional facts; detailed new dimensions in own glassware.py; no old geometry",
+      "groups": {
+        "body": "\u7403\u5f62\u73bb\u7483\u7ba1",
+        "stopper": "\u5355\u5b54\u6a61\u80f6\u585e",
+        "connector": "\u73bb\u7483\u63a5\u7ba1"
+      },
+      "dimensions": {
+        "source": "independent constants in glassware.py (to be fully parameterized)"
+      },
+      "checks": {
+        "body": {
+          "bounds_mm": [
+            [
+              -22,
+              -22,
+              0
+            ],
+            [
+              22,
+              22,
+              86
+            ]
+          ],
+          "void": [
+            [
+              0,
+              0,
+              5
+            ],
+            [
+              0,
+              0,
+              48
+            ],
+            [
+              0,
+              0,
+              84
+            ]
+          ],
+          "solid": [
+            [
+              3,
+              0,
+              15
+            ]
+          ]
+        },
+        "connector": {
+          "bounds_mm": [
+            [
+              -2.5,
+              -2.5,
+              0
+            ],
+            [
+              2.5,
+              2.5,
+              45
+            ]
+          ],
+          "void": [
+            [
+              0,
+              0,
+              20
+            ]
+          ],
+          "solid": [
+            [
+              2,
+              0,
+              20
+            ]
+          ]
+        }
+      },
+      "pending": [
+        "full local critical-section checks",
+        "all original graduations",
+        "profile/capacity oracle",
+        "full group mapping review"
+      ]
+    },
+    "C38": {
+      "asset": "chem_salt_bridge_cadquery",
+      "design": "Independent hollow BRep design from functional facts; detailed new dimensions in own glassware.py; no old geometry",
+      "groups": {
+        "bridge": "\u76d0\u6865\u73bb\u7483\u7ba1",
+        "stand": "\u5c55\u793a\u67b6"
+      },
+      "dimensions": {
+        "source": "independent constants in glassware.py (to be fully parameterized)"
+      },
+      "checks": {
+        "bridge": {
+          "bounds_mm": [
+            [
+              -46,
+              -6,
+              0
+            ],
+            [
+              46,
+              6,
+              116
+            ]
+          ],
+          "void": [
+            [
+              -40,
+              0,
+              20
+            ],
+            [
+              0,
+              0,
+              110
+            ],
+            [
+              40,
+              0,
+              20
+            ]
+          ],
+          "solid": [
+            [
+              -45,
+              0,
+              20
+            ]
+          ]
+        }
+      },
+      "pending": [
+        "full local critical-section checks",
+        "all original graduations",
+        "profile/capacity oracle",
+        "full group mapping review"
+      ]
+    },
+    "C39": {
+      "asset": "chem_electrolysis_cell_cadquery",
+      "design": "Independent hollow BRep design from functional facts; detailed new dimensions in own glassware.py; no old geometry",
+      "groups": {
+        "tank": "\u900f\u660e\u655e\u53e3\u69fd",
+        "beam": "\u7edd\u7f18\u6a2a\u6881",
+        "electrodeA": "\u7535\u6781A",
+        "electrodeB": "\u7535\u6781B"
+      },
+      "dimensions": {
+        "source": "independent constants in glassware.py (to be fully parameterized)"
+      },
+      "checks": {
+        "tank": {
+          "bounds_mm": [
+            [
+              -60,
+              -39,
+              0
+            ],
+            [
+              60,
+              39,
+              90
+            ]
+          ],
+          "void": [
+            [
+              0,
+              0,
+              30
+            ]
+          ],
+          "solid": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              59,
+              0,
+              30
+            ]
+          ]
+        }
+      },
+      "pending": [
+        "full local critical-section checks",
+        "all original graduations",
+        "profile/capacity oracle",
+        "full group mapping review"
+      ]
+    },
+    "C40": {
+      "asset": "chem_colorimeter_tubes_cadquery",
+      "design": "Independent hollow BRep design from functional facts; detailed new dimensions in own glassware.py; no old geometry",
+      "groups": {
+        "rack": "\u53cc\u5b54\u7ba1\u67b6",
+        "tube1": "\u6bd4\u8272\u7ba11",
+        "tube1_stopper": "\u914d\u5957\u585e1",
+        "tube2": "\u6bd4\u8272\u7ba12",
+        "tube2_stopper": "\u914d\u5957\u585e2"
+      },
+      "dimensions": {
+        "source": "independent constants in glassware.py (to be fully parameterized)"
+      },
+      "checks": {
+        "tube1": {
+          "bounds_mm": [
+            [
+              -11,
+              -11,
+              0
+            ],
+            [
+              11,
+              11,
+              190
+            ]
+          ],
+          "void": [
+            [
+              0,
+              0,
+              50
+            ]
+          ],
+          "solid": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              10,
+              0,
+              50
+            ]
+          ]
+        },
+        "tube2": {
+          "bounds_mm": [
+            [
+              -11,
+              -11,
+              0
+            ],
+            [
+              11,
+              11,
+              190
+            ]
+          ],
+          "void": [
+            [
+              0,
+              0,
+              50
+            ]
+          ],
+          "solid": [
+            [
+              10,
+              0,
+              50
+            ]
+          ]
+        }
+      },
+      "pending": [
+        "full local critical-section checks",
+        "all original graduations",
+        "profile/capacity oracle",
+        "full group mapping review"
+      ]
+    },
+    "C41": {
+      "asset": "chem_three_neck_flask_cadquery",
+      "design": "Independent hollow BRep design from functional facts; detailed new dimensions in own glassware.py; no old geometry",
+      "groups": {
+        "body": "\u4e09\u53e3\u70e7\u74f6",
+        "support": "\u8f6f\u6728\u6258\u73af",
+        "stopper0": "\u4e2d\u592e\u74f6\u585e",
+        "stopper1": "\u5de6\u4fa7\u74f6\u585e",
+        "stopper2": "\u53f3\u4fa7\u74f6\u585e"
+      },
+      "dimensions": {
+        "source": "independent constants in glassware.py (to be fully parameterized)"
+      },
+      "checks": {
+        "body": {
+          "bounds_mm": [
+            [
+              -55.66,
+              -45,
+              0
+            ],
+            [
+              55.66,
+              45,
+              135
+            ]
+          ],
+          "void": [
+            [
+              0,
+              0,
+              45
+            ],
+            [
+              0,
+              0,
+              133
+            ]
+          ],
+          "solid": [
+            [
+              0,
+              44.3,
+              45
+            ]
+          ]
+        }
+      },
+      "pending": [
+        "full local critical-section checks",
+        "all original graduations",
+        "profile/capacity oracle",
+        "full group mapping review"
+      ]
+    },
+    "C48": {
+      "asset": "chem_distilling_flask_cadquery",
+      "design": "Independent hollow BRep design from functional facts; detailed new dimensions in own glassware.py; no old geometry",
+      "groups": {
+        "body": "\u4fa7\u7ba1\u84b8\u998f\u70e7\u74f6",
+        "support": "\u5355\u5b54\u585e",
+        "stopper0": "\u8f6f\u6728\u6258\u5ea7"
+      },
+      "dimensions": {
+        "source": "independent constants in glassware.py (to be fully parameterized)"
+      },
+      "checks": {
+        "body": {
+          "bounds_mm": [
+            [
+              -45,
+              -45,
+              0
+            ],
+            [
+              60,
+              45,
+              135
+            ]
+          ],
+          "void": [
+            [
+              0,
+              0,
+              45
+            ],
+            [
+              0,
+              0,
+              107
+            ],
+            [
+              58,
+              0,
+              107
+            ]
+          ],
+          "solid": [
+            [
+              0,
+              44.3,
+              45
+            ]
+          ]
+        }
+      },
+      "pending": [
+        "full local critical-section checks",
+        "all original graduations",
+        "profile/capacity oracle",
+        "full group mapping review"
+      ]
+    },
+    "C60": {
+      "asset": "chem_backflow_trap_cadquery",
+      "design": "Independent hollow BRep design from functional facts; detailed new dimensions in own glassware.py; no old geometry",
+      "groups": {
+        "bottle": "\u7a7a\u74f6",
+        "stopper": "\u53cc\u5b54\u585e",
+        "tubeA": "\u77ed\u5bfc\u7ba1A",
+        "tubeB": "\u77ed\u5bfc\u7ba1B"
+      },
+      "dimensions": {
+        "source": "independent constants in glassware.py (to be fully parameterized)"
+      },
+      "checks": {
+        "bottle": {
+          "bounds_mm": [
+            [
+              -34,
+              -34,
+              0
+            ],
+            [
+              34,
+              34,
+              150
+            ]
+          ],
+          "void": [
+            [
+              0,
+              0,
+              100
+            ]
+          ],
+          "solid": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              33,
+              0,
+              70
+            ]
+          ]
+        },
+        "tubeA": {
+          "bounds_mm": [
+            [
+              -3.4,
+              -3.4,
+              0
+            ],
+            [
+              3.4,
+              3.4,
+              55
+            ]
+          ],
+          "void": [
+            [
+              0,
+              0,
+              20
+            ]
+          ],
+          "solid": [
+            [
+              3,
+              0,
+              20
+            ]
+          ]
+        }
+      },
+      "pending": [
+        "full local critical-section checks",
+        "all original graduations",
+        "profile/capacity oracle",
+        "full group mapping review"
+      ]
+    },
+    "C61": {
+      "asset": "chem_branch_connectors_cadquery",
+      "design": "Independent hollow BRep design from functional facts; detailed new dimensions in own glassware.py; no old geometry",
+      "groups": {
+        "T": "T\u5f62\u63a5\u5934",
+        "Y": "Y\u5f62\u63a5\u5934",
+        "sleeve": "\u67d4\u6027\u8fde\u63a5\u5957\u7ba1"
+      },
+      "dimensions": {
+        "source": "independent constants in glassware.py (to be fully parameterized)"
+      },
+      "checks": {
+        "T": {
+          "bounds_mm": [
+            [
+              -22,
+              -4,
+              0
+            ],
+            [
+              22,
+              4,
+              39
+            ]
+          ],
+          "void": [
+            [
+              0,
+              0,
+              5
+            ],
+            [
+              0,
+              0,
+              35
+            ],
+            [
+              20,
+              0,
+              35
+            ]
+          ],
+          "solid": [
+            [
+              3.2,
+              0,
+              10
+            ]
+          ]
+        },
+        "Y": {
+          "bounds_mm": [
+            [
+              -24.828427,
+              -4,
+              0
+            ],
+            [
+              24.828427,
+              4,
+              59.828427
+            ]
+          ],
+          "void": [
+            [
+              0,
+              0,
+              10
+            ],
+            [
+              -20,
+              0,
+              55
+            ],
+            [
+              20,
+              0,
+              55
+            ]
+          ]
+        }
+      },
+      "pending": [
+        "full local critical-section checks",
+        "all original graduations",
+        "profile/capacity oracle",
+        "full group mapping review"
+      ]
+    },
+    "C62": {
+      "asset": "chem_ground_joint_adapter_cadquery",
+      "design": "Independent hollow BRep design from functional facts; detailed new dimensions in own glassware.py; no old geometry",
+      "groups": {
+        "adapter": "\u5927\u5c0f\u53e3\u8f6c\u63a5\u5934",
+        "upper": "\u914d\u5957\u4e0a\u63a5\u7ba1",
+        "clip": "\u5f00\u53e3\u56fa\u5b9a\u5939"
+      },
+      "dimensions": {
+        "source": "independent constants in glassware.py (to be fully parameterized)"
+      },
+      "checks": {
+        "adapter": {
+          "bounds_mm": [
+            [
+              -12,
+              -12,
+              0
+            ],
+            [
+              12,
+              12,
+              58
+            ]
+          ],
+          "void": [
+            [
+              0,
+              0,
+              5
+            ],
+            [
+              0,
+              0,
+              45
+            ]
+          ],
+          "solid": [
+            [
+              6.5,
+              0,
+              5
+            ],
+            [
+              11.5,
+              0,
+              40
+            ]
+          ]
+        }
+      },
+      "pending": [
+        "full local critical-section checks",
+        "all original graduations",
+        "profile/capacity oracle",
+        "full group mapping review"
+      ]
+    },
+    "C67": {
+      "asset": "chem_gas_absorption_funnel_cadquery",
+      "design": "Independent hollow BRep design from functional facts; detailed new dimensions in own glassware.py; no old geometry",
+      "groups": {
+        "stand": "\u56fa\u5b9a\u652f\u67b6",
+        "funnel": "\u5012\u7f6e\u5438\u6536\u6f0f\u6597",
+        "cup": "\u7a7a\u63a5\u6536\u676f"
+      },
+      "dimensions": {
+        "source": "independent constants in glassware.py (to be fully parameterized)"
+      },
+      "checks": {
+        "cup": {
+          "bounds_mm": [
+            [
+              -40,
+              -40,
+              0
+            ],
+            [
+              40,
+              40,
+              70
+            ]
+          ],
+          "void": [
+            [
+              0,
+              0,
+              30
+            ]
+          ],
+          "solid": [
+            [
+              0,
+              0,
+              0.75
+            ],
+            [
+              39,
+              0,
+              30
+            ]
+          ]
+        }
+      },
+      "pending": [
+        "full local critical-section checks",
+        "all original graduations",
+        "profile/capacity oracle",
+        "full group mapping review"
+      ]
+    },
+    "C68": {
+      "asset": "chem_combustion_tube_boat_cadquery",
+      "design": "Independent hollow BRep design from functional facts; detailed new dimensions in own glassware.py; no old geometry",
+      "groups": {
+        "stand": "\u5c55\u793a\u6258\u67b6",
+        "tube": "\u73bb\u7483\u4e3b\u7ba1",
+        "boat": "\u5f27\u5e95\u74f7\u821f",
+        "left_stopper": "\u5de6\u7aef\u5355\u5b54\u585e",
+        "left_connector": "\u5de6\u4fa7\u63a5\u7ba1",
+        "right_stopper": "\u53f3\u7aef\u5355\u5b54\u585e",
+        "right_connector": "\u53f3\u4fa7\u63a5\u7ba1"
+      },
+      "dimensions": {
+        "source": "independent constants in glassware.py (to be fully parameterized)"
+      },
+      "checks": {
+        "tube": {
+          "bounds_mm": [
+            [
+              0,
+              -14,
+              -14
+            ],
+            [
+              240,
+              14,
+              14
+            ]
+          ],
+          "void": [
+            [
+              10,
+              0,
+              0
+            ],
+            [
+              120,
+              0,
+              0
+            ],
+            [
+              230,
+              0,
+              0
+            ]
+          ],
+          "solid": [
+            [
+              120,
+              13.3,
+              0
+            ]
+          ]
+        }
+      },
+      "pending": [
+        "full local critical-section checks",
+        "all original graduations",
+        "profile/capacity oracle",
+        "full group mapping review"
+      ]
+    },
+    "C70": {
+      "asset": "chem_dialysis_bag_cadquery",
+      "design": "Independent hollow BRep design from functional facts; detailed new dimensions in own glassware.py; no old geometry",
+      "groups": {
+        "stand": "\u60ac\u6302\u652f\u67b6",
+        "cup": "\u900f\u660e\u5916\u676f",
+        "membrane": "\u534a\u900f\u819c\u888b",
+        "upper": "\u4e0a\u5c01\u5939",
+        "lower": "\u4e0b\u5c01\u5939"
+      },
+      "dimensions": {
+        "source": "independent constants in glassware.py (to be fully parameterized)"
+      },
+      "checks": {
+        "cup": {
+          "bounds_mm": [
+            [
+              -50,
+              -50,
+              0
+            ],
+            [
+              50,
+              50,
+              115
+            ]
+          ],
+          "void": [
+            [
+              0,
+              0,
+              60
+            ]
+          ],
+          "solid": [
+            [
+              49.2,
+              0,
+              60
+            ]
+          ]
+        },
+        "membrane": {
+          "bounds_mm": [
+            [
+              -16,
+              -16,
+              0
+            ],
+            [
+              16,
+              16,
+              76
+            ]
+          ],
+          "void": [
+            [
+              0,
+              0,
+              30
+            ]
+          ],
+          "solid": [
+            [
+              15.9,
+              0,
+              30
+            ],
+            [
+              0,
+              0,
+              0.1
+            ]
+          ]
+        }
+      },
+      "pending": [
+        "full local critical-section checks",
+        "all original graduations",
+        "profile/capacity oracle",
+        "full group mapping review"
+      ]
+    },
+    "C71": {
+      "asset": "chem_calorimeter_cadquery",
+      "design": "Independent hollow BRep design from functional facts; detailed new dimensions in own glassware.py; no old geometry",
+      "groups": {
+        "outer": "\u4fdd\u62a4\u5916\u58f3",
+        "insulation": "\u9694\u70ed\u886c\u5c42",
+        "inner": "\u53cd\u5e94\u5185\u676f",
+        "lid": "\u53cc\u5b54\u4fdd\u6e29\u76d6",
+        "probe": "\u6d4b\u6e29\u63a2\u6746",
+        "stirrer": "\u73af\u5f62\u6405\u62cc\u6746"
+      },
+      "dimensions": {
+        "source": "independent constants in glassware.py (to be fully parameterized)"
+      },
+      "checks": {
+        "inner": {
+          "bounds_mm": [
+            [
+              -38,
+              -38,
+              0
+            ],
+            [
+              38,
+              38,
+              83
+            ]
+          ],
+          "void": [
+            [
+              0,
+              0,
+              40
+            ]
+          ],
+          "solid": [
+            [
+              37.4,
+              0,
+              40
+            ]
+          ]
+        }
+      },
+      "pending": [
+        "full local critical-section checks",
+        "all original graduations",
+        "profile/capacity oracle",
+        "full group mapping review"
+      ]
+    },
+    "C73": {
+      "asset": "chem_paper_chromatography_cadquery",
+      "design": "Independent hollow BRep design from functional facts; detailed new dimensions in own glassware.py; no old geometry",
+      "groups": {
+        "tank": "\u73bb\u7483\u5c55\u5f00\u7f38",
+        "lid": "\u76d6\u4e0e\u60ac\u6302\u6746",
+        "clip": "\u7eb8\u5939",
+        "paper": "\u6ee4\u7eb8\u6761",
+        "front": "\u6ee4\u7eb8\u6761",
+        "spotA": "\u6ee4\u7eb8\u6761",
+        "spotB": "\u6ee4\u7eb8\u6761"
+      },
+      "dimensions": {
+        "source": "independent constants in glassware.py (to be fully parameterized)"
+      },
+      "checks": {
+        "tank": {
+          "bounds_mm": [
+            [
+              -55,
+              -32.5,
+              0
+            ],
+            [
+              55,
+              32.5,
+              145
+            ]
+          ],
+          "void": [
+            [
+              0,
+              0,
+              100
+            ]
+          ],
+          "solid": [
+            [
+              54,
+              0,
+              80
+            ]
+          ]
+        }
+      },
+      "pending": [
+        "full local critical-section checks",
+        "all original graduations",
+        "profile/capacity oracle",
+        "full group mapping review"
+      ]
+    },
+    "C74": {
+      "asset": "chem_tyndall_box_cadquery",
+      "design": "Independent hollow BRep design from functional facts; detailed new dimensions in own glassware.py; no old geometry",
+      "groups": {
+        "box": "\u906e\u5149\u76d2\u4e3b\u4f53",
+        "lid": "\u53ef\u62c6\u9876\u76d6",
+        "light": "\u7a84\u675f\u5149\u6e90",
+        "sample": "\u65b9\u5f62\u6837\u54c1\u6c60",
+        "absorber": "\u5438\u5149\u6321\u677f"
+      },
+      "dimensions": {
+        "source": "independent constants in glassware.py (to be fully parameterized)"
+      },
+      "checks": {
+        "sample": {
+          "bounds_mm": [
+            [
+              -16,
+              -16,
+              0
+            ],
+            [
+              16,
+              16,
+              75
+            ]
+          ],
+          "void": [
+            [
+              0,
+              0,
+              40
+            ]
+          ],
+          "solid": [
+            [
+              15.2,
+              0,
+              30
+            ],
+            [
+              0,
+              0,
+              0.75
+            ]
+          ]
+        }
+      },
+      "pending": [
+        "full local critical-section checks",
+        "all original graduations",
+        "profile/capacity oracle",
+        "full group mapping review"
+      ]
+    }
+  }
+}

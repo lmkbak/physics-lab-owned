@@ -1,0 +1,29 @@
+{
+ "schema":"owned-electric-design/1", "designOrigin":"Independent original parametric dimensions, 2026-10-31; no historic geometry viewed", "units":"mm", "precision":{"linear":0.02,"angular":0.08},
+ "terminal":{"outerRadius":4.6,"boreRadius":1.7,"crossBoreRadius":1.25,"height":12,"collarRadius":6.2,"collarHeight":3.2,"capRadius":5.4,"capHeight":2.4,"slotWidth":1.2,"slotDepth":0.9},
+ "materials":{"body":[0.16,0.23,0.29],"insulator":[0.88,0.84,0.69],"copper":[0.76,0.43,0.18],"steel":[0.53,0.58,0.62],"black":[0.055,0.065,0.075],"white":[0.93,0.94,0.88],"red":[0.7,0.07,0.045],"blue":[0.07,0.27,0.56],"glass":[0.76,0.91,0.96],"green":[0.08,0.75,0.35]},
+ "assets":{
+  "ammeter":{"size":[142,126,154],"panelAngle_deg":60,"wall":2.4,"scale":[0.6,3],"divisions":30,"sweep_deg":120},
+  "voltmeter":{"size":[142,126,154],"panelAngle_deg":60,"wall":2.4,"scale":[3,15],"divisions":30,"sweep_deg":120},
+  "galvanometer":{"size":[142,126,154],"panelAngle_deg":60,"wall":2.4,"scale":[-300,0,300],"divisions":30,"sweep_deg":110},
+  "dcsupply":{"size":[168,118,88],"wall":2.2,"display":[0,12],"indicatorStates":["OFF","CV","CC"]},
+  "battery":{"size":[154,86,12],"cellRadius":12.2,"cellLength":57,"cells":2},
+  "rheostat":{"size":[214,102,12],"coilRadius":15.5,"coilLength":144,"turns":72,"sliderTravel":[-66,64],"ratings":[[20,2],[50,1.5],[200,1]]},
+  "switch":{"size":[132,72,10],"bladeLength":78,"bladeWidth":10,"bladeThickness":2,"range_rad":[0,0.7853981633974483]},
+  "dpdt":{"size":[142,128,10],"bladeLength":43,"bladeSpacing":48,"range_rad":[0,1.5707963267948966,3.141592653589793]},
+  "lamp":{"size":[112,76,10],"glassRadius":16,"glassWall":0.8,"ratings":["2.5V 0.3A","3.8V 0.3A","6.3V 0.15A"]},
+  "resistor10":{"size":[124,58,9],"resistance":10,"tolerance":5,"power":2,"bands":["brown","black","black","gold"]},
+  "resistor20":{"size":[124,58,9],"resistance":20,"tolerance":5,"power":2,"bands":["red","black","black","gold"]},
+  "resistor50":{"size":[124,58,9],"resistance":50,"tolerance":5,"power":2,"bands":["green","black","black","gold"]},
+  "resbox":{"size":[220,104,54],"wall":2.2,"decades":[1000,100,10,1],"digits":10},
+  "fuse":{"size":[118,66,10],"glassOuterRadius":5.2,"glassInnerRadius":4.4,"tubeLength":40,"ratings":[0.5,1,2]},
+  "capacitor":{"size":[212,130,10],"plateSize":[2,90,100],"gap":[32,96],"dielectricThickness":6,"dielectricLift":135},
+  "motor":{"size":[204,130,10],"shaftRadius":3.2,"rotorRadius":23,"rotorLength":62,"poleGap":58},
+  "solenoid":{"size":[206,92,10],"turns":40,"boreRadius":12,"wireRadius":0.8,"coilLength":92,"coreRadius":10.5,"coreTravel":108},
+  "ntc":{"size":[104,62,9],"beadRadius":6,"temperature":[0,100]},
+  "ldr":{"size":[104,62,9],"discRadius":13,"illuminance":[0,1000]},
+  "led":{"size":[84,52,8.5],"resinRadius":5,"colors":["red","yellow","green","blue","white"]},
+  "diode":{"size":[96,46,12],"bodyRadius":4,"bodyLength":24,"anode":"-x","cathode":"+x"},
+  "elcap":{"size":[80,56,8.5],"canRadius":13,"canHeight":46,"canWall":0.55,"capacitance_uF":[470,1000,2200,4700],"voltage":16}
+ }
+}

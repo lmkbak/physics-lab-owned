@@ -1,0 +1,3233 @@
+{
+  "schema": "electric-page-acceptance/v1",
+  "sampledAt": "2026-10-31T06:37:06.340Z",
+  "head": "b6a152955837995ff8a584b9b1154da3c899b170",
+  "sourceHashes": {
+    "src/lab/owned/electric/models.js": "71b2097f3920276180c75020a23f95726ed1014638c546d0766cf25691d013ca",
+    "src/lab/owned/electric/simulation.js": "ed1085cf403c0540f2f3e2e01ce224355477d9dcad89359b772448ac21816556",
+    "src/lab/owned/electric/solver.js": "bc2f18ac8158a7d84f481abacd998d23fc862397500cff8330237a93d5657472",
+    "src/lab/clbench/bench.js": "ba740c311a1b95742b95b8a935b29838ace180baeecd0844307dfd3eac62cc12"
+  },
+  "supersededRuns": [
+    {
+      "sampledAt": "2026-10-31T05:02:51.878Z",
+      "head": "not recorded",
+      "failed": 8,
+      "failures": [
+        {
+          "name": "preset led / open-reset",
+          "pass": false,
+          "ms": 378,
+          "error": "page.evaluate: Error: not ready/reported P\n    at eval (eval at evaluate (:370:30), <anonymous>:15:85)\n    at async <anonymous>:396:30\n    at D:\\软件开发\\学习开发\\physics-lab\\tools\\owned-electric\\ui.test.mjs:28:23\n    at test (D:\\软件开发\\学习开发\\physics-lab\\tools\\owned-electric\\ui.test.mjs:12:88)\n    at D:\\软件开发\\学习开发\\physics-lab\\tools\\owned-electric\\ui.test.mjs:27:108"
+        },
+        {
+          "name": "preset rc / default",
+          "pass": false,
+          "ms": 186,
+          "error": "page.evaluate: TypeError: TYPES.resbox.value is not a function\n    at Object.animate (http://127.0.0.1:5173/src/lab/clbench/visuals.js?t=1793422951834:379:30)\n    at tick (http://127.0.0.1:5173/src/lab/clbench/bench.js?t=1793422951834:1071:27)\n    at Object.tick (http://127.0.0.1:5173/src/lab/clbench/bench.js?t=1793422951834:1147:243)\n    at eval (eval at evaluate (:370:30), <anonymous>:13:9)\n    at async <anonymous>:396:30\n    at D:\\软件开发\\学习开发\\physics-lab\\tools\\owned-electric\\ui.test.mjs:28:23\n    at test (D:\\软件开发\\学习开发\\physics-lab\\tools\\owned-electric\\ui.test.mjs:12:88)\n    at D:\\软件开发\\学习开发\\physics-lab\\tools\\owned-electric\\ui.test.mjs:27:108"
+        },
+        {
+          "name": "preset rc / closed-A",
+          "pass": false,
+          "ms": 89,
+          "error": "page.evaluate: TypeError: TYPES.resbox.value is not a function\n    at Object.animate (http://127.0.0.1:5173/src/lab/clbench/visuals.js?t=1793422951834:379:30)\n    at tick (http://127.0.0.1:5173/src/lab/clbench/bench.js?t=1793422951834:1071:27)\n    at Object.tick (http://127.0.0.1:5173/src/lab/clbench/bench.js?t=1793422951834:1147:243)\n    at eval (eval at evaluate (:370:30), <anonymous>:13:9)\n    at async <anonymous>:396:30\n    at D:\\软件开发\\学习开发\\physics-lab\\tools\\owned-electric\\ui.test.mjs:28:23\n    at test (D:\\软件开发\\学习开发\\physics-lab\\tools\\owned-electric\\ui.test.mjs:12:88)\n    at D:\\软件开发\\学习开发\\physics-lab\\tools\\owned-electric\\ui.test.mjs:27:108"
+        },
+        {
+          "name": "preset rc / alternate-B",
+          "pass": false,
+          "ms": 90,
+          "error": "page.evaluate: TypeError: TYPES.resbox.value is not a function\n    at Object.animate (http://127.0.0.1:5173/src/lab/clbench/visuals.js?t=1793422951834:379:30)\n    at tick (http://127.0.0.1:5173/src/lab/clbench/bench.js?t=1793422951834:1071:27)\n    at Object.tick (http://127.0.0.1:5173/src/lab/clbench/bench.js?t=1793422951834:1147:243)\n    at eval (eval at evaluate (:370:30), <anonymous>:13:9)\n    at async <anonymous>:396:30\n    at D:\\软件开发\\学习开发\\physics-lab\\tools\\owned-electric\\ui.test.mjs:28:23\n    at test (D:\\软件开发\\学习开发\\physics-lab\\tools\\owned-electric\\ui.test.mjs:12:88)\n    at D:\\软件开发\\学习开发\\physics-lab\\tools\\owned-electric\\ui.test.mjs:27:108"
+        },
+        {
+          "name": "preset rc / open-reset",
+          "pass": false,
+          "ms": 82,
+          "error": "page.evaluate: TypeError: TYPES.resbox.value is not a function\n    at Object.animate (http://127.0.0.1:5173/src/lab/clbench/visuals.js?t=1793422951834:379:30)\n    at tick (http://127.0.0.1:5173/src/lab/clbench/bench.js?t=1793422951834:1071:27)\n    at Object.tick (http://127.0.0.1:5173/src/lab/clbench/bench.js?t=1793422951834:1147:243)\n    at eval (eval at evaluate (:370:30), <anonymous>:13:9)\n    at async <anonymous>:396:30\n    at D:\\软件开发\\学习开发\\physics-lab\\tools\\owned-electric\\ui.test.mjs:28:23\n    at test (D:\\软件开发\\学习开发\\physics-lab\\tools\\owned-electric\\ui.test.mjs:12:88)\n    at D:\\软件开发\\学习开发\\physics-lab\\tools\\owned-electric\\ui.test.mjs:27:108"
+        },
+        {
+          "name": "insert/render/report resbox",
+          "pass": false,
+          "ms": 23,
+          "error": "page.evaluate: TypeError: TYPES.resbox.value is not a function\n    at Object.animate (http://127.0.0.1:5173/src/lab/clbench/visuals.js?t=1793422951834:379:30)\n    at tick (http://127.0.0.1:5173/src/lab/clbench/bench.js?t=1793422951834:1071:27)\n    at Object.tick (http://127.0.0.1:5173/src/lab/clbench/bench.js?t=1793422951834:1147:243)\n    at eval (eval at evaluate (:370:30), <anonymous>:1:191)\n    at async <anonymous>:396:30\n    at D:\\软件开发\\学习开发\\physics-lab\\tools\\owned-electric\\ui.test.mjs:57:33\n    at async test (D:\\软件开发\\学习开发\\physics-lab\\tools\\owned-electric\\ui.test.mjs:12:82)\n    at async file:///D:/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E5%AD%A6%E4%B9%A0%E5%BC%80%E5%8F%91/physics-lab/tools/owned-electric/ui.test.mjs:55:36"
+        },
+        {
+          "name": "real touch connection completed and cancel button clears active preview",
+          "pass": false,
+          "ms": 77,
+          "error": "page.evaluate: Error: terminal not exposed S:+ at 147.85711180473373,799.7235306543486\n    at eval (eval at evaluate (:370:30), <anonymous>:1:417)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at target (D:\\软件开发\\学习开发\\physics-lab\\tools\\owned-electric\\ui.test.mjs:100:41)\n    at D:\\软件开发\\学习开发\\physics-lab\\tools\\owned-electric\\ui.test.mjs:101:24\n    at async test (D:\\软件开发\\学习开发\\physics-lab\\tools\\owned-electric\\ui.test.mjs:12:82)\n    at async file:///D:/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E5%AD%A6%E4%B9%A0%E5%BC%80%E5%8F%91/physics-lab/tools/owned-electric/ui.test.mjs:93:3"
+        },
+        {
+          "name": "page has no uncaught runtime errors",
+          "pass": false,
+          "ms": 2,
+          "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n+ actual - expected\n\n+ [\n+   'TYPES.resbox.value is not a function',\n+   'TYPES.resbox.value is not a function',\n+   'TYPES.resbox.value is not a function',\n+   'TYPES.resbox.value is not a function',\n+   'TYPES.resbox.value is not a function',\n+   'TYPES.resbox.value is not a function',\n+   'TYPES.resbox.value is not a function',\n+   'TYPES.resbox.value is not a function'\n+ ]\n- []\n\n    at file:///D:/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E5%AD%A6%E4%B9%A0%E5%BC%80%E5%8F%91/physics-lab/tools/owned-electric/ui.test.mjs:106:74\n    at test (file:///D:/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E5%AD%A6%E4%B9%A0%E5%BC%80%E5%8F%91/physics-lab/tools/owned-electric/ui.test.mjs:12:88)\n    at file:///D:/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E5%AD%A6%E4%B9%A0%E5%BC%80%E5%8F%91/physics-lab/tools/owned-electric/ui.test.mjs:106:9"
+        }
+      ],
+      "pageErrors": [
+        "TYPES.resbox.value is not a function",
+        "TYPES.resbox.value is not a function",
+        "TYPES.resbox.value is not a function",
+        "TYPES.resbox.value is not a function",
+        "TYPES.resbox.value is not a function",
+        "TYPES.resbox.value is not a function",
+        "TYPES.resbox.value is not a function",
+        "TYPES.resbox.value is not a function"
+      ],
+      "reason": "Superseded by fresh run after runtime integration fixes and stricter step-result/signed/touch/audio tests."
+    },
+    {
+      "sampledAt": "2026-10-31T06:29:11.325Z",
+      "head": "b6a152955837995ff8a584b9b1154da3c899b170",
+      "failed": 2,
+      "failures": [
+        {
+          "name": "preset led / open-reset",
+          "pass": false,
+          "ms": 58,
+          "error": "page.evaluate: Error: nonconverged led/open-reset step 0: solve-rejected\n    at eval (eval at evaluate (:370:30), <anonymous>:12:124)\n    at async <anonymous>:396:30\n    at D:\\软件开发\\学习开发\\physics-lab\\tools\\owned-electric\\ui.test.mjs:33:23\n    at test (D:\\软件开发\\学习开发\\physics-lab\\tools\\owned-electric\\ui.test.mjs:17:88)\n    at D:\\软件开发\\学习开发\\physics-lab\\tools\\owned-electric\\ui.test.mjs:32:108"
+        },
+        {
+          "name": "real touch connection completed and cancel button clears active preview",
+          "pass": false,
+          "ms": 3649,
+          "error": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert.ok(final.events.length >= 6)\n\n    at file:///D:/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E5%AD%A6%E4%B9%A0%E5%BC%80%E5%8F%91/physics-lab/tools/owned-electric/ui.test.mjs:132:316\n    at async test (file:///D:/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E5%AD%A6%E4%B9%A0%E5%BC%80%E5%8F%91/physics-lab/tools/owned-electric/ui.test.mjs:17:82)\n    at async file:///D:/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E5%AD%A6%E4%B9%A0%E5%BC%80%E5%8F%91/physics-lab/tools/owned-electric/ui.test.mjs:120:3"
+        }
+      ],
+      "pageErrors": [],
+      "reason": "Superseded by fresh run after runtime integration fixes and stricter step-result/signed/touch/audio tests."
+    },
+    {
+      "sampledAt": "2026-10-31T06:33:09.038Z",
+      "head": "b6a152955837995ff8a584b9b1154da3c899b170",
+      "failed": 4,
+      "failures": [
+        {
+          "name": "preset led / open-reset",
+          "pass": false,
+          "ms": 62,
+          "error": "page.evaluate: Error: nonconverged led/open-reset step 0: solve-rejected\n    at eval (eval at evaluate (:370:30), <anonymous>:12:124)\n    at async <anonymous>:396:30\n    at D:\\软件开发\\学习开发\\physics-lab\\tools\\owned-electric\\ui.test.mjs:33:23\n    at test (D:\\软件开发\\学习开发\\physics-lab\\tools\\owned-electric\\ui.test.mjs:17:88)\n    at D:\\软件开发\\学习开发\\physics-lab\\tools\\owned-electric\\ui.test.mjs:32:108"
+        },
+        {
+          "name": "protection lamp publishes consumer FX event",
+          "pass": false,
+          "ms": 70,
+          "error": "AssertionError [ERR_ASSERTION]: missing p.events trigger consumed by bench FX\n    at file:///D:/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E5%AD%A6%E4%B9%A0%E5%BC%80%E5%8F%91/physics-lab/tools/owned-electric/ui.test.mjs:101:345\n    at async test (file:///D:/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E5%AD%A6%E4%B9%A0%E5%BC%80%E5%8F%91/physics-lab/tools/owned-electric/ui.test.mjs:17:82)\n    at async file:///D:/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E5%AD%A6%E4%B9%A0%E5%BC%80%E5%8F%91/physics-lab/tools/owned-electric/ui.test.mjs:99:47"
+        },
+        {
+          "name": "protection led publishes consumer FX event",
+          "pass": false,
+          "ms": 95,
+          "error": "AssertionError [ERR_ASSERTION]: missing p.events trigger consumed by bench FX\n    at file:///D:/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E5%AD%A6%E4%B9%A0%E5%BC%80%E5%8F%91/physics-lab/tools/owned-electric/ui.test.mjs:101:345\n    at async test (file:///D:/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E5%AD%A6%E4%B9%A0%E5%BC%80%E5%8F%91/physics-lab/tools/owned-electric/ui.test.mjs:17:82)\n    at async file:///D:/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E5%AD%A6%E4%B9%A0%E5%BC%80%E5%8F%91/physics-lab/tools/owned-electric/ui.test.mjs:99:47"
+        },
+        {
+          "name": "protection fuse publishes consumer FX event",
+          "pass": false,
+          "ms": 86,
+          "error": "AssertionError [ERR_ASSERTION]: missing p.events trigger consumed by bench FX\n    at file:///D:/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E5%AD%A6%E4%B9%A0%E5%BC%80%E5%8F%91/physics-lab/tools/owned-electric/ui.test.mjs:101:345\n    at async test (file:///D:/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E5%AD%A6%E4%B9%A0%E5%BC%80%E5%8F%91/physics-lab/tools/owned-electric/ui.test.mjs:17:82)\n    at async file:///D:/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E5%AD%A6%E4%B9%A0%E5%BC%80%E5%8F%91/physics-lab/tools/owned-electric/ui.test.mjs:99:47"
+        }
+      ],
+      "pageErrors": [],
+      "reason": "Superseded by fresh run after runtime integration fixes and stricter step-result/signed/touch/audio tests."
+    }
+  ],
+  "base": "http://127.0.0.1:5173",
+  "target": "http://127.0.0.1:5173/?m=circuit-bench-3d&cover=0",
+  "scope": "Actual production page with owned models, Simulation, solver and music; CAD integration only as observed, not a complete CAD acceptance claim.",
+  "touchSource": {
+    "decision": "retain-project-owned",
+    "evidence": "Lead provenance and touchControls.js header identify this as the project-added layer around the imported bench. No controller rewrite."
+  },
+  "results": [
+    {
+      "name": "runtime owned solver/music loaded and API available",
+      "pass": true,
+      "ms": 14,
+      "evidence": {
+        "keys": [
+          "music",
+          "resize",
+          "renderer",
+          "composer",
+          "look",
+          "tick",
+          "screenOf",
+          "model",
+          "sim",
+          "ui",
+          "scene",
+          "camera",
+          "controls",
+          "loadPreset",
+          "addPart",
+          "addWire",
+          "byId",
+          "select",
+          "setParam",
+          "view",
+          "termWorld",
+          "recs",
+          "renderRecords",
+          "pickAt",
+          "isWiring",
+          "cancelWiring",
+          "cancelInteraction",
+          "stopCameraMotion",
+          "zoomBy",
+          "rotatePart",
+          "duplicate",
+          "removePart",
+          "removeWire",
+          "termHits"
+        ],
+        "presets": [
+          "blank",
+          "ohm",
+          "lamp-iu",
+          "emf",
+          "parallel",
+          "led",
+          "motor",
+          "rc",
+          "sensor",
+          "fuse",
+          "solenoid",
+          "plate"
+        ],
+        "sim": [
+          "dirty",
+          "V",
+          "time",
+          "warnings",
+          "lastIterations",
+          "nodes",
+          "elements",
+          "refs",
+          "_caps",
+          "_model",
+          "_solve",
+          "_used"
+        ],
+        "canvas": true
+      }
+    },
+    {
+      "name": "preset blank / default",
+      "pass": true,
+      "ms": 16,
+      "evidence": {
+        "parts": 0,
+        "wires": 0,
+        "meters": [],
+        "maxKcl": 0,
+        "warnings": [],
+        "converged": true
+      }
+    },
+    {
+      "name": "preset blank / closed-A",
+      "pass": true,
+      "ms": 7,
+      "evidence": {
+        "parts": 0,
+        "wires": 0,
+        "meters": [],
+        "maxKcl": 0,
+        "warnings": [],
+        "converged": true
+      }
+    },
+    {
+      "name": "preset blank / alternate-B",
+      "pass": true,
+      "ms": 8,
+      "evidence": {
+        "parts": 0,
+        "wires": 0,
+        "meters": [],
+        "maxKcl": 0,
+        "warnings": [],
+        "converged": true
+      }
+    },
+    {
+      "name": "preset blank / open-reset",
+      "pass": true,
+      "ms": 6,
+      "evidence": {
+        "parts": 0,
+        "wires": 0,
+        "meters": [],
+        "maxKcl": 0,
+        "warnings": [],
+        "converged": true
+      }
+    },
+    {
+      "name": "preset ohm / default",
+      "pass": true,
+      "ms": 204,
+      "evidence": {
+        "parts": 6,
+        "wires": 7,
+        "meters": [
+          {
+            "id": "A",
+            "reading": 0,
+            "unit": "A",
+            "range": 0.6
+          },
+          {
+            "id": "V",
+            "reading": 0,
+            "unit": "V",
+            "range": 3
+          }
+        ],
+        "maxKcl": 0,
+        "warnings": [],
+        "converged": true
+      }
+    },
+    {
+      "name": "preset ohm / closed-A",
+      "pass": true,
+      "ms": 170,
+      "evidence": {
+        "parts": 6,
+        "wires": 7,
+        "meters": [
+          {
+            "id": "A",
+            "reading": 0.2675359970403184,
+            "unit": "A",
+            "range": 0.6
+          },
+          {
+            "id": "V",
+            "reading": 2.6664540139962676,
+            "unit": "V",
+            "range": 3
+          }
+        ],
+        "maxKcl": 6.322720125240266e-14,
+        "warnings": [],
+        "converged": true
+      }
+    },
+    {
+      "name": "preset ohm / alternate-B",
+      "pass": true,
+      "ms": 187,
+      "evidence": {
+        "parts": 6,
+        "wires": 7,
+        "meters": [
+          {
+            "id": "A",
+            "reading": 0.08286504387450533,
+            "unit": "A",
+            "range": 0.6
+          },
+          {
+            "id": "V",
+            "reading": 0.8258919596000913,
+            "unit": "V",
+            "range": 3
+          }
+        ],
+        "maxKcl": 4.440892098500626e-14,
+        "warnings": [],
+        "converged": true
+      }
+    },
+    {
+      "name": "preset ohm / open-reset",
+      "pass": true,
+      "ms": 169,
+      "evidence": {
+        "parts": 6,
+        "wires": 7,
+        "meters": [
+          {
+            "id": "A",
+            "reading": 6.661338147750939e-16,
+            "unit": "A",
+            "range": 0.6
+          },
+          {
+            "id": "V",
+            "reading": 2.7068191438273104e-14,
+            "unit": "V",
+            "range": 3
+          }
+        ],
+        "maxKcl": 1.110112002322694e-14,
+        "warnings": [],
+        "converged": true
+      }
+    },
+    {
+      "name": "preset lamp-iu / default",
+      "pass": true,
+      "ms": 880,
+      "evidence": {
+        "parts": 6,
+        "wires": 8,
+        "meters": [
+          {
+            "id": "A",
+            "reading": 6.661338147750939e-16,
+            "unit": "A",
+            "range": 0.6
+          },
+          {
+            "id": "V",
+            "reading": 2.7068191438273104e-14,
+            "unit": "V",
+            "range": 3
+          }
+        ],
+        "maxKcl": 5.484501741648273e-12,
+        "warnings": [],
+        "converged": true
+      }
+    },
+    {
+      "name": "preset lamp-iu / closed-A",
+      "pass": true,
+      "ms": 230,
+      "evidence": {
+        "parts": 6,
+        "wires": 8,
+        "meters": [
+          {
+            "id": "A",
+            "reading": 0.38871189179515575,
+            "unit": "A",
+            "range": 0.6
+          },
+          {
+            "id": "V",
+            "reading": 3.87857425079542,
+            "unit": "V",
+            "range": 3
+          }
+        ],
+        "maxKcl": 4.474198789239381e-14,
+        "warnings": [
+          {
+            "level": "danger",
+            "text": "灯泡功率过高，灯丝正在受损。",
+            "part": "L"
+          },
+          {
+            "level": "danger",
+            "text": "读数超过仪表满量程。",
+            "part": "V"
+          }
+        ],
+        "converged": true
+      }
+    },
+    {
+      "name": "preset lamp-iu / alternate-B",
+      "pass": true,
+      "ms": 218,
+      "evidence": {
+        "parts": 6,
+        "wires": 8,
+        "meters": [
+          {
+            "id": "A",
+            "reading": 0.17864501156557377,
+            "unit": "A",
+            "range": 0.6
+          },
+          {
+            "id": "V",
+            "reading": 1.061194184455961,
+            "unit": "V",
+            "range": 3
+          }
+        ],
+        "maxKcl": 2.220446049250313e-14,
+        "warnings": [],
+        "converged": true
+      }
+    },
+    {
+      "name": "preset lamp-iu / open-reset",
+      "pass": true,
+      "ms": 195,
+      "evidence": {
+        "parts": 6,
+        "wires": 8,
+        "meters": [
+          {
+            "id": "A",
+            "reading": 4.616584701226e-16,
+            "unit": "A",
+            "range": 0.6
+          },
+          {
+            "id": "V",
+            "reading": -9.328516470576418e-15,
+            "unit": "V",
+            "range": 3
+          }
+        ],
+        "maxKcl": 6.683818696438989e-15,
+        "warnings": [],
+        "converged": true
+      }
+    },
+    {
+      "name": "preset emf / default",
+      "pass": true,
+      "ms": 156,
+      "evidence": {
+        "parts": 5,
+        "wires": 6,
+        "meters": [
+          {
+            "id": "A",
+            "reading": -1.7039395552773855e-28,
+            "unit": "A",
+            "range": 0.6
+          },
+          {
+            "id": "V",
+            "reading": 9.46517530468551e-28,
+            "unit": "V",
+            "range": 3
+          }
+        ],
+        "maxKcl": 2.066815571679051e-28,
+        "warnings": [],
+        "converged": true
+      }
+    },
+    {
+      "name": "preset emf / closed-A",
+      "pass": true,
+      "ms": 141,
+      "evidence": {
+        "parts": 5,
+        "wires": 6,
+        "meters": [
+          {
+            "id": "A",
+            "reading": 0.13508823981318638,
+            "unit": "A",
+            "range": 0.6
+          },
+          {
+            "id": "V",
+            "reading": 2.7296648347262233,
+            "unit": "V",
+            "range": 3
+          }
+        ],
+        "maxKcl": 2.220446049250313e-13,
+        "warnings": [],
+        "converged": true
+      }
+    },
+    {
+      "name": "preset emf / alternate-B",
+      "pass": true,
+      "ms": 171,
+      "evidence": {
+        "parts": 5,
+        "wires": 6,
+        "meters": [
+          {
+            "id": "A",
+            "reading": 0.2493201118742123,
+            "unit": "A",
+            "range": 0.6
+          },
+          {
+            "id": "V",
+            "reading": 2.544710310460725,
+            "unit": "V",
+            "range": 3
+          }
+        ],
+        "maxKcl": 4.440892098500626e-14,
+        "warnings": [],
+        "converged": true
+      }
+    },
+    {
+      "name": "preset emf / open-reset",
+      "pass": true,
+      "ms": 190,
+      "evidence": {
+        "parts": 5,
+        "wires": 6,
+        "meters": [
+          {
+            "id": "A",
+            "reading": -1.3275838761650505e-14,
+            "unit": "A",
+            "range": 0.6
+          },
+          {
+            "id": "V",
+            "reading": -2.7267123902199354e-13,
+            "unit": "V",
+            "range": 3
+          }
+        ],
+        "maxKcl": 4.440892098500626e-14,
+        "warnings": [],
+        "converged": true
+      }
+    },
+    {
+      "name": "preset parallel / default",
+      "pass": true,
+      "ms": 770,
+      "evidence": {
+        "parts": 6,
+        "wires": 7,
+        "meters": [
+          {
+            "id": "A",
+            "reading": 0,
+            "unit": "A",
+            "range": 3
+          }
+        ],
+        "maxKcl": 0,
+        "warnings": [],
+        "converged": true
+      }
+    },
+    {
+      "name": "preset parallel / closed-A",
+      "pass": true,
+      "ms": 163,
+      "evidence": {
+        "parts": 6,
+        "wires": 7,
+        "meters": [
+          {
+            "id": "A",
+            "reading": 0.5817461023213781,
+            "unit": "A",
+            "range": 3
+          }
+        ],
+        "maxKcl": 3.3306690738754696e-15,
+        "warnings": [],
+        "converged": true
+      }
+    },
+    {
+      "name": "preset parallel / alternate-B",
+      "pass": true,
+      "ms": 153,
+      "evidence": {
+        "parts": 6,
+        "wires": 7,
+        "meters": [
+          {
+            "id": "A",
+            "reading": 0.5817461023213781,
+            "unit": "A",
+            "range": 3
+          }
+        ],
+        "maxKcl": 3.3306690738754696e-15,
+        "warnings": [],
+        "converged": true
+      }
+    },
+    {
+      "name": "preset parallel / open-reset",
+      "pass": true,
+      "ms": 149,
+      "evidence": {
+        "parts": 6,
+        "wires": 7,
+        "meters": [
+          {
+            "id": "A",
+            "reading": -7.806255641895632e-17,
+            "unit": "A",
+            "range": 3
+          }
+        ],
+        "maxKcl": 8.673617379884035e-17,
+        "warnings": [],
+        "converged": true
+      }
+    },
+    {
+      "name": "preset led / default",
+      "pass": true,
+      "ms": 240,
+      "evidence": {
+        "parts": 5,
+        "wires": 8,
+        "meters": [
+          {
+            "id": "A",
+            "reading": 0.021729198891778535,
+            "unit": "A",
+            "range": 0.6
+          }
+        ],
+        "maxKcl": 4.440892098500626e-14,
+        "warnings": [],
+        "converged": true
+      }
+    },
+    {
+      "name": "preset led / closed-A",
+      "pass": true,
+      "ms": 142,
+      "evidence": {
+        "parts": 5,
+        "wires": 8,
+        "meters": [
+          {
+            "id": "A",
+            "reading": 0.021729198891778535,
+            "unit": "A",
+            "range": 0.6
+          }
+        ],
+        "maxKcl": 4.440892098500626e-14,
+        "warnings": [],
+        "converged": true
+      }
+    },
+    {
+      "name": "preset led / alternate-B",
+      "pass": true,
+      "ms": 143,
+      "evidence": {
+        "parts": 5,
+        "wires": 8,
+        "meters": [
+          {
+            "id": "A",
+            "reading": 0,
+            "unit": "A",
+            "range": 0.6
+          }
+        ],
+        "maxKcl": 1.1102230246251565e-14,
+        "warnings": [],
+        "converged": true
+      }
+    },
+    {
+      "name": "preset led / open-reset",
+      "pass": false,
+      "ms": 66,
+      "error": "page.evaluate: Error: nonconverged led/open-reset step 0: solve-rejected\n    at eval (eval at evaluate (:370:30), <anonymous>:12:124)\n    at async <anonymous>:396:30\n    at D:\\软件开发\\学习开发\\physics-lab\\tools\\owned-electric\\ui.test.mjs:33:23\n    at test (D:\\软件开发\\学习开发\\physics-lab\\tools\\owned-electric\\ui.test.mjs:17:88)\n    at D:\\软件开发\\学习开发\\physics-lab\\tools\\owned-electric\\ui.test.mjs:32:108"
+    },
+    {
+      "name": "preset motor / default",
+      "pass": true,
+      "ms": 431,
+      "evidence": {
+        "parts": 5,
+        "wires": 6,
+        "meters": [
+          {
+            "id": "A",
+            "reading": 0,
+            "unit": "A",
+            "range": 3
+          },
+          {
+            "id": "V",
+            "reading": 1.515646085764128e-13,
+            "unit": "V",
+            "range": 3
+          }
+        ],
+        "maxKcl": 5.0396988510058205e-14,
+        "warnings": [],
+        "converged": true
+      }
+    },
+    {
+      "name": "preset motor / closed-A",
+      "pass": true,
+      "ms": 185,
+      "evidence": {
+        "parts": 5,
+        "wires": 6,
+        "meters": [
+          {
+            "id": "A",
+            "reading": 0.7590492624696132,
+            "unit": "A",
+            "range": 3
+          },
+          {
+            "id": "V",
+            "reading": 2.9215116409580197,
+            "unit": "V",
+            "range": 3
+          }
+        ],
+        "maxKcl": 1.6497762357625678e-14,
+        "warnings": [],
+        "converged": true
+      }
+    },
+    {
+      "name": "preset motor / alternate-B",
+      "pass": true,
+      "ms": 175,
+      "evidence": {
+        "parts": 5,
+        "wires": 6,
+        "meters": [
+          {
+            "id": "A",
+            "reading": 0.9676230523984541,
+            "unit": "A",
+            "range": 3
+          },
+          {
+            "id": "V",
+            "reading": 2.8999498743218943,
+            "unit": "V",
+            "range": 3
+          }
+        ],
+        "maxKcl": 1.6431300764452317e-14,
+        "warnings": [
+          {
+            "level": "danger",
+            "text": "转子已锁住，电能主要转为线圈热量。",
+            "part": "M"
+          }
+        ],
+        "converged": true
+      }
+    },
+    {
+      "name": "preset motor / open-reset",
+      "pass": true,
+      "ms": 171,
+      "evidence": {
+        "parts": 5,
+        "wires": 6,
+        "meters": [
+          {
+            "id": "A",
+            "reading": 0,
+            "unit": "A",
+            "range": 3
+          },
+          {
+            "id": "V",
+            "reading": 1.36706104972332e-16,
+            "unit": "V",
+            "range": 3
+          }
+        ],
+        "maxKcl": 1.328430965878451e-16,
+        "warnings": [],
+        "converged": true
+      }
+    },
+    {
+      "name": "preset rc / default",
+      "pass": true,
+      "ms": 287,
+      "evidence": {
+        "parts": 7,
+        "wires": 9,
+        "meters": [
+          {
+            "id": "V",
+            "reading": 6.8353052486166e-16,
+            "unit": "V",
+            "range": 15
+          }
+        ],
+        "maxKcl": 1.3791051634015616e-14,
+        "warnings": [],
+        "converged": true
+      }
+    },
+    {
+      "name": "preset rc / closed-A",
+      "pass": true,
+      "ms": 201,
+      "evidence": {
+        "parts": 7,
+        "wires": 9,
+        "meters": [
+          {
+            "id": "V",
+            "reading": 0.4883347008171395,
+            "unit": "V",
+            "range": 15
+          }
+        ],
+        "maxKcl": 1.3898604489526178e-14,
+        "warnings": [],
+        "converged": true
+      }
+    },
+    {
+      "name": "preset rc / alternate-B",
+      "pass": true,
+      "ms": 204,
+      "evidence": {
+        "parts": 7,
+        "wires": 9,
+        "meters": [
+          {
+            "id": "V",
+            "reading": -1.3116135781643388e-14,
+            "unit": "V",
+            "range": 15
+          }
+        ],
+        "maxKcl": 1.471533398605951e-14,
+        "warnings": [],
+        "converged": true
+      }
+    },
+    {
+      "name": "preset rc / open-reset",
+      "pass": true,
+      "ms": 199,
+      "evidence": {
+        "parts": 7,
+        "wires": 9,
+        "meters": [
+          {
+            "id": "V",
+            "reading": -1.3116135781643388e-14,
+            "unit": "V",
+            "range": 15
+          }
+        ],
+        "maxKcl": 1.471533398605951e-14,
+        "warnings": [],
+        "converged": true
+      }
+    },
+    {
+      "name": "preset sensor / default",
+      "pass": true,
+      "ms": 229,
+      "evidence": {
+        "parts": 6,
+        "wires": 7,
+        "meters": [
+          {
+            "id": "A",
+            "reading": 0.029141751064061732,
+            "unit": "A",
+            "range": 0.6
+          }
+        ],
+        "maxKcl": 7.201683693836003e-12,
+        "warnings": [],
+        "converged": true
+      }
+    },
+    {
+      "name": "preset sensor / closed-A",
+      "pass": true,
+      "ms": 185,
+      "evidence": {
+        "parts": 6,
+        "wires": 7,
+        "meters": [
+          {
+            "id": "A",
+            "reading": 0.029141751064061732,
+            "unit": "A",
+            "range": 0.6
+          }
+        ],
+        "maxKcl": 7.201683693836003e-12,
+        "warnings": [],
+        "converged": true
+      }
+    },
+    {
+      "name": "preset sensor / alternate-B",
+      "pass": true,
+      "ms": 205,
+      "evidence": {
+        "parts": 6,
+        "wires": 7,
+        "meters": [
+          {
+            "id": "A",
+            "reading": 0.029141751064061732,
+            "unit": "A",
+            "range": 0.6
+          }
+        ],
+        "maxKcl": 7.201683693836003e-12,
+        "warnings": [],
+        "converged": true
+      }
+    },
+    {
+      "name": "preset sensor / open-reset",
+      "pass": true,
+      "ms": 190,
+      "evidence": {
+        "parts": 6,
+        "wires": 7,
+        "meters": [
+          {
+            "id": "A",
+            "reading": 0.029141751064061732,
+            "unit": "A",
+            "range": 0.6
+          }
+        ],
+        "maxKcl": 7.201683693836003e-12,
+        "warnings": [],
+        "converged": true
+      }
+    },
+    {
+      "name": "preset fuse / default",
+      "pass": true,
+      "ms": 240,
+      "evidence": {
+        "parts": 6,
+        "wires": 7,
+        "meters": [
+          {
+            "id": "A",
+            "reading": -2.439454888092385e-17,
+            "unit": "A",
+            "range": 3
+          }
+        ],
+        "maxKcl": 8.117963766485214e-18,
+        "warnings": [],
+        "converged": true
+      }
+    },
+    {
+      "name": "preset fuse / closed-A",
+      "pass": true,
+      "ms": 191,
+      "evidence": {
+        "parts": 6,
+        "wires": 7,
+        "meters": [
+          {
+            "id": "A",
+            "reading": 2,
+            "unit": "A",
+            "range": 3
+          }
+        ],
+        "maxKcl": 5.551115123125783e-15,
+        "warnings": [
+          {
+            "level": "warn",
+            "text": "负载电流已到设定上限，电源正在恒流输出。",
+            "part": "P"
+          },
+          {
+            "level": "danger",
+            "text": "熔丝过流，热量正在积累。",
+            "part": "F"
+          }
+        ],
+        "converged": true
+      }
+    },
+    {
+      "name": "preset fuse / alternate-B",
+      "pass": true,
+      "ms": 185,
+      "evidence": {
+        "parts": 6,
+        "wires": 7,
+        "meters": [
+          {
+            "id": "A",
+            "reading": 2,
+            "unit": "A",
+            "range": 3
+          }
+        ],
+        "maxKcl": 5.551115123125783e-15,
+        "warnings": [
+          {
+            "level": "warn",
+            "text": "负载电流已到设定上限，电源正在恒流输出。",
+            "part": "P"
+          },
+          {
+            "level": "danger",
+            "text": "熔丝过流，热量正在积累。",
+            "part": "F"
+          }
+        ],
+        "converged": true
+      }
+    },
+    {
+      "name": "preset fuse / open-reset",
+      "pass": true,
+      "ms": 157,
+      "evidence": {
+        "parts": 6,
+        "wires": 7,
+        "meters": [
+          {
+            "id": "A",
+            "reading": 4.163336342344337e-16,
+            "unit": "A",
+            "range": 3
+          }
+        ],
+        "maxKcl": 4.157785227221212e-16,
+        "warnings": [],
+        "converged": true
+      }
+    },
+    {
+      "name": "preset solenoid / default",
+      "pass": true,
+      "ms": 232,
+      "evidence": {
+        "parts": 5,
+        "wires": 8,
+        "meters": [
+          {
+            "id": "A",
+            "reading": 0.185834713621156,
+            "unit": "A",
+            "range": 3
+          }
+        ],
+        "maxKcl": 5.753730825119874e-14,
+        "warnings": [],
+        "converged": true
+      }
+    },
+    {
+      "name": "preset solenoid / closed-A",
+      "pass": true,
+      "ms": 163,
+      "evidence": {
+        "parts": 5,
+        "wires": 8,
+        "meters": [
+          {
+            "id": "A",
+            "reading": 0.10659701247586464,
+            "unit": "A",
+            "range": 3
+          }
+        ],
+        "maxKcl": 4.440892098500626e-14,
+        "warnings": [],
+        "converged": true
+      }
+    },
+    {
+      "name": "preset solenoid / alternate-B",
+      "pass": true,
+      "ms": 200,
+      "evidence": {
+        "parts": 5,
+        "wires": 8,
+        "meters": [
+          {
+            "id": "A",
+            "reading": -0.1651675158909871,
+            "unit": "A",
+            "range": 3
+          }
+        ],
+        "maxKcl": 6.933342788784103e-14,
+        "warnings": [
+          {
+            "level": "warn",
+            "text": "指针反偏，交换仪表两端连接。",
+            "part": "A"
+          }
+        ],
+        "converged": true
+      }
+    },
+    {
+      "name": "preset solenoid / open-reset",
+      "pass": true,
+      "ms": 203,
+      "evidence": {
+        "parts": 5,
+        "wires": 8,
+        "meters": [
+          {
+            "id": "A",
+            "reading": 0,
+            "unit": "A",
+            "range": 3
+          }
+        ],
+        "maxKcl": 1.474514954580286e-14,
+        "warnings": [],
+        "converged": true
+      }
+    },
+    {
+      "name": "preset plate / default",
+      "pass": true,
+      "ms": 193,
+      "evidence": {
+        "parts": 3,
+        "wires": 3,
+        "meters": [],
+        "maxKcl": 0,
+        "warnings": [],
+        "converged": true
+      }
+    },
+    {
+      "name": "preset plate / closed-A",
+      "pass": true,
+      "ms": 103,
+      "evidence": {
+        "parts": 3,
+        "wires": 3,
+        "meters": [],
+        "maxKcl": 5.486495132608165e-19,
+        "warnings": [],
+        "converged": true
+      }
+    },
+    {
+      "name": "preset plate / alternate-B",
+      "pass": true,
+      "ms": 86,
+      "evidence": {
+        "parts": 3,
+        "wires": 3,
+        "meters": [],
+        "maxKcl": 5.486508057305237e-19,
+        "warnings": [],
+        "converged": true
+      }
+    },
+    {
+      "name": "preset plate / open-reset",
+      "pass": true,
+      "ms": 88,
+      "evidence": {
+        "parts": 3,
+        "wires": 3,
+        "meters": [],
+        "maxKcl": 1.2924644606101033e-24,
+        "warnings": [],
+        "converged": true
+      }
+    },
+    {
+      "name": "insert/render/report dcsupply",
+      "pass": true,
+      "ms": 36,
+      "evidence": {
+        "ready": true,
+        "obj": true,
+        "terms": [
+          "+",
+          "-"
+        ],
+        "paramKeys": [
+          "V",
+          "Ilim",
+          "on"
+        ],
+        "state": {},
+        "live": {
+          "U": 3,
+          "I": 0,
+          "P": 0,
+          "rows": [
+            [
+              "电压",
+              "3.00 V"
+            ],
+            [
+              "电流",
+              "0.000 A"
+            ],
+            [
+              "输出功率",
+              "0.000 W"
+            ],
+            [
+              "调节状态",
+              "CV"
+            ]
+          ],
+          "warn": [],
+          "short": false,
+          "mode": "CV"
+        },
+        "props": "P1 · 可调直流电源\n3.0 V · 2 A\n电压\n3.00 V\n电流\n0.000 A\n输出功率\n0.000 W\n调节状态\nCV\n输出开关\n设定电压\n3 V\n电流上限\n.5 A\n1 A\n2 A\n\n电压旋钮给出目标值；负载增大到电流上限时，端电压随之降低。\n\n正端 +\n负端 −\n↻ 旋转 90°\n复制\n删除",
+        "selected": "X"
+      }
+    },
+    {
+      "name": "insert/render/report battery",
+      "pass": true,
+      "ms": 23,
+      "evidence": {
+        "ready": true,
+        "obj": true,
+        "terms": [
+          "+",
+          "-"
+        ],
+        "paramKeys": [
+          "E",
+          "r"
+        ],
+        "state": {},
+        "live": {
+          "U": 3,
+          "I": 0,
+          "P": 0,
+          "rows": [
+            [
+              "电压",
+              "3.00 V"
+            ],
+            [
+              "电流",
+              "0.000 A"
+            ],
+            [
+              "输出功率",
+              "0.000 W"
+            ]
+          ],
+          "warn": [],
+          "short": false
+        },
+        "props": "E1 · 串联电池组\n3.00 V / 1.0 Ω\n电压\n3.00 V\n电流\n0.000 A\n输出功率\n0.000 W\n电动势\n3 V\n内阻\n1 Ω\n\n由电动势和内阻组成的电池模型，可用输出曲线测量内阻。\n\n正端 +\n负端 −\n↻ 旋转 90°\n复制\n删除",
+        "selected": "X"
+      }
+    },
+    {
+      "name": "insert/render/report switch",
+      "pass": true,
+      "ms": 17,
+      "evidence": {
+        "ready": true,
+        "obj": true,
+        "terms": [
+          "A",
+          "B"
+        ],
+        "paramKeys": [
+          "closed"
+        ],
+        "state": {},
+        "live": {
+          "U": 0,
+          "I": 0,
+          "P": 0,
+          "rows": [
+            [
+              "电压",
+              "0.00 V"
+            ],
+            [
+              "电流",
+              "0.000 A"
+            ]
+          ],
+          "warn": []
+        },
+        "props": "S1 · 单刀开关\n断开\n电压\n0.00 V\n电流\n0.000 A\n接通\n\n接通时接点电阻为 10 mΩ，断开时回路中移除此支路。\n\nA\nB\n↻ 旋转 90°\n复制\n删除",
+        "selected": "X"
+      }
+    },
+    {
+      "name": "insert/render/report dpdt",
+      "pass": true,
+      "ms": 16,
+      "evidence": {
+        "ready": true,
+        "obj": true,
+        "terms": [
+          "A1",
+          "A2",
+          "B1",
+          "B2",
+          "C1",
+          "C2"
+        ],
+        "paramKeys": [
+          "pos"
+        ],
+        "state": {},
+        "live": {
+          "U": 0,
+          "I": 0,
+          "P": 0,
+          "rows": [
+            [
+              "电压",
+              "0.00 V"
+            ],
+            [
+              "电流",
+              "0.000 A"
+            ]
+          ],
+          "warn": []
+        },
+        "props": "K1 · 双刀换向开关\n断开\n电压\n0.00 V\n电流\n0.000 A\n刀片位置\nA 侧\n断开\nB 侧\n\n两个公共触点同步选择 A 或 B 侧，可搭建极性换向回路。\n\nA1\nC1\nB1\nA2\nC2\nB2\n↻ 旋转 90°\n复制\n删除",
+        "selected": "X"
+      }
+    },
+    {
+      "name": "insert/render/report lamp",
+      "pass": true,
+      "ms": 22,
+      "evidence": {
+        "ready": true,
+        "obj": true,
+        "terms": [
+          "A",
+          "B"
+        ],
+        "paramKeys": [
+          "rating"
+        ],
+        "state": {
+          "burnt": false,
+          "over": 0
+        },
+        "live": {
+          "U": 0,
+          "I": 0,
+          "P": 0,
+          "rows": [
+            [
+              "电压",
+              "0.00 V"
+            ],
+            [
+              "电流",
+              "0.000 A"
+            ],
+            [
+              "额定功率比",
+              "0.00"
+            ],
+            [
+              "灯丝",
+              "完好"
+            ]
+          ],
+          "warn": [],
+          "ratio": 0,
+          "brightness": 0
+        },
+        "props": "L1 · 灯座与白炽灯\n2.5V 0.3A\n电压\n0.00 V\n电流\n0.000 A\n额定功率比\n0.00\n灯丝\n完好\n灯泡规格\n2.5V 0.3A\n3.8V 0.3A\n6.3V 0.15A\n装入新灯泡\n\n灯丝模型具有正温度特性，电流增大时静态电阻上升。\n\nA\nB\n↻ 旋转 90°\n复制\n删除",
+        "selected": "X"
+      }
+    },
+    {
+      "name": "insert/render/report led",
+      "pass": true,
+      "ms": 22,
+      "evidence": {
+        "ready": true,
+        "obj": true,
+        "terms": [
+          "+",
+          "-"
+        ],
+        "paramKeys": [
+          "color"
+        ],
+        "state": {
+          "burnt": false,
+          "over": 0
+        },
+        "live": {
+          "U": 0,
+          "I": 0,
+          "P": 0,
+          "rows": [
+            [
+              "电压",
+              "0.00 V"
+            ],
+            [
+              "电流",
+              "0.000 A"
+            ],
+            [
+              "方向",
+              "低电流"
+            ]
+          ],
+          "warn": [],
+          "brightness": 0,
+          "ratio": 0
+        },
+        "props": "D1 · 发光二极管\n红光 LED\n电压\n0.00 V\n电流\n0.000 A\n方向\n低电流\n发光颜色\n红 · 1.9 V\n黄 · 2 V\n绿 · 2.1 V\n蓝 · 3 V\n白 · 3 V\n更换 LED\n\n正向连接并串联限流电阻；不同发光颜色采用不同标称压降。\n\n正端 +\n负端 −\n↻ 旋转 90°\n复制\n删除",
+        "selected": "X"
+      }
+    },
+    {
+      "name": "insert/render/report diode",
+      "pass": true,
+      "ms": 32,
+      "evidence": {
+        "ready": true,
+        "obj": true,
+        "terms": [
+          "+",
+          "-"
+        ],
+        "paramKeys": [],
+        "state": {},
+        "live": {
+          "U": 0,
+          "I": 0,
+          "P": 0,
+          "rows": [
+            [
+              "电压",
+              "0.00 V"
+            ],
+            [
+              "电流",
+              "0.000 A"
+            ],
+            [
+              "方向",
+              "低电流"
+            ]
+          ],
+          "warn": [],
+          "brightness": 0,
+          "ratio": 0
+        },
+        "props": "D1 · 硅整流二极管\n硅整流二极管\n电压\n0.00 V\n电流\n0.000 A\n方向\n低电流\n\n阳极电位高于阴极时出现正向电流，色环表示阴极端。\n\n正端 +\n负端 −\n↻ 旋转 90°\n复制\n删除",
+        "selected": "X"
+      }
+    },
+    {
+      "name": "insert/render/report resistor10",
+      "pass": true,
+      "ms": 21,
+      "evidence": {
+        "ready": true,
+        "obj": true,
+        "terms": [
+          "A",
+          "B"
+        ],
+        "paramKeys": [],
+        "state": {},
+        "live": {
+          "U": 0,
+          "I": 0,
+          "P": 0,
+          "rows": [
+            [
+              "电压",
+              "0.00 V"
+            ],
+            [
+              "电流",
+              "0.000 A"
+            ],
+            [
+              "电阻",
+              "10.00 Ω"
+            ],
+            [
+              "功率",
+              "0.000 W"
+            ]
+          ],
+          "warn": [],
+          "R": 10
+        },
+        "props": "R1 · 10 Ω 电阻\n10 Ω\n电压\n0.00 V\n电流\n0.000 A\n电阻\n10.00 Ω\n功率\n0.000 W\n\n线性电阻用于验证电压、电流与阻值的关系。\n\nA\nB\n↻ 旋转 90°\n复制\n删除",
+        "selected": "X"
+      }
+    },
+    {
+      "name": "insert/render/report resistor20",
+      "pass": true,
+      "ms": 35,
+      "evidence": {
+        "ready": true,
+        "obj": true,
+        "terms": [
+          "A",
+          "B"
+        ],
+        "paramKeys": [],
+        "state": {},
+        "live": {
+          "U": 0,
+          "I": 0,
+          "P": 0,
+          "rows": [
+            [
+              "电压",
+              "0.00 V"
+            ],
+            [
+              "电流",
+              "0.000 A"
+            ],
+            [
+              "电阻",
+              "20.00 Ω"
+            ],
+            [
+              "功率",
+              "0.000 W"
+            ]
+          ],
+          "warn": [],
+          "R": 20
+        },
+        "props": "R1 · 20 Ω 电阻\n20 Ω\n电压\n0.00 V\n电流\n0.000 A\n电阻\n20.00 Ω\n功率\n0.000 W\n\n线性电阻用于验证电压、电流与阻值的关系。\n\nA\nB\n↻ 旋转 90°\n复制\n删除",
+        "selected": "X"
+      }
+    },
+    {
+      "name": "insert/render/report resistor50",
+      "pass": true,
+      "ms": 15,
+      "evidence": {
+        "ready": true,
+        "obj": true,
+        "terms": [
+          "A",
+          "B"
+        ],
+        "paramKeys": [],
+        "state": {},
+        "live": {
+          "U": 0,
+          "I": 0,
+          "P": 0,
+          "rows": [
+            [
+              "电压",
+              "0.00 V"
+            ],
+            [
+              "电流",
+              "0.000 A"
+            ],
+            [
+              "电阻",
+              "50.00 Ω"
+            ],
+            [
+              "功率",
+              "0.000 W"
+            ]
+          ],
+          "warn": [],
+          "R": 50
+        },
+        "props": "R1 · 50 Ω 电阻\n50 Ω\n电压\n0.00 V\n电流\n0.000 A\n电阻\n50.00 Ω\n功率\n0.000 W\n\n线性电阻用于验证电压、电流与阻值的关系。\n\nA\nB\n↻ 旋转 90°\n复制\n删除",
+        "selected": "X"
+      }
+    },
+    {
+      "name": "insert/render/report rheostat",
+      "pass": true,
+      "ms": 23,
+      "evidence": {
+        "ready": true,
+        "obj": true,
+        "terms": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "paramKeys": [
+          "Rmax",
+          "s"
+        ],
+        "state": {},
+        "live": {
+          "U": 0,
+          "I": 0,
+          "P": 0,
+          "rows": [
+            [
+              "电压",
+              "0.00 V"
+            ],
+            [
+              "电流",
+              "0.000 A"
+            ],
+            [
+              "A—滑片电流",
+              "0.000 A"
+            ],
+            [
+              "滑片—B 电流",
+              "0.000 A"
+            ]
+          ],
+          "warn": [],
+          "iAP": 0,
+          "iPB": 0
+        },
+        "props": "Rp1 · 四接线柱滑动变阻器\n50 Ω / 100%\n电压\n0.00 V\n电流\n0.000 A\nA—滑片电流\n0.000 A\n滑片—B 电流\n0.000 A\n滑片位置\n1\n线圈规格\n20 Ω / 2 A\n50 Ω / 1.5 A\n200 Ω / 1 A\n\nA、B 是线圈两端，C、D 经金属滑杆连接同一个滑片。\n\n线圈 A\n线圈 B\n滑片 C\n滑片 D\n↻ 旋转 90°\n复制\n删除",
+        "selected": "X"
+      }
+    },
+    {
+      "name": "insert/render/report resbox",
+      "pass": true,
+      "ms": 20,
+      "evidence": {
+        "ready": true,
+        "obj": true,
+        "terms": [
+          "A",
+          "B"
+        ],
+        "paramKeys": [
+          "d"
+        ],
+        "state": {},
+        "live": {
+          "U": 0,
+          "I": 0,
+          "P": 0,
+          "rows": [
+            [
+              "电压",
+              "0.00 V"
+            ],
+            [
+              "电流",
+              "0.000 A"
+            ],
+            [
+              "电阻",
+              "10.00 Ω"
+            ],
+            [
+              "功率",
+              "0.000 W"
+            ]
+          ],
+          "warn": [],
+          "R": 10
+        },
+        "props": "Rb1 · 十进电阻箱\n10 Ω\n电压\n0.00 V\n电流\n0.000 A\n电阻\n10.00 Ω\n功率\n0.000 W\n各位数字\n×1000\n×100\n×10\n×1\n\n四位拨盘分别控制千、百、十、个位阻值。\n\nA\nB\n↻ 旋转 90°\n复制\n删除",
+        "selected": "X"
+      }
+    },
+    {
+      "name": "insert/render/report ntc",
+      "pass": true,
+      "ms": 22,
+      "evidence": {
+        "ready": true,
+        "obj": true,
+        "terms": [
+          "A",
+          "B"
+        ],
+        "paramKeys": [
+          "T"
+        ],
+        "state": {},
+        "live": {
+          "U": 0,
+          "I": 0,
+          "P": 0,
+          "rows": [
+            [
+              "电压",
+              "0.00 V"
+            ],
+            [
+              "电流",
+              "0.000 A"
+            ],
+            [
+              "电阻",
+              "100.00 Ω"
+            ],
+            [
+              "功率",
+              "0.000 W"
+            ]
+          ],
+          "warn": [],
+          "R": 100
+        },
+        "props": "Rt1 · 负温度系数热敏电阻\n25 °C · 100.0 Ω\n电压\n0.00 V\n电流\n0.000 A\n电阻\n100.00 Ω\n功率\n0.000 W\n温度\n25 °C\n\n教学参数 R25=100 Ω、B=3950 K，升温使电阻降低。\n\nA\nB\n↻ 旋转 90°\n复制\n删除",
+        "selected": "X"
+      }
+    },
+    {
+      "name": "insert/render/report ldr",
+      "pass": true,
+      "ms": 20,
+      "evidence": {
+        "ready": true,
+        "obj": true,
+        "terms": [
+          "A",
+          "B"
+        ],
+        "paramKeys": [
+          "E"
+        ],
+        "state": {},
+        "live": {
+          "U": 0,
+          "I": 0,
+          "P": 0,
+          "rows": [
+            [
+              "电压",
+              "0.00 V"
+            ],
+            [
+              "电流",
+              "0.000 A"
+            ],
+            [
+              "电阻",
+              "909.09 Ω"
+            ],
+            [
+              "功率",
+              "0.000 W"
+            ]
+          ],
+          "warn": [],
+          "R": 909.0909090909091
+        },
+        "props": "Rg1 · 光敏电阻\n100 lx · 909.1 Ω\n电压\n0.00 V\n电流\n0.000 A\n电阻\n909.09 Ω\n功率\n0.000 W\n照度\n100 lx\n\n采用 R=10000/(1+E/10) Ω 的公开教学曲线，便于比较光照响应。\n\nA\nB\n↻ 旋转 90°\n复制\n删除",
+        "selected": "X"
+      }
+    },
+    {
+      "name": "insert/render/report ammeter",
+      "pass": true,
+      "ms": 23,
+      "evidence": {
+        "ready": true,
+        "obj": true,
+        "terms": [
+          "-",
+          "0.6",
+          "3"
+        ],
+        "paramKeys": [],
+        "state": {},
+        "live": {
+          "U": 0,
+          "I": 0,
+          "P": 0,
+          "rows": [
+            [
+              "示值",
+              "0.00 A"
+            ],
+            [
+              "量程",
+              "0.6 A"
+            ],
+            [
+              "端电压",
+              "0.00 V"
+            ]
+          ],
+          "warn": [],
+          "range": 0.6,
+          "unit": "A",
+          "frac": 0,
+          "reading": 0
+        },
+        "props": "A1 · 双量程电流表\n双量程电流表\n示值\n0.00 A\n量程\n0.6 A\n端电压\n0.00 V\n\n内部采用通用分流结构，接线柱决定实际量程。\n\n3 A\n公共端 −\n0.6 A\n↻ 旋转 90°\n复制\n删除",
+        "selected": "X"
+      }
+    },
+    {
+      "name": "insert/render/report voltmeter",
+      "pass": true,
+      "ms": 17,
+      "evidence": {
+        "ready": true,
+        "obj": true,
+        "terms": [
+          "-",
+          "15",
+          "3"
+        ],
+        "paramKeys": [],
+        "state": {},
+        "live": {
+          "U": 0,
+          "I": 0,
+          "P": 0,
+          "rows": [
+            [
+              "示值",
+              "0.00 V"
+            ],
+            [
+              "量程",
+              "3 V"
+            ],
+            [
+              "端电压",
+              "0.00 V"
+            ]
+          ],
+          "warn": [],
+          "range": 3,
+          "unit": "V",
+          "frac": 0,
+          "reading": 0
+        },
+        "props": "V1 · 双量程电压表\n双量程电压表\n示值\n0.00 V\n量程\n3 V\n端电压\n0.00 V\n\n倍压电阻依次串联，选择不同接线柱可切换输入电阻。\n\n3 V\n15 V\n公共端 −\n↻ 旋转 90°\n复制\n删除",
+        "selected": "X"
+      }
+    },
+    {
+      "name": "insert/render/report galvanometer",
+      "pass": true,
+      "ms": 59,
+      "evidence": {
+        "ready": true,
+        "obj": true,
+        "terms": [
+          "A",
+          "B"
+        ],
+        "paramKeys": [],
+        "state": {},
+        "live": {
+          "U": 0,
+          "I": 0,
+          "P": 0,
+          "rows": [
+            [
+              "示值",
+              "0 μA"
+            ],
+            [
+              "量程",
+              "±300 μA"
+            ],
+            [
+              "端电压",
+              "0.00 V"
+            ]
+          ],
+          "warn": [],
+          "range": 300,
+          "unit": "μA",
+          "frac": 0,
+          "reading": 0
+        },
+        "props": "G1 · 中心零位检流计\n中心零位检流计\n示值\n0 μA\n量程\n±300 μA\n端电压\n0.00 V\n\n以正负微安示值观察小电流方向，满偏为 ±300 μA。\n\nA\nB\n↻ 旋转 90°\n复制\n删除",
+        "selected": "X"
+      }
+    },
+    {
+      "name": "insert/render/report fuse",
+      "pass": true,
+      "ms": 20,
+      "evidence": {
+        "ready": true,
+        "obj": true,
+        "terms": [
+          "A",
+          "B"
+        ],
+        "paramKeys": [
+          "rating"
+        ],
+        "state": {
+          "heat": 0,
+          "blown": false
+        },
+        "live": {
+          "U": 0,
+          "I": 0,
+          "P": 0,
+          "rows": [
+            [
+              "电压",
+              "0.00 V"
+            ],
+            [
+              "电流",
+              "0.000 A"
+            ],
+            [
+              "熔丝",
+              "接通"
+            ],
+            [
+              "热积累",
+              "0.000"
+            ]
+          ],
+          "warn": []
+        },
+        "props": "F1 · 可更换熔断器\n1 A\n电压\n0.00 V\n电流\n0.000 A\n熔丝\n接通\n热积累\n0.000\n额定电流\n.5 A\n1 A\n2 A\n安装新熔丝\n\n按电流平方累积热量，降至额定电流以下时逐步冷却。\n\nA\nB\n↻ 旋转 90°\n复制\n删除",
+        "selected": "X"
+      }
+    },
+    {
+      "name": "insert/render/report capacitor",
+      "pass": true,
+      "ms": 21,
+      "evidence": {
+        "ready": true,
+        "obj": true,
+        "terms": [
+          "A",
+          "B"
+        ],
+        "paramKeys": [
+          "d",
+          "dielectric"
+        ],
+        "state": {
+          "v": 0
+        },
+        "live": {
+          "U": 0,
+          "I": 0,
+          "P": 0,
+          "rows": [
+            [
+              "电压",
+              "0.00 V"
+            ],
+            [
+              "电流",
+              "0.000 A"
+            ],
+            [
+              "电容",
+              "3.98 pF"
+            ],
+            [
+              "电荷",
+              "0.000e+0 C"
+            ]
+          ],
+          "warn": [],
+          "C": 3.98438451576e-12,
+          "Q": 0,
+          "energy": 0,
+          "E": 0
+        },
+        "props": "C1 · 动板平行板电容器\n3.98 pF\n电压\n0.00 V\n电流\n0.000 A\n电容\n3.98 pF\n电荷\n0.000e+0 C\n板间距离\n32 mm\n插入电介质\n\n板面积取 0.0144 m²，插入介质时相对介电常数取 4。隔离移动时保持电荷。\n\nA\nB\n↻ 旋转 90°\n复制\n删除",
+        "selected": "X"
+      }
+    },
+    {
+      "name": "insert/render/report elcap",
+      "pass": true,
+      "ms": 21,
+      "evidence": {
+        "ready": true,
+        "obj": true,
+        "terms": [
+          "+",
+          "-"
+        ],
+        "paramKeys": [
+          "C"
+        ],
+        "state": {
+          "v": 0
+        },
+        "live": {
+          "U": 0,
+          "I": 0,
+          "P": 0,
+          "rows": [
+            [
+              "电压",
+              "0.00 V"
+            ],
+            [
+              "电流",
+              "0.000 A"
+            ],
+            [
+              "电容",
+              "1000.00 μF"
+            ],
+            [
+              "电荷",
+              "0.000e+0 C"
+            ]
+          ],
+          "warn": [],
+          "C": 0.001,
+          "Q": 0,
+          "energy": 0,
+          "E": 0
+        },
+        "props": "⊕\nC1 · 极性电解电容\n1000 μF / 16 V\n电压\n0.00 V\n电流\n0.000 A\n电容\n1000.00 μF\n电荷\n0.000e+0 C\n容量\n470 μF\n1000 μF\n2200 μF\n4700 μF\n将电压归零\n\n微法级储能元件，观察充放电并检查极性和 16 V 耐压。\n\n正端 +\n负端 −\n↻ 旋转 90°\n复制\n删除",
+        "selected": "X"
+      }
+    },
+    {
+      "name": "insert/render/report motor",
+      "pass": true,
+      "ms": 17,
+      "evidence": {
+        "ready": true,
+        "obj": true,
+        "terms": [
+          "A",
+          "B"
+        ],
+        "paramKeys": [
+          "stalled"
+        ],
+        "state": {
+          "w": 0,
+          "stalled": false,
+          "angle": 0
+        },
+        "live": {
+          "U": 0,
+          "I": 0,
+          "P": 0,
+          "rows": [
+            [
+              "电压",
+              "0.00 V"
+            ],
+            [
+              "电流",
+              "0.000 A"
+            ],
+            [
+              "转速",
+              "0 rpm"
+            ],
+            [
+              "反电动势",
+              "0.00 V"
+            ]
+          ],
+          "warn": [],
+          "w": 0,
+          "angle": 0,
+          "rpm": 0,
+          "E": 0,
+          "torque": 0,
+          "copper": 0,
+          "mechanical": 0
+        },
+        "props": "M1 · 直流电动机\n转子自由\n电压\n0.00 V\n电流\n0.000 A\n转速\n0 rpm\n反电动势\n0.00 V\n锁住转子\n\n电枢电阻、反电动势和转动惯量共同决定启动过程。\n\nA\nB\n↻ 旋转 90°\n复制\n删除",
+        "selected": "X"
+      }
+    },
+    {
+      "name": "insert/render/report solenoid",
+      "pass": true,
+      "ms": 26,
+      "evidence": {
+        "ready": true,
+        "obj": true,
+        "terms": [
+          "A",
+          "B"
+        ],
+        "paramKeys": [
+          "core"
+        ],
+        "state": {},
+        "live": {
+          "U": 0,
+          "I": 0,
+          "P": 0,
+          "rows": [
+            [
+              "电压",
+              "0.00 V"
+            ],
+            [
+              "电流",
+              "0.000 A"
+            ],
+            [
+              "轴向磁场",
+              "0.000 mT"
+            ],
+            [
+              "方向",
+              "A → B"
+            ]
+          ],
+          "warn": [],
+          "B": 0
+        },
+        "props": "L1 · 螺线管线圈\n有铁芯\n电压\n0.00 V\n电流\n0.000 A\n轴向磁场\n0.000 mT\n方向\nA → B\n插入铁芯\n\n取 500 匝、长 0.12 m 的教学线圈，铁芯相对磁导率按 80 计算。\n\nA\nB\n↻ 旋转 90°\n复制\n删除",
+        "selected": "X"
+      }
+    },
+    {
+      "name": "actual ammeter 0.6/3 A and voltmeter 3/15 V signed readings/units",
+      "pass": true,
+      "ms": 677,
+      "evidence": [
+        {
+          "type": "ammeter",
+          "terminal": "0.6",
+          "sign": 1,
+          "live": {
+            "U": 0.42134831460674077,
+            "I": 0.004213483146067408,
+            "P": 0.00177534402221941,
+            "rows": [
+              [
+                "示值",
+                "2.53 A"
+              ],
+              [
+                "量程",
+                "0.6 A"
+              ],
+              [
+                "端电压",
+                "0.42 V"
+              ]
+            ],
+            "warn": [
+              {
+                "level": "danger",
+                "text": "读数超过仪表满量程。"
+              }
+            ],
+            "range": 0.6,
+            "unit": "A",
+            "frac": 4.213483146067408,
+            "reading": 2.5280898876404447
+          }
+        },
+        {
+          "type": "ammeter",
+          "terminal": "0.6",
+          "sign": -1,
+          "live": {
+            "U": -0.42134831460674005,
+            "I": -0.004213483146067401,
+            "P": 0.0017753440222194041,
+            "rows": [
+              [
+                "示值",
+                "-2.53 A"
+              ],
+              [
+                "量程",
+                "0.6 A"
+              ],
+              [
+                "端电压",
+                "-0.42 V"
+              ]
+            ],
+            "warn": [
+              {
+                "level": "warn",
+                "text": "指针反偏，交换仪表两端连接。"
+              },
+              {
+                "level": "danger",
+                "text": "读数超过仪表满量程。"
+              }
+            ],
+            "range": 0.6,
+            "unit": "A",
+            "frac": -4.213483146067401,
+            "reading": -2.5280898876404403
+          }
+        },
+        {
+          "type": "ammeter",
+          "terminal": "3",
+          "sign": 1,
+          "live": {
+            "U": 0.09505948481710791,
+            "I": 0.0009493269657460418,
+            "P": 0.00009024253228680698,
+            "rows": [
+              [
+                "示值",
+                "2.85 A"
+              ],
+              [
+                "量程",
+                "3 A"
+              ],
+              [
+                "端电压",
+                "0.10 V"
+              ]
+            ],
+            "warn": [],
+            "range": 3,
+            "unit": "A",
+            "frac": 0.9493269657460418,
+            "reading": 2.8479808972381253
+          }
+        },
+        {
+          "type": "ammeter",
+          "terminal": "3",
+          "sign": -1,
+          "live": {
+            "U": -0.09505948481710783,
+            "I": -0.0009493269657460418,
+            "P": 0.00009024253228680691,
+            "rows": [
+              [
+                "示值",
+                "-2.85 A"
+              ],
+              [
+                "量程",
+                "3 A"
+              ],
+              [
+                "端电压",
+                "-0.10 V"
+              ]
+            ],
+            "warn": [
+              {
+                "level": "warn",
+                "text": "指针反偏，交换仪表两端连接。"
+              }
+            ],
+            "range": 3,
+            "unit": "A",
+            "frac": -0.9493269657460418,
+            "reading": -2.8479808972381253
+          }
+        },
+        {
+          "type": "voltmeter",
+          "terminal": "3",
+          "sign": 1,
+          "live": {
+            "U": 2.9989803466821217,
+            "I": 0.0009996601155607074,
+            "P": 0.00299796103992854,
+            "rows": [
+              [
+                "示值",
+                "3.00 V"
+              ],
+              [
+                "量程",
+                "3 V"
+              ],
+              [
+                "端电压",
+                "3.00 V"
+              ]
+            ],
+            "warn": [],
+            "range": 3,
+            "unit": "V",
+            "frac": 0.9996601155607073,
+            "reading": 2.998980346682122
+          }
+        },
+        {
+          "type": "voltmeter",
+          "terminal": "3",
+          "sign": -1,
+          "live": {
+            "U": -2.998980346682117,
+            "I": -0.0009996601155607056,
+            "P": 0.0029979610399285305,
+            "rows": [
+              [
+                "示值",
+                "-3.00 V"
+              ],
+              [
+                "量程",
+                "3 V"
+              ],
+              [
+                "端电压",
+                "-3.00 V"
+              ]
+            ],
+            "warn": [
+              {
+                "level": "warn",
+                "text": "指针反偏，交换仪表两端连接。"
+              }
+            ],
+            "range": 3,
+            "unit": "V",
+            "frac": -0.9996601155607056,
+            "reading": -2.9989803466821168
+          }
+        },
+        {
+          "type": "voltmeter",
+          "terminal": "15",
+          "sign": 1,
+          "live": {
+            "U": 2.9997960138710744,
+            "I": 0.0001999864009247381,
+            "P": 0.0005999184083224519,
+            "rows": [
+              [
+                "示值",
+                "3.0 V"
+              ],
+              [
+                "量程",
+                "15 V"
+              ],
+              [
+                "端电压",
+                "3.00 V"
+              ]
+            ],
+            "warn": [],
+            "range": 15,
+            "unit": "V",
+            "frac": 0.1999864009247381,
+            "reading": 2.9997960138710713
+          }
+        },
+        {
+          "type": "voltmeter",
+          "terminal": "15",
+          "sign": -1,
+          "live": {
+            "U": -2.999796013871076,
+            "I": -0.0001999864009247384,
+            "P": 0.0005999184083224532,
+            "rows": [
+              [
+                "示值",
+                "-3.0 V"
+              ],
+              [
+                "量程",
+                "15 V"
+              ],
+              [
+                "端电压",
+                "-3.00 V"
+              ]
+            ],
+            "warn": [
+              {
+                "level": "warn",
+                "text": "指针反偏，交换仪表两端连接。"
+              }
+            ],
+            "range": 15,
+            "unit": "V",
+            "frac": -0.1999864009247384,
+            "reading": -2.999796013871076
+          }
+        },
+        {
+          "type": "galvanometer",
+          "terminal": "A",
+          "sign": 1,
+          "live": {
+            "U": 0.02969708968519448,
+            "I": 0.0002969708968519448,
+            "P": 0.000008819171357704844,
+            "rows": [
+              [
+                "示值",
+                "297 μA"
+              ],
+              [
+                "量程",
+                "±300 μA"
+              ],
+              [
+                "端电压",
+                "0.03 V"
+              ]
+            ],
+            "warn": [],
+            "range": 300,
+            "unit": "μA",
+            "frac": 0.9899029895064827,
+            "reading": 296.9708968519448
+          }
+        },
+        {
+          "type": "galvanometer",
+          "terminal": "A",
+          "sign": -1,
+          "live": {
+            "U": -0.029697089685210464,
+            "I": -0.00029697089685210465,
+            "P": 0.000008819171357714337,
+            "rows": [
+              [
+                "示值",
+                "-297 μA"
+              ],
+              [
+                "量程",
+                "±300 μA"
+              ],
+              [
+                "端电压",
+                "-0.03 V"
+              ]
+            ],
+            "warn": [
+              {
+                "level": "warn",
+                "text": "指针反偏，交换仪表两端连接。"
+              }
+            ],
+            "range": 300,
+            "unit": "μA",
+            "frac": -0.9899029895070156,
+            "reading": -296.97089685210466
+          }
+        }
+      ]
+    },
+    {
+      "name": "real-page lamp damage and replacement",
+      "pass": true,
+      "ms": 212,
+      "evidence": {
+        "damaged": {
+          "id": "X",
+          "type": "lamp",
+          "state": {
+            "burnt": true,
+            "over": 0.350000001
+          },
+          "live": {
+            "U": 12,
+            "I": 0,
+            "P": 0,
+            "rows": [
+              [
+                "电压",
+                "12.00 V"
+              ],
+              [
+                "电流",
+                "0.000 A"
+              ],
+              [
+                "额定功率比",
+                "0.00"
+              ],
+              [
+                "灯丝",
+                "断开"
+              ]
+            ],
+            "warn": [
+              {
+                "level": "danger",
+                "text": "灯丝已断，装入新灯泡后可继续。"
+              }
+            ],
+            "ratio": 0,
+            "brightness": 0
+          }
+        },
+        "replacement": {
+          "id": "X",
+          "type": "lamp",
+          "state": {
+            "burnt": false,
+            "over": 0,
+            "blown": false,
+            "heat": 0
+          },
+          "live": {
+            "U": 0.020785313027596782,
+            "I": 0.00979018883195059,
+            "P": 0.00020349213947137512,
+            "rows": [
+              [
+                "电压",
+                "0.02 V"
+              ],
+              [
+                "电流",
+                "0.010 A"
+              ],
+              [
+                "额定功率比",
+                "0.00"
+              ],
+              [
+                "灯丝",
+                "完好"
+              ]
+            ],
+            "warn": [],
+            "ratio": 0.00027132285262850014,
+            "brightness": 0.00027132285262850014
+          }
+        }
+      }
+    },
+    {
+      "name": "real-page led damage and replacement",
+      "pass": true,
+      "ms": 186,
+      "evidence": {
+        "damaged": {
+          "id": "X",
+          "type": "led",
+          "state": {
+            "burnt": true,
+            "over": 0.15000000100000008
+          },
+          "live": {
+            "U": 5,
+            "I": 0,
+            "P": 0,
+            "rows": [
+              [
+                "电压",
+                "5.00 V"
+              ],
+              [
+                "电流",
+                "0.000 A"
+              ],
+              [
+                "方向",
+                "低电流"
+              ]
+            ],
+            "warn": [
+              {
+                "level": "danger",
+                "text": "LED 已损坏，需更换。"
+              }
+            ],
+            "brightness": 0,
+            "ratio": 0
+          }
+        },
+        "replacement": {
+          "id": "X",
+          "type": "led",
+          "state": {
+            "burnt": false,
+            "over": 0,
+            "blown": false,
+            "heat": 0
+          },
+          "live": {
+            "U": 0.9999998806355715,
+            "I": 1.1934056043278925e-9,
+            "P": 1.1934054618777146e-9,
+            "rows": [
+              [
+                "电压",
+                "1.00 V"
+              ],
+              [
+                "电流",
+                "0.000 A"
+              ],
+              [
+                "方向",
+                "低电流"
+              ]
+            ],
+            "warn": [],
+            "brightness": 5.967028021639462e-8,
+            "ratio": 5.967028021639462e-8
+          }
+        }
+      }
+    },
+    {
+      "name": "real-page fuse damage and replacement",
+      "pass": true,
+      "ms": 177,
+      "evidence": {
+        "damaged": {
+          "id": "X",
+          "type": "fuse",
+          "state": {
+            "heat": 1.2934114984232983,
+            "blown": true
+          },
+          "live": {
+            "U": 3,
+            "I": 0,
+            "P": 0,
+            "rows": [
+              [
+                "电压",
+                "3.00 V"
+              ],
+              [
+                "电流",
+                "0.000 A"
+              ],
+              [
+                "熔丝",
+                "已熔断"
+              ],
+              [
+                "热积累",
+                "1.293"
+              ]
+            ],
+            "warn": [
+              {
+                "level": "danger",
+                "text": "熔丝已熔断，检查回路后更换。"
+              }
+            ]
+          }
+        },
+        "replacement": {
+          "id": "X",
+          "type": "fuse",
+          "state": {
+            "heat": 0,
+            "blown": false,
+            "burnt": false,
+            "over": 0
+          },
+          "live": {
+            "U": 0.0004996502448284534,
+            "I": 0.009993004896569069,
+            "P": 0.0000049930073431426695,
+            "rows": [
+              [
+                "电压",
+                "0.00 V"
+              ],
+              [
+                "电流",
+                "0.010 A"
+              ],
+              [
+                "熔丝",
+                "接通"
+              ],
+              [
+                "热积累",
+                "0.000"
+              ]
+            ],
+            "warn": []
+          }
+        }
+      }
+    },
+    {
+      "name": "real-page capacitor moving plate Q conservation and electrolytic polarity/16 V",
+      "pass": true,
+      "ms": 68,
+      "evidence": {
+        "moved": {
+          "before": {
+            "v": 3,
+            "Q": 1.1953153547279999e-11
+          },
+          "after": {
+            "v": 9,
+            "Q": 1.1953153547279999e-11
+          }
+        },
+        "polar": [
+          {
+            "id": "C",
+            "type": "elcap",
+            "state": {
+              "v": -1
+            },
+            "live": {
+              "U": -1,
+              "I": 0,
+              "P": 0,
+              "rows": [
+                [
+                  "电压",
+                  "-1.00 V"
+                ],
+                [
+                  "电流",
+                  "0.000 A"
+                ],
+                [
+                  "电容",
+                  "1000.00 μF"
+                ],
+                [
+                  "电荷",
+                  "-1.000e-3 C"
+                ]
+              ],
+              "warn": [
+                {
+                  "level": "danger",
+                  "text": "电解电容出现反向电压，请核对正负端。"
+                }
+              ],
+              "C": 0.001,
+              "Q": -0.001,
+              "energy": 0.0005,
+              "E": 0
+            }
+          },
+          {
+            "id": "C",
+            "type": "elcap",
+            "state": {
+              "v": 17
+            },
+            "live": {
+              "U": 17,
+              "I": 0,
+              "P": 0,
+              "rows": [
+                [
+                  "电压",
+                  "17.00 V"
+                ],
+                [
+                  "电流",
+                  "0.000 A"
+                ],
+                [
+                  "电容",
+                  "1000.00 μF"
+                ],
+                [
+                  "电荷",
+                  "1.700e-2 C"
+                ]
+              ],
+              "warn": [
+                {
+                  "level": "danger",
+                  "text": "电解电容端电压超过 16 V。"
+                }
+              ],
+              "C": 0.001,
+              "Q": 0.017,
+              "energy": 0.1445,
+              "E": 0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "real-page motor rotor angle and stalled current/back EMF",
+      "pass": true,
+      "ms": 123,
+      "evidence": {
+        "running": {
+          "id": "M",
+          "type": "motor",
+          "state": {
+            "w": 99.2508852483701,
+            "stalled": false,
+            "angle": 27.769611699287637
+          },
+          "live": {
+            "U": 2.49063657451079,
+            "I": 0.499375907342363,
+            "P": 1.2437638992564006,
+            "rows": [
+              [
+                "电压",
+                "2.49 V"
+              ],
+              [
+                "电流",
+                "0.499 A"
+              ],
+              [
+                "转速",
+                "948 rpm"
+              ],
+              [
+                "反电动势",
+                "0.99 V"
+              ]
+            ],
+            "warn": [],
+            "w": 99.2508852483701,
+            "angle": 27.769611699287637,
+            "rpm": 947.7761396114746,
+            "E": 0.992508852483701,
+            "torque": 0.0049937590734236295,
+            "copper": 0.7481288905020249,
+            "mechanical": 0.49563500875437566
+          }
+        },
+        "stalled": {
+          "id": "M",
+          "type": "motor",
+          "state": {
+            "w": 0,
+            "stalled": true,
+            "angle": 27.769611699287637
+          },
+          "live": {
+            "U": 2.2388059701492526,
+            "I": 0.7462686567164175,
+            "P": 1.6707507239919788,
+            "rows": [
+              [
+                "电压",
+                "2.24 V"
+              ],
+              [
+                "电流",
+                "0.746 A"
+              ],
+              [
+                "转速",
+                "0 rpm"
+              ],
+              [
+                "反电动势",
+                "0.00 V"
+              ]
+            ],
+            "warn": [
+              {
+                "level": "danger",
+                "text": "转子已锁住，电能主要转为线圈热量。"
+              }
+            ],
+            "w": 0,
+            "angle": 27.769611699287637,
+            "rpm": 0,
+            "E": 0,
+            "torque": 0.0074626865671641755,
+            "copper": 1.6707507239919785,
+            "mechanical": 0
+          }
+        }
+      }
+    },
+    {
+      "name": "paused visual tick preserves physically integrated motor angle",
+      "pass": true,
+      "ms": 91,
+      "evidence": {
+        "before": 1.3560729160602296,
+        "after": 1.3560729160602296,
+        "timeBefore": 16.568766690570705,
+        "timeAfter": 16.568766690570705
+      }
+    },
+    {
+      "name": "running visual tick does not add angle after accepted physics step",
+      "pass": false,
+      "ms": 81,
+      "error": "AssertionError [ERR_ASSERTION]: visual animation added to physically accepted angle\n+ actual - expected\n\n+ 1.6592468998267977\n- 1.6258148552746168\n     ^\n\n    at file:///D:/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E5%AD%A6%E4%B9%A0%E5%BC%80%E5%8F%91/physics-lab/tools/owned-electric/ui.test.mjs:101:564\n    at async test (file:///D:/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E5%AD%A6%E4%B9%A0%E5%BC%80%E5%8F%91/physics-lab/tools/owned-electric/ui.test.mjs:17:82)\n    at async file:///D:/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E5%AD%A6%E4%B9%A0%E5%BC%80%E5%8F%91/physics-lab/tools/owned-electric/ui.test.mjs:99:3"
+    },
+    {
+      "name": "protection lamp publishes consumer FX event",
+      "pass": false,
+      "ms": 35,
+      "error": "AssertionError [ERR_ASSERTION]: missing p.events trigger consumed by bench FX\n    at file:///D:/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E5%AD%A6%E4%B9%A0%E5%BC%80%E5%8F%91/physics-lab/tools/owned-electric/ui.test.mjs:105:345\n    at async test (file:///D:/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E5%AD%A6%E4%B9%A0%E5%BC%80%E5%8F%91/physics-lab/tools/owned-electric/ui.test.mjs:17:82)\n    at async file:///D:/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E5%AD%A6%E4%B9%A0%E5%BC%80%E5%8F%91/physics-lab/tools/owned-electric/ui.test.mjs:103:47"
+    },
+    {
+      "name": "protection led publishes consumer FX event",
+      "pass": false,
+      "ms": 41,
+      "error": "AssertionError [ERR_ASSERTION]: missing p.events trigger consumed by bench FX\n    at file:///D:/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E5%AD%A6%E4%B9%A0%E5%BC%80%E5%8F%91/physics-lab/tools/owned-electric/ui.test.mjs:105:345\n    at async test (file:///D:/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E5%AD%A6%E4%B9%A0%E5%BC%80%E5%8F%91/physics-lab/tools/owned-electric/ui.test.mjs:17:82)\n    at async file:///D:/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E5%AD%A6%E4%B9%A0%E5%BC%80%E5%8F%91/physics-lab/tools/owned-electric/ui.test.mjs:103:47"
+    },
+    {
+      "name": "protection fuse publishes consumer FX event",
+      "pass": false,
+      "ms": 37,
+      "error": "AssertionError [ERR_ASSERTION]: missing p.events trigger consumed by bench FX\n    at file:///D:/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E5%AD%A6%E4%B9%A0%E5%BC%80%E5%8F%91/physics-lab/tools/owned-electric/ui.test.mjs:105:345\n    at async test (file:///D:/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E5%AD%A6%E4%B9%A0%E5%BC%80%E5%8F%91/physics-lab/tools/owned-electric/ui.test.mjs:17:82)\n    at async file:///D:/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E5%AD%A6%E4%B9%A0%E5%BC%80%E5%8F%91/physics-lab/tools/owned-electric/ui.test.mjs:103:47"
+    },
+    {
+      "name": "native music UI toggle and running AudioContext (not listening evidence)",
+      "pass": true,
+      "ms": 600,
+      "evidence": {
+        "on": true,
+        "context": "running",
+        "diagnostics": {
+          "nodes": 28,
+          "sources": 7,
+          "voices": 7,
+          "events": 4,
+          "timers": 1,
+          "counts": {
+            "kick": 1,
+            "snare": 0,
+            "hat": 3,
+            "bass": 2,
+            "pad": 4,
+            "pluck": 1
+          }
+        },
+        "pulse": {
+          "beat": 0.12498172420115516,
+          "chord": 0
+        }
+      }
+    },
+    {
+      "name": "injected music resume reject lifecycle negative control",
+      "pass": true,
+      "ms": 1454,
+      "evidence": {
+        "on": false,
+        "buttonOn": false,
+        "diagnostics": {
+          "nodes": 0,
+          "sources": 0,
+          "voices": 0,
+          "events": 0,
+          "timers": 0,
+          "counts": {}
+        },
+        "error": "EXPECTED_UI_RESUME_REJECTION"
+      }
+    },
+    {
+      "name": "injected music resume pending-stop lifecycle negative control",
+      "pass": true,
+      "ms": 1562,
+      "evidence": {
+        "on": false,
+        "disposed": false,
+        "buttonOn": false,
+        "pending": false,
+        "diagnostics": {
+          "nodes": 0,
+          "sources": 0,
+          "voices": 0,
+          "events": 0,
+          "timers": 0,
+          "counts": {}
+        }
+      }
+    },
+    {
+      "name": "injected music resume pending-leave lifecycle negative control",
+      "pass": true,
+      "ms": 1575,
+      "evidence": {
+        "on": false,
+        "disposed": true,
+        "buttonOn": false,
+        "pending": false,
+        "diagnostics": {
+          "nodes": 0,
+          "sources": 0,
+          "voices": 0,
+          "events": 0,
+          "timers": 0,
+          "counts": {}
+        }
+      }
+    },
+    {
+      "name": "real touch connection completed and cancel button clears active preview",
+      "pass": true,
+      "ms": 3489,
+      "evidence": {
+        "from": {
+          "x": 159.56895389235606,
+          "y": 450.1557960031487,
+          "p": "S",
+          "t": "+"
+        },
+        "to": {
+          "x": 622.7733025780159,
+          "y": 497.9294644296682,
+          "p": "R",
+          "t": "A"
+        },
+        "cancelFrom": {
+          "x": 157.5590429012276,
+          "y": 501.2664953276155,
+          "p": "S",
+          "t": "-"
+        },
+        "completed": {
+          "wiring": false,
+          "wires": [
+            {
+              "a": {
+                "p": "S",
+                "t": "+"
+              },
+              "b": {
+                "p": "R",
+                "t": "A"
+              }
+            }
+          ]
+        },
+        "final": {
+          "wiring": false,
+          "wires": 1,
+          "enabled": true,
+          "events": [
+            {
+              "name": "pointerdown",
+              "trusted": true,
+              "pointerType": "touch",
+              "canvasTarget": true,
+              "x": 159.56895446777344,
+              "y": 450.1557922363281
+            },
+            {
+              "name": "pointerup",
+              "trusted": true,
+              "pointerType": "touch",
+              "canvasTarget": true,
+              "x": 159.56895446777344,
+              "y": 450.1557922363281
+            },
+            {
+              "name": "pointerdown",
+              "trusted": true,
+              "pointerType": "touch",
+              "canvasTarget": true,
+              "x": 622.7733154296875,
+              "y": 497.9294738769531
+            },
+            {
+              "name": "pointerup",
+              "trusted": true,
+              "pointerType": "touch",
+              "canvasTarget": true,
+              "x": 622.7733154296875,
+              "y": 497.9294738769531
+            },
+            {
+              "name": "pointerdown",
+              "trusted": true,
+              "pointerType": "touch",
+              "canvasTarget": true,
+              "x": 157.5590362548828,
+              "y": 501.2665100097656
+            },
+            {
+              "name": "pointerup",
+              "trusted": true,
+              "pointerType": "touch",
+              "canvasTarget": true,
+              "x": 157.5590362548828,
+              "y": 501.2665100097656
+            },
+            {
+              "name": "pointerdown",
+              "trusted": true,
+              "pointerType": "touch",
+              "canvasTarget": false,
+              "x": 668.09375,
+              "y": 39
+            },
+            {
+              "name": "pointerup",
+              "trusted": true,
+              "pointerType": "touch",
+              "canvasTarget": false,
+              "x": 668.09375,
+              "y": 39
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "page has no uncaught runtime errors",
+      "pass": true,
+      "ms": 0,
+      "evidence": {
+        "pageErrors": [],
+        "consoleErrors": [
+          "Failed to load resource: the server responded with a status of 404 (Not Found)",
+          "Failed to load resource: the server responded with a status of 404 (Not Found)",
+          "Error: EXPECTED_UI_RESUME_REJECTION\n    at window.AudioContext.resume (eval at evaluate (:370:30), <anonymous>:5:111)\n    at http://127.0.0.1:5173/src/lab/owned/music/engine.js?t=1793421177183:309:48\n    at BeatMusic.activate (http://127.0.0.1:5173/src/lab/owned/music/engine.js?t=1793421177183:322:7)\n    at BeatMusic.start (http://127.0.0.1:5173/src/lab/owned/music/beat.js?t=1793421177183:11:36)\n    at HTMLButtonElement.toggleMusic (http://127.0.0.1:5173/src/lab/clbench/bench.js?t=1793423016454:125:11)"
+        ]
+      }
+    }
+  ],
+  "pageErrors": [],
+  "consoleErrors": [
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Error: EXPECTED_UI_RESUME_REJECTION\n    at window.AudioContext.resume (eval at evaluate (:370:30), <anonymous>:5:111)\n    at http://127.0.0.1:5173/src/lab/owned/music/engine.js?t=1793421177183:309:48\n    at BeatMusic.activate (http://127.0.0.1:5173/src/lab/owned/music/engine.js?t=1793421177183:322:7)\n    at BeatMusic.start (http://127.0.0.1:5173/src/lab/owned/music/beat.js?t=1793421177183:11:36)\n    at HTMLButtonElement.toggleMusic (http://127.0.0.1:5173/src/lab/clbench/bench.js?t=1793423016454:125:11)"
+  ],
+  "moduleRequests": [
+    "http://127.0.0.1:5173/src/lab/owned/electric/models.js?t=1793423016454",
+    "http://127.0.0.1:5173/src/lab/owned/electric/simulation.js?t=1793423016454",
+    "http://127.0.0.1:5173/src/lab/owned/music/beat.js?t=1793421177183",
+    "http://127.0.0.1:5173/src/lab/owned/electric/solver.js",
+    "http://127.0.0.1:5173/src/lab/owned/music/engine.js?t=1793421177183"
+  ],
+  "failed": 5,
+  "finishedAt": "2026-10-31T06:37:31.240Z",
+  "headAtEnd": "b6a152955837995ff8a584b9b1154da3c899b170",
+  "sourceChangedDuringRun": [],
+  "limitations": [
+    "No human listening verdict; native music evidence is running AudioContext and scheduled events.",
+    "CAD is checked for actual insertion/readiness/terminal presence, not geometric ownership or full moving clearances.",
+    "Earlier not-ready P occurred during integration/HMR; stable reruns did not reproduce it and do not establish its root cause."
+  ]
+}

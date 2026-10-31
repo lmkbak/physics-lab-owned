@@ -1,0 +1,12 @@
+{
+ "schema":"independent-cad-design/1","units":"mm","replacementReady":false,
+ "C05":{"flask100":{"innerBodyRadius":28,"wall":1.5,"bottom":3,"bodyStartZ":12,"bodyEndZ":61,"neckStartZ":86,"innerNeckRadius":5.5,"height":145,"nominalMl":100},"flask250":{"innerBodyRadius":38,"wall":1.7,"bottom":3,"bodyStartZ":15,"bodyEndZ":71,"neckStartZ":112,"innerNeckRadius":7,"height":180,"nominalMl":250}},
+ "C07":{"mouthOuterRadius":35.4,"wall":1.3,"stemOuterRadius":4,"stemInnerRadius":2.7,"stemBottomZ":45,"stemTopZ":103,"rimZ":160,"paperRimZ":152,"supportRingRadius":26,"filterPaperDiameter":114.3},
+ "C13":{"gasJar":{"outerRadius":28,"wall":1.6,"bottom":3,"height":160},"waterTrough":{"width":170,"depth":140,"height":75,"wall":3,"bottom":4},"platform":{"width":66,"depth":58,"height":24,"topHoleRadius":8,"sidePortRadius":6}},
+ "C14":{"outerRadius":29,"wall":1.6,"bottom":3,"shoulderZ":96,"neckZ":117,"height":140,"neckInnerRadius":15,"tubeOuterRadius":2.6,"tubeInnerRadius":1.6,"longTubeBottomZ":12,"shortTubeBottomZ":128,"tubeX":[-6,6]},
+ "C15":{"tubeOuterRadius":10,"wall":1.5,"bendRadius":30,"straightHeight":115,"centerSpacing":60,"standWidth":110,"standDepth":65,"baseThickness":8,"stopperHeight":14},
+ "C16":{"bodyRadius":36,"wall":1.6,"bellyZ":186,"bodyBottomZ":144,"neckZ":226,"rimZ":260,"neckInnerRadius":11,"outletInnerRadius":2.5,"outletZ":75,"valveZ":117,"valveOuterRadius":8,"valveBoreRadius":3,"valveLength":34},
+ "C23":{"outerRadius":52,"height":45,"innerRadius":45,"innerBottom":12,"pestleLength":120,"pestleHandleRadius":6,"pestleHeadRadius":15},
+ "C24":{"watch60":{"radius":30,"thickness":1.1,"sag":5},"watch80":{"radius":40,"thickness":1.2,"sag":6},"spotPlate":{"width":100,"depth":64,"height":12,"wellRadius":10,"wellDepth":8,"minimumBottom":4}},
+ "designBasis":"Self-selected engineering dimensions under public functional requirements; glass bodies remain integral, no reference models"
+}

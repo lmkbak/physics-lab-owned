@@ -1,0 +1,451 @@
+{
+  "purpose": "observation-only-not-algorithm-generation",
+  "lamp": [
+    {
+      "Vr": 2.5,
+      "Ir": 0.3,
+      "factor": 0,
+      "baselineI": 0,
+      "ownedI": 0,
+      "differencePct": null
+    },
+    {
+      "Vr": 2.5,
+      "Ir": 0.3,
+      "factor": 0.01,
+      "baselineI": 0.011450381679389313,
+      "ownedI": 0.011450381679389313,
+      "differencePct": 0
+    },
+    {
+      "Vr": 2.5,
+      "Ir": 0.3,
+      "factor": 0.05,
+      "baselineI": 0.041281649446509285,
+      "ownedI": 0.041281649446509285,
+      "differencePct": 0
+    },
+    {
+      "Vr": 2.5,
+      "Ir": 0.3,
+      "factor": 0.1,
+      "baselineI": 0.0682894099889269,
+      "ownedI": 0.06828940998892688,
+      "differencePct": -2.220446049250313e-14
+    },
+    {
+      "Vr": 2.5,
+      "Ir": 0.3,
+      "factor": 0.25,
+      "baselineI": 0.12711864406779658,
+      "ownedI": 0.12711864406779658,
+      "differencePct": 0
+    },
+    {
+      "Vr": 2.5,
+      "Ir": 0.3,
+      "factor": 0.5,
+      "baselineI": 0.19741321292279573,
+      "ownedI": 0.19741321292279573,
+      "differencePct": 0
+    },
+    {
+      "Vr": 2.5,
+      "Ir": 0.3,
+      "factor": 0.75,
+      "baselineI": 0.2527689913079655,
+      "ownedI": 0.2527689913079655,
+      "differencePct": 0
+    },
+    {
+      "Vr": 2.5,
+      "Ir": 0.3,
+      "factor": 1,
+      "baselineI": 0.3,
+      "ownedI": 0.3,
+      "differencePct": 0
+    },
+    {
+      "Vr": 2.5,
+      "Ir": 0.3,
+      "factor": 1.5,
+      "baselineI": 0.37997424456412243,
+      "ownedI": 0.37997424456412243,
+      "differencePct": 0
+    },
+    {
+      "Vr": 2.5,
+      "Ir": 0.3,
+      "factor": 2,
+      "baselineI": 0.44787646501642997,
+      "ownedI": 0.44787646501642997,
+      "differencePct": 0
+    },
+    {
+      "Vr": 2.5,
+      "Ir": 0.3,
+      "factor": -0.5,
+      "baselineI": -0.19741321292279573,
+      "ownedI": -0.19741321292279573,
+      "differencePct": 0
+    },
+    {
+      "Vr": 2.5,
+      "Ir": 0.3,
+      "factor": -1,
+      "baselineI": -0.3,
+      "ownedI": -0.3,
+      "differencePct": 0
+    },
+    {
+      "Vr": 3.8,
+      "Ir": 0.3,
+      "factor": 0,
+      "baselineI": 0,
+      "ownedI": 0,
+      "differencePct": null
+    },
+    {
+      "Vr": 3.8,
+      "Ir": 0.3,
+      "factor": 0.01,
+      "baselineI": 0.011450381679389313,
+      "ownedI": 0.011450381679389313,
+      "differencePct": 0
+    },
+    {
+      "Vr": 3.8,
+      "Ir": 0.3,
+      "factor": 0.05,
+      "baselineI": 0.041281649446509285,
+      "ownedI": 0.041281649446509285,
+      "differencePct": 0
+    },
+    {
+      "Vr": 3.8,
+      "Ir": 0.3,
+      "factor": 0.1,
+      "baselineI": 0.0682894099889269,
+      "ownedI": 0.0682894099889269,
+      "differencePct": 0
+    },
+    {
+      "Vr": 3.8,
+      "Ir": 0.3,
+      "factor": 0.25,
+      "baselineI": 0.12711864406779658,
+      "ownedI": 0.1271186440677966,
+      "differencePct": 2.220446049250313e-14
+    },
+    {
+      "Vr": 3.8,
+      "Ir": 0.3,
+      "factor": 0.5,
+      "baselineI": 0.19741321292279573,
+      "ownedI": 0.19741321292279573,
+      "differencePct": 0
+    },
+    {
+      "Vr": 3.8,
+      "Ir": 0.3,
+      "factor": 0.75,
+      "baselineI": 0.2527689913079655,
+      "ownedI": 0.2527689913079655,
+      "differencePct": 0
+    },
+    {
+      "Vr": 3.8,
+      "Ir": 0.3,
+      "factor": 1,
+      "baselineI": 0.3,
+      "ownedI": 0.3,
+      "differencePct": 0
+    },
+    {
+      "Vr": 3.8,
+      "Ir": 0.3,
+      "factor": 1.5,
+      "baselineI": 0.3799742445641224,
+      "ownedI": 0.37997424456412243,
+      "differencePct": 2.220446049250313e-14
+    },
+    {
+      "Vr": 3.8,
+      "Ir": 0.3,
+      "factor": 2,
+      "baselineI": 0.44787646501642997,
+      "ownedI": 0.44787646501642997,
+      "differencePct": 0
+    },
+    {
+      "Vr": 3.8,
+      "Ir": 0.3,
+      "factor": -0.5,
+      "baselineI": -0.19741321292279573,
+      "ownedI": -0.19741321292279573,
+      "differencePct": 0
+    },
+    {
+      "Vr": 3.8,
+      "Ir": 0.3,
+      "factor": -1,
+      "baselineI": -0.3,
+      "ownedI": -0.3,
+      "differencePct": 0
+    },
+    {
+      "Vr": 6.3,
+      "Ir": 0.15,
+      "factor": 0,
+      "baselineI": 0,
+      "ownedI": 0,
+      "differencePct": null
+    },
+    {
+      "Vr": 6.3,
+      "Ir": 0.15,
+      "factor": 0.01,
+      "baselineI": 0.0057251908396946565,
+      "ownedI": 0.005725190839694656,
+      "differencePct": -1.1102230246251565e-14
+    },
+    {
+      "Vr": 6.3,
+      "Ir": 0.15,
+      "factor": 0.05,
+      "baselineI": 0.020640824723254642,
+      "ownedI": 0.020640824723254642,
+      "differencePct": 0
+    },
+    {
+      "Vr": 6.3,
+      "Ir": 0.15,
+      "factor": 0.1,
+      "baselineI": 0.03414470499446345,
+      "ownedI": 0.03414470499446345,
+      "differencePct": 0
+    },
+    {
+      "Vr": 6.3,
+      "Ir": 0.15,
+      "factor": 0.25,
+      "baselineI": 0.06355932203389829,
+      "ownedI": 0.06355932203389829,
+      "differencePct": 0
+    },
+    {
+      "Vr": 6.3,
+      "Ir": 0.15,
+      "factor": 0.5,
+      "baselineI": 0.09870660646139787,
+      "ownedI": 0.09870660646139787,
+      "differencePct": 0
+    },
+    {
+      "Vr": 6.3,
+      "Ir": 0.15,
+      "factor": 0.75,
+      "baselineI": 0.12638449565398274,
+      "ownedI": 0.12638449565398274,
+      "differencePct": 0
+    },
+    {
+      "Vr": 6.3,
+      "Ir": 0.15,
+      "factor": 1,
+      "baselineI": 0.15,
+      "ownedI": 0.15,
+      "differencePct": 0
+    },
+    {
+      "Vr": 6.3,
+      "Ir": 0.15,
+      "factor": 1.5,
+      "baselineI": 0.18998712228206122,
+      "ownedI": 0.18998712228206124,
+      "differencePct": 2.220446049250313e-14
+    },
+    {
+      "Vr": 6.3,
+      "Ir": 0.15,
+      "factor": 2,
+      "baselineI": 0.22393823250821498,
+      "ownedI": 0.22393823250821498,
+      "differencePct": 0
+    },
+    {
+      "Vr": 6.3,
+      "Ir": 0.15,
+      "factor": -0.5,
+      "baselineI": -0.09870660646139787,
+      "ownedI": -0.09870660646139787,
+      "differencePct": 0
+    },
+    {
+      "Vr": 6.3,
+      "Ir": 0.15,
+      "factor": -1,
+      "baselineI": -0.15,
+      "ownedI": -0.15,
+      "differencePct": 0
+    }
+  ],
+  "motor": [
+    {
+      "dt": 0.008333333333333333,
+      "step": 1,
+      "baselineW": 3.3057395143487853,
+      "ownedW": 3.2580731135539103,
+      "speedDifferencePct": -1.441928518202229,
+      "baselineI": 0.9823583517292125,
+      "ownedI": 0.9825891618756493,
+      "currentDifferencePct": 0.023495514241878013,
+      "baselineU": 2.9801324503311255,
+      "ownedU": 2.980348216762487,
+      "ownedAngle": 0.02715060927961592
+    },
+    {
+      "dt": 0.008333333333333333,
+      "step": 10,
+      "baselineW": 30.96379804856677,
+      "ownedW": 30.545944727383542,
+      "speedDifferencePct": -1.349489880174981,
+      "baselineI": 0.8907844416170487,
+      "ownedI": 0.892231971101379,
+      "currentDifferencePct": 0.1625005351129083,
+      "baselineU": 2.981991305336814,
+      "ownedU": 2.9821553605779725,
+      "ownedAngle": 1.4305130623604474
+    },
+    {
+      "dt": 0.008333333333333333,
+      "step": 60,
+      "baselineW": 132.63330986889727,
+      "ownedW": 131.42698673886647,
+      "speedDifferencePct": -0.9095174743231516,
+      "baselineI": 0.5541637520243917,
+      "ownedI": 0.5581887856328924,
+      "currentDifferencePct": 0.7263256742789492,
+      "baselineU": 2.988824354762148,
+      "ownedU": 2.988836224287342,
+      "ownedAngle": 38.11589966967655
+    },
+    {
+      "dt": 0.008333333333333333,
+      "step": 300,
+      "baselineW": 223.23737128478723,
+      "ownedW": 223.0572867604348,
+      "speedDifferencePct": -0.08066952379701675,
+      "baselineI": 0.25417999988825235,
+      "ownedI": 0.2547771961575007,
+      "currentDifferencePct": 0.234950141439505,
+      "baselineU": 2.9949137125126293,
+      "ownedU": 2.99490445607685,
+      "ownedAngle": 437.82855412740673
+    },
+    {
+      "dt": 0.016666666666666666,
+      "step": 1,
+      "baselineW": 6.611479028697571,
+      "ownedW": 6.423523608325916,
+      "speedDifferencePct": -2.842864955871771,
+      "baselineI": 0.9713392200147166,
+      "ownedI": 0.9721075377207752,
+      "currentDifferencePct": 0.07909880402512393,
+      "baselineU": 2.9801324503311255,
+      "ownedU": 2.9805578492455846,
+      "ownedAngle": 0.10705872680543194
+    },
+    {
+      "dt": 0.016666666666666666,
+      "step": 10,
+      "baselineW": 58.05499152043672,
+      "ownedW": 56.610701185064336,
+      "speedDifferencePct": -2.4877969965148683,
+      "baselineI": 0.801030693761209,
+      "ownedI": 0.8059248305130321,
+      "currentDifferencePct": 0.6109799274785388,
+      "baselineU": 2.9836419964879943,
+      "ownedU": 2.9838815033897395,
+      "ownedAngle": 5.413494735528523
+    },
+    {
+      "dt": 0.016666666666666666,
+      "step": 60,
+      "baselineW": 187.91780696475033,
+      "ownedW": 185.91200791361885,
+      "speedDifferencePct": -1.0673810446860554,
+      "baselineI": 0.37110778138224143,
+      "ownedI": 0.37777480823305015,
+      "currentDifferencePct": 1.7965203601973734,
+      "baselineU": 2.9925014137942276,
+      "ownedU": 2.992444503835339,
+      "ownedAngle": 120.057664296656
+    },
+    {
+      "dt": 0.016666666666666666,
+      "step": 300,
+      "baselineW": 225.92193354347967,
+      "ownedW": 225.9129862271905,
+      "speedDifferencePct": -0.0039603575221036635,
+      "baselineI": 0.2452915904638139,
+      "ownedI": 0.24532123765830974,
+      "currentDifferencePct": 0.012086510768583025,
+      "baselineU": 2.9950941068262384,
+      "ownedU": 2.995093575246834,
+      "ownedAngle": 1001.0831349667812
+    },
+    {
+      "dt": 0.1,
+      "step": 1,
+      "baselineW": 39.668874172185426,
+      "ownedW": 33.744577770266474,
+      "speedDifferencePct": -14.934369894653788,
+      "baselineI": 0.8611479028697571,
+      "ownedI": 0.8816404709593826,
+      "currentDifferencePct": 2.379680426711195,
+      "baselineU": 2.9801324503311255,
+      "ownedU": 2.9823671905808125,
+      "ownedAngle": 3.3744577770266475
+    },
+    {
+      "dt": 0.1,
+      "step": 10,
+      "baselineW": 193.17372807489807,
+      "ownedW": 181.12354545244517,
+      "speedDifferencePct": -6.238002829132516,
+      "baselineI": 0.3535752890467998,
+      "ownedI": 0.39363064419720145,
+      "currentDifferencePct": 11.328663623067815,
+      "baselineU": 2.99246314788938,
+      "ownedU": 2.992127387116056,
+      "ownedAngle": 122.78515517420139
+    },
+    {
+      "dt": 0.1,
+      "step": 60,
+      "baselineW": 225.95036471770865,
+      "ownedW": 225.9386902810743,
+      "speedDifferencePct": -0.005166814689128163,
+      "baselineI": 0.24519745792192568,
+      "ownedI": 0.24523612489710503,
+      "currentDifferencePct": 0.01576972922436859,
+      "baselineU": 2.9950960209428636,
+      "ownedU": 2.995095277502058,
+      "ownedAngle": 1227.0209647965216
+    },
+    {
+      "dt": 0.1,
+      "step": 300,
+      "baselineW": 225.9524707657487,
+      "ownedW": 225.95247076565278,
+      "speedDifferencePct": -4.2454928461665986e-11,
+      "baselineI": 0.24519049415314997,
+      "ownedI": 0.24519049415313043,
+      "currentDifferencePct": -7.971401316808624e-12,
+      "baselineU": 2.995096190116937,
+      "ownedU": 2.995096190115919,
+      "ownedAngle": 6649.872413857542
+    }
+  ]
+}

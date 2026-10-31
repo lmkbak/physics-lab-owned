@@ -1,0 +1,281 @@
+{
+  "schema": "independent-cad-equipment-specs/1",
+  "assets": {
+    "C49": {
+      "asset": "retort_stand_cadquery",
+      "design": "Independent functional BRep assembly; own dimensions and surfaces, no old input",
+      "groups": {
+        "base": "\u539a\u91cd\u5706\u89d2\u5e95\u5ea7",
+        "rod": "\u7ad6\u76f4\u652f\u6746",
+        "boss": "\u4e0a\u5341\u5b57\u5939",
+        "ring": "\u4e0b\u5341\u5b57\u5939",
+        "clamp": "\u4e07\u80fd\u5939\u4e0e\u6a2a\u6746",
+        "jawA": "\u94c1\u5708\u4e0e\u8fde\u63a5\u6746",
+        "jawB": "\u94c1\u5708\u4e0e\u8fde\u63a5\u6746",
+        "padA": "\u94c1\u5708\u4e0e\u8fde\u63a5\u6746",
+        "padB": "\u94c1\u5708\u4e0e\u8fde\u63a5\u6746"
+      },
+      "checks": {},
+      "pending": [
+        "complete parameterization",
+        "full component contact and pivot oracles",
+        "functional group mapping",
+        "graduation/profile",
+        "fresh and visual review"
+      ]
+    },
+    "C50": {
+      "asset": "chem_lab_jack_cadquery",
+      "design": "Independent functional BRep assembly; own dimensions and surfaces, no old input",
+      "groups": {
+        "base": "\u4e0b\u5e95\u677f\u4e0e\u5bfc\u8f68",
+        "top": "\u4e0a\u53f0\u677f\u4e0e\u5bfc\u8f68",
+        "frontA": "\u4ea4\u53c9\u652f\u81c2",
+        "frontB": "\u94f0\u8f74\u4e0e\u6ed1\u8f74",
+        "rearA": "\u8c03\u8282\u87ba\u6746\u4e0e\u6ed1\u5757",
+        "rearB": "\u8c03\u8282\u87ba\u6746\u4e0e\u6ed1\u5757",
+        "screw": "\u8c03\u8282\u87ba\u6746\u4e0e\u6ed1\u5757",
+        "pivot": "\u8c03\u8282\u87ba\u6746\u4e0e\u6ed1\u5757"
+      },
+      "checks": {},
+      "pending": [
+        "complete parameterization",
+        "full component contact and pivot oracles",
+        "functional group mapping",
+        "graduation/profile",
+        "fresh and visual review"
+      ]
+    },
+    "C52": {
+      "asset": "pan_balance_cadquery",
+      "design": "Independent functional BRep assembly; own dimensions and surfaces, no old input",
+      "groups": {
+        "base": "\u94f8\u9020\u5e95\u5ea7\u4e0e\u6c34\u5e73\u652f\u627f",
+        "pillar": "\u7b49\u81c2\u6a2a\u6881\u4e0e\u5e73\u8861\u87ba\u6bcd",
+        "beam": "\u5e73\u884c\u5bfc\u5411\u4e0e\u6258\u76d8\u627f\u5ea7",
+        "pointer": "\u6d45\u5f27\u6258\u76d8",
+        "scale": "\u652f\u70b9\u8f74\u5957\u4e0e\u6b62\u52a8\u4ef6",
+        "leftpan": "\u7ec6\u6307\u9488\u4e0e\u6247\u5f62\u6807\u724c",
+        "leftsupport": "\u6e38\u7801\u4e0e\u523b\u5ea6\u5c3a",
+        "rightpan": "\u6e38\u7801\u4e0e\u523b\u5ea6\u5c3a",
+        "rightsupport": "\u6e38\u7801\u4e0e\u523b\u5ea6\u5c3a"
+      },
+      "checks": {},
+      "pending": [
+        "complete parameterization",
+        "full component contact and pivot oracles",
+        "functional group mapping",
+        "graduation/profile",
+        "fresh and visual review"
+      ]
+    },
+    "C53": {
+      "asset": "chem_mass_set_cadquery",
+      "design": "Independent functional BRep assembly; own dimensions and surfaces, no old input",
+      "groups": {
+        "box": "\u6536\u7eb3\u76d2",
+        "lid": "\u72ec\u7acb\u76d2\u76d6",
+        "weight0": "1 g\u781d\u7801\u793a\u610f",
+        "weight1": "2 g\u781d\u7801\u793a\u610f",
+        "weight2": "5 g\u781d\u7801\u793a\u610f",
+        "weight3": "10 g\u781d\u7801\u793a\u610f",
+        "weight4": "20 g\u781d\u7801\u793a\u610f",
+        "tweezers": "20 g\u781d\u7801\u793a\u610f"
+      },
+      "checks": {},
+      "pending": [
+        "complete parameterization",
+        "full component contact and pivot oracles",
+        "functional group mapping",
+        "graduation/profile",
+        "fresh and visual review"
+      ]
+    },
+    "C56": {
+      "asset": "test_leads_cadquery",
+      "design": "Independent functional BRep assembly; own dimensions and surfaces, no old input",
+      "groups": {
+        "insulation": "\u5bfc\u7ebf\u7edd\u7f18\u5c42",
+        "copper": "\u94dc\u82af\u4e0e\u538b\u63a5",
+        "bananaGrip": "\u9999\u8549\u63d2\u5934\u7edd\u7f18",
+        "bananaPin": "\u9999\u8549\u63d2\u9488",
+        "jawLower": "\u9cc4\u9c7c\u5939\u4e0b\u5939\u53e3",
+        "jawUpper": "\u9cc4\u9c7c\u5939\u4e0a\u5939\u53e3",
+        "hinge": "\u9500\u8f74\u4e0e\u626d\u7c27",
+        "boot": "\u9cc4\u9c7c\u5939\u7edd\u7f18\u5957",
+        "terminalInsulator": "\u63a5\u7ebf\u67f1\u7edd\u7f18",
+        "terminalConductor": "\u63a5\u7ebf\u67f1\u5bfc\u4f53"
+      },
+      "checks": {},
+      "pending": [
+        "complete parameterization",
+        "full component contact and pivot oracles",
+        "functional group mapping",
+        "graduation/profile",
+        "fresh and visual review"
+      ]
+    },
+    "C59": {
+      "asset": "chem_pressure_funnel_cadquery",
+      "design": "Independent functional BRep assembly; own dimensions and surfaces, no old input",
+      "groups": {
+        "body": "\u4e00\u4f53\u73bb\u7483\u5668\u8eab",
+        "stopper": "\u73bb\u7483\u65cb\u585e",
+        "valve": "\u4e0a\u53e3\u585e",
+        "support": "\u5c55\u793a\u67b6"
+      },
+      "checks": {},
+      "pending": [
+        "complete parameterization",
+        "full component contact and pivot oracles",
+        "functional group mapping",
+        "graduation/profile",
+        "fresh and visual review"
+      ]
+    },
+    "C63": {
+      "asset": "chem_kipp_generator_cadquery",
+      "design": "Independent functional BRep assembly; own dimensions and surfaces, no old input",
+      "groups": {
+        "lower": "\u4e2d\u4e0b\u5ba4\u4e0e\u4fa7\u7ba1",
+        "middle": "\u4e0a\u7403\u4e0e\u957f\u5bfc\u7ba1",
+        "upper": "\u4e0a\u53e3\u8fde\u63a5\u5957",
+        "stem": "\u5e26\u5b54\u627f\u6258\u677f",
+        "gasout": "\u51fa\u6c14\u65cb\u585e",
+        "stopper": "\u4e0b\u90e8\u6392\u6db2\u585e",
+        "stand": "\u4e0b\u90e8\u6392\u6db2\u585e"
+      },
+      "checks": {},
+      "pending": [
+        "complete parameterization",
+        "full component contact and pivot oracles",
+        "functional group mapping",
+        "graduation/profile",
+        "fresh and visual review"
+      ]
+    },
+    "C65": {
+      "asset": "chem_double_burette_clamp_cadquery",
+      "design": "Independent functional BRep assembly; own dimensions and surfaces, no old input",
+      "groups": {
+        "base": "\u9519\u5b54\u5939\u5ea7",
+        "left": "\u6a2a\u6746\u4e0e\u53cc\u5939\u73af",
+        "leftpad": "\u67d4\u6027\u886c\u57ab",
+        "leftscrew": "\u9501\u7d27\u87ba\u9489",
+        "right": "\u9501\u7d27\u87ba\u9489",
+        "rightpad": "\u9501\u7d27\u87ba\u9489",
+        "rightscrew": "\u9501\u7d27\u87ba\u9489"
+      },
+      "checks": {},
+      "pending": [
+        "complete parameterization",
+        "full component contact and pivot oracles",
+        "functional group mapping",
+        "graduation/profile",
+        "fresh and visual review"
+      ]
+    },
+    "C66": {
+      "asset": "chem_vigreux_column_cadquery",
+      "design": "Independent functional BRep assembly; own dimensions and surfaces, no old input",
+      "groups": {
+        "column": "\u4e00\u4f53\u73bb\u7483\u5206\u998f\u67f1",
+        "top": "\u5c55\u793a\u652f\u67b6",
+        "bottom": "\u5c55\u793a\u652f\u67b6",
+        "stand": "\u5c55\u793a\u652f\u67b6"
+      },
+      "checks": {},
+      "pending": [
+        "complete parameterization",
+        "full component contact and pivot oracles",
+        "functional group mapping",
+        "graduation/profile",
+        "fresh and visual review"
+      ]
+    },
+    "C72": {
+      "asset": "chem_conductivity_cadquery",
+      "design": "Independent functional BRep assembly; own dimensions and surfaces, no old input",
+      "groups": {
+        "base": "\u652f\u67b6\u5e95\u5ea7",
+        "cup": "\u5171\u7528\u70e7\u676f",
+        "probe": "\u53cc\u7535\u6781\u63a2\u5934",
+        "wire": "\u8fde\u63a5\u7ebf",
+        "lower": "\u4eea\u8868\u4e0b\u58f3",
+        "panel": "\u4eea\u8868\u9762\u677f",
+        "board": "\u7535\u8def\u677f"
+      },
+      "checks": {},
+      "pending": [
+        "complete parameterization",
+        "full component contact and pivot oracles",
+        "functional group mapping",
+        "graduation/profile",
+        "fresh and visual review"
+      ]
+    },
+    "C55": {
+      "asset": "dc_supply_cadquery",
+      "design": "Independent functional BRep assembly; own dimensions and surfaces, no old input",
+      "groups": {
+        "shell": "\u901a\u98ce\u5916\u58f3\u4e0e\u63d0\u624b",
+        "panel": "\u524d\u9762\u677f\u4e0e\u63a7\u5236",
+        "base": "\u5e95\u677f\u652f\u6491",
+        "transformer": "\u9694\u79bb\u53d8\u538b\u5668",
+        "bridge": "\u6865\u5f0f\u6574\u6d41",
+        "capacitors": "\u6ee4\u6ce2\u7535\u5bb9",
+        "regulator": "\u7ebf\u6027\u7a33\u538b",
+        "control": "\u63a7\u5236\u4e0e\u8f93\u51fa",
+        "wires": "\u529f\u80fd\u5bfc\u7ebf"
+      },
+      "checks": {},
+      "pending": [
+        "complete parameterization",
+        "full component contact and pivot oracles",
+        "functional group mapping",
+        "graduation/profile",
+        "fresh and visual review"
+      ]
+    },
+    "C57": {
+      "asset": "multimeter_cadquery",
+      "design": "Independent functional BRep assembly; own dimensions and surfaces, no old input",
+      "groups": {
+        "case": "\u5916\u58f3\u4e0e\u8868\u76d8",
+        "head": "\u78c1\u7535\u5f0f\u8868\u5934",
+        "switch": "\u91cf\u7a0b\u8f6c\u6362",
+        "va": "\u7535\u538b\u4e0e\u7535\u6d41\u652f\u8def",
+        "ac": "\u4ea4\u6d41\u652f\u8def",
+        "ohm": "\u7535\u963b\u6863\u652f\u8def",
+        "accessories": "\u914d\u5957\u9644\u4ef6"
+      },
+      "checks": {},
+      "pending": [
+        "complete parameterization",
+        "full component contact and pivot oracles",
+        "functional group mapping",
+        "graduation/profile",
+        "fresh and visual review"
+      ]
+    },
+    "C58": {
+      "asset": "chem_ph_meter_cadquery",
+      "design": "Independent functional BRep assembly; own dimensions and surfaces, no old input",
+      "groups": {
+        "case": "\u673a\u8eab\u4e0e\u7535\u8def\u793a\u610f",
+        "panel": "\u663e\u793a\u9762\u677f",
+        "probe": "\u7535\u6781\u4e0e\u8fde\u63a5\u7ebf",
+        "stand": "\u7535\u6781\u652f\u67b6",
+        "cap": "\u4fdd\u62a4\u5e3d"
+      },
+      "checks": {},
+      "pending": [
+        "complete parameterization",
+        "full component contact and pivot oracles",
+        "functional group mapping",
+        "graduation/profile",
+        "fresh and visual review"
+      ]
+    }
+  }
+}

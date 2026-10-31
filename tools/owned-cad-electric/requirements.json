@@ -1,0 +1,2543 @@
+{
+  "schema": "owned-electrical-requirements/1",
+  "requirements": [
+    {
+      "asset": "dcsupply",
+      "requiredFunctionalGroups": [
+        "body",
+        "insulators",
+        "conductors",
+        "markings",
+        "knob",
+        "rocker",
+        "lamp"
+      ],
+      "dynamicGroups": [
+        {
+          "name": "knob",
+          "pivot_mm": [
+            48,
+            -56.4,
+            50.5
+          ],
+          "pivotEvidence": "explicit public visual contract",
+          "control": "rotate-y"
+        },
+        {
+          "name": "rocker",
+          "pivot_mm": [
+            -62,
+            -52.4,
+            31.45
+          ],
+          "pivotEvidence": "explicit public visual contract",
+          "control": "toggle-x"
+        },
+        {
+          "name": "lamp",
+          "pivot_mm": [
+            0,
+            0,
+            0
+          ],
+          "pivotEvidence": "No declared pivot: existing adapter uses component origin",
+          "control": null
+        }
+      ],
+      "interactionRequirements": "0–12 V旋钮沿Y转0–270°；开关X轴0/-0.28；灯/显示保留OFF、CV、CC",
+      "terminals": [
+        {
+          "id": "+",
+          "polarity": "+",
+          "localPosition_mm": null,
+          "localDirection": null,
+          "coordinateEvidence": "Unavailable in permitted source interface; do not read gzip geometry to fill it",
+          "dynamicOffset": null,
+          "worldTransformRule": "worldPosition = instance.matrixWorld * (localPosition + current dynamicOffset); worldDirection = normalize(instance normal/rotation transform of localDirection); compare with post groove mouth center",
+          "worldPosition_mm": null,
+          "worldDirection": null,
+          "requiredFixtures": [
+            "identity",
+            "translation(137,-83,12)mm",
+            "rotationZ(90deg)+translation",
+            "rotationZ(37deg)+translation",
+            "component motion endpoints and midpoint"
+          ],
+          "acceptanceStatus": "pending-real-fixture-tests",
+          "replacementReady": false
+        },
+        {
+          "id": "-",
+          "polarity": "-",
+          "localPosition_mm": null,
+          "localDirection": null,
+          "coordinateEvidence": "Unavailable in permitted source interface; do not read gzip geometry to fill it",
+          "dynamicOffset": null,
+          "worldTransformRule": "worldPosition = instance.matrixWorld * (localPosition + current dynamicOffset); worldDirection = normalize(instance normal/rotation transform of localDirection); compare with post groove mouth center",
+          "worldPosition_mm": null,
+          "worldDirection": null,
+          "requiredFixtures": [
+            "identity",
+            "translation(137,-83,12)mm",
+            "rotationZ(90deg)+translation",
+            "rotationZ(37deg)+translation",
+            "component motion endpoints and midpoint"
+          ],
+          "acceptanceStatus": "pending-real-fixture-tests",
+          "replacementReady": false
+        }
+      ]
+    },
+    {
+      "asset": "battery",
+      "requiredFunctionalGroups": [
+        "body",
+        "insulators",
+        "conductors",
+        "markings"
+      ],
+      "dynamicGroups": [],
+      "interactionRequirements": "短路发热状态绑定求解器；两个可辨认电池与串接触点",
+      "terminals": [
+        {
+          "id": "+",
+          "polarity": "+",
+          "localPosition_mm": null,
+          "localDirection": null,
+          "coordinateEvidence": "Unavailable in permitted source interface; do not read gzip geometry to fill it",
+          "dynamicOffset": null,
+          "worldTransformRule": "worldPosition = instance.matrixWorld * (localPosition + current dynamicOffset); worldDirection = normalize(instance normal/rotation transform of localDirection); compare with post groove mouth center",
+          "worldPosition_mm": null,
+          "worldDirection": null,
+          "requiredFixtures": [
+            "identity",
+            "translation(137,-83,12)mm",
+            "rotationZ(90deg)+translation",
+            "rotationZ(37deg)+translation",
+            "component motion endpoints and midpoint"
+          ],
+          "acceptanceStatus": "pending-real-fixture-tests",
+          "replacementReady": false
+        },
+        {
+          "id": "-",
+          "polarity": "-",
+          "localPosition_mm": null,
+          "localDirection": null,
+          "coordinateEvidence": "Unavailable in permitted source interface; do not read gzip geometry to fill it",
+          "dynamicOffset": null,
+          "worldTransformRule": "worldPosition = instance.matrixWorld * (localPosition + current dynamicOffset); worldDirection = normalize(instance normal/rotation transform of localDirection); compare with post groove mouth center",
+          "worldPosition_mm": null,
+          "worldDirection": null,
+          "requiredFixtures": [
+            "identity",
+            "translation(137,-83,12)mm",
+            "rotationZ(90deg)+translation",
+            "rotationZ(37deg)+translation",
+            "component motion endpoints and midpoint"
+          ],
+          "acceptanceStatus": "pending-real-fixture-tests",
+          "replacementReady": false
+        }
+      ]
+    },
+    {
+      "asset": "switch",
+      "requiredFunctionalGroups": [
+        "body",
+        "insulators",
+        "conductors",
+        "markings",
+        "blade"
+      ],
+      "dynamicGroups": [
+        {
+          "name": "blade",
+          "pivot_mm": [
+            -38,
+            0,
+            23
+          ],
+          "pivotEvidence": "explicit public visual contract",
+          "control": "toggle-y"
+        }
+      ],
+      "interactionRequirements": "刀片Y轴0到π/4，点击切换；火花点[40,0,26]",
+      "terminals": [
+        {
+          "id": "A",
+          "polarity": null,
+          "localPosition_mm": null,
+          "localDirection": null,
+          "coordinateEvidence": "Unavailable in permitted source interface; do not read gzip geometry to fill it",
+          "dynamicOffset": null,
+          "worldTransformRule": "worldPosition = instance.matrixWorld * (localPosition + current dynamicOffset); worldDirection = normalize(instance normal/rotation transform of localDirection); compare with post groove mouth center",
+          "worldPosition_mm": null,
+          "worldDirection": null,
+          "requiredFixtures": [
+            "identity",
+            "translation(137,-83,12)mm",
+            "rotationZ(90deg)+translation",
+            "rotationZ(37deg)+translation",
+            "component motion endpoints and midpoint"
+          ],
+          "acceptanceStatus": "pending-real-fixture-tests",
+          "replacementReady": false
+        },
+        {
+          "id": "B",
+          "polarity": null,
+          "localPosition_mm": null,
+          "localDirection": null,
+          "coordinateEvidence": "Unavailable in permitted source interface; do not read gzip geometry to fill it",
+          "dynamicOffset": null,
+          "worldTransformRule": "worldPosition = instance.matrixWorld * (localPosition + current dynamicOffset); worldDirection = normalize(instance normal/rotation transform of localDirection); compare with post groove mouth center",
+          "worldPosition_mm": null,
+          "worldDirection": null,
+          "requiredFixtures": [
+            "identity",
+            "translation(137,-83,12)mm",
+            "rotationZ(90deg)+translation",
+            "rotationZ(37deg)+translation",
+            "component motion endpoints and midpoint"
+          ],
+          "acceptanceStatus": "pending-real-fixture-tests",
+          "replacementReady": false
+        }
+      ]
+    },
+    {
+      "asset": "dpdt",
+      "requiredFunctionalGroups": [
+        "body",
+        "insulators",
+        "conductors",
+        "markings",
+        "blade"
+      ],
+      "dynamicGroups": [
+        {
+          "name": "blade",
+          "pivot_mm": [
+            0,
+            0,
+            27
+          ],
+          "pivotEvidence": "explicit public visual contract",
+          "control": "toggle-x"
+        }
+      ],
+      "interactionRequirements": "双联刀片X轴A=0/off=π/2/B=π；两个公共端保持独立回路",
+      "terminals": [
+        {
+          "id": "A1",
+          "polarity": null,
+          "localPosition_mm": null,
+          "localDirection": null,
+          "coordinateEvidence": "Unavailable in permitted source interface; do not read gzip geometry to fill it",
+          "dynamicOffset": null,
+          "worldTransformRule": "worldPosition = instance.matrixWorld * (localPosition + current dynamicOffset); worldDirection = normalize(instance normal/rotation transform of localDirection); compare with post groove mouth center",
+          "worldPosition_mm": null,
+          "worldDirection": null,
+          "requiredFixtures": [
+            "identity",
+            "translation(137,-83,12)mm",
+            "rotationZ(90deg)+translation",
+            "rotationZ(37deg)+translation",
+            "component motion endpoints and midpoint"
+          ],
+          "acceptanceStatus": "pending-real-fixture-tests",
+          "replacementReady": false
+        },
+        {
+          "id": "C1",
+          "polarity": null,
+          "localPosition_mm": null,
+          "localDirection": null,
+          "coordinateEvidence": "Unavailable in permitted source interface; do not read gzip geometry to fill it",
+          "dynamicOffset": null,
+          "worldTransformRule": "worldPosition = instance.matrixWorld * (localPosition + current dynamicOffset); worldDirection = normalize(instance normal/rotation transform of localDirection); compare with post groove mouth center",
+          "worldPosition_mm": null,
+          "worldDirection": null,
+          "requiredFixtures": [
+            "identity",
+            "translation(137,-83,12)mm",
+            "rotationZ(90deg)+translation",
+            "rotationZ(37deg)+translation",
+            "component motion endpoints and midpoint"
+          ],
+          "acceptanceStatus": "pending-real-fixture-tests",
+          "replacementReady": false
+        },
+        {
+          "id": "B1",
+          "polarity": null,
+          "localPosition_mm": null,
+          "localDirection": null,
+          "coordinateEvidence": "Unavailable in permitted source interface; do not read gzip geometry to fill it",
+          "dynamicOffset": null,
+          "worldTransformRule": "worldPosition = instance.matrixWorld * (localPosition + current dynamicOffset); worldDirection = normalize(instance normal/rotation transform of localDirection); compare with post groove mouth center",
+          "worldPosition_mm": null,
+          "worldDirection": null,
+          "requiredFixtures": [
+            "identity",
+            "translation(137,-83,12)mm",
+            "rotationZ(90deg)+translation",
+            "rotationZ(37deg)+translation",
+            "component motion endpoints and midpoint"
+          ],
+          "acceptanceStatus": "pending-real-fixture-tests",
+          "replacementReady": false
+        },
+        {
+          "id": "A2",
+          "polarity": null,
+          "localPosition_mm": null,
+          "localDirection": null,
+          "coordinateEvidence": "Unavailable in permitted source interface; do not read gzip geometry to fill it",
+          "dynamicOffset": null,
+          "worldTransformRule": "worldPosition = instance.matrixWorld * (localPosition + current dynamicOffset); worldDirection = normalize(instance normal/rotation transform of localDirection); compare with post groove mouth center",
+          "worldPosition_mm": null,
+          "worldDirection": null,
+          "requiredFixtures": [
+            "identity",
+            "translation(137,-83,12)mm",
+            "rotationZ(90deg)+translation",
+            "rotationZ(37deg)+translation",
+            "component motion endpoints and midpoint"
+          ],
+          "acceptanceStatus": "pending-real-fixture-tests",
+          "replacementReady": false
+        },
+        {
+          "id": "C2",
+          "polarity": null,
+          "localPosition_mm": null,
+          "localDirection": null,
+          "coordinateEvidence": "Unavailable in permitted source interface; do not read gzip geometry to fill it",
+          "dynamicOffset": null,
+          "worldTransformRule": "worldPosition = instance.matrixWorld * (localPosition + current dynamicOffset); worldDirection = normalize(instance normal/rotation transform of localDirection); compare with post groove mouth center",
+          "worldPosition_mm": null,
+          "worldDirection": null,
+          "requiredFixtures": [
+            "identity",
+            "translation(137,-83,12)mm",
+            "rotationZ(90deg)+translation",
+            "rotationZ(37deg)+translation",
+            "component motion endpoints and midpoint"
+          ],
+          "acceptanceStatus": "pending-real-fixture-tests",
+          "replacementReady": false
+        },
+        {
+          "id": "B2",
+          "polarity": null,
+          "localPosition_mm": null,
+          "localDirection": null,
+          "coordinateEvidence": "Unavailable in permitted source interface; do not read gzip geometry to fill it",
+          "dynamicOffset": null,
+          "worldTransformRule": "worldPosition = instance.matrixWorld * (localPosition + current dynamicOffset); worldDirection = normalize(instance normal/rotation transform of localDirection); compare with post groove mouth center",
+          "worldPosition_mm": null,
+          "worldDirection": null,
+          "requiredFixtures": [
+            "identity",
+            "translation(137,-83,12)mm",
+            "rotationZ(90deg)+translation",
+            "rotationZ(37deg)+translation",
+            "component motion endpoints and midpoint"
+          ],
+          "acceptanceStatus": "pending-real-fixture-tests",
+          "replacementReady": false
+        }
+      ]
+    },
+    {
+      "asset": "lamp",
+      "requiredFunctionalGroups": [
+        "body",
+        "insulators",
+        "conductors",
+        "markings",
+        "filament",
+        "glass"
+      ],
+      "dynamicGroups": [
+        {
+          "name": "filament",
+          "pivot_mm": [
+            0,
+            0,
+            0
+          ],
+          "pivotEvidence": "No declared pivot: existing adapter uses component origin",
+          "control": null
+        },
+        {
+          "name": "glass",
+          "pivot_mm": [
+            0,
+            0,
+            0
+          ],
+          "pivotEvidence": "No declared pivot: existing adapter uses component origin",
+          "control": null
+        }
+      ],
+      "interactionRequirements": "灯丝/玻壳分别由功率驱动；烧断灯丝隐藏，玻璃变暗；支持3额定规格",
+      "terminals": [
+        {
+          "id": "A",
+          "polarity": null,
+          "localPosition_mm": null,
+          "localDirection": null,
+          "coordinateEvidence": "Unavailable in permitted source interface; do not read gzip geometry to fill it",
+          "dynamicOffset": null,
+          "worldTransformRule": "worldPosition = instance.matrixWorld * (localPosition + current dynamicOffset); worldDirection = normalize(instance normal/rotation transform of localDirection); compare with post groove mouth center",
+          "worldPosition_mm": null,
+          "worldDirection": null,
+          "requiredFixtures": [
+            "identity",
+            "translation(137,-83,12)mm",
+            "rotationZ(90deg)+translation",
+            "rotationZ(37deg)+translation",
+            "component motion endpoints and midpoint"
+          ],
+          "acceptanceStatus": "pending-real-fixture-tests",
+          "replacementReady": false
+        },
+        {
+          "id": "B",
+          "polarity": null,
+          "localPosition_mm": null,
+          "localDirection": null,
+          "coordinateEvidence": "Unavailable in permitted source interface; do not read gzip geometry to fill it",
+          "dynamicOffset": null,
+          "worldTransformRule": "worldPosition = instance.matrixWorld * (localPosition + current dynamicOffset); worldDirection = normalize(instance normal/rotation transform of localDirection); compare with post groove mouth center",
+          "worldPosition_mm": null,
+          "worldDirection": null,
+          "requiredFixtures": [
+            "identity",
+            "translation(137,-83,12)mm",
+            "rotationZ(90deg)+translation",
+            "rotationZ(37deg)+translation",
+            "component motion endpoints and midpoint"
+          ],
+          "acceptanceStatus": "pending-real-fixture-tests",
+          "replacementReady": false
+        }
+      ]
+    },
+    {
+      "asset": "resistor10",
+      "requiredFunctionalGroups": [
+        "body",
+        "insulators",
+        "conductors",
+        "markings",
+        "heat"
+      ],
+      "dynamicGroups": [
+        {
+          "name": "heat",
+          "pivot_mm": [
+            0,
+            0,
+            0
+          ],
+          "pivotEvidence": "No declared pivot: existing adapter uses component origin",
+          "control": null
+        }
+      ],
+      "interactionRequirements": "10Ω±5%色环与2W教学过热外观",
+      "terminals": [
+        {
+          "id": "A",
+          "polarity": null,
+          "localPosition_mm": null,
+          "localDirection": null,
+          "coordinateEvidence": "Unavailable in permitted source interface; do not read gzip geometry to fill it",
+          "dynamicOffset": null,
+          "worldTransformRule": "worldPosition = instance.matrixWorld * (localPosition + current dynamicOffset); worldDirection = normalize(instance normal/rotation transform of localDirection); compare with post groove mouth center",
+          "worldPosition_mm": null,
+          "worldDirection": null,
+          "requiredFixtures": [
+            "identity",
+            "translation(137,-83,12)mm",
+            "rotationZ(90deg)+translation",
+            "rotationZ(37deg)+translation",
+            "component motion endpoints and midpoint"
+          ],
+          "acceptanceStatus": "pending-real-fixture-tests",
+          "replacementReady": false
+        },
+        {
+          "id": "B",
+          "polarity": null,
+          "localPosition_mm": null,
+          "localDirection": null,
+          "coordinateEvidence": "Unavailable in permitted source interface; do not read gzip geometry to fill it",
+          "dynamicOffset": null,
+          "worldTransformRule": "worldPosition = instance.matrixWorld * (localPosition + current dynamicOffset); worldDirection = normalize(instance normal/rotation transform of localDirection); compare with post groove mouth center",
+          "worldPosition_mm": null,
+          "worldDirection": null,
+          "requiredFixtures": [
+            "identity",
+            "translation(137,-83,12)mm",
+            "rotationZ(90deg)+translation",
+            "rotationZ(37deg)+translation",
+            "component motion endpoints and midpoint"
+          ],
+          "acceptanceStatus": "pending-real-fixture-tests",
+          "replacementReady": false
+        }
+      ]
+    },
+    {
+      "asset": "resistor20",
+      "requiredFunctionalGroups": [
+        "body",
+        "insulators",
+        "conductors",
+        "markings",
+        "heat"
+      ],
+      "dynamicGroups": [
+        {
+          "name": "heat",
+          "pivot_mm": [
+            0,
+            0,
+            0
+          ],
+          "pivotEvidence": "No declared pivot: existing adapter uses component origin",
+          "control": null
+        }
+      ],
+      "interactionRequirements": "20Ω±5%色环与2W教学过热外观",
+      "terminals": [
+        {
+          "id": "A",
+          "polarity": null,
+          "localPosition_mm": null,
+          "localDirection": null,
+          "coordinateEvidence": "Unavailable in permitted source interface; do not read gzip geometry to fill it",
+          "dynamicOffset": null,
+          "worldTransformRule": "worldPosition = instance.matrixWorld * (localPosition + current dynamicOffset); worldDirection = normalize(instance normal/rotation transform of localDirection); compare with post groove mouth center",
+          "worldPosition_mm": null,
+          "worldDirection": null,
+          "requiredFixtures": [
+            "identity",
+            "translation(137,-83,12)mm",
+            "rotationZ(90deg)+translation",
+            "rotationZ(37deg)+translation",
+            "component motion endpoints and midpoint"
+          ],
+          "acceptanceStatus": "pending-real-fixture-tests",
+          "replacementReady": false
+        },
+        {
+          "id": "B",
+          "polarity": null,
+          "localPosition_mm": null,
+          "localDirection": null,
+          "coordinateEvidence": "Unavailable in permitted source interface; do not read gzip geometry to fill it",
+          "dynamicOffset": null,
+          "worldTransformRule": "worldPosition = instance.matrixWorld * (localPosition + current dynamicOffset); worldDirection = normalize(instance normal/rotation transform of localDirection); compare with post groove mouth center",
+          "worldPosition_mm": null,
+          "worldDirection": null,
+          "requiredFixtures": [
+            "identity",
+            "translation(137,-83,12)mm",
+            "rotationZ(90deg)+translation",
+            "rotationZ(37deg)+translation",
+            "component motion endpoints and midpoint"
+          ],
+          "acceptanceStatus": "pending-real-fixture-tests",
+          "replacementReady": false
+        }
+      ]
+    },
+    {
+      "asset": "resistor50",
+      "requiredFunctionalGroups": [
+        "body",
+        "insulators",
+        "conductors",
+        "markings",
+        "heat"
+      ],
+      "dynamicGroups": [
+        {
+          "name": "heat",
+          "pivot_mm": [
+            0,
+            0,
+            0
+          ],
+          "pivotEvidence": "No declared pivot: existing adapter uses component origin",
+          "control": null
+        }
+      ],
+      "interactionRequirements": "50Ω±5%色环与2W教学过热外观",
+      "terminals": [
+        {
+          "id": "A",
+          "polarity": null,
+          "localPosition_mm": null,
+          "localDirection": null,
+          "coordinateEvidence": "Unavailable in permitted source interface; do not read gzip geometry to fill it",
+          "dynamicOffset": null,
+          "worldTransformRule": "worldPosition = instance.matrixWorld * (localPosition + current dynamicOffset); worldDirection = normalize(instance normal/rotation transform of localDirection); compare with post groove mouth center",
+          "worldPosition_mm": null,
+          "worldDirection": null,
+          "requiredFixtures": [
+            "identity",
+            "translation(137,-83,12)mm",
+            "rotationZ(90deg)+translation",
+            "rotationZ(37deg)+translation",
+            "component motion endpoints and midpoint"
+          ],
+          "acceptanceStatus": "pending-real-fixture-tests",
+          "replacementReady": false
+        },
+        {
+          "id": "B",
+          "polarity": null,
+          "localPosition_mm": null,
+          "localDirection": null,
+          "coordinateEvidence": "Unavailable in permitted source interface; do not read gzip geometry to fill it",
+          "dynamicOffset": null,
+          "worldTransformRule": "worldPosition = instance.matrixWorld * (localPosition + current dynamicOffset); worldDirection = normalize(instance normal/rotation transform of localDirection); compare with post groove mouth center",
+          "worldPosition_mm": null,
+          "worldDirection": null,
+          "requiredFixtures": [
+            "identity",
+            "translation(137,-83,12)mm",
+            "rotationZ(90deg)+translation",
+            "rotationZ(37deg)+translation",
+            "component motion endpoints and midpoint"
+          ],
+          "acceptanceStatus": "pending-real-fixture-tests",
+          "replacementReady": false
+        }
+      ]
+    },
+    {
+      "asset": "rheostat",
+      "requiredFunctionalGroups": [
+        "body",
+        "insulators",
+        "conductors",
+        "markings",
+        "slider"
+      ],
+      "dynamicGroups": [
+        {
+          "name": "slider",
+          "pivot_mm": [
+            0,
+            0,
+            0
+          ],
+          "pivotEvidence": "No declared pivot: existing adapter uses component origin",
+          "control": "translate-x"
+        }
+      ],
+      "interactionRequirements": "s∈[0,1]滑片x=-66+130s；A/B线圈端、C/D同金属杆；20/50/200Ω",
+      "terminals": [
+        {
+          "id": "A",
+          "polarity": null,
+          "localPosition_mm": null,
+          "localDirection": null,
+          "coordinateEvidence": "Unavailable in permitted source interface; do not read gzip geometry to fill it",
+          "dynamicOffset": null,
+          "worldTransformRule": "worldPosition = instance.matrixWorld * (localPosition + current dynamicOffset); worldDirection = normalize(instance normal/rotation transform of localDirection); compare with post groove mouth center",
+          "worldPosition_mm": null,
+          "worldDirection": null,
+          "requiredFixtures": [
+            "identity",
+            "translation(137,-83,12)mm",
+            "rotationZ(90deg)+translation",
+            "rotationZ(37deg)+translation",
+            "component motion endpoints and midpoint"
+          ],
+          "acceptanceStatus": "pending-real-fixture-tests",
+          "replacementReady": false
+        },
+        {
+          "id": "B",
+          "polarity": null,
+          "localPosition_mm": null,
+          "localDirection": null,
+          "coordinateEvidence": "Unavailable in permitted source interface; do not read gzip geometry to fill it",
+          "dynamicOffset": null,
+          "worldTransformRule": "worldPosition = instance.matrixWorld * (localPosition + current dynamicOffset); worldDirection = normalize(instance normal/rotation transform of localDirection); compare with post groove mouth center",
+          "worldPosition_mm": null,
+          "worldDirection": null,
+          "requiredFixtures": [
+            "identity",
+            "translation(137,-83,12)mm",
+            "rotationZ(90deg)+translation",
+            "rotationZ(37deg)+translation",
+            "component motion endpoints and midpoint"
+          ],
+          "acceptanceStatus": "pending-real-fixture-tests",
+          "replacementReady": false
+        },
+        {
+          "id": "C",
+          "polarity": null,
+          "localPosition_mm": null,
+          "localDirection": null,
+          "coordinateEvidence": "Unavailable in permitted source interface; do not read gzip geometry to fill it",
+          "dynamicOffset": null,
+          "worldTransformRule": "worldPosition = instance.matrixWorld * (localPosition + current dynamicOffset); worldDirection = normalize(instance normal/rotation transform of localDirection); compare with post groove mouth center",
+          "worldPosition_mm": null,
+          "worldDirection": null,
+          "requiredFixtures": [
+            "identity",
+            "translation(137,-83,12)mm",
+            "rotationZ(90deg)+translation",
+            "rotationZ(37deg)+translation",
+            "component motion endpoints and midpoint"
+          ],
+          "acceptanceStatus": "pending-real-fixture-tests",
+          "replacementReady": false
+        },
+        {
+          "id": "D",
+          "polarity": null,
+          "localPosition_mm": null,
+          "localDirection": null,
+          "coordinateEvidence": "Unavailable in permitted source interface; do not read gzip geometry to fill it",
+          "dynamicOffset": null,
+          "worldTransformRule": "worldPosition = instance.matrixWorld * (localPosition + current dynamicOffset); worldDirection = normalize(instance normal/rotation transform of localDirection); compare with post groove mouth center",
+          "worldPosition_mm": null,
+          "worldDirection": null,
+          "requiredFixtures": [
+            "identity",
+            "translation(137,-83,12)mm",
+            "rotationZ(90deg)+translation",
+            "rotationZ(37deg)+translation",
+            "component motion endpoints and midpoint"
+          ],
+          "acceptanceStatus": "pending-real-fixture-tests",
+          "replacementReady": false
+        }
+      ]
+    },
+    {
+      "asset": "resbox",
+      "requiredFunctionalGroups": [
+        "body",
+        "insulators",
+        "conductors",
+        "markings",
+        "k1000",
+        "k100",
+        "k10",
+        "k1"
+      ],
+      "dynamicGroups": [
+        {
+          "name": "k1000",
+          "pivot_mm": [
+            -78,
+            8,
+            61
+          ],
+          "pivotEvidence": "explicit public visual contract",
+          "control": "digit-z"
+        },
+        {
+          "name": "k100",
+          "pivot_mm": [
+            -26,
+            8,
+            61
+          ],
+          "pivotEvidence": "explicit public visual contract",
+          "control": "digit-z"
+        },
+        {
+          "name": "k10",
+          "pivot_mm": [
+            26,
+            8,
+            61
+          ],
+          "pivotEvidence": "explicit public visual contract",
+          "control": "digit-z"
+        },
+        {
+          "name": "k1",
+          "pivot_mm": [
+            78,
+            8,
+            61
+          ],
+          "pivotEvidence": "explicit public visual contract",
+          "control": "digit-z"
+        }
+      ],
+      "interactionRequirements": "四旋钮0–9各36°，0–9999Ω读数；Shift反向和滚轮均保留",
+      "terminals": [
+        {
+          "id": "A",
+          "polarity": null,
+          "localPosition_mm": null,
+          "localDirection": null,
+          "coordinateEvidence": "Unavailable in permitted source interface; do not read gzip geometry to fill it",
+          "dynamicOffset": null,
+          "worldTransformRule": "worldPosition = instance.matrixWorld * (localPosition + current dynamicOffset); worldDirection = normalize(instance normal/rotation transform of localDirection); compare with post groove mouth center",
+          "worldPosition_mm": null,
+          "worldDirection": null,
+          "requiredFixtures": [
+            "identity",
+            "translation(137,-83,12)mm",
+            "rotationZ(90deg)+translation",
+            "rotationZ(37deg)+translation",
+            "component motion endpoints and midpoint"
+          ],
+          "acceptanceStatus": "pending-real-fixture-tests",
+          "replacementReady": false
+        },
+        {
+          "id": "B",
+          "polarity": null,
+          "localPosition_mm": null,
+          "localDirection": null,
+          "coordinateEvidence": "Unavailable in permitted source interface; do not read gzip geometry to fill it",
+          "dynamicOffset": null,
+          "worldTransformRule": "worldPosition = instance.matrixWorld * (localPosition + current dynamicOffset); worldDirection = normalize(instance normal/rotation transform of localDirection); compare with post groove mouth center",
+          "worldPosition_mm": null,
+          "worldDirection": null,
+          "requiredFixtures": [
+            "identity",
+            "translation(137,-83,12)mm",
+            "rotationZ(90deg)+translation",
+            "rotationZ(37deg)+translation",
+            "component motion endpoints and midpoint"
+          ],
+          "acceptanceStatus": "pending-real-fixture-tests",
+          "replacementReady": false
+        }
+      ]
+    },
+    {
+      "asset": "ammeter",
+      "requiredFunctionalGroups": [
+        "body",
+        "insulators",
+        "conductors",
+        "markings",
+        "needle"
+      ],
+      "dynamicGroups": [
+        {
+          "name": "needle",
+          "pivot_mm": [
+            0,
+            -28.9,
+            110.25
+          ],
+          "pivotEvidence": "explicit public visual contract",
+          "control": null
+        }
+      ],
+      "interactionRequirements": "独立针绕[0,-√3/2,0.5]旋转，120°量程；0.6/3A双标尺30分度、反偏与超程",
+      "terminals": [
+        {
+          "id": "-",
+          "polarity": "-",
+          "localPosition_mm": [
+            null,
+            -63.8,
+            66.9
+          ],
+          "localDirection": [
+            0,
+            -0.8660254037844386,
+            0.5
+          ],
+          "coordinateEvidence": "Public meter correction fixes y/z/d; x is not present in permitted inputs",
+          "dynamicOffset": null,
+          "worldTransformRule": "worldPosition = instance.matrixWorld * (localPosition + current dynamicOffset); worldDirection = normalize(instance normal/rotation transform of localDirection); compare with post groove mouth center",
+          "worldPosition_mm": null,
+          "worldDirection": null,
+          "requiredFixtures": [
+            "identity",
+            "translation(137,-83,12)mm",
+            "rotationZ(90deg)+translation",
+            "rotationZ(37deg)+translation",
+            "component motion endpoints and midpoint"
+          ],
+          "acceptanceStatus": "pending-real-fixture-tests",
+          "replacementReady": false
+        },
+        {
+          "id": "0.6",
+          "polarity": "+",
+          "localPosition_mm": [
+            null,
+            -63.8,
+            66.9
+          ],
+          "localDirection": [
+            0,
+            -0.8660254037844386,
+            0.5
+          ],
+          "coordinateEvidence": "Public meter correction fixes y/z/d; x is not present in permitted inputs",
+          "dynamicOffset": null,
+          "worldTransformRule": "worldPosition = instance.matrixWorld * (localPosition + current dynamicOffset); worldDirection = normalize(instance normal/rotation transform of localDirection); compare with post groove mouth center",
+          "worldPosition_mm": null,
+          "worldDirection": null,
+          "requiredFixtures": [
+            "identity",
+            "translation(137,-83,12)mm",
+            "rotationZ(90deg)+translation",
+            "rotationZ(37deg)+translation",
+            "component motion endpoints and midpoint"
+          ],
+          "acceptanceStatus": "pending-real-fixture-tests",
+          "replacementReady": false
+        },
+        {
+          "id": "3",
+          "polarity": "+",
+          "localPosition_mm": [
+            null,
+            -63.8,
+            66.9
+          ],
+          "localDirection": [
+            0,
+            -0.8660254037844386,
+            0.5
+          ],
+          "coordinateEvidence": "Public meter correction fixes y/z/d; x is not present in permitted inputs",
+          "dynamicOffset": null,
+          "worldTransformRule": "worldPosition = instance.matrixWorld * (localPosition + current dynamicOffset); worldDirection = normalize(instance normal/rotation transform of localDirection); compare with post groove mouth center",
+          "worldPosition_mm": null,
+          "worldDirection": null,
+          "requiredFixtures": [
+            "identity",
+            "translation(137,-83,12)mm",
+            "rotationZ(90deg)+translation",
+            "rotationZ(37deg)+translation",
+            "component motion endpoints and midpoint"
+          ],
+          "acceptanceStatus": "pending-real-fixture-tests",
+          "replacementReady": false
+        }
+      ]
+    },
+    {
+      "asset": "voltmeter",
+      "requiredFunctionalGroups": [
+        "body",
+        "insulators",
+        "conductors",
+        "markings",
+        "needle"
+      ],
+      "dynamicGroups": [
+        {
+          "name": "needle",
+          "pivot_mm": [
+            0,
+            -28.9,
+            110.25
+          ],
+          "pivotEvidence": "explicit public visual contract",
+          "control": null
+        }
+      ],
+      "interactionRequirements": "独立针绕[0,-√3/2,0.5]旋转，120°；3/15V双标尺30分度、反偏与超程",
+      "terminals": [
+        {
+          "id": "-",
+          "polarity": "-",
+          "localPosition_mm": [
+            null,
+            -63.8,
+            66.9
+          ],
+          "localDirection": [
+            0,
+            -0.8660254037844386,
+            0.5
+          ],
+          "coordinateEvidence": "Public meter correction fixes y/z/d; x is not present in permitted inputs",
+          "dynamicOffset": null,
+          "worldTransformRule": "worldPosition = instance.matrixWorld * (localPosition + current dynamicOffset); worldDirection = normalize(instance normal/rotation transform of localDirection); compare with post groove mouth center",
+          "worldPosition_mm": null,
+          "worldDirection": null,
+          "requiredFixtures": [
+            "identity",
+            "translation(137,-83,12)mm",
+            "rotationZ(90deg)+translation",
+            "rotationZ(37deg)+translation",
+            "component motion endpoints and midpoint"
+          ],
+          "acceptanceStatus": "pending-real-fixture-tests",
+          "replacementReady": false
+        },
+        {
+          "id": "3",
+          "polarity": "+",
+          "localPosition_mm": [
+            null,
+            -63.8,
+            66.9
+          ],
+          "localDirection": [
+            0,
+            -0.8660254037844386,
+            0.5
+          ],
+          "coordinateEvidence": "Public meter correction fixes y/z/d; x is not present in permitted inputs",
+          "dynamicOffset": null,
+          "worldTransformRule": "worldPosition = instance.matrixWorld * (localPosition + current dynamicOffset); worldDirection = normalize(instance normal/rotation transform of localDirection); compare with post groove mouth center",
+          "worldPosition_mm": null,
+          "worldDirection": null,
+          "requiredFixtures": [
+            "identity",
+            "translation(137,-83,12)mm",
+            "rotationZ(90deg)+translation",
+            "rotationZ(37deg)+translation",
+            "component motion endpoints and midpoint"
+          ],
+          "acceptanceStatus": "pending-real-fixture-tests",
+          "replacementReady": false
+        },
+        {
+          "id": "15",
+          "polarity": "+",
+          "localPosition_mm": [
+            null,
+            -63.8,
+            66.9
+          ],
+          "localDirection": [
+            0,
+            -0.8660254037844386,
+            0.5
+          ],
+          "coordinateEvidence": "Public meter correction fixes y/z/d; x is not present in permitted inputs",
+          "dynamicOffset": null,
+          "worldTransformRule": "worldPosition = instance.matrixWorld * (localPosition + current dynamicOffset); worldDirection = normalize(instance normal/rotation transform of localDirection); compare with post groove mouth center",
+          "worldPosition_mm": null,
+          "worldDirection": null,
+          "requiredFixtures": [
+            "identity",
+            "translation(137,-83,12)mm",
+            "rotationZ(90deg)+translation",
+            "rotationZ(37deg)+translation",
+            "component motion endpoints and midpoint"
+          ],
+          "acceptanceStatus": "pending-real-fixture-tests",
+          "replacementReady": false
+        }
+      ]
+    },
+    {
+      "asset": "galvanometer",
+      "requiredFunctionalGroups": [
+        "body",
+        "insulators",
+        "conductors",
+        "markings",
+        "needle"
+      ],
+      "dynamicGroups": [
+        {
+          "name": "needle",
+          "pivot_mm": [
+            0,
+            -28.9,
+            110.25
+          ],
+          "pivotEvidence": "explicit public visual contract",
+          "control": null
+        }
+      ],
+      "interactionRequirements": "中零±300μA教学尺度，55°双向扫角，阻尼/反向响应",
+      "terminals": [
+        {
+          "id": "A",
+          "polarity": null,
+          "localPosition_mm": [
+            null,
+            -63.8,
+            66.9
+          ],
+          "localDirection": [
+            0,
+            -0.8660254037844386,
+            0.5
+          ],
+          "coordinateEvidence": "Public meter correction fixes y/z/d; x is not present in permitted inputs",
+          "dynamicOffset": null,
+          "worldTransformRule": "worldPosition = instance.matrixWorld * (localPosition + current dynamicOffset); worldDirection = normalize(instance normal/rotation transform of localDirection); compare with post groove mouth center",
+          "worldPosition_mm": null,
+          "worldDirection": null,
+          "requiredFixtures": [
+            "identity",
+            "translation(137,-83,12)mm",
+            "rotationZ(90deg)+translation",
+            "rotationZ(37deg)+translation",
+            "component motion endpoints and midpoint"
+          ],
+          "acceptanceStatus": "pending-real-fixture-tests",
+          "replacementReady": false
+        },
+        {
+          "id": "B",
+          "polarity": null,
+          "localPosition_mm": [
+            null,
+            -63.8,
+            66.9
+          ],
+          "localDirection": [
+            0,
+            -0.8660254037844386,
+            0.5
+          ],
+          "coordinateEvidence": "Public meter correction fixes y/z/d; x is not present in permitted inputs",
+          "dynamicOffset": null,
+          "worldTransformRule": "worldPosition = instance.matrixWorld * (localPosition + current dynamicOffset); worldDirection = normalize(instance normal/rotation transform of localDirection); compare with post groove mouth center",
+          "worldPosition_mm": null,
+          "worldDirection": null,
+          "requiredFixtures": [
+            "identity",
+            "translation(137,-83,12)mm",
+            "rotationZ(90deg)+translation",
+            "rotationZ(37deg)+translation",
+            "component motion endpoints and midpoint"
+          ],
+          "acceptanceStatus": "pending-real-fixture-tests",
+          "replacementReady": false
+        }
+      ]
+    },
+    {
+      "asset": "fuse",
+      "requiredFunctionalGroups": [
+        "body",
+        "insulators",
+        "conductors",
+        "markings",
+        "element",
+        "glass"
+      ],
+      "dynamicGroups": [
+        {
+          "name": "element",
+          "pivot_mm": [
+            0,
+            0,
+            0
+          ],
+          "pivotEvidence": "No declared pivot: existing adapter uses component origin",
+          "control": null
+        },
+        {
+          "name": "glass",
+          "pivot_mm": [
+            0,
+            0,
+            0
+          ],
+          "pivotEvidence": "No declared pivot: existing adapter uses component origin",
+          "control": null
+        }
+      ],
+      "interactionRequirements": "0.5/1/2A教学规格，发热与熔断后element隐藏、glass熏暗，更换复位",
+      "terminals": [
+        {
+          "id": "A",
+          "polarity": null,
+          "localPosition_mm": null,
+          "localDirection": null,
+          "coordinateEvidence": "Unavailable in permitted source interface; do not read gzip geometry to fill it",
+          "dynamicOffset": null,
+          "worldTransformRule": "worldPosition = instance.matrixWorld * (localPosition + current dynamicOffset); worldDirection = normalize(instance normal/rotation transform of localDirection); compare with post groove mouth center",
+          "worldPosition_mm": null,
+          "worldDirection": null,
+          "requiredFixtures": [
+            "identity",
+            "translation(137,-83,12)mm",
+            "rotationZ(90deg)+translation",
+            "rotationZ(37deg)+translation",
+            "component motion endpoints and midpoint"
+          ],
+          "acceptanceStatus": "pending-real-fixture-tests",
+          "replacementReady": false
+        },
+        {
+          "id": "B",
+          "polarity": null,
+          "localPosition_mm": null,
+          "localDirection": null,
+          "coordinateEvidence": "Unavailable in permitted source interface; do not read gzip geometry to fill it",
+          "dynamicOffset": null,
+          "worldTransformRule": "worldPosition = instance.matrixWorld * (localPosition + current dynamicOffset); worldDirection = normalize(instance normal/rotation transform of localDirection); compare with post groove mouth center",
+          "worldPosition_mm": null,
+          "worldDirection": null,
+          "requiredFixtures": [
+            "identity",
+            "translation(137,-83,12)mm",
+            "rotationZ(90deg)+translation",
+            "rotationZ(37deg)+translation",
+            "component motion endpoints and midpoint"
+          ],
+          "acceptanceStatus": "pending-real-fixture-tests",
+          "replacementReady": false
+        }
+      ]
+    },
+    {
+      "asset": "capacitor",
+      "requiredFunctionalGroups": [
+        "body",
+        "insulators",
+        "conductors",
+        "markings",
+        "plateB",
+        "dielectric"
+      ],
+      "dynamicGroups": [
+        {
+          "name": "plateB",
+          "pivot_mm": [
+            0,
+            0,
+            0
+          ],
+          "pivotEvidence": "No declared pivot: existing adapter uses component origin",
+          "control": "translate-x"
+        },
+        {
+          "name": "dielectric",
+          "pivot_mm": [
+            0,
+            0,
+            0
+          ],
+          "pivotEvidence": "No declared pivot: existing adapter uses component origin",
+          "control": "toggle-z"
+        }
+      ],
+      "interactionRequirements": "90×100板面积；d32–96mm，B板含端子同步X+0–64；介质厚6，移出Z+135",
+      "terminals": [
+        {
+          "id": "A",
+          "polarity": null,
+          "localPosition_mm": null,
+          "localDirection": null,
+          "coordinateEvidence": "Unavailable in permitted source interface; do not read gzip geometry to fill it",
+          "dynamicOffset": null,
+          "worldTransformRule": "worldPosition = instance.matrixWorld * (localPosition + current dynamicOffset); worldDirection = normalize(instance normal/rotation transform of localDirection); compare with post groove mouth center",
+          "worldPosition_mm": null,
+          "worldDirection": null,
+          "requiredFixtures": [
+            "identity",
+            "translation(137,-83,12)mm",
+            "rotationZ(90deg)+translation",
+            "rotationZ(37deg)+translation",
+            "component motion endpoints and midpoint"
+          ],
+          "acceptanceStatus": "pending-real-fixture-tests",
+          "replacementReady": false
+        },
+        {
+          "id": "B",
+          "polarity": null,
+          "localPosition_mm": null,
+          "localDirection": null,
+          "coordinateEvidence": "Unavailable in permitted source interface; do not read gzip geometry to fill it",
+          "dynamicOffset": {
+            "axis": "x",
+            "source": "current animated plateB.position.x",
+            "range_mm": [
+              0,
+              64
+            ]
+          },
+          "worldTransformRule": "worldPosition = instance.matrixWorld * (localPosition + current dynamicOffset); worldDirection = normalize(instance normal/rotation transform of localDirection); compare with post groove mouth center",
+          "worldPosition_mm": null,
+          "worldDirection": null,
+          "requiredFixtures": [
+            "identity",
+            "translation(137,-83,12)mm",
+            "rotationZ(90deg)+translation",
+            "rotationZ(37deg)+translation",
+            "component motion endpoints and midpoint"
+          ],
+          "acceptanceStatus": "pending-real-fixture-tests",
+          "replacementReady": false
+        }
+      ]
+    },
+    {
+      "asset": "motor",
+      "requiredFunctionalGroups": [
+        "body",
+        "insulators",
+        "conductors",
+        "markings",
+        "rotor"
+      ],
+      "dynamicGroups": [
+        {
+          "name": "rotor",
+          "pivot_mm": [
+            0,
+            0,
+            90
+          ],
+          "pivotEvidence": "explicit public visual contract",
+          "control": null
+        }
+      ],
+      "interactionRequirements": "转子绕X连续双向转，堵转状态；刷接点位于[72,±12,90]",
+      "terminals": [
+        {
+          "id": "A",
+          "polarity": null,
+          "localPosition_mm": null,
+          "localDirection": null,
+          "coordinateEvidence": "Unavailable in permitted source interface; do not read gzip geometry to fill it",
+          "dynamicOffset": null,
+          "worldTransformRule": "worldPosition = instance.matrixWorld * (localPosition + current dynamicOffset); worldDirection = normalize(instance normal/rotation transform of localDirection); compare with post groove mouth center",
+          "worldPosition_mm": null,
+          "worldDirection": null,
+          "requiredFixtures": [
+            "identity",
+            "translation(137,-83,12)mm",
+            "rotationZ(90deg)+translation",
+            "rotationZ(37deg)+translation",
+            "component motion endpoints and midpoint"
+          ],
+          "acceptanceStatus": "pending-real-fixture-tests",
+          "replacementReady": false
+        },
+        {
+          "id": "B",
+          "polarity": null,
+          "localPosition_mm": null,
+          "localDirection": null,
+          "coordinateEvidence": "Unavailable in permitted source interface; do not read gzip geometry to fill it",
+          "dynamicOffset": null,
+          "worldTransformRule": "worldPosition = instance.matrixWorld * (localPosition + current dynamicOffset); worldDirection = normalize(instance normal/rotation transform of localDirection); compare with post groove mouth center",
+          "worldPosition_mm": null,
+          "worldDirection": null,
+          "requiredFixtures": [
+            "identity",
+            "translation(137,-83,12)mm",
+            "rotationZ(90deg)+translation",
+            "rotationZ(37deg)+translation",
+            "component motion endpoints and midpoint"
+          ],
+          "acceptanceStatus": "pending-real-fixture-tests",
+          "replacementReady": false
+        }
+      ]
+    },
+    {
+      "asset": "solenoid",
+      "requiredFunctionalGroups": [
+        "body",
+        "insulators",
+        "conductors",
+        "markings",
+        "core",
+        "winding"
+      ],
+      "dynamicGroups": [
+        {
+          "name": "core",
+          "pivot_mm": [
+            0,
+            0,
+            38
+          ],
+          "pivotEvidence": "explicit public visual contract",
+          "control": "toggle-x"
+        },
+        {
+          "name": "winding",
+          "pivot_mm": [
+            0,
+            0,
+            0
+          ],
+          "pivotEvidence": "No declared pivot: existing adapter uses component origin",
+          "control": null
+        }
+      ],
+      "interactionRequirements": "40匝教学线圈，芯X移出108；绕组可单独发热，电流变号磁场方向反转",
+      "terminals": [
+        {
+          "id": "A",
+          "polarity": null,
+          "localPosition_mm": null,
+          "localDirection": null,
+          "coordinateEvidence": "Unavailable in permitted source interface; do not read gzip geometry to fill it",
+          "dynamicOffset": null,
+          "worldTransformRule": "worldPosition = instance.matrixWorld * (localPosition + current dynamicOffset); worldDirection = normalize(instance normal/rotation transform of localDirection); compare with post groove mouth center",
+          "worldPosition_mm": null,
+          "worldDirection": null,
+          "requiredFixtures": [
+            "identity",
+            "translation(137,-83,12)mm",
+            "rotationZ(90deg)+translation",
+            "rotationZ(37deg)+translation",
+            "component motion endpoints and midpoint"
+          ],
+          "acceptanceStatus": "pending-real-fixture-tests",
+          "replacementReady": false
+        },
+        {
+          "id": "B",
+          "polarity": null,
+          "localPosition_mm": null,
+          "localDirection": null,
+          "coordinateEvidence": "Unavailable in permitted source interface; do not read gzip geometry to fill it",
+          "dynamicOffset": null,
+          "worldTransformRule": "worldPosition = instance.matrixWorld * (localPosition + current dynamicOffset); worldDirection = normalize(instance normal/rotation transform of localDirection); compare with post groove mouth center",
+          "worldPosition_mm": null,
+          "worldDirection": null,
+          "requiredFixtures": [
+            "identity",
+            "translation(137,-83,12)mm",
+            "rotationZ(90deg)+translation",
+            "rotationZ(37deg)+translation",
+            "component motion endpoints and midpoint"
+          ],
+          "acceptanceStatus": "pending-real-fixture-tests",
+          "replacementReady": false
+        }
+      ]
+    },
+    {
+      "asset": "ntc",
+      "requiredFunctionalGroups": [
+        "body",
+        "insulators",
+        "conductors",
+        "markings",
+        "bead"
+      ],
+      "dynamicGroups": [
+        {
+          "name": "bead",
+          "pivot_mm": [
+            0,
+            0,
+            0
+          ],
+          "pivotEvidence": "No declared pivot: existing adapter uses component origin",
+          "control": null
+        }
+      ],
+      "interactionRequirements": "0–100°C，珠体冷/热颜色由教学R(T)驱动",
+      "terminals": [
+        {
+          "id": "A",
+          "polarity": null,
+          "localPosition_mm": null,
+          "localDirection": null,
+          "coordinateEvidence": "Unavailable in permitted source interface; do not read gzip geometry to fill it",
+          "dynamicOffset": null,
+          "worldTransformRule": "worldPosition = instance.matrixWorld * (localPosition + current dynamicOffset); worldDirection = normalize(instance normal/rotation transform of localDirection); compare with post groove mouth center",
+          "worldPosition_mm": null,
+          "worldDirection": null,
+          "requiredFixtures": [
+            "identity",
+            "translation(137,-83,12)mm",
+            "rotationZ(90deg)+translation",
+            "rotationZ(37deg)+translation",
+            "component motion endpoints and midpoint"
+          ],
+          "acceptanceStatus": "pending-real-fixture-tests",
+          "replacementReady": false
+        },
+        {
+          "id": "B",
+          "polarity": null,
+          "localPosition_mm": null,
+          "localDirection": null,
+          "coordinateEvidence": "Unavailable in permitted source interface; do not read gzip geometry to fill it",
+          "dynamicOffset": null,
+          "worldTransformRule": "worldPosition = instance.matrixWorld * (localPosition + current dynamicOffset); worldDirection = normalize(instance normal/rotation transform of localDirection); compare with post groove mouth center",
+          "worldPosition_mm": null,
+          "worldDirection": null,
+          "requiredFixtures": [
+            "identity",
+            "translation(137,-83,12)mm",
+            "rotationZ(90deg)+translation",
+            "rotationZ(37deg)+translation",
+            "component motion endpoints and midpoint"
+          ],
+          "acceptanceStatus": "pending-real-fixture-tests",
+          "replacementReady": false
+        }
+      ]
+    },
+    {
+      "asset": "ldr",
+      "requiredFunctionalGroups": [
+        "body",
+        "insulators",
+        "conductors",
+        "markings",
+        "layer"
+      ],
+      "dynamicGroups": [
+        {
+          "name": "layer",
+          "pivot_mm": [
+            0,
+            0,
+            0
+          ],
+          "pivotEvidence": "No declared pivot: existing adapter uses component origin",
+          "control": null
+        }
+      ],
+      "interactionRequirements": "0–1000lx，蛇形感光层独立；照明锥与求解亮度绑定",
+      "terminals": [
+        {
+          "id": "A",
+          "polarity": null,
+          "localPosition_mm": null,
+          "localDirection": null,
+          "coordinateEvidence": "Unavailable in permitted source interface; do not read gzip geometry to fill it",
+          "dynamicOffset": null,
+          "worldTransformRule": "worldPosition = instance.matrixWorld * (localPosition + current dynamicOffset); worldDirection = normalize(instance normal/rotation transform of localDirection); compare with post groove mouth center",
+          "worldPosition_mm": null,
+          "worldDirection": null,
+          "requiredFixtures": [
+            "identity",
+            "translation(137,-83,12)mm",
+            "rotationZ(90deg)+translation",
+            "rotationZ(37deg)+translation",
+            "component motion endpoints and midpoint"
+          ],
+          "acceptanceStatus": "pending-real-fixture-tests",
+          "replacementReady": false
+        },
+        {
+          "id": "B",
+          "polarity": null,
+          "localPosition_mm": null,
+          "localDirection": null,
+          "coordinateEvidence": "Unavailable in permitted source interface; do not read gzip geometry to fill it",
+          "dynamicOffset": null,
+          "worldTransformRule": "worldPosition = instance.matrixWorld * (localPosition + current dynamicOffset); worldDirection = normalize(instance normal/rotation transform of localDirection); compare with post groove mouth center",
+          "worldPosition_mm": null,
+          "worldDirection": null,
+          "requiredFixtures": [
+            "identity",
+            "translation(137,-83,12)mm",
+            "rotationZ(90deg)+translation",
+            "rotationZ(37deg)+translation",
+            "component motion endpoints and midpoint"
+          ],
+          "acceptanceStatus": "pending-real-fixture-tests",
+          "replacementReady": false
+        }
+      ]
+    },
+    {
+      "asset": "led",
+      "requiredFunctionalGroups": [
+        "body",
+        "insulators",
+        "conductors",
+        "markings",
+        "resin",
+        "die"
+      ],
+      "dynamicGroups": [
+        {
+          "name": "resin",
+          "pivot_mm": [
+            0,
+            0,
+            0
+          ],
+          "pivotEvidence": "No declared pivot: existing adapter uses component origin",
+          "control": null
+        },
+        {
+          "name": "die",
+          "pivot_mm": [
+            0,
+            0,
+            0
+          ],
+          "pivotEvidence": "No declared pivot: existing adapter uses component origin",
+          "control": null
+        }
+      ],
+      "interactionRequirements": "五发光色、正向/反向/烧坏三态，独立树脂和芯片组",
+      "terminals": [
+        {
+          "id": "+",
+          "polarity": "+",
+          "localPosition_mm": [
+            30,
+            -10,
+            20.5
+          ],
+          "localDirection": [
+            0,
+            0,
+            1
+          ],
+          "coordinateEvidence": "Public procedural terminal return contract in visuals.js",
+          "dynamicOffset": null,
+          "worldTransformRule": "worldPosition = instance.matrixWorld * (localPosition + current dynamicOffset); worldDirection = normalize(instance normal/rotation transform of localDirection); compare with post groove mouth center",
+          "worldPosition_mm": null,
+          "worldDirection": null,
+          "requiredFixtures": [
+            "identity",
+            "translation(137,-83,12)mm",
+            "rotationZ(90deg)+translation",
+            "rotationZ(37deg)+translation",
+            "component motion endpoints and midpoint"
+          ],
+          "acceptanceStatus": "pending-real-fixture-tests",
+          "replacementReady": false
+        },
+        {
+          "id": "-",
+          "polarity": "-",
+          "localPosition_mm": [
+            -30,
+            -10,
+            20.5
+          ],
+          "localDirection": [
+            0,
+            0,
+            1
+          ],
+          "coordinateEvidence": "Public procedural terminal return contract in visuals.js",
+          "dynamicOffset": null,
+          "worldTransformRule": "worldPosition = instance.matrixWorld * (localPosition + current dynamicOffset); worldDirection = normalize(instance normal/rotation transform of localDirection); compare with post groove mouth center",
+          "worldPosition_mm": null,
+          "worldDirection": null,
+          "requiredFixtures": [
+            "identity",
+            "translation(137,-83,12)mm",
+            "rotationZ(90deg)+translation",
+            "rotationZ(37deg)+translation",
+            "component motion endpoints and midpoint"
+          ],
+          "acceptanceStatus": "pending-real-fixture-tests",
+          "replacementReady": false
+        }
+      ]
+    },
+    {
+      "asset": "diode",
+      "requiredFunctionalGroups": [
+        "body",
+        "insulators",
+        "conductors",
+        "markings"
+      ],
+      "dynamicGroups": [],
+      "interactionRequirements": "阳极在-x红柱、阴极在+x黑柱且阴极色环可辨；导通/截止保留",
+      "terminals": [
+        {
+          "id": "+",
+          "polarity": "+",
+          "localPosition_mm": [
+            -36,
+            0,
+            24
+          ],
+          "localDirection": [
+            0,
+            0,
+            1
+          ],
+          "coordinateEvidence": "Public procedural terminal return contract in visuals.js",
+          "dynamicOffset": null,
+          "worldTransformRule": "worldPosition = instance.matrixWorld * (localPosition + current dynamicOffset); worldDirection = normalize(instance normal/rotation transform of localDirection); compare with post groove mouth center",
+          "worldPosition_mm": null,
+          "worldDirection": null,
+          "requiredFixtures": [
+            "identity",
+            "translation(137,-83,12)mm",
+            "rotationZ(90deg)+translation",
+            "rotationZ(37deg)+translation",
+            "component motion endpoints and midpoint"
+          ],
+          "acceptanceStatus": "pending-real-fixture-tests",
+          "replacementReady": false
+        },
+        {
+          "id": "-",
+          "polarity": "-",
+          "localPosition_mm": [
+            36,
+            0,
+            24
+          ],
+          "localDirection": [
+            0,
+            0,
+            1
+          ],
+          "coordinateEvidence": "Public procedural terminal return contract in visuals.js",
+          "dynamicOffset": null,
+          "worldTransformRule": "worldPosition = instance.matrixWorld * (localPosition + current dynamicOffset); worldDirection = normalize(instance normal/rotation transform of localDirection); compare with post groove mouth center",
+          "worldPosition_mm": null,
+          "worldDirection": null,
+          "requiredFixtures": [
+            "identity",
+            "translation(137,-83,12)mm",
+            "rotationZ(90deg)+translation",
+            "rotationZ(37deg)+translation",
+            "component motion endpoints and midpoint"
+          ],
+          "acceptanceStatus": "pending-real-fixture-tests",
+          "replacementReady": false
+        }
+      ]
+    },
+    {
+      "asset": "elcap",
+      "requiredFunctionalGroups": [
+        "body",
+        "insulators",
+        "conductors",
+        "markings",
+        "ring"
+      ],
+      "dynamicGroups": [
+        {
+          "name": "ring",
+          "pivot_mm": [
+            0,
+            0,
+            0
+          ],
+          "pivotEvidence": "No declared pivot: existing adapter uses component origin",
+          "control": null
+        }
+      ],
+      "interactionRequirements": "470/1000/2200/4700μF、16V，负极条纹/长短引脚、充放电与反接提示；ring是现象组",
+      "terminals": [
+        {
+          "id": "+",
+          "polarity": "+",
+          "localPosition_mm": [
+            28,
+            -12,
+            20.5
+          ],
+          "localDirection": [
+            0,
+            0,
+            1
+          ],
+          "coordinateEvidence": "Public procedural terminal return contract in visuals.js",
+          "dynamicOffset": null,
+          "worldTransformRule": "worldPosition = instance.matrixWorld * (localPosition + current dynamicOffset); worldDirection = normalize(instance normal/rotation transform of localDirection); compare with post groove mouth center",
+          "worldPosition_mm": null,
+          "worldDirection": null,
+          "requiredFixtures": [
+            "identity",
+            "translation(137,-83,12)mm",
+            "rotationZ(90deg)+translation",
+            "rotationZ(37deg)+translation",
+            "component motion endpoints and midpoint"
+          ],
+          "acceptanceStatus": "pending-real-fixture-tests",
+          "replacementReady": false
+        },
+        {
+          "id": "-",
+          "polarity": "-",
+          "localPosition_mm": [
+            -28,
+            -12,
+            20.5
+          ],
+          "localDirection": [
+            0,
+            0,
+            1
+          ],
+          "coordinateEvidence": "Public procedural terminal return contract in visuals.js",
+          "dynamicOffset": null,
+          "worldTransformRule": "worldPosition = instance.matrixWorld * (localPosition + current dynamicOffset); worldDirection = normalize(instance normal/rotation transform of localDirection); compare with post groove mouth center",
+          "worldPosition_mm": null,
+          "worldDirection": null,
+          "requiredFixtures": [
+            "identity",
+            "translation(137,-83,12)mm",
+            "rotationZ(90deg)+translation",
+            "rotationZ(37deg)+translation",
+            "component motion endpoints and midpoint"
+          ],
+          "acceptanceStatus": "pending-real-fixture-tests",
+          "replacementReady": false
+        }
+      ]
+    }
+  ],
+  "electrical": [
+    {
+      "id": "dcsupply",
+      "name": "学生直流电源",
+      "terminals": {
+        "+": {
+          "label": "正极 +",
+          "pol": "+"
+        },
+        "-": {
+          "label": "负极 −",
+          "pol": "-"
+        }
+      },
+      "defaults": {
+        "V": 3,
+        "Ilim": 2,
+        "on": true
+      },
+      "initialState": {},
+      "procedural": false,
+      "thumbnail": "dc_supply_cadquery",
+      "controls": [
+        {
+          "key": "on",
+          "type": "toggle"
+        },
+        {
+          "key": "V",
+          "type": "range",
+          "min": 0,
+          "max": 12,
+          "step": 0.1,
+          "unit": "V"
+        },
+        {
+          "key": "Ilim",
+          "type": "select",
+          "options": [
+            [
+              0.5,
+              "0.5 A"
+            ],
+            [
+              1,
+              "1 A"
+            ],
+            [
+              2,
+              "2 A"
+            ]
+          ]
+        }
+      ],
+      "verified": false
+    },
+    {
+      "id": "battery",
+      "name": "电池组（2 节串联）",
+      "terminals": {
+        "+": {
+          "label": "正极 +",
+          "pol": "+"
+        },
+        "-": {
+          "label": "负极 −",
+          "pol": "-"
+        }
+      },
+      "defaults": {
+        "E": 3,
+        "r": 1
+      },
+      "initialState": {},
+      "procedural": false,
+      "thumbnail": "battery_holder_cadquery",
+      "controls": [
+        {
+          "key": "E",
+          "type": "range",
+          "min": 2.4,
+          "max": 3.2,
+          "step": 0.05,
+          "unit": "V"
+        },
+        {
+          "key": "r",
+          "type": "range",
+          "min": 0.1,
+          "max": 5,
+          "step": 0.1,
+          "unit": "Ω"
+        }
+      ],
+      "verified": false
+    },
+    {
+      "id": "switch",
+      "name": "单刀单掷开关",
+      "terminals": {
+        "A": {
+          "label": "接线柱 A"
+        },
+        "B": {
+          "label": "接线柱 B"
+        }
+      },
+      "defaults": {
+        "closed": false
+      },
+      "initialState": {},
+      "procedural": false,
+      "thumbnail": "knife_switch_cadquery",
+      "controls": [
+        {
+          "key": "closed",
+          "type": "toggle"
+        }
+      ],
+      "verified": false
+    },
+    {
+      "id": "dpdt",
+      "name": "双刀双掷开关",
+      "terminals": {
+        "A1": {
+          "label": "A1"
+        },
+        "C1": {
+          "label": "C1（公共）"
+        },
+        "B1": {
+          "label": "B1"
+        },
+        "A2": {
+          "label": "A2"
+        },
+        "C2": {
+          "label": "C2（公共）"
+        },
+        "B2": {
+          "label": "B2"
+        }
+      },
+      "defaults": {
+        "pos": "off"
+      },
+      "initialState": {},
+      "procedural": false,
+      "thumbnail": "dpdt_switch_cadquery",
+      "controls": [
+        {
+          "key": "pos",
+          "type": "select",
+          "options": [
+            [
+              "A",
+              "合向 A"
+            ],
+            [
+              "off",
+              "中间断开"
+            ],
+            [
+              "B",
+              "合向 B"
+            ]
+          ]
+        }
+      ],
+      "verified": false
+    },
+    {
+      "id": "lamp",
+      "name": "小灯泡与灯座",
+      "terminals": {
+        "A": {
+          "label": "接线柱（螺口）"
+        },
+        "B": {
+          "label": "接线柱（中心）"
+        }
+      },
+      "defaults": {
+        "rating": "2.5V 0.3A"
+      },
+      "initialState": {
+        "burnt": false,
+        "over": 0
+      },
+      "procedural": false,
+      "thumbnail": "lamp_holder_cadquery",
+      "controls": [
+        {
+          "key": "rating",
+          "type": "select",
+          "options": [
+            [
+              "2.5V 0.3A",
+              "2.5V 0.3A"
+            ],
+            [
+              "3.8V 0.3A",
+              "3.8V 0.3A"
+            ],
+            [
+              "6.3V 0.15A",
+              "6.3V 0.15A"
+            ]
+          ]
+        },
+        {
+          "key": "replace",
+          "type": "button"
+        }
+      ],
+      "verified": false
+    },
+    {
+      "id": "led",
+      "name": "发光二极管 LED",
+      "terminals": {
+        "+": {
+          "label": "阳极 +（长脚）",
+          "pol": "+"
+        },
+        "-": {
+          "label": "阴极 −（短脚）",
+          "pol": "-"
+        }
+      },
+      "defaults": {
+        "color": "red"
+      },
+      "initialState": {
+        "burnt": false,
+        "over": 0
+      },
+      "procedural": true,
+      "thumbnail": "led_cadquery",
+      "controls": [
+        {
+          "key": "color",
+          "type": "select",
+          "options": [
+            [
+              "red",
+              "红光（约 1.9 V）"
+            ],
+            [
+              "yellow",
+              "黄光（约 2 V）"
+            ],
+            [
+              "green",
+              "绿光（约 2.1 V）"
+            ],
+            [
+              "blue",
+              "蓝光（约 3 V）"
+            ],
+            [
+              "white",
+              "白光（约 3 V）"
+            ]
+          ]
+        },
+        {
+          "key": "replace",
+          "type": "button"
+        }
+      ],
+      "verified": false
+    },
+    {
+      "id": "diode",
+      "name": "整流二极管",
+      "terminals": {
+        "+": {
+          "label": "阳极 +",
+          "pol": "+"
+        },
+        "-": {
+          "label": "阴极 −（色环端）",
+          "pol": "-"
+        }
+      },
+      "defaults": {},
+      "initialState": {},
+      "procedural": true,
+      "thumbnail": "rectifier_diode_cadquery",
+      "controls": [],
+      "verified": false
+    },
+    {
+      "id": "resistor10",
+      "name": "定值电阻 10 Ω",
+      "terminals": {
+        "A": {
+          "label": "接线柱 A"
+        },
+        "B": {
+          "label": "接线柱 B"
+        }
+      },
+      "defaults": {},
+      "initialState": {},
+      "procedural": false,
+      "thumbnail": "fixed_resistors_cadquery",
+      "controls": [],
+      "verified": false
+    },
+    {
+      "id": "resistor20",
+      "name": "定值电阻 20 Ω",
+      "terminals": {
+        "A": {
+          "label": "接线柱 A"
+        },
+        "B": {
+          "label": "接线柱 B"
+        }
+      },
+      "defaults": {},
+      "initialState": {},
+      "procedural": false,
+      "thumbnail": "fixed_resistors_cadquery",
+      "controls": [],
+      "verified": false
+    },
+    {
+      "id": "resistor50",
+      "name": "定值电阻 50 Ω",
+      "terminals": {
+        "A": {
+          "label": "接线柱 A"
+        },
+        "B": {
+          "label": "接线柱 B"
+        }
+      },
+      "defaults": {},
+      "initialState": {},
+      "procedural": false,
+      "thumbnail": "fixed_resistors_cadquery",
+      "controls": [],
+      "verified": false
+    },
+    {
+      "id": "rheostat",
+      "name": "滑动变阻器",
+      "terminals": {
+        "A": {
+          "label": "A（线圈左端）"
+        },
+        "B": {
+          "label": "B（线圈右端）"
+        },
+        "C": {
+          "label": "C（金属杆）"
+        },
+        "D": {
+          "label": "D（金属杆）"
+        }
+      },
+      "defaults": {
+        "Rmax": 50,
+        "s": 1
+      },
+      "initialState": {},
+      "procedural": false,
+      "thumbnail": "rheostat_cadquery",
+      "controls": [
+        {
+          "key": "s",
+          "type": "range",
+          "min": 0,
+          "max": 1,
+          "step": 0.01
+        },
+        {
+          "key": "Rmax",
+          "type": "select",
+          "options": [
+            [
+              20,
+              "20 Ω 2 A"
+            ],
+            [
+              50,
+              "50 Ω 1.5 A"
+            ],
+            [
+              200,
+              "200 Ω 1 A"
+            ]
+          ]
+        }
+      ],
+      "verified": false
+    },
+    {
+      "id": "resbox",
+      "name": "四档十进电阻箱",
+      "terminals": {
+        "A": {
+          "label": "接线柱 A"
+        },
+        "B": {
+          "label": "接线柱 B"
+        }
+      },
+      "defaults": {
+        "d": [
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "initialState": {},
+      "procedural": false,
+      "thumbnail": "resistance_box_cadquery",
+      "controls": [
+        {
+          "key": "d",
+          "type": "digits"
+        }
+      ],
+      "verified": false
+    },
+    {
+      "id": "ntc",
+      "name": "热敏电阻 NTC",
+      "terminals": {
+        "A": {
+          "label": "接线柱 A"
+        },
+        "B": {
+          "label": "接线柱 B"
+        }
+      },
+      "defaults": {
+        "T": 25
+      },
+      "initialState": {},
+      "procedural": false,
+      "thumbnail": "sensor_resistors_cadquery",
+      "controls": [
+        {
+          "key": "T",
+          "type": "range",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "°C"
+        }
+      ],
+      "verified": false
+    },
+    {
+      "id": "ldr",
+      "name": "光敏电阻 LDR",
+      "terminals": {
+        "A": {
+          "label": "接线柱 A"
+        },
+        "B": {
+          "label": "接线柱 B"
+        }
+      },
+      "defaults": {
+        "E": 100
+      },
+      "initialState": {},
+      "procedural": false,
+      "thumbnail": "sensor_resistors_cadquery",
+      "controls": [
+        {
+          "key": "E",
+          "type": "range",
+          "min": 0,
+          "max": 1000,
+          "step": 5,
+          "unit": "lx"
+        }
+      ],
+      "verified": false
+    },
+    {
+      "id": "ammeter",
+      "name": "电流表",
+      "terminals": {
+        "3": {
+          "label": "3 A 量程",
+          "pol": "+"
+        },
+        "-": {
+          "label": "− 公共端",
+          "pol": "-"
+        },
+        "0.6": {
+          "label": "0.6 A 量程",
+          "pol": "+"
+        }
+      },
+      "defaults": {},
+      "initialState": {},
+      "procedural": false,
+      "thumbnail": "ammeter_cadquery",
+      "controls": [],
+      "verified": false
+    },
+    {
+      "id": "voltmeter",
+      "name": "电压表",
+      "terminals": {
+        "3": {
+          "label": "3 V 量程",
+          "pol": "+"
+        },
+        "15": {
+          "label": "15 V 量程",
+          "pol": "+"
+        },
+        "-": {
+          "label": "− 公共端",
+          "pol": "-"
+        }
+      },
+      "defaults": {},
+      "initialState": {},
+      "procedural": false,
+      "thumbnail": "voltmeter_cadquery",
+      "controls": [],
+      "verified": false
+    },
+    {
+      "id": "galvanometer",
+      "name": "灵敏检流计",
+      "terminals": {
+        "A": {
+          "label": "接线柱 A"
+        },
+        "B": {
+          "label": "接线柱 B"
+        }
+      },
+      "defaults": {},
+      "initialState": {},
+      "procedural": false,
+      "thumbnail": "galvanometer_cadquery",
+      "controls": [],
+      "verified": false
+    },
+    {
+      "id": "fuse",
+      "name": "保险丝与保险座",
+      "terminals": {
+        "A": {
+          "label": "接线柱 A"
+        },
+        "B": {
+          "label": "接线柱 B"
+        }
+      },
+      "defaults": {
+        "rating": 1
+      },
+      "initialState": {
+        "heat": 0,
+        "blown": false
+      },
+      "procedural": false,
+      "thumbnail": "fuse_holder_cadquery",
+      "controls": [
+        {
+          "key": "rating",
+          "type": "select",
+          "options": [
+            [
+              0.5,
+              "0.5 A"
+            ],
+            [
+              1,
+              "1 A"
+            ],
+            [
+              2,
+              "2 A"
+            ]
+          ]
+        },
+        {
+          "key": "replace",
+          "type": "button"
+        }
+      ],
+      "verified": false
+    },
+    {
+      "id": "capacitor",
+      "name": "平行板电容器",
+      "terminals": {
+        "A": {
+          "label": "极板 A"
+        },
+        "B": {
+          "label": "极板 B（可移动）"
+        }
+      },
+      "defaults": {
+        "d": 32,
+        "dielectric": false
+      },
+      "initialState": {
+        "v": 0
+      },
+      "procedural": false,
+      "thumbnail": "capacitor_cadquery",
+      "controls": [
+        {
+          "key": "d",
+          "type": "range",
+          "min": 32,
+          "max": 96,
+          "step": 1,
+          "unit": "mm"
+        },
+        {
+          "key": "dielectric",
+          "type": "toggle"
+        }
+      ],
+      "verified": false
+    },
+    {
+      "id": "elcap",
+      "name": "电解电容器",
+      "terminals": {
+        "+": {
+          "label": "正极 +",
+          "pol": "+"
+        },
+        "-": {
+          "label": "负极 −",
+          "pol": "-"
+        }
+      },
+      "defaults": {
+        "C": 1000
+      },
+      "initialState": {
+        "v": 0
+      },
+      "procedural": true,
+      "thumbnail": null,
+      "controls": [
+        {
+          "key": "C",
+          "type": "select",
+          "options": [
+            [
+              470,
+              "470 μF"
+            ],
+            [
+              1000,
+              "1000 μF"
+            ],
+            [
+              2200,
+              "2200 μF"
+            ],
+            [
+              4700,
+              "4700 μF"
+            ]
+          ]
+        },
+        {
+          "key": "discharge",
+          "type": "button"
+        }
+      ],
+      "verified": false
+    },
+    {
+      "id": "motor",
+      "name": "教学直流电动机",
+      "terminals": {
+        "A": {
+          "label": "接线柱 A（电刷）"
+        },
+        "B": {
+          "label": "接线柱 B（电刷）"
+        }
+      },
+      "defaults": {
+        "stalled": false
+      },
+      "initialState": {
+        "w": 0,
+        "stalled": false,
+        "angle": 0
+      },
+      "procedural": false,
+      "thumbnail": "dc_motor_cadquery",
+      "controls": [
+        {
+          "key": "stalled",
+          "type": "toggle"
+        }
+      ],
+      "verified": false
+    },
+    {
+      "id": "solenoid",
+      "name": "螺线管与铁芯",
+      "terminals": {
+        "A": {
+          "label": "接线柱 A"
+        },
+        "B": {
+          "label": "接线柱 B"
+        }
+      },
+      "defaults": {
+        "core": true
+      },
+      "initialState": {},
+      "procedural": false,
+      "thumbnail": "solenoid_cadquery",
+      "controls": [
+        {
+          "key": "core",
+          "type": "toggle"
+        }
+      ],
+      "verified": false
+    }
+  ]
+}

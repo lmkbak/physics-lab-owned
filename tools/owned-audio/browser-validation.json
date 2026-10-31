@@ -1,0 +1,1537 @@
+{
+  "scope": "isolated owned audio candidate only; no production integration",
+  "url": "http://127.0.0.1:5173/owned-audio/audition.html",
+  "humanListening": "pending",
+  "realEngine": "Installed Chrome headless; native AudioContext and OfflineAudioContext; hardware destination muted via launch flag (not a listening verdict)",
+  "results": [
+    {
+      "name": "cold page has six paused preload-none players and no AudioContext",
+      "pass": true,
+      "evidence": {
+        "contextType": "undefined",
+        "active": 0,
+        "players": [
+          {
+            "paused": true,
+            "preload": "none",
+            "current": 0,
+            "readyState": 0
+          },
+          {
+            "paused": true,
+            "preload": "none",
+            "current": 0,
+            "readyState": 0
+          },
+          {
+            "paused": true,
+            "preload": "none",
+            "current": 0,
+            "readyState": 0
+          },
+          {
+            "paused": true,
+            "preload": "none",
+            "current": 0,
+            "readyState": 0
+          },
+          {
+            "paused": true,
+            "preload": "none",
+            "current": 0,
+            "readyState": 0
+          },
+          {
+            "paused": true,
+            "preload": "none",
+            "current": 0,
+            "readyState": 0
+          }
+        ]
+      }
+    },
+    {
+      "name": "trusted click creates running real AudioContext, stop removes sources",
+      "pass": true,
+      "evidence": {
+        "before": {
+          "type": "AudioContext",
+          "state": "running",
+          "sampleRate": 48000,
+          "active": 1,
+          "loop": true
+        },
+        "after": 0
+      }
+    },
+    {
+      "name": "six candidates decode through native real AudioContext",
+      "pass": true,
+      "evidence": [
+        {
+          "name": "click-switch",
+          "sampleRate": 48000,
+          "channels": 1,
+          "duration": 0.18,
+          "peak": 0.6610720157623291,
+          "rms": 0.053116442742796414
+        },
+        {
+          "name": "impact-glass",
+          "sampleRate": 48000,
+          "channels": 1,
+          "duration": 1.05,
+          "peak": 0.725149393081665,
+          "rms": 0.07745505616541763
+        },
+        {
+          "name": "impact-metal",
+          "sampleRate": 48000,
+          "channels": 1,
+          "duration": 1.25,
+          "peak": 0.7502881288528442,
+          "rms": 0.08505884820437033
+        },
+        {
+          "name": "impact-wood",
+          "sampleRate": 48000,
+          "channels": 1,
+          "duration": 0.42,
+          "peak": 0.7603396773338318,
+          "rms": 0.08366822234744103
+        },
+        {
+          "name": "explosion",
+          "sampleRate": 48000,
+          "channels": 1,
+          "duration": 0.95,
+          "peak": 0.8360447287559509,
+          "rms": 0.09779058963454917
+        },
+        {
+          "name": "motor",
+          "sampleRate": 48000,
+          "channels": 1,
+          "duration": 1.2,
+          "peak": 0.5837185382843018,
+          "rms": 0.2644510681647438
+        }
+      ]
+    },
+    {
+      "name": "click-switch: real media play, nonzero analyser, natural end or timed release",
+      "pass": true,
+      "evidence": {
+        "engine": "running",
+        "playing": false,
+        "rate": null,
+        "gain": null,
+        "loop": false,
+        "analyserPeak": 0.4112025499343872,
+        "polls": 60,
+        "measurement": "analyser attached before gesture; 4ms polling captures full transient",
+        "released": true
+      }
+    },
+    {
+      "name": "impact-glass: real media play, nonzero analyser, natural end or timed release",
+      "pass": true,
+      "evidence": {
+        "engine": "running",
+        "playing": true,
+        "rate": 1.05,
+        "gain": 0.4000000059604645,
+        "loop": false,
+        "analyserPeak": 0.29192420840263367,
+        "polls": 58,
+        "measurement": "analyser attached before gesture; 4ms polling captures full transient",
+        "released": true
+      }
+    },
+    {
+      "name": "impact-metal: real media play, nonzero analyser, natural end or timed release",
+      "pass": true,
+      "evidence": {
+        "engine": "running",
+        "playing": true,
+        "rate": 1.05,
+        "gain": 0.4000000059604645,
+        "loop": false,
+        "analyserPeak": 0.3058605492115021,
+        "polls": 62,
+        "measurement": "analyser attached before gesture; 4ms polling captures full transient",
+        "released": true
+      }
+    },
+    {
+      "name": "impact-wood: real media play, nonzero analyser, natural end or timed release",
+      "pass": true,
+      "evidence": {
+        "engine": "running",
+        "playing": true,
+        "rate": 1.05,
+        "gain": 0.4000000059604645,
+        "loop": false,
+        "analyserPeak": 0.3044648766517639,
+        "polls": 61,
+        "measurement": "analyser attached before gesture; 4ms polling captures full transient",
+        "released": true
+      }
+    },
+    {
+      "name": "explosion: real media play, nonzero analyser, natural end or timed release",
+      "pass": true,
+      "evidence": {
+        "engine": "running",
+        "playing": true,
+        "rate": 1.05,
+        "gain": 0.800000011920929,
+        "loop": false,
+        "analyserPeak": 0.662483811378479,
+        "polls": 63,
+        "measurement": "analyser attached before gesture; 4ms polling captures full transient",
+        "released": true
+      }
+    },
+    {
+      "name": "motor: real media play, nonzero analyser, natural end or timed release",
+      "pass": true,
+      "evidence": {
+        "engine": "running",
+        "playing": true,
+        "rate": 1,
+        "gain": 0.1294441968202591,
+        "loop": true,
+        "analyserPeak": 0.09013176709413528,
+        "polls": 61,
+        "measurement": "analyser attached before gesture; 4ms polling captures full transient",
+        "released": true
+      }
+    },
+    {
+      "name": "real controls preserve bounded gain/playbackRate/rpm formulas",
+      "pass": true,
+      "evidence": [
+        {
+          "name": "click-switch",
+          "a": "0",
+          "b": null,
+          "expected": {
+            "gain": 0.18,
+            "rate": 0.92
+          },
+          "actual": {
+            "rate": 0.92,
+            "gain": 0.18000000715255737,
+            "loop": false,
+            "display": "http://127.0.0.1:5173/owned-audio/click-switch.wav"
+          }
+        },
+        {
+          "name": "click-switch",
+          "a": "1",
+          "b": null,
+          "expected": {
+            "gain": 0.63,
+            "rate": 1.1
+          },
+          "actual": {
+            "rate": 1.1,
+            "gain": 0.6299999952316284,
+            "loop": false,
+            "display": "http://127.0.0.1:5173/owned-audio/click-switch.wav"
+          }
+        },
+        {
+          "name": "impact-metal",
+          "a": "0",
+          "b": "1",
+          "expected": {
+            "gain": 0.1,
+            "rate": 1.05
+          },
+          "actual": {
+            "rate": 1.05,
+            "gain": 0.10000000149011612,
+            "loop": false,
+            "display": "http://127.0.0.1:5173/owned-audio/impact-metal.wav"
+          }
+        },
+        {
+          "name": "impact-metal",
+          "a": "20",
+          "b": "20",
+          "expected": {
+            "gain": 0.62,
+            "rate": 0.7
+          },
+          "actual": {
+            "rate": 0.7,
+            "gain": 0.6200000047683716,
+            "loop": false,
+            "display": "http://127.0.0.1:5173/owned-audio/impact-metal.wav"
+          }
+        },
+        {
+          "name": "explosion",
+          "a": "0",
+          "b": null,
+          "expected": {
+            "gain": 0.25,
+            "rate": 0.95
+          },
+          "actual": {
+            "rate": 0.95,
+            "gain": 0.25,
+            "loop": false,
+            "display": "http://127.0.0.1:5173/owned-audio/explosion.wav"
+          }
+        },
+        {
+          "name": "explosion",
+          "a": "1",
+          "b": null,
+          "expected": {
+            "gain": 0.8,
+            "rate": 1.05
+          },
+          "actual": {
+            "rate": 1.05,
+            "gain": 0.800000011920929,
+            "loop": false,
+            "display": "http://127.0.0.1:5173/owned-audio/explosion.wav"
+          }
+        },
+        {
+          "name": "motor",
+          "a": "0",
+          "b": null,
+          "expected": {
+            "gain": 0.16,
+            "rate": 0.55
+          },
+          "actual": {
+            "rate": 0.55,
+            "gain": 0.15467286109924316,
+            "loop": true,
+            "display": "http://127.0.0.1:5173/owned-audio/motor.wav"
+          }
+        },
+        {
+          "name": "motor",
+          "a": "600",
+          "b": null,
+          "expected": {
+            "gain": 0.16,
+            "rate": 1
+          },
+          "actual": {
+            "rate": 1,
+            "gain": 0.1575155258178711,
+            "loop": true,
+            "display": "http://127.0.0.1:5173/owned-audio/motor.wav"
+          }
+        },
+        {
+          "name": "motor",
+          "a": "2400",
+          "b": null,
+          "expected": {
+            "gain": 0.16,
+            "rate": 1.8
+          },
+          "actual": {
+            "rate": 1.8,
+            "gain": 0.1571601927280426,
+            "loop": true,
+            "display": "http://127.0.0.1:5173/owned-audio/motor.wav"
+          }
+        }
+      ]
+    },
+    {
+      "name": "native motor player completes five continuous loops at rate 1.8 and stops",
+      "pass": true,
+      "evidence": {
+        "wraps": 5,
+        "paused": false,
+        "ended": false,
+        "loop": true,
+        "rate": 1.8,
+        "samples": 249,
+        "error": null
+      }
+    },
+    {
+      "name": "browserLoopExcess: native loop versus independent continuous PCM at three rates and zero mute",
+      "pass": true,
+      "evidence": [
+        {
+          "rate": 0.55,
+          "gain": 1,
+          "engine": "OfflineAudioContext",
+          "renderSeconds": 7,
+          "joinCount": 3,
+          "joins": [
+            {
+              "frame": 96218,
+              "maxAdjacentDifference": 0.00023894710466265678,
+              "referenceAdjacentDifference": 0.00023894710466265678,
+              "seamExcessDifference": 0
+            },
+            {
+              "frame": 192436,
+              "maxAdjacentDifference": 0.0001605115830898285,
+              "referenceAdjacentDifference": 0.0001605115830898285,
+              "seamExcessDifference": 0
+            },
+            {
+              "frame": 288655,
+              "maxAdjacentDifference": 0.00043640146031975746,
+              "referenceAdjacentDifference": 0.00043640146031975746,
+              "seamExcessDifference": 0
+            }
+          ],
+          "normalWindows": [
+            {
+              "frame": 48109,
+              "maxAdjacentDifference": 0.022877791430801153,
+              "referenceAdjacentDifference": 0.022877791430801153,
+              "seamExcessDifference": 0
+            },
+            {
+              "frame": 144327,
+              "maxAdjacentDifference": 0.02287779189646244,
+              "referenceAdjacentDifference": 0.02287779189646244,
+              "seamExcessDifference": 0
+            },
+            {
+              "frame": 240545,
+              "maxAdjacentDifference": 0.02287779189646244,
+              "referenceAdjacentDifference": 0.02287779189646244,
+              "seamExcessDifference": 0
+            }
+          ],
+          "rms": 0.2643640606515276,
+          "peak": 0.578852653503418,
+          "maxAdjacentDifference": 0.03021240234375,
+          "rawFixedThreshold": 0.02,
+          "rawFixedThresholdPass": true,
+          "independentSeamExcessThreshold": 0.02,
+          "independentSeamExcessPass": true,
+          "comparison": "native loop versus independently expanded PCM nonloop at identical rate; original raw .02 threshold retained, not reclassified"
+        },
+        {
+          "rate": 0.55,
+          "gain": 0,
+          "engine": "OfflineAudioContext",
+          "renderSeconds": 7,
+          "joinCount": 3,
+          "joins": [
+            {
+              "frame": 96218,
+              "maxAdjacentDifference": 0,
+              "referenceAdjacentDifference": 0,
+              "seamExcessDifference": 0
+            },
+            {
+              "frame": 192436,
+              "maxAdjacentDifference": 0,
+              "referenceAdjacentDifference": 0,
+              "seamExcessDifference": 0
+            },
+            {
+              "frame": 288655,
+              "maxAdjacentDifference": 0,
+              "referenceAdjacentDifference": 0,
+              "seamExcessDifference": 0
+            }
+          ],
+          "normalWindows": [
+            {
+              "frame": 48109,
+              "maxAdjacentDifference": 0,
+              "referenceAdjacentDifference": 0,
+              "seamExcessDifference": 0
+            },
+            {
+              "frame": 144327,
+              "maxAdjacentDifference": 0,
+              "referenceAdjacentDifference": 0,
+              "seamExcessDifference": 0
+            },
+            {
+              "frame": 240545,
+              "maxAdjacentDifference": 0,
+              "referenceAdjacentDifference": 0,
+              "seamExcessDifference": 0
+            }
+          ],
+          "rms": 0,
+          "peak": 0,
+          "maxAdjacentDifference": 0,
+          "rawFixedThreshold": 0.02,
+          "rawFixedThresholdPass": true,
+          "independentSeamExcessThreshold": 0.02,
+          "independentSeamExcessPass": true,
+          "comparison": "native loop versus independently expanded PCM nonloop at identical rate; original raw .02 threshold retained, not reclassified"
+        },
+        {
+          "rate": 1,
+          "gain": 1,
+          "engine": "OfflineAudioContext",
+          "renderSeconds": 7,
+          "joinCount": 5,
+          "joins": [
+            {
+              "frame": 52920,
+              "maxAdjacentDifference": 0.005462813191115856,
+              "referenceAdjacentDifference": 0.005462813191115856,
+              "seamExcessDifference": 0
+            },
+            {
+              "frame": 105840,
+              "maxAdjacentDifference": 0.005462813191115856,
+              "referenceAdjacentDifference": 0.005462813191115856,
+              "seamExcessDifference": 0
+            },
+            {
+              "frame": 158760,
+              "maxAdjacentDifference": 0.005462813191115856,
+              "referenceAdjacentDifference": 0.005462813191115856,
+              "seamExcessDifference": 0
+            },
+            {
+              "frame": 211680,
+              "maxAdjacentDifference": 0.005462813191115856,
+              "referenceAdjacentDifference": 0.005462813191115856,
+              "seamExcessDifference": 0
+            },
+            {
+              "frame": 264600,
+              "maxAdjacentDifference": 0.005462813191115856,
+              "referenceAdjacentDifference": 0.005462813191115856,
+              "seamExcessDifference": 0
+            }
+          ],
+          "normalWindows": [
+            {
+              "frame": 26460,
+              "maxAdjacentDifference": 0.04159598425030708,
+              "referenceAdjacentDifference": 0.04159598425030708,
+              "seamExcessDifference": 0
+            },
+            {
+              "frame": 79380,
+              "maxAdjacentDifference": 0.04159598425030708,
+              "referenceAdjacentDifference": 0.04159598425030708,
+              "seamExcessDifference": 0
+            },
+            {
+              "frame": 132300,
+              "maxAdjacentDifference": 0.04159598425030708,
+              "referenceAdjacentDifference": 0.04159598425030708,
+              "seamExcessDifference": 0
+            },
+            {
+              "frame": 185220,
+              "maxAdjacentDifference": 0.04159598425030708,
+              "referenceAdjacentDifference": 0.04159598425030708,
+              "seamExcessDifference": 0
+            },
+            {
+              "frame": 238140,
+              "maxAdjacentDifference": 0.04159598425030708,
+              "referenceAdjacentDifference": 0.04159598425030708,
+              "seamExcessDifference": 0
+            }
+          ],
+          "rms": 0.264476636338477,
+          "peak": 0.5800042748451233,
+          "maxAdjacentDifference": 0.054931640625,
+          "rawFixedThreshold": 0.02,
+          "rawFixedThresholdPass": true,
+          "independentSeamExcessThreshold": 0.02,
+          "independentSeamExcessPass": true,
+          "comparison": "native loop versus independently expanded PCM nonloop at identical rate; original raw .02 threshold retained, not reclassified"
+        },
+        {
+          "rate": 1,
+          "gain": 0,
+          "engine": "OfflineAudioContext",
+          "renderSeconds": 7,
+          "joinCount": 5,
+          "joins": [
+            {
+              "frame": 52920,
+              "maxAdjacentDifference": 0,
+              "referenceAdjacentDifference": 0,
+              "seamExcessDifference": 0
+            },
+            {
+              "frame": 105840,
+              "maxAdjacentDifference": 0,
+              "referenceAdjacentDifference": 0,
+              "seamExcessDifference": 0
+            },
+            {
+              "frame": 158760,
+              "maxAdjacentDifference": 0,
+              "referenceAdjacentDifference": 0,
+              "seamExcessDifference": 0
+            },
+            {
+              "frame": 211680,
+              "maxAdjacentDifference": 0,
+              "referenceAdjacentDifference": 0,
+              "seamExcessDifference": 0
+            },
+            {
+              "frame": 264600,
+              "maxAdjacentDifference": 0,
+              "referenceAdjacentDifference": 0,
+              "seamExcessDifference": 0
+            }
+          ],
+          "normalWindows": [
+            {
+              "frame": 26460,
+              "maxAdjacentDifference": 0,
+              "referenceAdjacentDifference": 0,
+              "seamExcessDifference": 0
+            },
+            {
+              "frame": 79380,
+              "maxAdjacentDifference": 0,
+              "referenceAdjacentDifference": 0,
+              "seamExcessDifference": 0
+            },
+            {
+              "frame": 132300,
+              "maxAdjacentDifference": 0,
+              "referenceAdjacentDifference": 0,
+              "seamExcessDifference": 0
+            },
+            {
+              "frame": 185220,
+              "maxAdjacentDifference": 0,
+              "referenceAdjacentDifference": 0,
+              "seamExcessDifference": 0
+            },
+            {
+              "frame": 238140,
+              "maxAdjacentDifference": 0,
+              "referenceAdjacentDifference": 0,
+              "seamExcessDifference": 0
+            }
+          ],
+          "rms": 0,
+          "peak": 0,
+          "maxAdjacentDifference": 0,
+          "rawFixedThreshold": 0.02,
+          "rawFixedThresholdPass": true,
+          "independentSeamExcessThreshold": 0.02,
+          "independentSeamExcessPass": true,
+          "comparison": "native loop versus independently expanded PCM nonloop at identical rate; original raw .02 threshold retained, not reclassified"
+        },
+        {
+          "rate": 1.8,
+          "gain": 1,
+          "engine": "OfflineAudioContext",
+          "renderSeconds": 7,
+          "joinCount": 10,
+          "joins": [
+            {
+              "frame": 29400,
+              "maxAdjacentDifference": 0.024146784096956253,
+              "referenceAdjacentDifference": 0.024146784096956253,
+              "seamExcessDifference": 0
+            },
+            {
+              "frame": 58800,
+              "maxAdjacentDifference": 0.02414122223854065,
+              "referenceAdjacentDifference": 0.02414122223854065,
+              "seamExcessDifference": 0
+            },
+            {
+              "frame": 88200,
+              "maxAdjacentDifference": 0.024135660380125046,
+              "referenceAdjacentDifference": 0.024135660380125046,
+              "seamExcessDifference": 0
+            },
+            {
+              "frame": 117600,
+              "maxAdjacentDifference": 0.024130098521709442,
+              "referenceAdjacentDifference": 0.024130098521709442,
+              "seamExcessDifference": 0
+            },
+            {
+              "frame": 147000,
+              "maxAdjacentDifference": 0.02412453666329384,
+              "referenceAdjacentDifference": 0.02412453666329384,
+              "seamExcessDifference": 0
+            },
+            {
+              "frame": 176400,
+              "maxAdjacentDifference": 0.024118974804878235,
+              "referenceAdjacentDifference": 0.024118974804878235,
+              "seamExcessDifference": 0
+            },
+            {
+              "frame": 205800,
+              "maxAdjacentDifference": 0.024113409221172333,
+              "referenceAdjacentDifference": 0.024113409221172333,
+              "seamExcessDifference": 0
+            },
+            {
+              "frame": 235200,
+              "maxAdjacentDifference": 0.024107851088047028,
+              "referenceAdjacentDifference": 0.024107851088047028,
+              "seamExcessDifference": 0
+            },
+            {
+              "frame": 264600,
+              "maxAdjacentDifference": 0.024102289229631424,
+              "referenceAdjacentDifference": 0.024102289229631424,
+              "seamExcessDifference": 0
+            },
+            {
+              "frame": 294000,
+              "maxAdjacentDifference": 0.02409672737121582,
+              "referenceAdjacentDifference": 0.02409672737121582,
+              "seamExcessDifference": 0
+            }
+          ],
+          "normalWindows": [
+            {
+              "frame": 14700,
+              "maxAdjacentDifference": 0.052293991670012474,
+              "referenceAdjacentDifference": 0.052293991670012474,
+              "seamExcessDifference": 0
+            },
+            {
+              "frame": 44100,
+              "maxAdjacentDifference": 0.052254460752010345,
+              "referenceAdjacentDifference": 0.052254460752010345,
+              "seamExcessDifference": 0
+            },
+            {
+              "frame": 73500,
+              "maxAdjacentDifference": 0.05221492610871792,
+              "referenceAdjacentDifference": 0.05221492610871792,
+              "seamExcessDifference": 0
+            },
+            {
+              "frame": 102900,
+              "maxAdjacentDifference": 0.05217539519071579,
+              "referenceAdjacentDifference": 0.05217539519071579,
+              "seamExcessDifference": 0
+            },
+            {
+              "frame": 132300,
+              "maxAdjacentDifference": 0.05213586427271366,
+              "referenceAdjacentDifference": 0.05213586427271366,
+              "seamExcessDifference": 0
+            },
+            {
+              "frame": 161700,
+              "maxAdjacentDifference": 0.05209633149206638,
+              "referenceAdjacentDifference": 0.05209633149206638,
+              "seamExcessDifference": 0
+            },
+            {
+              "frame": 191100,
+              "maxAdjacentDifference": 0.052056800574064255,
+              "referenceAdjacentDifference": 0.052056800574064255,
+              "seamExcessDifference": 0
+            },
+            {
+              "frame": 220500,
+              "maxAdjacentDifference": 0.052017269656062126,
+              "referenceAdjacentDifference": 0.052017269656062126,
+              "seamExcessDifference": 0
+            },
+            {
+              "frame": 249900,
+              "maxAdjacentDifference": 0.0519777350127697,
+              "referenceAdjacentDifference": 0.0519777350127697,
+              "seamExcessDifference": 0
+            },
+            {
+              "frame": 279300,
+              "maxAdjacentDifference": 0.05193820409476757,
+              "referenceAdjacentDifference": 0.05193820409476757,
+              "seamExcessDifference": 0
+            }
+          ],
+          "rms": 0.26436880875482366,
+          "peak": 0.5768256783485413,
+          "maxAdjacentDifference": 0.07028819806873798,
+          "rawFixedThreshold": 0.02,
+          "rawFixedThresholdPass": false,
+          "independentSeamExcessThreshold": 0.02,
+          "independentSeamExcessPass": true,
+          "comparison": "native loop versus independently expanded PCM nonloop at identical rate; original raw .02 threshold retained, not reclassified"
+        },
+        {
+          "rate": 1.8,
+          "gain": 0,
+          "engine": "OfflineAudioContext",
+          "renderSeconds": 7,
+          "joinCount": 10,
+          "joins": [
+            {
+              "frame": 29400,
+              "maxAdjacentDifference": 0,
+              "referenceAdjacentDifference": 0,
+              "seamExcessDifference": 0
+            },
+            {
+              "frame": 58800,
+              "maxAdjacentDifference": 0,
+              "referenceAdjacentDifference": 0,
+              "seamExcessDifference": 0
+            },
+            {
+              "frame": 88200,
+              "maxAdjacentDifference": 0,
+              "referenceAdjacentDifference": 0,
+              "seamExcessDifference": 0
+            },
+            {
+              "frame": 117600,
+              "maxAdjacentDifference": 0,
+              "referenceAdjacentDifference": 0,
+              "seamExcessDifference": 0
+            },
+            {
+              "frame": 147000,
+              "maxAdjacentDifference": 0,
+              "referenceAdjacentDifference": 0,
+              "seamExcessDifference": 0
+            },
+            {
+              "frame": 176400,
+              "maxAdjacentDifference": 0,
+              "referenceAdjacentDifference": 0,
+              "seamExcessDifference": 0
+            },
+            {
+              "frame": 205800,
+              "maxAdjacentDifference": 0,
+              "referenceAdjacentDifference": 0,
+              "seamExcessDifference": 0
+            },
+            {
+              "frame": 235200,
+              "maxAdjacentDifference": 0,
+              "referenceAdjacentDifference": 0,
+              "seamExcessDifference": 0
+            },
+            {
+              "frame": 264600,
+              "maxAdjacentDifference": 0,
+              "referenceAdjacentDifference": 0,
+              "seamExcessDifference": 0
+            },
+            {
+              "frame": 294000,
+              "maxAdjacentDifference": 0,
+              "referenceAdjacentDifference": 0,
+              "seamExcessDifference": 0
+            }
+          ],
+          "normalWindows": [
+            {
+              "frame": 14700,
+              "maxAdjacentDifference": 0,
+              "referenceAdjacentDifference": 0,
+              "seamExcessDifference": 0
+            },
+            {
+              "frame": 44100,
+              "maxAdjacentDifference": 0,
+              "referenceAdjacentDifference": 0,
+              "seamExcessDifference": 0
+            },
+            {
+              "frame": 73500,
+              "maxAdjacentDifference": 0,
+              "referenceAdjacentDifference": 0,
+              "seamExcessDifference": 0
+            },
+            {
+              "frame": 102900,
+              "maxAdjacentDifference": 0,
+              "referenceAdjacentDifference": 0,
+              "seamExcessDifference": 0
+            },
+            {
+              "frame": 132300,
+              "maxAdjacentDifference": 0,
+              "referenceAdjacentDifference": 0,
+              "seamExcessDifference": 0
+            },
+            {
+              "frame": 161700,
+              "maxAdjacentDifference": 0,
+              "referenceAdjacentDifference": 0,
+              "seamExcessDifference": 0
+            },
+            {
+              "frame": 191100,
+              "maxAdjacentDifference": 0,
+              "referenceAdjacentDifference": 0,
+              "seamExcessDifference": 0
+            },
+            {
+              "frame": 220500,
+              "maxAdjacentDifference": 0,
+              "referenceAdjacentDifference": 0,
+              "seamExcessDifference": 0
+            },
+            {
+              "frame": 249900,
+              "maxAdjacentDifference": 0,
+              "referenceAdjacentDifference": 0,
+              "seamExcessDifference": 0
+            },
+            {
+              "frame": 279300,
+              "maxAdjacentDifference": 0,
+              "referenceAdjacentDifference": 0,
+              "seamExcessDifference": 0
+            }
+          ],
+          "rms": 0,
+          "peak": 0,
+          "maxAdjacentDifference": 0,
+          "rawFixedThreshold": 0.02,
+          "rawFixedThresholdPass": true,
+          "independentSeamExcessThreshold": 0.02,
+          "independentSeamExcessPass": true,
+          "comparison": "native loop versus independently expanded PCM nonloop at identical rate; original raw .02 threshold retained, not reclassified"
+        }
+      ]
+    },
+    {
+      "name": "browser pagehide releases real graph and page restore creates new context",
+      "pass": true,
+      "evidence": {
+        "hidden": {
+          "active": 0,
+          "cleared": true,
+          "oldState": "closed"
+        },
+        "restored": {
+          "newContext": true,
+          "state": "running",
+          "active": 1
+        },
+        "event": "real PageTransitionEvent dispatched to page; graph is native; BFCache navigation itself not asserted"
+      }
+    },
+    {
+      "name": "real page navigation and cold reload release playback and remain silent",
+      "pass": true,
+      "evidence": {
+        "contextType": "undefined",
+        "active": 0,
+        "paused": true
+      }
+    }
+  ],
+  "requests": [
+    "http://127.0.0.1:5173/owned-audio/audition.html",
+    "http://127.0.0.1:5173/owned-audio/motor.wav",
+    "http://127.0.0.1:5173/owned-audio/click-switch.wav",
+    "http://127.0.0.1:5173/owned-audio/impact-glass.wav",
+    "http://127.0.0.1:5173/owned-audio/impact-metal.wav",
+    "http://127.0.0.1:5173/owned-audio/impact-wood.wav",
+    "http://127.0.0.1:5173/owned-audio/explosion.wav",
+    "http://127.0.0.1:5173/owned-audio/motor.wav",
+    "http://127.0.0.1:5173/owned-audio/click-switch.wav",
+    "http://127.0.0.1:5173/owned-audio/impact-glass.wav",
+    "http://127.0.0.1:5173/owned-audio/impact-metal.wav",
+    "http://127.0.0.1:5173/owned-audio/impact-wood.wav",
+    "http://127.0.0.1:5173/owned-audio/explosion.wav",
+    "http://127.0.0.1:5173/owned-audio/motor.wav",
+    "http://127.0.0.1:5173/owned-audio/click-switch.wav",
+    "http://127.0.0.1:5173/owned-audio/click-switch.wav",
+    "http://127.0.0.1:5173/owned-audio/impact-metal.wav",
+    "http://127.0.0.1:5173/owned-audio/impact-metal.wav",
+    "http://127.0.0.1:5173/owned-audio/explosion.wav",
+    "http://127.0.0.1:5173/owned-audio/explosion.wav",
+    "http://127.0.0.1:5173/owned-audio/motor.wav",
+    "http://127.0.0.1:5173/owned-audio/motor.wav",
+    "http://127.0.0.1:5173/owned-audio/motor.wav",
+    "http://127.0.0.1:5173/owned-audio/motor.wav",
+    "http://127.0.0.1:5173/owned-audio/motor.wav",
+    "http://127.0.0.1:5173/owned-audio/motor.wav",
+    "http://127.0.0.1:5173/owned-audio/motor.wav",
+    "http://127.0.0.1:5173/owned-audio/audition.html"
+  ],
+  "errors": [],
+  "browserLoopExcessContract": {
+    "version": 2,
+    "threshold": 0.02,
+    "metric": "maximum adjacent-difference residual: native loop minus independently expanded nonloop PCM at same rate, each join +/-8 frames",
+    "rawFixedThreshold": "retained as diagnostic only; arbitrary waveform slope is not physical discontinuity",
+    "limitation": "reference repeats asset tail/head too; this checks browser-loop-added discontinuity only, not original PCM seam quality or human listening"
+  },
+  "motorLoopEvidence": [
+    {
+      "rate": 0.55,
+      "gain": 1,
+      "engine": "OfflineAudioContext",
+      "renderSeconds": 7,
+      "joinCount": 3,
+      "joins": [
+        {
+          "frame": 96218,
+          "maxAdjacentDifference": 0.00023894710466265678,
+          "referenceAdjacentDifference": 0.00023894710466265678,
+          "seamExcessDifference": 0
+        },
+        {
+          "frame": 192436,
+          "maxAdjacentDifference": 0.0001605115830898285,
+          "referenceAdjacentDifference": 0.0001605115830898285,
+          "seamExcessDifference": 0
+        },
+        {
+          "frame": 288655,
+          "maxAdjacentDifference": 0.00043640146031975746,
+          "referenceAdjacentDifference": 0.00043640146031975746,
+          "seamExcessDifference": 0
+        }
+      ],
+      "normalWindows": [
+        {
+          "frame": 48109,
+          "maxAdjacentDifference": 0.022877791430801153,
+          "referenceAdjacentDifference": 0.022877791430801153,
+          "seamExcessDifference": 0
+        },
+        {
+          "frame": 144327,
+          "maxAdjacentDifference": 0.02287779189646244,
+          "referenceAdjacentDifference": 0.02287779189646244,
+          "seamExcessDifference": 0
+        },
+        {
+          "frame": 240545,
+          "maxAdjacentDifference": 0.02287779189646244,
+          "referenceAdjacentDifference": 0.02287779189646244,
+          "seamExcessDifference": 0
+        }
+      ],
+      "rms": 0.2643640606515276,
+      "peak": 0.578852653503418,
+      "maxAdjacentDifference": 0.03021240234375,
+      "rawFixedThreshold": 0.02,
+      "rawFixedThresholdPass": true,
+      "independentSeamExcessThreshold": 0.02,
+      "independentSeamExcessPass": true,
+      "comparison": "native loop versus independently expanded PCM nonloop at identical rate; original raw .02 threshold retained, not reclassified"
+    },
+    {
+      "rate": 0.55,
+      "gain": 0,
+      "engine": "OfflineAudioContext",
+      "renderSeconds": 7,
+      "joinCount": 3,
+      "joins": [
+        {
+          "frame": 96218,
+          "maxAdjacentDifference": 0,
+          "referenceAdjacentDifference": 0,
+          "seamExcessDifference": 0
+        },
+        {
+          "frame": 192436,
+          "maxAdjacentDifference": 0,
+          "referenceAdjacentDifference": 0,
+          "seamExcessDifference": 0
+        },
+        {
+          "frame": 288655,
+          "maxAdjacentDifference": 0,
+          "referenceAdjacentDifference": 0,
+          "seamExcessDifference": 0
+        }
+      ],
+      "normalWindows": [
+        {
+          "frame": 48109,
+          "maxAdjacentDifference": 0,
+          "referenceAdjacentDifference": 0,
+          "seamExcessDifference": 0
+        },
+        {
+          "frame": 144327,
+          "maxAdjacentDifference": 0,
+          "referenceAdjacentDifference": 0,
+          "seamExcessDifference": 0
+        },
+        {
+          "frame": 240545,
+          "maxAdjacentDifference": 0,
+          "referenceAdjacentDifference": 0,
+          "seamExcessDifference": 0
+        }
+      ],
+      "rms": 0,
+      "peak": 0,
+      "maxAdjacentDifference": 0,
+      "rawFixedThreshold": 0.02,
+      "rawFixedThresholdPass": true,
+      "independentSeamExcessThreshold": 0.02,
+      "independentSeamExcessPass": true,
+      "comparison": "native loop versus independently expanded PCM nonloop at identical rate; original raw .02 threshold retained, not reclassified"
+    },
+    {
+      "rate": 1,
+      "gain": 1,
+      "engine": "OfflineAudioContext",
+      "renderSeconds": 7,
+      "joinCount": 5,
+      "joins": [
+        {
+          "frame": 52920,
+          "maxAdjacentDifference": 0.005462813191115856,
+          "referenceAdjacentDifference": 0.005462813191115856,
+          "seamExcessDifference": 0
+        },
+        {
+          "frame": 105840,
+          "maxAdjacentDifference": 0.005462813191115856,
+          "referenceAdjacentDifference": 0.005462813191115856,
+          "seamExcessDifference": 0
+        },
+        {
+          "frame": 158760,
+          "maxAdjacentDifference": 0.005462813191115856,
+          "referenceAdjacentDifference": 0.005462813191115856,
+          "seamExcessDifference": 0
+        },
+        {
+          "frame": 211680,
+          "maxAdjacentDifference": 0.005462813191115856,
+          "referenceAdjacentDifference": 0.005462813191115856,
+          "seamExcessDifference": 0
+        },
+        {
+          "frame": 264600,
+          "maxAdjacentDifference": 0.005462813191115856,
+          "referenceAdjacentDifference": 0.005462813191115856,
+          "seamExcessDifference": 0
+        }
+      ],
+      "normalWindows": [
+        {
+          "frame": 26460,
+          "maxAdjacentDifference": 0.04159598425030708,
+          "referenceAdjacentDifference": 0.04159598425030708,
+          "seamExcessDifference": 0
+        },
+        {
+          "frame": 79380,
+          "maxAdjacentDifference": 0.04159598425030708,
+          "referenceAdjacentDifference": 0.04159598425030708,
+          "seamExcessDifference": 0
+        },
+        {
+          "frame": 132300,
+          "maxAdjacentDifference": 0.04159598425030708,
+          "referenceAdjacentDifference": 0.04159598425030708,
+          "seamExcessDifference": 0
+        },
+        {
+          "frame": 185220,
+          "maxAdjacentDifference": 0.04159598425030708,
+          "referenceAdjacentDifference": 0.04159598425030708,
+          "seamExcessDifference": 0
+        },
+        {
+          "frame": 238140,
+          "maxAdjacentDifference": 0.04159598425030708,
+          "referenceAdjacentDifference": 0.04159598425030708,
+          "seamExcessDifference": 0
+        }
+      ],
+      "rms": 0.264476636338477,
+      "peak": 0.5800042748451233,
+      "maxAdjacentDifference": 0.054931640625,
+      "rawFixedThreshold": 0.02,
+      "rawFixedThresholdPass": true,
+      "independentSeamExcessThreshold": 0.02,
+      "independentSeamExcessPass": true,
+      "comparison": "native loop versus independently expanded PCM nonloop at identical rate; original raw .02 threshold retained, not reclassified"
+    },
+    {
+      "rate": 1,
+      "gain": 0,
+      "engine": "OfflineAudioContext",
+      "renderSeconds": 7,
+      "joinCount": 5,
+      "joins": [
+        {
+          "frame": 52920,
+          "maxAdjacentDifference": 0,
+          "referenceAdjacentDifference": 0,
+          "seamExcessDifference": 0
+        },
+        {
+          "frame": 105840,
+          "maxAdjacentDifference": 0,
+          "referenceAdjacentDifference": 0,
+          "seamExcessDifference": 0
+        },
+        {
+          "frame": 158760,
+          "maxAdjacentDifference": 0,
+          "referenceAdjacentDifference": 0,
+          "seamExcessDifference": 0
+        },
+        {
+          "frame": 211680,
+          "maxAdjacentDifference": 0,
+          "referenceAdjacentDifference": 0,
+          "seamExcessDifference": 0
+        },
+        {
+          "frame": 264600,
+          "maxAdjacentDifference": 0,
+          "referenceAdjacentDifference": 0,
+          "seamExcessDifference": 0
+        }
+      ],
+      "normalWindows": [
+        {
+          "frame": 26460,
+          "maxAdjacentDifference": 0,
+          "referenceAdjacentDifference": 0,
+          "seamExcessDifference": 0
+        },
+        {
+          "frame": 79380,
+          "maxAdjacentDifference": 0,
+          "referenceAdjacentDifference": 0,
+          "seamExcessDifference": 0
+        },
+        {
+          "frame": 132300,
+          "maxAdjacentDifference": 0,
+          "referenceAdjacentDifference": 0,
+          "seamExcessDifference": 0
+        },
+        {
+          "frame": 185220,
+          "maxAdjacentDifference": 0,
+          "referenceAdjacentDifference": 0,
+          "seamExcessDifference": 0
+        },
+        {
+          "frame": 238140,
+          "maxAdjacentDifference": 0,
+          "referenceAdjacentDifference": 0,
+          "seamExcessDifference": 0
+        }
+      ],
+      "rms": 0,
+      "peak": 0,
+      "maxAdjacentDifference": 0,
+      "rawFixedThreshold": 0.02,
+      "rawFixedThresholdPass": true,
+      "independentSeamExcessThreshold": 0.02,
+      "independentSeamExcessPass": true,
+      "comparison": "native loop versus independently expanded PCM nonloop at identical rate; original raw .02 threshold retained, not reclassified"
+    },
+    {
+      "rate": 1.8,
+      "gain": 1,
+      "engine": "OfflineAudioContext",
+      "renderSeconds": 7,
+      "joinCount": 10,
+      "joins": [
+        {
+          "frame": 29400,
+          "maxAdjacentDifference": 0.024146784096956253,
+          "referenceAdjacentDifference": 0.024146784096956253,
+          "seamExcessDifference": 0
+        },
+        {
+          "frame": 58800,
+          "maxAdjacentDifference": 0.02414122223854065,
+          "referenceAdjacentDifference": 0.02414122223854065,
+          "seamExcessDifference": 0
+        },
+        {
+          "frame": 88200,
+          "maxAdjacentDifference": 0.024135660380125046,
+          "referenceAdjacentDifference": 0.024135660380125046,
+          "seamExcessDifference": 0
+        },
+        {
+          "frame": 117600,
+          "maxAdjacentDifference": 0.024130098521709442,
+          "referenceAdjacentDifference": 0.024130098521709442,
+          "seamExcessDifference": 0
+        },
+        {
+          "frame": 147000,
+          "maxAdjacentDifference": 0.02412453666329384,
+          "referenceAdjacentDifference": 0.02412453666329384,
+          "seamExcessDifference": 0
+        },
+        {
+          "frame": 176400,
+          "maxAdjacentDifference": 0.024118974804878235,
+          "referenceAdjacentDifference": 0.024118974804878235,
+          "seamExcessDifference": 0
+        },
+        {
+          "frame": 205800,
+          "maxAdjacentDifference": 0.024113409221172333,
+          "referenceAdjacentDifference": 0.024113409221172333,
+          "seamExcessDifference": 0
+        },
+        {
+          "frame": 235200,
+          "maxAdjacentDifference": 0.024107851088047028,
+          "referenceAdjacentDifference": 0.024107851088047028,
+          "seamExcessDifference": 0
+        },
+        {
+          "frame": 264600,
+          "maxAdjacentDifference": 0.024102289229631424,
+          "referenceAdjacentDifference": 0.024102289229631424,
+          "seamExcessDifference": 0
+        },
+        {
+          "frame": 294000,
+          "maxAdjacentDifference": 0.02409672737121582,
+          "referenceAdjacentDifference": 0.02409672737121582,
+          "seamExcessDifference": 0
+        }
+      ],
+      "normalWindows": [
+        {
+          "frame": 14700,
+          "maxAdjacentDifference": 0.052293991670012474,
+          "referenceAdjacentDifference": 0.052293991670012474,
+          "seamExcessDifference": 0
+        },
+        {
+          "frame": 44100,
+          "maxAdjacentDifference": 0.052254460752010345,
+          "referenceAdjacentDifference": 0.052254460752010345,
+          "seamExcessDifference": 0
+        },
+        {
+          "frame": 73500,
+          "maxAdjacentDifference": 0.05221492610871792,
+          "referenceAdjacentDifference": 0.05221492610871792,
+          "seamExcessDifference": 0
+        },
+        {
+          "frame": 102900,
+          "maxAdjacentDifference": 0.05217539519071579,
+          "referenceAdjacentDifference": 0.05217539519071579,
+          "seamExcessDifference": 0
+        },
+        {
+          "frame": 132300,
+          "maxAdjacentDifference": 0.05213586427271366,
+          "referenceAdjacentDifference": 0.05213586427271366,
+          "seamExcessDifference": 0
+        },
+        {
+          "frame": 161700,
+          "maxAdjacentDifference": 0.05209633149206638,
+          "referenceAdjacentDifference": 0.05209633149206638,
+          "seamExcessDifference": 0
+        },
+        {
+          "frame": 191100,
+          "maxAdjacentDifference": 0.052056800574064255,
+          "referenceAdjacentDifference": 0.052056800574064255,
+          "seamExcessDifference": 0
+        },
+        {
+          "frame": 220500,
+          "maxAdjacentDifference": 0.052017269656062126,
+          "referenceAdjacentDifference": 0.052017269656062126,
+          "seamExcessDifference": 0
+        },
+        {
+          "frame": 249900,
+          "maxAdjacentDifference": 0.0519777350127697,
+          "referenceAdjacentDifference": 0.0519777350127697,
+          "seamExcessDifference": 0
+        },
+        {
+          "frame": 279300,
+          "maxAdjacentDifference": 0.05193820409476757,
+          "referenceAdjacentDifference": 0.05193820409476757,
+          "seamExcessDifference": 0
+        }
+      ],
+      "rms": 0.26436880875482366,
+      "peak": 0.5768256783485413,
+      "maxAdjacentDifference": 0.07028819806873798,
+      "rawFixedThreshold": 0.02,
+      "rawFixedThresholdPass": false,
+      "independentSeamExcessThreshold": 0.02,
+      "independentSeamExcessPass": true,
+      "comparison": "native loop versus independently expanded PCM nonloop at identical rate; original raw .02 threshold retained, not reclassified"
+    },
+    {
+      "rate": 1.8,
+      "gain": 0,
+      "engine": "OfflineAudioContext",
+      "renderSeconds": 7,
+      "joinCount": 10,
+      "joins": [
+        {
+          "frame": 29400,
+          "maxAdjacentDifference": 0,
+          "referenceAdjacentDifference": 0,
+          "seamExcessDifference": 0
+        },
+        {
+          "frame": 58800,
+          "maxAdjacentDifference": 0,
+          "referenceAdjacentDifference": 0,
+          "seamExcessDifference": 0
+        },
+        {
+          "frame": 88200,
+          "maxAdjacentDifference": 0,
+          "referenceAdjacentDifference": 0,
+          "seamExcessDifference": 0
+        },
+        {
+          "frame": 117600,
+          "maxAdjacentDifference": 0,
+          "referenceAdjacentDifference": 0,
+          "seamExcessDifference": 0
+        },
+        {
+          "frame": 147000,
+          "maxAdjacentDifference": 0,
+          "referenceAdjacentDifference": 0,
+          "seamExcessDifference": 0
+        },
+        {
+          "frame": 176400,
+          "maxAdjacentDifference": 0,
+          "referenceAdjacentDifference": 0,
+          "seamExcessDifference": 0
+        },
+        {
+          "frame": 205800,
+          "maxAdjacentDifference": 0,
+          "referenceAdjacentDifference": 0,
+          "seamExcessDifference": 0
+        },
+        {
+          "frame": 235200,
+          "maxAdjacentDifference": 0,
+          "referenceAdjacentDifference": 0,
+          "seamExcessDifference": 0
+        },
+        {
+          "frame": 264600,
+          "maxAdjacentDifference": 0,
+          "referenceAdjacentDifference": 0,
+          "seamExcessDifference": 0
+        },
+        {
+          "frame": 294000,
+          "maxAdjacentDifference": 0,
+          "referenceAdjacentDifference": 0,
+          "seamExcessDifference": 0
+        }
+      ],
+      "normalWindows": [
+        {
+          "frame": 14700,
+          "maxAdjacentDifference": 0,
+          "referenceAdjacentDifference": 0,
+          "seamExcessDifference": 0
+        },
+        {
+          "frame": 44100,
+          "maxAdjacentDifference": 0,
+          "referenceAdjacentDifference": 0,
+          "seamExcessDifference": 0
+        },
+        {
+          "frame": 73500,
+          "maxAdjacentDifference": 0,
+          "referenceAdjacentDifference": 0,
+          "seamExcessDifference": 0
+        },
+        {
+          "frame": 102900,
+          "maxAdjacentDifference": 0,
+          "referenceAdjacentDifference": 0,
+          "seamExcessDifference": 0
+        },
+        {
+          "frame": 132300,
+          "maxAdjacentDifference": 0,
+          "referenceAdjacentDifference": 0,
+          "seamExcessDifference": 0
+        },
+        {
+          "frame": 161700,
+          "maxAdjacentDifference": 0,
+          "referenceAdjacentDifference": 0,
+          "seamExcessDifference": 0
+        },
+        {
+          "frame": 191100,
+          "maxAdjacentDifference": 0,
+          "referenceAdjacentDifference": 0,
+          "seamExcessDifference": 0
+        },
+        {
+          "frame": 220500,
+          "maxAdjacentDifference": 0,
+          "referenceAdjacentDifference": 0,
+          "seamExcessDifference": 0
+        },
+        {
+          "frame": 249900,
+          "maxAdjacentDifference": 0,
+          "referenceAdjacentDifference": 0,
+          "seamExcessDifference": 0
+        },
+        {
+          "frame": 279300,
+          "maxAdjacentDifference": 0,
+          "referenceAdjacentDifference": 0,
+          "seamExcessDifference": 0
+        }
+      ],
+      "rms": 0,
+      "peak": 0,
+      "maxAdjacentDifference": 0,
+      "rawFixedThreshold": 0.02,
+      "rawFixedThresholdPass": true,
+      "independentSeamExcessThreshold": 0.02,
+      "independentSeamExcessPass": true,
+      "comparison": "native loop versus independently expanded PCM nonloop at identical rate; original raw .02 threshold retained, not reclassified"
+    }
+  ],
+  "chromeVersion": "156.0.8078.74",
+  "screenshot": "temporary capture taken and cleaned",
+  "requestsOwnedOnly": true,
+  "browserClosed": true,
+  "temporaryArtifactsCleaned": true,
+  "pass": true,
+  "status": "objective browser candidate pass; human listening and application integration pending"
+}
