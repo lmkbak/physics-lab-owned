@@ -11,7 +11,7 @@ function frameSnapshot(sim, model) {
   const save = object => { if (!object || seen.has(object)) return; seen.add(object); entries.push([object, Object.getOwnPropertyDescriptors(object)]); };
   const state = object => { if (!object || typeof object !== 'object' || seen.has(object)) return; save(object); for (const v of Object.values(object)) state(v); };
   save(sim);
-  for (const p of model.parts) { save(p); state(p.state); state(p.params); for (const el of p.els ?? []) save(el); if (p.el) save(p.el); }
+  for (const p of model.parts) { save(p); state(p.state); state(p.params); if (Array.isArray(p.events)) { save(p.events); for (const ev of p.events) state(ev); } for (const el of p.els ?? []) save(el); if (p.el) save(p.el); }
   for (const w of model.wires) { save(w); if (w.el) save(w.el); }
   for (const el of sim.elements ?? []) save(el);
   return () => { for (let i = entries.length - 1; i >= 0; i--) restoreKeys(...entries[i]); };

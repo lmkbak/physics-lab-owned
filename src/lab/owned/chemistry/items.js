@@ -125,6 +125,14 @@ export async function createItem(key,ctx,opts={}){
  updateVesselVisual(item,0,0,ctx);return item;
 }
 export function refill(item){if(!item.reagent||!item.v)return;const r=item.reagent;item.v.mix=r.solid?C.fromReagent(r.id):C.fromReagent(r.id,item.v.capacity*.72);if(r.solid)for(const k of Object.keys(item.v.mix.s))item.v.mix.s[k]*=3;item.v.app=null;item.v.appT=0;}
+// The inspect consumer must invoke this after changing its clone transform.
+// It owns/replaces only clone-specific geometry and a clone-specific material.
+export function syncInspectLiquid(source,clone,liquid,time=0){
+ if(!source.v||!liquid)return;clone.updateWorldMatrix(true,false);const p=source.v.profile,e=clone.matrixWorld.elements,normal=new THREE.Vector3(e[1],e[5],e[9]).normalize(),volume=Math.min(p.fullCapacity,source.v.mix.vol);
+ if(liquid.material===source.v.liqMat)liquid.material=source.v.liqMat.clone();
+ const cache=liquid.userData.ownedInspect||{};if(cache.volume!==volume||!cache.normal||cache.normal.distanceToSquared(normal)>1e-8){const geometry=createGravityLiquidGeometry(p,volume,normal);if(cache.ownedGeometry)liquid.geometry.dispose();liquid.geometry=geometry;liquid.userData.ownedInspect={volume,normal:normal.clone(),ownedGeometry:true};}
+ const u=liquid.material.uniforms,s=source.v.liqMat.uniforms;for(const k of ['uOpacity','uTurb','uGlow','uBoil'])u[k].value=s[k].value;u.uColor.value.copy(s.uColor.value);u.uPpt.value.copy(s.uPpt.value);u.uTime.value=time;u.uLevel.value=liquid.geometry.userData.gravityLevel*Math.hypot(e[1],e[5],e[9])+e[13];u.uCenter.value.copy(source.v.liqMat.uniforms.uCenter.value);u.uCenter.value.y=u.uLevel.value;liquid.visible=volume>0;
+}
 export function mouthWorld(item,out=V()){if(!item.v)throw new TypeError('mouthWorld needs vessel');item.root.updateWorldMatrix(true,false);return item.root.localToWorld(out.set(0,item.v.profile.rim,0));}
 function boundedRadius(profile,y,theta,r){return Math.max(0,profile.radiusAt(y,theta)-r);}
 const tempColor=new THREE.Color();
@@ -151,16 +159,16 @@ export function createGravityLiquidGeometry(profile,volumeMl,normal,fullGeometry
  const horizontal=Math.hypot(n.x,n.z),angle0=Math.atan2(n.z,n.x),z0=profile.bottom,z1=profile.rim;
  function area(y,level){const radius=profile.radiusAt(y),d=level-n.y*y;if(horizontal<1e-12)return d>=0?Math.PI*radius*radius:0;
   if(!profile.nonAxisymmetric){const cut=d/horizontal;if(cut<=-radius)return 0;if(cut>=radius)return Math.PI*radius*radius;return radius*radius*(Math.asin(cut/radius)+Math.PI/2)+cut*Math.sqrt(Math.max(0,radius*radius-cut*cut));}
-  let sum=0;const N=192;for(let i=0;i<N;i++){const theta=2*Math.PI*(i+.5)/N,r=profile.radiusAt(y,theta),a=horizontal*Math.cos(theta-angle0);let value;if(Math.abs(a)<1e-14)value=d>=0?r*r:0;else if(a>0)value=d<=0?0:Math.min(r,d/a)**2;else value=d>=0?r*r:Math.max(0,r*r-Math.min(r,d/a)**2);sum+=value;}return sum*Math.PI/N;
+  let sum=0;const N=64;for(let i=0;i<N;i++){const theta=2*Math.PI*(i+.5)/N,r=profile.radiusAt(y,theta),a=horizontal*Math.cos(theta-angle0);let value;if(Math.abs(a)<1e-14)value=d>=0?r*r:0;else if(a>0)value=d<=0?0:Math.min(r,d/a)**2;else value=d>=0?r*r:Math.max(0,r*r-Math.min(r,d/a)**2);sum+=value;}return sum*Math.PI/N;
  }
- function integrated(level){const N=256,dy=(z1-z0)/N;let sum=area(z0,level)+area(z1,level);for(let i=1;i<N;i++)sum+=area(z0+dy*i,level)*(i%2?4:2);return sum*dy/3*1e6;}
+ function integrated(level){const N=64,dy=(z1-z0)/N;let sum=area(z0,level)+area(z1,level);for(let i=1;i<N;i++)sum+=area(z0+dy*i,level)*(i%2?4:2);return sum*dy/3*1e6;}
  const wanted=Math.max(0,Math.min(profile.fullCapacity,volumeMl));let lo=min,hi=max;for(let i=0;i<27;i++){const mid=(lo+hi)/2;if(integrated(mid)<wanted)lo=mid;else hi=mid;}let level=(lo+hi)/2;
  // Correct residual tessellation difference with a small number of mesh-volume secant steps.
  let measured=measure(level);for(let i=0;i<2&&Math.abs(measured-wanted)>Math.max(1e-6,wanted*.0005);i++){const delta=(max-min)*.0001,slope=(measure(level+delta)-measure(level-delta))/(2*delta);if(!(slope>0))break;level=Math.max(min,Math.min(max,level+(wanted-measured)/slope));measured=measure(level);}
  const out=[],cuts=new Map();for(const tri of tris){const poly=clip(tri,level);for(let j=1;j<poly.length-1;j++)for(const p of [poly[0],poly[j],poly[j+1]])out.push(p.x,p.y,p.z);for(const p of poly)if(Math.abs(n.dot(p)-level)<1e-9)cuts.set(`${Math.round(p.x*1e9)},${Math.round(p.y*1e9)},${Math.round(p.z*1e9)}`,p);}
  const boundary=[...cuts.values()];const center=new THREE.Vector3();for(const p of boundary)center.add(p);if(boundary.length)center.divideScalar(boundary.length);
  boundary.sort((a,b)=>Math.atan2(second.dot(a.clone().sub(center)),axis.dot(a.clone().sub(center)))-Math.atan2(second.dot(b.clone().sub(center)),axis.dot(b.clone().sub(center))));
- const planar=boundary.map(p=>new THREE.Vector2(axis.dot(p),second.dot(p)));for(const tri of THREE.ShapeUtils.triangulateShape(planar,[]))for(const i of tri){const p=boundary[i];out.push(p.x,p.y,p.z);}
+ const planar=boundary.map(p=>new THREE.Vector2(axis.dot(p),second.dot(p)));for(const tri of THREE.ShapeUtils.triangulateShape(planar,[])){const a=boundary[tri[0]],b=boundary[tri[1]],c=boundary[tri[2]],cross=new THREE.Vector3().crossVectors(b.clone().sub(a),c.clone().sub(a));if(cross.lengthSq()<4e-28)continue;const ordered=cross.dot(n)<0?[a,c,b]:[a,b,c];for(const p of ordered)out.push(p.x,p.y,p.z);}
  const geometry=new THREE.BufferGeometry();geometry.setAttribute('position',new THREE.Float32BufferAttribute(out,3));geometry.computeVertexNormals();geometry.computeBoundingBox();geometry.userData={ownedLiquid:true,volumeMl:wanted,gravityNormal:n.toArray(),gravityLevel:level};
  if(!fullGeometry)full.dispose();return geometry;
 }
@@ -176,7 +184,7 @@ export function updateVesselVisual(item,dt,time,ctx={}){
  v.liquid.visible=volume>1e-9;const gas=m.fx.H2+m.fx.O2+m.fx.CO2+m.fx.NO2+m.fx.NO+(m.fx.boil||0);const bubbleCount=volume>0?Math.min(128,Math.ceil(gas*24)):0;
  const channel=Object.keys(GAS_COLORS).filter(k=>(m.fx[k]||0)>0);let n=0;for(let i=0;i<bubbleCount;i++){const s=v.bubbles.seeds[i],r=.0005;const wet=v.level-p.bottom;if(wet<r*2)continue;const y=p.bottom+r+(wet-2*r)*((s.v+time*.2)%1),rr=boundedRadius(p,y,s.a,r);if(rr<=0)continue;const gx=Math.cos(s.a)*rr*Math.sqrt(s.u),gz=Math.sin(s.a)*rr*Math.sqrt(s.u);if(tilted&&gravity.x*gx+gravity.y*y+gravity.z*gz+r>v.liquid.geometry.userData.gravityLevel)continue;const key=channel[i%Math.max(1,channel.length)]||'O2';v.bubbles.instance(n++,gx,y,gz,r,tempColor.setRGB(...GAS_COLORS[key]));}v.bubbles.finish(n);
  n=0;const count=Math.min(256,Math.ceil(app.pptAmount*30));for(let i=0;i<count;i++){const s=v.ppt.seeds[i],r=.0005,wet=v.level-p.bottom;if(wet<2*r)continue;const y=p.bottom+r+Math.max(0,wet-2*r)*s.v*(1-v.settle*.97),rr=boundedRadius(p,y,s.a,r);if(rr<=0)continue;const px=Math.cos(s.a)*rr*Math.sqrt(s.u),pz=Math.sin(s.a)*rr*Math.sqrt(s.u);if(tilted&&gravity.x*px+gravity.y*y+gravity.z*pz+r>v.liquid.geometry.userData.gravityLevel)continue;v.ppt.instance(n++,px,y,pz,r,v.pptCol);}v.ppt.finish(n);
- n=0;for(const[k,amount]of Object.entries(app.chunks)){const entries=Math.min(12,Math.ceil(amount*2));tempColor.setRGB(...C.SPECIES[k].color);for(let i=0;i<entries&&n<96;i++){const s=v.chunks.seeds[n],r=Math.min(.0025,p.rimR*.13),surface=(k==='Na'||k==='K')&&volume>0;const y=surface?Math.max(p.bottom+r,v.level-r*.3):p.bottom+r;const a=s.a+(surface?time*4.7:0);const rr=boundedRadius(p,y,a,r);if(rr<=0)continue;v.chunks.instance(n++,Math.cos(a)*rr*Math.sqrt(s.u),y,Math.sin(a)*rr*Math.sqrt(s.u),r,tempColor);}}v.chunks.finish(n);
+ n=0;for(const[k,amount]of Object.entries(app.chunks)){const entries=Math.min(12,Math.ceil(amount*2));tempColor.setRGB(...((m.crystals&&['salt','KClCrystal','CuSO4Crystal'].includes(k))?m.crystals:C.SPECIES[k].color));for(let i=0;i<entries&&n<96;i++){const s=v.chunks.seeds[n],r=Math.min(.0025,p.rimR*.13),surface=(k==='Na'||k==='K')&&volume>0;const y=surface?Math.max(p.bottom+r,v.level-r*.3):p.bottom+r;const a=s.a+(surface?time*4.7:0);const rr=boundedRadius(p,y,a,r);if(rr<=0)continue;v.chunks.instance(n++,Math.cos(a)*rr*Math.sqrt(s.u),y,Math.sin(a)*rr*Math.sqrt(s.u),r,tempColor);}}v.chunks.finish(n);
  for(const stopper of item.stoppers)stopper.visible=!(item.heldBy||item.open>0);item.open=Math.max(0,item.open-dt);
  if(item.spoonMesh)item.spoonMesh.visible=!!item.tool?.load;
 }
